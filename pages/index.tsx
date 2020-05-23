@@ -12,7 +12,7 @@ export default function Home() {
           <title>Devin Nguyen.Home</title>
         </Head>
         <h1>DEVIN NGUYEN</h1>
-        <section>
+        <section className={styles.mainContent}>
           <p>
             Software Engineer at{" "}
             <a

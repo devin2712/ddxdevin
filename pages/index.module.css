@@ -6,3 +6,9 @@
 .cloudhealth:hover {
   color: #533feb;
 }
+
+.mainContent {
+  background: url("/images/bg.svg");
+  background-size: 4px 24px;
+  background-position: right 20px top;
+}
