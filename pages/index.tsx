@@ -28,33 +28,37 @@ export default function Home() {
             title="Photography"
             links={[
               { url: "#", title: "La Main Ouverte" },
-              { url: "#", title: "Bauhäuslers" },
-              { url: "#", title: "(S)E1 [WIP]" },
+              { url: "#1", title: "Bauhäuslers" },
+              { url: "#2", title: "(S)E1 [WIP]" },
             ]}
           />
           <LinkList
             title="Talks"
             links={[
-              { url: "#", title: "Bauhaus Architecture & CloudHealth UI" },
+              { url: "#3", title: "Bauhaus Architecture & CloudHealth UI" },
             ]}
           />
           <LinkList
             links={[
               {
-                url: "https://www.linkedin.com/in/devinnguyen/",
+                url: "//www.linkedin.com/in/devinnguyen/",
                 title: "LinkedIn",
+                isExternal: true,
               },
               {
-                url: "https://github.com/devin2712",
+                url: "//github.com/devin2712",
                 title: "Github",
+                isExternal: true,
               },
               {
-                url: "https://twitter.com/ddxdevin",
+                url: "//twitter.com/ddxdevin",
                 title: "Twitter",
+                isExternal: true,
               },
               {
-                url: "http://instagram.com/ddxdevin",
+                url: "//instagram.com/ddxdevin",
                 title: "Instagram",
+                isExternal: true,
               },
             ]}
           />
