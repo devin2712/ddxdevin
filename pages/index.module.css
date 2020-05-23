@@ -1,0 +1,8 @@
+.cloudhealth,
+.cloudhealth:visited {
+  font-weight: 400;
+  color: #282561;
+}
+.cloudhealth:hover {
+  color: #533feb;
+}

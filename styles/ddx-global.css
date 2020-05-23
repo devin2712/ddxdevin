@@ -1,19 +1,24 @@
 body {
   font-family: "Inter", sans-serif;
   font-weight: 300;
-  font-size: 16px;  
+  font-size: 16px;
 }
 
 h1 {
   font-family: "TroisMilleBlackItalic-30", sans-serif;
-  font-feature-settings: 'ss03';
+  font-feature-settings: "ss03";
   word-break: break-word;
   font-size: 2rem;
-  line-height: 1.5rem;
+  line-height: 1em;
   margin: 24px 0;
 }
 
-p, a, span, em, strong {
+p,
+a,
+span,
+label,
+em,
+strong {
   font-size: 1.125rem;
   line-height: 1.333333333rem;
   margin: 24px 0;
@@ -42,13 +47,13 @@ ul {
 @media only screen and (min-width: 400px) {
   h1 {
     font-size: 3rem;
-    line-height: 1rem;
+    /* line-height: 1em; */
   }
 }
 
 @media only screen and (min-width: 1200px) {
   h1 {
     font-size: 6rem;
-    line-height: 1rem;
+    /* line-height: 1em; */
   }
 }

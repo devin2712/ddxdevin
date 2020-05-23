@@ -1,0 +1,13 @@
+body {
+  background-color: #fafafa;
+}
+
+h1 {
+  color: #444;
+}
+
+p,
+a,
+label {
+  color: #666;
+}
