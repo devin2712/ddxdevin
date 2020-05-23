@@ -1,4 +1,6 @@
-import "../styles/global.css";
+import "../styles/normalize.css";
+import "../styles/fonts.css";
+import "../styles/ddx-global.css";
 
 import { AppProps } from "next/app";
 

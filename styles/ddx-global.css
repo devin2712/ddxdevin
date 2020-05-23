@@ -1,0 +1,58 @@
+body {
+  font-family: "Inter", sans-serif;
+  font-weight: 300;
+  font-size: 16px;  
+}
+
+h1 {
+  font-family: "TroisMilleBlackItalic-30", sans-serif;
+  font-feature-settings: 'ss03';
+  word-break: break-word;
+  font-size: 2em;
+  line-height: 1.5em;
+  margin: 24px 0;
+}
+
+p, a, span, em, strong {
+  font-size: 1.125em;
+  line-height: 1.333333333em;
+  margin: 24px 0;
+}
+
+p * {
+  font-size: 1em;
+}
+
+strong {
+  font-weight: 400;
+}
+
+a {
+  -moz-transition: all 0.1s linear;
+  -o-transition: all 0.1s linear;
+  -webkit-transition: all 0.1s linear;
+  transition: all 0.1s linear;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+@media only screen and (min-width: 400px) {
+  h1 {
+    font-size: 3em;
+    line-height: 1em;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  h1 {
+    font-size: 6em;
+    line-height: 1em;
+  }
+}
