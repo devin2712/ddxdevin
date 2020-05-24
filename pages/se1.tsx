@@ -37,7 +37,7 @@ export default function Se1() {
             </ul>
           </summary>
           <LightTable
-            positiveImages={[
+            images={[
               {
                 src: "/images/light-table/000051980002.jpg",
                 pre: "/images/light-table/pre/000051980002.jpg",
@@ -100,74 +100,6 @@ export default function Se1() {
               },
               {
                 src: "/images/light-table/000096000012.jpg",
-                pre: "/images/light-table/pre/000096000012.jpg",
-                alt: "Light Table Picture",
-                height: 200,
-              },
-            ]}
-            negativeImages={[
-              {
-                src: "/images/light-table/negatives/000051980002.jpg",
-                pre: "/images/light-table/pre/000051980002.jpg",
-                alt: "Light Table Picture",
-                height: 200,
-              },
-              {
-                src: "/images/light-table/negatives/000051980007.jpg",
-                pre: "/images/light-table/pre/000051980007.jpg",
-                alt: "Light Table Picture",
-                height: 200,
-              },
-              {
-                src: "/images/light-table/negatives/000055320003.jpg",
-                pre: "/images/light-table/pre/000055320003.jpg",
-                alt: "Light Table Picture",
-                height: 200,
-              },
-              {
-                src: "/images/light-table/negatives/000055320005.jpg",
-                pre: "/images/light-table/pre/000055320005.jpg",
-                alt: "Light Table Picture",
-                height: 200,
-              },
-              {
-                src: "/images/light-table/negatives/000055320007.jpg",
-                pre: "/images/light-table/pre/000055320007.jpg",
-                alt: "Light Table Picture",
-                height: 200,
-              },
-              {
-                src: "/images/light-table/negatives/000055320009.jpg",
-                pre: "/images/light-table/pre/000055320009.jpg",
-                alt: "Light Table Picture",
-                height: 200,
-              },
-              {
-                src: "/images/light-table/negatives/000073900001.jpg",
-                pre: "/images/light-table/pre/000073900001.jpg",
-                alt: "Light Table Picture",
-                height: 200,
-              },
-              {
-                src: "/images/light-table/negatives/000073900004.jpg",
-                pre: "/images/light-table/pre/000073900004.jpg",
-                alt: "Light Table Picture",
-                height: 200,
-              },
-              {
-                src: "/images/light-table/negatives/000095990003.jpg",
-                pre: "/images/light-table/pre/000095990003.jpg",
-                alt: "Light Table Picture",
-                height: 200,
-              },
-              {
-                src: "/images/light-table/negatives/000095990004.jpg",
-                pre: "/images/light-table/pre/000095990004.jpg",
-                alt: "Light Table Picture",
-                height: 200,
-              },
-              {
-                src: "/images/light-table/negatives/000096000012.jpg",
                 pre: "/images/light-table/pre/000096000012.jpg",
                 alt: "Light Table Picture",
                 height: 200,

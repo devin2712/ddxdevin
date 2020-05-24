@@ -30,9 +30,14 @@ div.lightTablePhotoScreen div {
 }
 
 div.lightTablePhotoScreen div img {
+  transition: 0.5s filter ease-in-out;
   border: 3px solid rgba(58, 21, 20, 1);
   width: 100%;
   max-width: 200px;
+}
+
+div.lightTablePhotoScreen.renderNegatives div img {
+  filter: invert(1);
 }
 
 img.powerSymbol {

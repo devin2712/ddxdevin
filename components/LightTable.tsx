@@ -10,14 +10,10 @@ export enum LightTableMode {
 }
 
 export interface LightTableProps {
-  positiveImages: ReadonlyArray<BlogPostGalleryImage>;
-  negativeImages: ReadonlyArray<BlogPostGalleryImage>;
+  images: ReadonlyArray<BlogPostGalleryImage>;
 }
 
-export default function LightTable({
-  positiveImages,
-  negativeImages,
-}: LightTableProps) {
+export default function LightTable({ images }: LightTableProps) {
   const { dark, toggle } = React.useContext(ThemeContext);
 
   return (
@@ -29,12 +25,12 @@ export default function LightTable({
           alt="Power symbol for light table. Use to turn light table on and off."
           onClick={() => toggle()}
         />
-        <div className={styles.lightTablePhotoScreen}>
-          {dark ? (
-            <BlogPostGallery listOfImages={positiveImages} draggable />
-          ) : (
-            <BlogPostGallery listOfImages={negativeImages} draggable />
-          )}
+        <div
+          className={`${styles.lightTablePhotoScreen} ${
+            dark ? "" : styles.renderNegatives
+          }`}
+        >
+          <BlogPostGallery listOfImages={images} draggable />
         </div>
       </div>
     </div>
