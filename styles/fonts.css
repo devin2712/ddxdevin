@@ -1,4 +1,5 @@
 @font-face {
+  font-display: swap;
   font-family: "TroisMilleBlackItalic-30";
   src: url("/fonts/TroisMilleBlackItalic-30.woff2") format("woff2"),
     url("/fonts/TroisMilleBlackItalic-30.woff") format("woff");
