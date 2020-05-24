@@ -21,7 +21,7 @@ export default function LinkList({ title, links }: LinkListProps) {
         {links.map((link) => (
           <li key={link.url as string} className={styles.link}>
             {link.isExternal && link.isExternal == true ? (
-              <a href={link.url as string} target="_blank">
+              <a href={link.url as string} target="_blank" rel="noreferrer">
                 {link.title}
               </a>
             ) : (
