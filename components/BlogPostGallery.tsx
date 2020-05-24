@@ -1,8 +1,9 @@
 import styles from "./BlogPostGallery.module.css";
+import ProgressiveImage from "./ProgressiveImage";
 
-export type BlogPostGalleryProps = {
+export interface BlogPostGalleryProps {
   listOfImages: Array<String>;
-};
+}
 
 export default function BlogPostGallery({
   listOfImages,

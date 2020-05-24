@@ -2,16 +2,16 @@ import Link from "next/link";
 
 import styles from "./LinkList.module.css";
 
-export type LinkDefinition = {
+export interface LinkDefinition {
   url: String;
   title: String;
   isExternal?: boolean;
-};
+}
 
-export type LinkListProps = {
+export interface LinkListProps {
   title?: String;
   links: Array<LinkDefinition>;
-};
+}
 
 export default function LinkList({ title, links }: LinkListProps) {
   return (

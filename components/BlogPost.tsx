@@ -1,10 +1,10 @@
 import styles from "./BlogPost.module.css";
 import Head from "next/head";
 
-export type BlogPostProps = {
+export interface BlogPostProps {
   title: String;
   children: React.ReactNode;
-};
+}
 
 export default function BlogPost({ title, children }: BlogPostProps) {
   return (
