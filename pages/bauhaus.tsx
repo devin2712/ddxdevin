@@ -23,46 +23,55 @@ export default function LaMainOuverte() {
                 src: "/images/bauhaus/main.png",
                 pre: "/images/bauhaus/pre/main.jpg",
                 alt: "Bauhaus Talk Slide",
+                height: 540,
               },
               {
                 src: "/images/bauhaus/1.jpg",
                 pre: "/images/bauhaus/pre/1.jpg",
                 alt: "Bauhaus Talk Slide",
+                height: 540,
               },
               {
                 src: "/images/bauhaus/2.jpg",
                 pre: "/images/bauhaus/pre/2.jpg",
                 alt: "Bauhaus Talk Slide",
+                height: 540,
               },
               {
                 src: "/images/bauhaus/3.jpg",
                 pre: "/images/bauhaus/pre/3.jpg",
                 alt: "Bauhaus Talk Slide",
+                height: 540,
               },
               {
                 src: "/images/bauhaus/4.jpg",
                 pre: "/images/bauhaus/pre/4.jpg",
                 alt: "Bauhaus Talk Slide",
+                height: 540,
               },
               {
                 src: "/images/bauhaus/5.jpg",
                 pre: "/images/bauhaus/pre/5.jpg",
                 alt: "Bauhaus Talk Slide",
+                height: 540,
               },
               {
                 src: "/images/bauhaus/6.jpg",
                 pre: "/images/bauhaus/pre/6.jpg",
                 alt: "Bauhaus Talk Slide",
+                height: 540,
               },
               {
                 src: "/images/bauhaus/7.jpg",
                 pre: "/images/bauhaus/pre/7.jpg",
                 alt: "Bauhaus Talk Slide",
+                height: 540,
               },
               {
                 src: "/images/bauhaus/8.jpg",
                 pre: "/images/bauhaus/pre/8.jpg",
                 alt: "Bauhaus Talk Slide",
+                height: 540,
               },
             ]}
           />
