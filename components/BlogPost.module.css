@@ -1,3 +1,13 @@
-article.blogPost {
+article.blogPost h1 {
   text-align: center;
+}
+
+article.blogPost summary ul {
+  text-align: center;
+}
+
+article.blogPost p {
+  margin: 0 auto 1em;
+  max-width: 640px;
+  text-align: justify;
 }

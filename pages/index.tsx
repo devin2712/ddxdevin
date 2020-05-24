@@ -35,7 +35,10 @@ export default function Home() {
           <LinkList
             title="Talks"
             links={[
-              { url: "#3", title: "Bauhaus Architecture & CloudHealth UI" },
+              {
+                url: "/bauhaus",
+                title: "Bauhaus Architecture & CloudHealth UI",
+              },
             ]}
           />
           <LinkList
