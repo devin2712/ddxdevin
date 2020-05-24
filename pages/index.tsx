@@ -19,6 +19,7 @@ export default function Home() {
               href="https://www.cloudhealthtech.com/"
               className={styles.cloudhealth}
               target="_blank"
+              rel="noreferrer"
             >
               CloudHealth
             </a>
