@@ -17,19 +17,24 @@ class ProgressiveImage extends React.Component<
   ProgressiveImageProps,
   ProgressiveImageState
 > {
+  _isMounted = false;
+
   state = {
     currentImage: this.props.preview,
     loading: true,
   };
 
   componentDidMount() {
+    this._isMounted = true;
     this.fetchImage(this.props.image);
   }
 
   fetchImage = (src) => {
-    const image = new Image();
-    image.onload = () => this.setState({ currentImage: src, loading: false });
-    image.src = src;
+    if (this._isMounted) {
+      const image = new Image();
+      image.onload = () => this.setState({ currentImage: src, loading: false });
+      image.src = src;
+    }
   };
 
   style = (loading) => {
