@@ -1,8 +1,14 @@
 import styles from "./BlogPostGallery.module.css";
 import ProgressiveImage from "./ProgressiveImage";
 
+export interface BlogPostGalleryImage {
+  src: String;
+  pre: String;
+  alt: String;
+}
+
 export interface BlogPostGalleryProps {
-  listOfImages: Array<String>;
+  listOfImages: Array<BlogPostGalleryImage>;
 }
 
 export default function BlogPostGallery({
@@ -11,7 +17,13 @@ export default function BlogPostGallery({
   return (
     <div className={styles.galleryImages}>
       {listOfImages.map((image) => (
-        <img key={image as string} src={image as string} />
+        <div key={image.src as string}>
+          <ProgressiveImage
+            preview={image.pre}
+            image={image.src}
+            alt={image.alt}
+          />
+        </div>
       ))}
     </div>
   );

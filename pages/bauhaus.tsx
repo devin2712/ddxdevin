@@ -19,15 +19,51 @@ export default function LaMainOuverte() {
 
           <BlogPostGallery
             listOfImages={[
-              "/images/bauhaus/main.png",
-              "/images/bauhaus/1.jpg",
-              "/images/bauhaus/2.jpg",
-              "/images/bauhaus/3.jpg",
-              "/images/bauhaus/4.jpg",
-              "/images/bauhaus/5.jpg",
-              "/images/bauhaus/6.jpg",
-              "/images/bauhaus/7.jpg",
-              "/images/bauhaus/8.jpg",
+              {
+                src: "/images/bauhaus/main.png",
+                pre: "/images/bauhaus/pre/main.jpg",
+                alt: "Bauhaus Talk Slide",
+              },
+              {
+                src: "/images/bauhaus/1.jpg",
+                pre: "/images/bauhaus/pre/1.jpg",
+                alt: "Bauhaus Talk Slide",
+              },
+              {
+                src: "/images/bauhaus/2.jpg",
+                pre: "/images/bauhaus/pre/2.jpg",
+                alt: "Bauhaus Talk Slide",
+              },
+              {
+                src: "/images/bauhaus/3.jpg",
+                pre: "/images/bauhaus/pre/3.jpg",
+                alt: "Bauhaus Talk Slide",
+              },
+              {
+                src: "/images/bauhaus/4.jpg",
+                pre: "/images/bauhaus/pre/4.jpg",
+                alt: "Bauhaus Talk Slide",
+              },
+              {
+                src: "/images/bauhaus/5.jpg",
+                pre: "/images/bauhaus/pre/5.jpg",
+                alt: "Bauhaus Talk Slide",
+              },
+              {
+                src: "/images/bauhaus/6.jpg",
+                pre: "/images/bauhaus/pre/6.jpg",
+                alt: "Bauhaus Talk Slide",
+              },
+              {
+                src: "/images/bauhaus/7.jpg",
+                pre: "/images/bauhaus/pre/7.jpg",
+                alt: "Bauhaus Talk Slide",
+              },
+              {
+                src: "/images/bauhaus/8.jpg",
+                pre: "/images/bauhaus/pre/8.jpg",
+                alt: "Bauhaus Talk Slide",
+              },
             ]}
           />
         </>
