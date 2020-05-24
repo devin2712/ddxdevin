@@ -15,12 +15,16 @@ h1 {
 
 p,
 a,
+li,
 span,
 label,
 em,
 strong {
   font-size: 1.125rem;
   line-height: 1.5rem;
+}
+
+p {
   margin: 24px 0;
 }
 
