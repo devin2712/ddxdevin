@@ -10,7 +10,7 @@ export default function BlogPostGallery({
   return (
     <div className={styles.galleryImages}>
       {listOfImages.map((image) => (
-        <img src={image as string} />
+        <img key={image as string} src={image as string} />
       ))}
     </div>
   );
