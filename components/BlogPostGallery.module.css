@@ -16,6 +16,8 @@ div.galleryImages.grid {
 }
 
 div.galleryImages.grid img {
+  min-width: 100px;
+  min-height: 80%;
   display: inline-block;
   max-width: 100%;
   margin-bottom: 2em;
