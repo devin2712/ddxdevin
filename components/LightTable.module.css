@@ -16,6 +16,7 @@ div.lightTableDevice {
 
 div.lightTablePhotoScreen {
   background: #eee;
+  min-height: 800px;
   border-radius: 2px;
   box-shadow: 0 0 45px 8px #aaa;
   padding: 20px;
