@@ -1,9 +1,8 @@
 import React from "react";
-import LazyLoad from "react-lazyload";
 
 import styles from "./LightTable.module.css";
-import ProgressiveImage from "./ProgressiveImage";
 import BlogPostGallery, { BlogPostGalleryImage } from "./BlogPostGallery";
+import ThemeContext from "../pages/ThemeContext";
 
 export enum LightTableMode {
   LIGHT,
@@ -15,31 +14,28 @@ export interface LightTableProps {
   negativeImages: ReadonlyArray<BlogPostGalleryImage>;
 }
 
-export interface LightTableState {
-  lightMode: LightTableMode;
-}
+export default function LightTable({
+  positiveImages,
+  negativeImages,
+}: LightTableProps) {
+  const { dark, toggle } = React.useContext(ThemeContext);
 
-class LightTable extends React.Component<LightTableProps, LightTableState> {
-  state = {
-    lightMode: LightTableMode.DARK,
-  };
-
-  render() {
-    return (
-      <div className={styles.lightTable}>
-        <div className={styles.lightTableDevice}>
-          <img className={styles.powerSymbol} src="/images/power.svg" />
-          <div className={styles.lightTablePhotoScreen}>
-            {this.state.lightMode === LightTableMode.DARK ? (
-              <BlogPostGallery listOfImages={this.props.positiveImages} />
-            ) : (
-              <BlogPostGallery listOfImages={this.props.negativeImages} />
-            )}
-          </div>
+  return (
+    <div className={styles.lightTable}>
+      <div className={styles.lightTableDevice}>
+        <img
+          className={styles.powerSymbol}
+          src="/images/power.svg"
+          onClick={() => toggle()}
+        />
+        <div className={styles.lightTablePhotoScreen}>
+          {dark ? (
+            <BlogPostGallery listOfImages={positiveImages} />
+          ) : (
+            <BlogPostGallery listOfImages={negativeImages} />
+          )}
         </div>
       </div>
-    );
-  }
+    </div>
+  );
 }
-
-export default LightTable;

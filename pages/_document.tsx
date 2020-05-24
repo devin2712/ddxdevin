@@ -8,7 +8,10 @@ class DevinDocument extends Document {
 
   render() {
     return (
-      <Html lang="en">
+      <Html
+        lang="en"
+        data-dark-mode-enabled={this.props.__NEXT_DATA__.page === "/se1"}
+      >
         <Head />
         <body>
           <Main />

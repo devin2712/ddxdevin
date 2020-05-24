@@ -1,5 +1,24 @@
-body {
-  background-color: #fafafa;
+html[data-dark-mode-enabled="true"],
+html[data-dark-mode-enabled="true"] body {
+  transition: background 0.5s ease;
+}
+
+html[data-dark-mode-enabled="true"].dark,
+html[data-dark-mode-enabled="true"].dark body {
+  background: #333;
+}
+
+html[data-dark-mode-enabled="true"].dark a {
+  border-color: #fafafa;
+}
+
+html[data-dark-mode-enabled="true"].dark h1,
+html[data-dark-mode-enabled="true"].dark p,
+html[data-dark-mode-enabled="true"].dark span,
+html[data-dark-mode-enabled="true"].dark a,
+html[data-dark-mode-enabled="true"].dark em,
+html[data-dark-mode-enabled="true"].dark label {
+  color: #fafafa;
 }
 
 h1 {
