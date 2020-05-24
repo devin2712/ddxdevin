@@ -12,6 +12,15 @@ html[data-dark-mode-enabled="true"].dark a {
   border-color: #fafafa;
 }
 
+html[data-dark-mode-enabled="true"] h1,
+html[data-dark-mode-enabled="true"] p,
+html[data-dark-mode-enabled="true"] span,
+html[data-dark-mode-enabled="true"] a,
+html[data-dark-mode-enabled="true"] em,
+html[data-dark-mode-enabled="true"] label {
+  transition: color 1s ease-in-out;
+}
+
 html[data-dark-mode-enabled="true"].dark h1,
 html[data-dark-mode-enabled="true"].dark p,
 html[data-dark-mode-enabled="true"].dark span,
@@ -19,15 +28,6 @@ html[data-dark-mode-enabled="true"].dark a,
 html[data-dark-mode-enabled="true"].dark em,
 html[data-dark-mode-enabled="true"].dark label {
   color: #fafafa;
-}
-
-h1,
-p,
-span,
-a,
-em,
-label {
-  transition: color 1s ease-in-out;
 }
 
 h1 {
