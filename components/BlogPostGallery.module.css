@@ -1,10 +1,35 @@
 div.galleryImages {
   margin: 3rem auto;
-  max-width: 800px;
 }
 
 div.galleryImages img {
   display: inline-block;
   max-width: 100%;
   margin-bottom: 2rem;
+}
+
+div.galleryImages.grid {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+div.galleryImages.grid img {
+  display: inline-block;
+  max-width: 100%;
+  margin-bottom: 2em;
+  border: 5px solid #000;
+}
+
+@media only screen and (min-width: 400px) {
+  div.galleryImages.grid img {
+    max-width: 320px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  div.galleryImages.grid img {
+    max-width: 250px;
+  }
 }

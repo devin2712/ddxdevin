@@ -1,7 +1,12 @@
+import LazyLoad from "react-lazyload";
+
 import styles from "./BlogPostGallery.module.css";
 import ProgressiveImage from "./ProgressiveImage";
 
-import LazyLoad from "react-lazyload";
+export enum GalleryType {
+  GRID,
+  POST,
+}
 
 export interface BlogPostGalleryImage {
   src: String;
@@ -12,13 +17,25 @@ export interface BlogPostGalleryImage {
 
 export interface BlogPostGalleryProps {
   listOfImages: Array<BlogPostGalleryImage>;
+  type?: GalleryType;
+}
+
+function galleryTypeClass(type: GalleryType | undefined) {
+  const typeClasses = {
+    undefined: "",
+    [GalleryType.GRID]: styles.grid,
+    [GalleryType.POST]: styles.post,
+  };
+
+  return typeClasses[type];
 }
 
 export default function BlogPostGallery({
   listOfImages,
+  type,
 }: BlogPostGalleryProps) {
   return (
-    <div className={styles.galleryImages}>
+    <div className={`${styles.galleryImages} ${galleryTypeClass(type)}`}>
       {listOfImages.map((image) => (
         <div key={image.src as string}>
           <LazyLoad height={image.height || 500}>

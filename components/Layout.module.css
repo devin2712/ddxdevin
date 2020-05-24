@@ -1,5 +1,10 @@
 .container {
-  max-width: 64rem;
+  max-width: 72rem;
   padding: 0 1rem;
   margin: 3rem auto 6rem;
+}
+
+.container main {
+  width: 100%;
+  display: inline-block;
 }

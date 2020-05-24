@@ -29,7 +29,7 @@ export default function Home() {
             title="Photography"
             links={[
               { url: "/la-main-ouverte", title: "La Main Ouverte" },
-              { url: "#1", title: "Bauhäuslers" },
+              { url: "/bauhauslers", title: "Bauhäuslers" },
               { url: "#2", title: "(S)E1 [WIP]" },
             ]}
           />
