@@ -30,7 +30,7 @@ export default function Home() {
             links={[
               { url: "/la-main-ouverte", title: "La Main Ouverte" },
               { url: "/bauhauslers", title: "Bauhäuslers" },
-              { url: "#2", title: "(S)E1 [WIP]" },
+              { url: "/se1", title: "(S)E1 [WIP]" },
             ]}
           />
           <LinkList

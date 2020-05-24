@@ -1,0 +1,43 @@
+div.lightTable {
+  margin: 1em 2em 4em 2em;
+}
+
+div.lightTableDevice {
+  position: relative;
+  border-top: 50px solid #222;
+  border-bottom: 50px solid #222;
+  border-left: 90px solid #222;
+  border-right: 90px solid #222;
+  border-radius: 16px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+div.lightTablePhotoScreen {
+  background: #eee;
+  border-radius: 2px;
+  box-shadow: 0 0 45px 8px #aaa;
+  padding: 20px;
+}
+
+div.lightTablePhotoScreen div {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+div.lightTablePhotoScreen div img {
+  border: 3px solid rgba(58, 21, 20, 1);
+  width: 100%;
+  max-width: 200px;
+  margin-bottom: 20px;
+}
+
+img.powerSymbol {
+  position: absolute;
+  left: -60px;
+  top: 25px;
+  width: 32px;
+  height: 32px;
+}

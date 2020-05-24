@@ -16,7 +16,7 @@ export interface BlogPostGalleryImage {
 }
 
 export interface BlogPostGalleryProps {
-  listOfImages: Array<BlogPostGalleryImage>;
+  listOfImages: ReadonlyArray<BlogPostGalleryImage>;
   type?: GalleryType;
 }
 
