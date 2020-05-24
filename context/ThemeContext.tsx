@@ -39,7 +39,7 @@ function isLocalStorageAvailable() {
 }
 
 export function ThemeProvider({ children }: ThemeProviderProps) {
-  const [dark, setDark] = useState(false);
+  const [dark, setDark] = useState(true);
   const [storageAvailable, setStorageAvailable] = useState(false);
 
   useEffect(() => {
@@ -55,6 +55,9 @@ export function ThemeProvider({ children }: ThemeProviderProps) {
         setDark(false);
         applyTheme("light");
       }
+    } else {
+      // initialize with dark mode
+      applyTheme("dark");
     }
   }, []);
 
