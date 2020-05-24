@@ -1,11 +1,26 @@
+div.draggable {
+  display: block;
+}
+
+div.draggable:hover {
+  cursor: grab;
+}
+
+div.draggable:active {
+  cursor: grabbing;
+}
+
 div.galleryImages {
   margin: 3rem auto;
+}
+
+div.galleryImages div.galleryImage {
+  margin-bottom: 2rem;
 }
 
 div.galleryImages img {
   display: inline-block;
   max-width: 100%;
-  margin-bottom: 2rem;
 }
 
 div.galleryImages.grid {
@@ -20,7 +35,6 @@ div.galleryImages.grid img {
   min-height: 80%;
   display: inline-block;
   max-width: 100%;
-  margin-bottom: 2em;
   border: 5px solid #000;
 }
 

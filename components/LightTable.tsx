@@ -31,9 +31,9 @@ export default function LightTable({
         />
         <div className={styles.lightTablePhotoScreen}>
           {dark ? (
-            <BlogPostGallery listOfImages={positiveImages} />
+            <BlogPostGallery listOfImages={positiveImages} draggable />
           ) : (
-            <BlogPostGallery listOfImages={negativeImages} />
+            <BlogPostGallery listOfImages={negativeImages} draggable />
           )}
         </div>
       </div>

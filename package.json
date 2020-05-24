@@ -11,6 +11,7 @@
     "next": "9.3.5",
     "react": "16.13.1",
     "react-dom": "16.13.1",
+    "react-draggable": "^4.4.2",
     "react-lazyload": "^2.6.7"
   },
   "devDependencies": {

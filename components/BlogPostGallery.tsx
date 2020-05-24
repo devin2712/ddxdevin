@@ -1,4 +1,5 @@
 import LazyLoad from "react-lazyload";
+import Draggable from "react-draggable";
 
 import styles from "./BlogPostGallery.module.css";
 import ProgressiveImage from "./ProgressiveImage";
@@ -18,6 +19,7 @@ export interface BlogPostGalleryImage {
 export interface BlogPostGalleryProps {
   listOfImages: ReadonlyArray<BlogPostGalleryImage>;
   type?: GalleryType;
+  draggable?: boolean;
 }
 
 function galleryTypeClass(type: GalleryType | undefined) {
@@ -33,17 +35,26 @@ function galleryTypeClass(type: GalleryType | undefined) {
 export default function BlogPostGallery({
   listOfImages,
   type,
+  draggable,
 }: BlogPostGalleryProps) {
+  const renderImage = (image) => {
+    return (
+      <ProgressiveImage preview={image.pre} image={image.src} alt={image.alt} />
+    );
+  };
+
   return (
     <div className={`${styles.galleryImages} ${galleryTypeClass(type)}`}>
       {listOfImages.map((image) => (
-        <div key={image.src as string}>
+        <div className={styles.galleryImage} key={image.src as string}>
           <LazyLoad height={image.height || 500}>
-            <ProgressiveImage
-              preview={image.pre}
-              image={image.src}
-              alt={image.alt}
-            />
+            {draggable && draggable === true ? (
+              <Draggable onStart={(e) => e.preventDefault()}>
+                <div className={styles.draggable}>{renderImage(image)}</div>
+              </Draggable>
+            ) : (
+              renderImage(image)
+            )}
           </LazyLoad>
         </div>
       ))}
