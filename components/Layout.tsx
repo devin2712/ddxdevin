@@ -19,6 +19,7 @@ export default function Layout({
         <meta property="og:title" content="Devin Nguyen" />
         <meta property="og:site_name" content="Devin Nguyen" />
         <meta name="description" content="software engineer" />
+        <meta name="theme-color" content="#444444" />
         <link
           rel="icon"
           type="image/png"
