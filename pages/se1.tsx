@@ -21,7 +21,7 @@ export default function Se1() {
                 <span>
                   book art direction by{" "}
                   <a
-                    href="httspan://jasonkim.xyz/"
+                    href="http://jasonkim.xyz/"
                     target="_blank"
                     rel="noreferrer"
                   >
