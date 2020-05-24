@@ -26,6 +26,7 @@ export default function LightTable({
         <img
           className={styles.powerSymbol}
           src="/images/power.svg"
+          alt="Power symbol for light table. Use to turn light table on and off."
           onClick={() => toggle()}
         />
         <div className={styles.lightTablePhotoScreen}>
