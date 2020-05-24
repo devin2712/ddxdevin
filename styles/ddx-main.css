@@ -1,6 +1,6 @@
 html[data-dark-mode-enabled="true"],
 html[data-dark-mode-enabled="true"] body {
-  transition: background 0.5s ease;
+  transition: background 1s ease-in-out;
 }
 
 html[data-dark-mode-enabled="true"].dark,
@@ -19,6 +19,15 @@ html[data-dark-mode-enabled="true"].dark a,
 html[data-dark-mode-enabled="true"].dark em,
 html[data-dark-mode-enabled="true"].dark label {
   color: #fafafa;
+}
+
+h1,
+p,
+span,
+a,
+em,
+label {
+  transition: color 1s ease-in-out;
 }
 
 h1 {
