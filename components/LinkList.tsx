@@ -15,9 +15,9 @@ export interface LinkListProps {
 
 export default function LinkList({ title, links }: LinkListProps) {
   return (
-    <>
+    <div className={styles.linkList}>
       {title ? <label className={styles.title}>{title}</label> : null}
-      <ul className={styles.linkList}>
+      <ul>
         {links.map((link) => (
           <li key={link.url as string} className={styles.link}>
             {link.isExternal && link.isExternal == true ? (
@@ -32,6 +32,6 @@ export default function LinkList({ title, links }: LinkListProps) {
           </li>
         ))}
       </ul>
-    </>
+    </div>
   );
 }

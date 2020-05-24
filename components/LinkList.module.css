@@ -7,6 +7,10 @@
   padding: 0;
 }
 
+.linkList ul {
+  margin: 0;
+}
+
 .link a {
   color: #666;
 }
