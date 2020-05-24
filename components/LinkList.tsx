@@ -15,21 +15,23 @@ export interface LinkListProps {
 
 export default function LinkList({ title, links }: LinkListProps) {
   return (
-    <ul className={styles.linkList}>
+    <>
       {title ? <label className={styles.title}>{title}</label> : null}
-      {links.map((link) => (
-        <li key={link.url as string} className={styles.link}>
-          {link.isExternal && link.isExternal == true ? (
-            <a href={link.url as string} target="_blank">
-              {link.title}
-            </a>
-          ) : (
-            <Link href={link.url as string}>
-              <a>{link.title}</a>
-            </Link>
-          )}
-        </li>
-      ))}
-    </ul>
+      <ul className={styles.linkList}>
+        {links.map((link) => (
+          <li key={link.url as string} className={styles.link}>
+            {link.isExternal && link.isExternal == true ? (
+              <a href={link.url as string} target="_blank">
+                {link.title}
+              </a>
+            ) : (
+              <Link href={link.url as string}>
+                <a>{link.title}</a>
+              </Link>
+            )}
+          </li>
+        ))}
+      </ul>
+    </>
   );
 }
