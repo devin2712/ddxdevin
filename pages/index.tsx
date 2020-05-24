@@ -27,7 +27,7 @@ export default function Home() {
           <LinkList
             title="Photography"
             links={[
-              { url: "#", title: "La Main Ouverte" },
+              { url: "/la-main-ouverte", title: "La Main Ouverte" },
               { url: "#1", title: "Bauhäuslers" },
               { url: "#2", title: "(S)E1 [WIP]" },
             ]}
