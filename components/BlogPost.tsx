@@ -1,4 +1,5 @@
 import styles from "./BlogPost.module.css";
+import Head from "next/head";
 
 export type BlogPostProps = {
   title: String;
@@ -7,9 +8,14 @@ export type BlogPostProps = {
 
 export default function BlogPost({ title, children }: BlogPostProps) {
   return (
-    <article className={styles.blogPost}>
-      {title ? <h1>{title}</h1> : null}
-      <section>{children}</section>
-    </article>
+    <>
+      <Head>
+        <title>{title}</title>
+      </Head>
+      <article className={styles.blogPost}>
+        {title ? <h1>{title}</h1> : null}
+        <section>{children}</section>
+      </article>
+    </>
   );
 }
