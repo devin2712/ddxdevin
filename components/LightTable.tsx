@@ -2,7 +2,7 @@ import React from "react";
 
 import styles from "./LightTable.module.css";
 import BlogPostGallery, { BlogPostGalleryImage } from "./BlogPostGallery";
-import ThemeContext from "../pages/ThemeContext";
+import ThemeContext from "../context/ThemeContext";
 
 export enum LightTableMode {
   LIGHT,

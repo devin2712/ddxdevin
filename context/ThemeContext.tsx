@@ -5,7 +5,11 @@ const ThemeContext = React.createContext({
   toggle: () => {},
 });
 
-export function ThemeProvider(props) {
+export interface ThemeProviderProps {
+  children: React.ReactNode;
+}
+
+export function ThemeProvider({ children }: ThemeProviderProps) {
   const [dark, setDark] = useState(false);
 
   useEffect(() => {
@@ -37,7 +41,7 @@ export function ThemeProvider(props) {
         toggle,
       }}
     >
-      {props.children}
+      {children ? children : null}
     </ThemeContext.Provider>
   );
 }

@@ -6,7 +6,7 @@ import "../styles/ddx-main.css";
 import { AppProps } from "next/app";
 import Router from "next/router";
 
-import { ThemeProvider } from "./ThemeContext";
+import { ThemeProvider } from "../context/ThemeContext";
 
 // OVERRIDE for now; only enable dark mode for /se1 page
 const handleRouteChange = (url) => {
