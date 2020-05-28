@@ -2,7 +2,7 @@ import Layout from "../components/Layout";
 import BlogPost from "../components/BlogPost";
 import BlogPostGallery from "../components/BlogPostGallery";
 
-export default function LaMainOuverte() {
+export default function Bauhaus() {
   return (
     <Layout>
       <BlogPost title="BAUHAUS">
