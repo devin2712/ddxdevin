@@ -1,10 +1,22 @@
 import Layout from "../components/Layout";
 import BlogPost from "../components/BlogPost";
 import BlogPostGallery from "../components/BlogPostGallery";
+import Head from "next/head";
 
 export default function Bauhaus() {
   return (
     <Layout>
+      <Head>
+        <meta
+          name="og:image"
+          content="https://devinnguyen.com/images/bauhaus/6.jpg"
+        />
+        <meta property="og:type" content="article" />
+        <meta
+          property="og:title"
+          content="Bauhaus Architecture & CloudHealth UI"
+        />
+      </Head>
       <BlogPost title="BAUHAUS">
         <>
           <p>

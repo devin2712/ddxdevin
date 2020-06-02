@@ -1,10 +1,19 @@
 import Layout from "../components/Layout";
 import BlogPost from "../components/BlogPost";
 import BlogPostGallery from "../components/BlogPostGallery";
+import Head from "next/head";
 
 export default function LaMainOuverte() {
   return (
     <Layout>
+      <Head>
+        <meta
+          name="og:image"
+          content="https://devinnguyen.com/images/la-main-ouverte/spread3.jpg"
+        />
+        <meta property="og:type" content="article" />
+        <meta property="og:title" content="La Main Ouverte" />
+      </Head>
       <BlogPost title="LA MAIN OUVERTE">
         <>
           <summary>

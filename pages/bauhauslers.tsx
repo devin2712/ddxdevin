@@ -1,10 +1,19 @@
 import Layout from "../components/Layout";
 import BlogPost from "../components/BlogPost";
 import BlogPostGallery, { GalleryType } from "../components/BlogPostGallery";
+import Head from "next/head";
 
 export default function Bauhauslers() {
   return (
     <Layout>
+      <Head>
+        <meta
+          name="og:image"
+          content="https://devinnguyen.com/images/bauhauslers/1.jpg"
+        />
+        <meta property="og:type" content="article" />
+        <meta property="og:title" content="Bauhäuslers" />
+      </Head>
       <BlogPost title="BAUHÄUSLERS">
         <>
           <summary>
