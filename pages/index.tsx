@@ -28,11 +28,11 @@ export default function Home() {
           <LinkList
             title="Code"
             links={[
-              { url: "https://github.com/devin2712/covid-notify", title: "COVID-19 Vaccine Appointment Notification System [Source Code]" },
-              { url: "https://github.com/devin2712/covid-notify", title: "COVID-19 Vaccine Appointment Notification System [Setup Guide]" },
+              { url: "https://github.com/devin2712/covid-notify", title: "COVID-19 Vaccine Appointment Notification System [Source Code]", isExternal: true, },
+              { url: "https://github.com/devin2712/covid-notify", title: "COVID-19 Vaccine Appointment Notification System [Setup Guide]", isExternal: true, },
             ]}
           />
-          
+
           <LinkList
             title="Photography"
             links={[
