@@ -28,16 +28,17 @@ export default function Home() {
           <LinkList
             title="Code"
             links={[
-              { url: "/la-main-ouverte", title: "La Main Ouverte" },
-              { url: "/bauhauslers", title: "Bauhäuslers" },
-              { url: "/se1", title: "(S)E1 [WIP]" },
+              { url: "https://github.com/devin2712/covid-notify", title: "COVID-19 Vaccine Appointment Notification System [Source Code]" },
+              { url: "https://github.com/devin2712/covid-notify", title: "COVID-19 Vaccine Appointment Notification System [Setup Guide]" },
             ]}
           />
+          
           <LinkList
             title="Photography"
             links={[
-              { url: "https://github.com/devin2712/covid-notify", title: "COVID-19 Vaccine Appointment Notification System [Source Code]" },
-              { url: "https://github.com/devin2712/covid-notify", title: "COVID-19 Vaccine Appointment Notification System [Setup Guide]" },
+              { url: "/la-main-ouverte", title: "La Main Ouverte" },
+              { url: "/bauhauslers", title: "Bauhäuslers" },
+              { url: "/se1", title: "(S)E1 [WIP]" },
             ]}
           />
           <LinkList
