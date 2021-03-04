@@ -16,7 +16,7 @@ export default function Bauhauslers() {
       </Head>
       <BlogPost title="BAUHÄUSLERS">
         <>
-          <summary>
+          <section>
             <p>
               <em>Bauhäusler</em> — a student of the bauhaus
             </p>
@@ -25,7 +25,7 @@ export default function Bauhauslers() {
               master, Mies van der Rohe; from "Mies" and German "misslingen"
               [failure]
             </p>
-          </summary>
+          </section>
           <BlogPostGallery
             type={GalleryType.GRID}
             listOfImages={[

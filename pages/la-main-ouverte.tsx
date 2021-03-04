@@ -16,7 +16,7 @@ export default function LaMainOuverte() {
       </Head>
       <BlogPost title="LA MAIN OUVERTE">
         <>
-          <summary>
+          <section>
             <ul>
               <li>Chandigarh, India</li>
             </ul>
@@ -31,7 +31,7 @@ export default function LaMainOuverte() {
                 <em>Sold out.</em>
               </li>
             </ul>
-          </summary>
+          </section>
           <BlogPostGallery
             listOfImages={[
               {

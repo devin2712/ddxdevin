@@ -8,7 +8,7 @@ export default function Se1() {
     <Layout>
       <BlogPost title="LIGHT TABLE">
         <>
-          <summary>
+          <section>
             <ul>
               <li>
                 <em>
@@ -35,7 +35,7 @@ export default function Se1() {
                 <span>London, UK</span>
               </li>
             </ul>
-          </summary>
+          </section>
           <LightTable
             images={[
               {
