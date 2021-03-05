@@ -30,6 +30,7 @@ export default function Home() {
             links={[
               { url: "https://github.com/devin2712/covid-notify", title: "COVID-19 Vaccine Appointment Notification System [Source Code]", isExternal: true, },
               { url: "https://ddxdevin.medium.com/build-a-covid-19-vaccine-appointment-notification-system-with-a-twilio-serverless-function-23cf328c01f4", title: "COVID-19 Vaccine Appointment Notification System [Setup Guide]", isExternal: true, },
+              { url: "https://github.com/devin2712/myturn-monitor", title: "COVID-19 Vaccine: MyTurn CA Availability Monitor", isExternal: true, },
             ]}
           />
 
