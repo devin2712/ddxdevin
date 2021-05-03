@@ -14,27 +14,29 @@ export default function Home() {
         <h1>DEVIN NGUYEN</h1>
         <section className={styles.mainContent}>
           <p>
-            Senior Software Engineer at{" "}
-            <a
-              href="https://www.hypr.com/"
-              className={styles.company}
-              target="_blank"
-              rel="noreferrer"
-            >
-              HYPR
-            </a>
-          </p>
-          <p className={styles.past}>
-            Software Engineer at{" "}
-            <a
-              href="https://www.cloudhealthtech.com/"
-              className={styles.company}
-              target="_blank"
-              rel="noreferrer"
-            >
-              CloudHealth
-            </a>
-            <span> (acquired by VMware!)</span>
+            <span className={styles.company}>
+              Senior Software Engineer at{" "}
+              <a
+                href="https://www.hypr.com/"
+                className={styles.companyLink}
+                target="_blank"
+                rel="noreferrer"
+              >
+                HYPR
+              </a>
+            </span>
+            <span className={styles.past}>
+              Software Engineer at{" "}
+              <a
+                href="https://www.cloudhealthtech.com/"
+                className={styles.companyLink}
+                target="_blank"
+                rel="noreferrer"
+              >
+                CloudHealth
+              </a>
+              <span> (acquired by VMware!)</span>
+            </span>
           </p>
           <LinkList
             title="Code"
