@@ -1,10 +1,14 @@
-.cloudhealth,
-.cloudhealth:visited {
+.company,
+.company:visited {
   font-weight: 400;
   color: #282561;
 }
-.cloudhealth:hover {
+.company:hover {
   color: #533feb;
+}
+
+.past {
+  text-decoration: line-through;
 }
 
 .mainContent {
