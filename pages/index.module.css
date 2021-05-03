@@ -1,14 +1,22 @@
-.company,
-.company:visited {
+.companyLink,
+.companyLink:visited {
   font-weight: 400;
   color: #282561;
 }
-.company:hover {
+.companyLink:hover {
   color: #533feb;
+}
+
+.company {
+  display: block;
 }
 
 .past {
   text-decoration: line-through;
+}
+
+.companies span {
+  display: block;
 }
 
 .mainContent {
