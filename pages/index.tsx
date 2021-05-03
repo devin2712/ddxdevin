@@ -14,10 +14,21 @@ export default function Home() {
         <h1>DEVIN NGUYEN</h1>
         <section className={styles.mainContent}>
           <p>
+            Senior Software Engineer at{" "}
+            <a
+              href="https://www.hypr.com/"
+              className={styles.company}
+              target="_blank"
+              rel="noreferrer"
+            >
+              HYPR
+            </a>
+          </p>
+          <p className={styles.past}>
             Software Engineer at{" "}
             <a
               href="https://www.cloudhealthtech.com/"
-              className={styles.cloudhealth}
+              className={styles.company}
               target="_blank"
               rel="noreferrer"
             >
