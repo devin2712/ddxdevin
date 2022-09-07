@@ -15,7 +15,7 @@ export default function Home() {
         <section className={styles.mainContent}>
           <p>
             <span className={styles.company}>
-              Senior Software Engineer at{" "}
+              Principal Engineer at{" "}
               <a
                 href="https://www.hypr.com/"
                 className={styles.companyLink}
