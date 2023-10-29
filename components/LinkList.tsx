@@ -20,7 +20,7 @@ export default function LinkList({ title, links }: LinkListProps) {
       {title ? (
         <h2 className={styles.title}>
           <span aria-hidden="true" className={styles.icon}>
-            &#8594;
+            &#x2192;
           </span>
           {title}
         </h2>
@@ -36,7 +36,7 @@ export default function LinkList({ title, links }: LinkListProps) {
                     {" "}
                     [{link.externalLinkLabel}{" "}
                     <span className={styles.externalIcon} aria-hidden="true">
-                      &#8599;
+                      &#x2197;
                     </span>
                     ]
                   </span>
