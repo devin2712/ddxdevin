@@ -5,6 +5,8 @@
     url("/fonts/TroisMilleBlackItalic-30.woff") format("woff");
 }
 
+/** Inter Font Family Definitions **/
+
 @font-face {
   font-display: swap;
   font-family: "Inter";
