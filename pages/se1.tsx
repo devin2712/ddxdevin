@@ -5,7 +5,7 @@ import BlogPostGallery from "../components/BlogPostGallery";
 
 export default function Se1() {
   return (
-    <Layout>
+    <Layout largeFormat>
       <BlogPost title="LIGHT TABLE">
         <>
           <section>

@@ -12,9 +12,12 @@ export default function Home() {
           <title>Devin Nguyen.Home</title>
         </Head>
         <h1>DEVIN NGUYEN</h1>
-        <section className={styles.mainContent}>
-          <p>
+        <div className={styles.mainContent}>
+          <div>
             <span className={styles.company}>
+              <span className={styles.icon} aria-hidden="true">
+                &#8600;
+              </span>
               Principal Engineer at{" "}
               <a
                 href="https://www.hypr.com/"
@@ -25,25 +28,49 @@ export default function Home() {
                 HYPR
               </a>
             </span>
-            <span className={styles.past}>
-              Software Engineer at{" "}
-              <a
-                href="https://www.cloudhealthtech.com/"
-                className={styles.companyLink}
-                target="_blank"
-                rel="noreferrer"
-              >
-                CloudHealth
-              </a>
-              <span> (acquired by VMware!)</span>
+            <span className={styles.company}>
+              <span className={styles.icon} aria-hidden="true">
+                &#8600;
+              </span>
+              <span className={styles.past}>
+                Software Engineer at{" "}
+                <a
+                  href="https://www.cloudhealthtech.com/"
+                  className={styles.companyLink}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  CloudHealth
+                </a>
+                <span> (acquired by VMware!)</span>
+              </span>
             </span>
-          </p>
+          </div>
           <LinkList
             title="Code"
             links={[
-              { url: "https://github.com/devin2712/covid-notify", title: "COVID-19 Vaccine: Appointment Notification System [Source Code]", isExternal: true, },
-              { url: "https://ddxdevin.medium.com/build-a-covid-19-vaccine-appointment-notification-system-with-a-twilio-serverless-function-23cf328c01f4", title: "COVID-19 Vaccine: Appointment Notification System [Setup Guide]", isExternal: true, },
-              { url: "https://github.com/devin2712/myturn-monitor", title: "COVID-19 Vaccine: MyTurn CA Availability Monitor", isExternal: true, },
+              {
+                url: "https://github.com/devin2712/covid-notify",
+                title:
+                  "COVID-19 Vaccine: Appointment Notification System",
+                isExternal: true,
+                externalLinkLabel: "GitHub Source Code",
+              },
+              {
+                url:
+                  "https://ddxdevin.medium.com/build-a-covid-19-vaccine-appointment-notification-system-with-a-twilio-serverless-function-23cf328c01f4",
+                title:
+                  "COVID-19 Vaccine: Appointment Notification System",
+                isExternal: true,
+                externalLinkLabel: "Medium Setup Guide",
+              },
+              {
+                url: "https://github.com/devin2712/myturn-monitor",
+                title:
+                  "COVID-19 Vaccine: MyTurn CA Availability Monitor",
+                isExternal: true,
+                externalLinkLabel: "GitHub Source Code",
+              },
             ]}
           />
 
@@ -65,6 +92,7 @@ export default function Home() {
             ]}
           />
           <LinkList
+            title="Links"
             links={[
               {
                 url: "//www.linkedin.com/in/devinnguyen/",
@@ -88,7 +116,7 @@ export default function Home() {
               },
             ]}
           />
-        </section>
+        </div>
       </Layout>
     </>
   );

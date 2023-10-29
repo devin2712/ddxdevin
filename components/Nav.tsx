@@ -6,7 +6,7 @@ export default function Nav() {
   return (
     <nav className={styles.nav}>
       <Link href="/">
-        <a>&#8593; INDEX</a>
+        <span className={styles.icon} aria-hidden="true">&#8593;</span> INDEX
       </Link>
     </nav>
   );

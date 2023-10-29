@@ -6,12 +6,14 @@ import Nav from "./Nav";
 export default function Layout({
   children,
   home,
+  largeFormat
 }: {
   children: React.ReactNode;
   home?: boolean;
+  largeFormat?: boolean;
 }) {
   return (
-    <div className={styles.container}>
+    <div className={`${styles.container} ${!!largeFormat ? styles.largeFormat : ""}`}>
       <Head>
         <meta charSet="utf-8" />
         <meta httpEquiv="x-ua-compatible" content="ie=edge" />

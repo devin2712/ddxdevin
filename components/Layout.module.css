@@ -1,5 +1,9 @@
+.container.largeFormat {
+  max-width: 76rem;
+}
+
 .container {
-  max-width: 72rem;
+  max-width: 48rem;
   padding: 0 1rem;
   margin: 0 auto 6rem;
 }

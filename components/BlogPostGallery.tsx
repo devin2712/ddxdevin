@@ -1,4 +1,3 @@
-import LazyLoad from "react-lazyload";
 import Draggable from "react-draggable";
 
 import styles from "./BlogPostGallery.module.css";
@@ -47,15 +46,13 @@ export default function BlogPostGallery({
     <div className={`${styles.galleryImages} ${galleryTypeClass(type)}`}>
       {listOfImages.map((image) => (
         <div className={styles.galleryImage} key={image.src as string}>
-          <LazyLoad height={image.height || 500}>
-            {draggable && draggable === true ? (
-              <Draggable onStart={(e) => e.preventDefault()}>
-                <div className={styles.draggable}>{renderImage(image)}</div>
-              </Draggable>
-            ) : (
-              renderImage(image)
-            )}
-          </LazyLoad>
+          {draggable && draggable === true ? (
+            <Draggable onStart={(e) => e.preventDefault()}>
+              <div className={styles.draggable}>{renderImage(image)}</div>
+            </Draggable>
+          ) : (
+            renderImage(image)
+          )}
         </div>
       ))}
     </div>

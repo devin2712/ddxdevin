@@ -11,16 +11,16 @@
   display: block;
 }
 
+.icon {
+  font-weight: 800;
+  font-size: 24px;
+  margin-right: 0.25rem;
+}
+
 .past {
   text-decoration: line-through;
 }
 
 .companies span {
   display: block;
-}
-
-.mainContent {
-  background: url("/images/bg.svg");
-  background-size: 4px 24px;
-  background-position: right 20px top;
 }

@@ -5,7 +5,7 @@ import Head from "next/head";
 
 export default function Bauhauslers() {
   return (
-    <Layout>
+    <Layout largeFormat>
       <Head>
         <meta
           name="og:image"
