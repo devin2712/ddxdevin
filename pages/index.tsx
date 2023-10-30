@@ -32,8 +32,8 @@ export default function Home() {
               <span className={styles.icon} aria-hidden="true">
                 &#x2198;
               </span>
-              <span className={styles.past}>
-                Software Engineer at{" "}
+              <span>
+                Previously: Software Engineer at{" "}
                 <a
                   href="https://www.cloudhealthtech.com/"
                   className={styles.companyLink}

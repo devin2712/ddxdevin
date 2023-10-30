@@ -1,6 +1,6 @@
 .companyLink,
 .companyLink:visited {
-  font-weight: 400;
+  font-weight: 600;
   color: #282561;
 }
 .companyLink:hover {
@@ -15,10 +15,6 @@
   font-weight: 800;
   font-size: 24px;
   margin-right: 0.25rem;
-}
-
-.past {
-  text-decoration: line-through;
 }
 
 .companies span {
