@@ -50,6 +50,12 @@ export default function Home() {
             title="Code"
             links={[
               {
+                url: "https://github.com/devin2712/myturn-monitor",
+                title: "COVID-19 Vaccine: MyTurn CA Availability Monitor",
+                isExternal: true,
+                externalLinkLabel: "GitHub Source Code",
+              },
+              {
                 url: "https://github.com/devin2712/covid-notify",
                 title: "COVID-19 Vaccine: Appointment Notification System",
                 isExternal: true,
@@ -61,12 +67,6 @@ export default function Home() {
                 title: "COVID-19 Vaccine: Appointment Notification System",
                 isExternal: true,
                 externalLinkLabel: "Medium Setup Guide",
-              },
-              {
-                url: "https://github.com/devin2712/myturn-monitor",
-                title: "COVID-19 Vaccine: MyTurn CA Availability Monitor",
-                isExternal: true,
-                externalLinkLabel: "GitHub Source Code",
               },
             ]}
           />
