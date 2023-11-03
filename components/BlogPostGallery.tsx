@@ -12,7 +12,6 @@ export interface BlogPostGalleryImage {
   src: String;
   pre: String;
   alt: String;
-  height?: Number;
 }
 
 export interface BlogPostGalleryProps {
