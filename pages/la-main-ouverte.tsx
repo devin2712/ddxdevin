@@ -37,47 +37,47 @@ export default function LaMainOuverte() {
               {
                 src: "/images/la-main-ouverte/lmo.jpg",
                 pre: "/images/la-main-ouverte/pre/lmo.jpg",
-                alt: "La Main Ouverte Spread",
+                alt: "Front and back cover of La Main Ouverte zine showing images from Chandigarh",
               },
               {
                 src: "/images/la-main-ouverte/spread1.jpg",
                 pre: "/images/la-main-ouverte/pre/spread1.jpg",
-                alt: "La Main Ouverte Spread",
+                alt: "Inside cover illustration and title page of zine: Chandigarh, India 2019",
               },
               {
                 src: "/images/la-main-ouverte/spread2.jpg",
                 pre: "/images/la-main-ouverte/pre/spread2.jpg",
-                alt: "La Main Ouverte Spread",
+                alt: "Image of introduction paragraph of The Open Hand and the history of Le Corbusier and Chandigarh",
               },
               {
                 src: "/images/la-main-ouverte/spread3.jpg",
                 pre: "/images/la-main-ouverte/pre/spread3.jpg",
-                alt: "La Main Ouverte Spread",
+                alt: "Double-page spread with images of Le Corbusier's architecture in Chandigarh",
               },
               {
                 src: "/images/la-main-ouverte/spread4.jpg",
                 pre: "/images/la-main-ouverte/pre/spread4.jpg",
-                alt: "La Main Ouverte Spread",
+                alt: "Double-page spread with images of Le Corbusier's architecture in Chandigarh",
               },
               {
                 src: "/images/la-main-ouverte/spread5.jpg",
                 pre: "/images/la-main-ouverte/pre/spread5.jpg",
-                alt: "La Main Ouverte Spread",
+                alt: "Double-page spread with images of Le Corbusier's architecture in Chandigarh",
               },
               {
                 src: "/images/la-main-ouverte/spread6.jpg",
                 pre: "/images/la-main-ouverte/pre/spread6.jpg",
-                alt: "La Main Ouverte Spread",
+                alt: "Double-page spread with images of Le Corbusier's architecture in Chandigarh",
               },
               {
                 src: "/images/la-main-ouverte/spread7.jpg",
                 pre: "/images/la-main-ouverte/pre/spread7.jpg",
-                alt: "La Main Ouverte Spread",
+                alt: "Double-page spread with images of Le Corbusier's architecture in Chandigarh",
               },
               {
                 src: "/images/la-main-ouverte/spread8.jpg",
                 pre: "/images/la-main-ouverte/pre/spread8.jpg",
-                alt: "La Main Ouverte Spread",
+                alt: "Double-page spread with images of Le Corbusier's architecture in Chandigarh",
               },
             ]}
           />

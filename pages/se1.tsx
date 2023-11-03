@@ -41,57 +41,57 @@ export default function Se1() {
               {
                 src: "/images/light-table/000051980002.jpg",
                 pre: "/images/light-table/pre/000051980002.jpg",
-                alt: "Light Table Picture",
+                alt: "Photograph of urban scenes from London's SE1 and E1 neighborhoods",
               },
               {
                 src: "/images/light-table/000051980007.jpg",
                 pre: "/images/light-table/pre/000051980007.jpg",
-                alt: "Light Table Picture",
+                alt: "Photograph of urban scenes from London's SE1 and E1 neighborhoods",
               },
               {
                 src: "/images/light-table/000055320003.jpg",
                 pre: "/images/light-table/pre/000055320003.jpg",
-                alt: "Light Table Picture",
+                alt: "Photograph of urban scenes from London's SE1 and E1 neighborhoods",
               },
               {
                 src: "/images/light-table/000055320005.jpg",
                 pre: "/images/light-table/pre/000055320005.jpg",
-                alt: "Light Table Picture",
+                alt: "Photograph of urban scenes from London's SE1 and E1 neighborhoods",
               },
               {
                 src: "/images/light-table/000055320007.jpg",
                 pre: "/images/light-table/pre/000055320007.jpg",
-                alt: "Light Table Picture",
+                alt: "Photograph of urban scenes from London's SE1 and E1 neighborhoods",
               },
               {
                 src: "/images/light-table/000055320009.jpg",
                 pre: "/images/light-table/pre/000055320009.jpg",
-                alt: "Light Table Picture",
+                alt: "Photograph of urban scenes from London's SE1 and E1 neighborhoods",
               },
               {
                 src: "/images/light-table/000073900001.jpg",
                 pre: "/images/light-table/pre/000073900001.jpg",
-                alt: "Light Table Picture",
+                alt: "Photograph of urban scenes from London's SE1 and E1 neighborhoods",
               },
               {
                 src: "/images/light-table/000073900004.jpg",
                 pre: "/images/light-table/pre/000073900004.jpg",
-                alt: "Light Table Picture",
+                alt: "Photograph of urban scenes from London's SE1 and E1 neighborhoods",
               },
               {
                 src: "/images/light-table/000095990003.jpg",
                 pre: "/images/light-table/pre/000095990003.jpg",
-                alt: "Light Table Picture",
+                alt: "Photograph of urban scenes from London's SE1 and E1 neighborhoods",
               },
               {
                 src: "/images/light-table/000095990004.jpg",
                 pre: "/images/light-table/pre/000095990004.jpg",
-                alt: "Light Table Picture",
+                alt: "Photograph of urban scenes from London's SE1 and E1 neighborhoods",
               },
               {
                 src: "/images/light-table/000096000012.jpg",
                 pre: "/images/light-table/pre/000096000012.jpg",
-                alt: "Light Table Picture",
+                alt: "Photograph of urban scenes from London's SE1 and E1 neighborhoods",
               },
             ]}
           />
