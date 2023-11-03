@@ -14,6 +14,7 @@ export interface BlogPostGalleryImage {
   alt: String;
   height: Number;
   width: Number;
+  largestContentfulPaint?: boolean;
 }
 
 export interface BlogPostGalleryProps {
@@ -39,13 +40,14 @@ export default function BlogPostGallery({
 }: BlogPostGalleryProps) {
   const renderImage = (image) => {
     return (
-      <Image 
+      <Image
         src={image.src}
         alt={image.alt}
         width={image.width}
         height={image.height}
         placeholder={image.pre ? "blur" : "empty"}
         blurDataURL={image.pre ?? null}
+        priority={image.largestContentfulPaint ?? false}
       />
     );
   };

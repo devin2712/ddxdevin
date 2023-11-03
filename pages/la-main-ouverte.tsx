@@ -41,6 +41,7 @@ export default function LaMainOuverte() {
                   "Front and back cover of La Main Ouverte zine showing images from Chandigarh",
                 width: 1216,
                 height: 760,
+                largestContentfulPaint: true,
               },
               {
                 src: "/images/la-main-ouverte/spread1.jpg",

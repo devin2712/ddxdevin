@@ -38,6 +38,7 @@ export default function Bauhaus() {
                   "Screenshot of browser window with Google Slides main title slide: 100 Summer, Bauhaus Architecture and CloudHealth UI",
                 width: 1216,
                 height: 788,
+                largestContentfulPaint: true,
               },
               {
                 src: "/images/bauhaus/1.jpg",
