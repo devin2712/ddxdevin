@@ -5,7 +5,7 @@ import Head from "next/head";
 
 export default function LaMainOuverte() {
   return (
-    <Layout>
+    <Layout largeFormat>
       <Head>
         <meta
           name="og:image"
@@ -37,47 +37,74 @@ export default function LaMainOuverte() {
               {
                 src: "/images/la-main-ouverte/lmo.jpg",
                 pre: "/images/la-main-ouverte/pre/lmo.jpg",
-                alt: "Front and back cover of La Main Ouverte zine showing images from Chandigarh",
+                alt:
+                  "Front and back cover of La Main Ouverte zine showing images from Chandigarh",
+                width: 1216,
+                height: 760,
               },
               {
                 src: "/images/la-main-ouverte/spread1.jpg",
                 pre: "/images/la-main-ouverte/pre/spread1.jpg",
-                alt: "Inside cover illustration and title page of zine: Chandigarh, India 2019",
+                alt:
+                  "Inside cover illustration and title page of zine: Chandigarh, India 2019",
+                width: 1216,
+                height: 760,
               },
               {
                 src: "/images/la-main-ouverte/spread2.jpg",
                 pre: "/images/la-main-ouverte/pre/spread2.jpg",
-                alt: "Image of introduction paragraph of The Open Hand and the history of Le Corbusier and Chandigarh",
+                alt:
+                  "Image of introduction paragraph of The Open Hand and the history of Le Corbusier and Chandigarh",
+                width: 1216,
+                height: 760,
               },
               {
                 src: "/images/la-main-ouverte/spread3.jpg",
                 pre: "/images/la-main-ouverte/pre/spread3.jpg",
-                alt: "Double-page spread with images of Le Corbusier's architecture in Chandigarh",
+                alt:
+                  "Double-page spread with images of Le Corbusier's architecture in Chandigarh",
+                width: 1216,
+                height: 760,
               },
               {
                 src: "/images/la-main-ouverte/spread4.jpg",
                 pre: "/images/la-main-ouverte/pre/spread4.jpg",
-                alt: "Double-page spread with images of Le Corbusier's architecture in Chandigarh",
+                alt:
+                  "Double-page spread with images of Le Corbusier's architecture in Chandigarh",
+                width: 1216,
+                height: 760,
               },
               {
                 src: "/images/la-main-ouverte/spread5.jpg",
                 pre: "/images/la-main-ouverte/pre/spread5.jpg",
-                alt: "Double-page spread with images of Le Corbusier's architecture in Chandigarh",
+                alt:
+                  "Double-page spread with images of Le Corbusier's architecture in Chandigarh",
+                width: 1216,
+                height: 760,
               },
               {
                 src: "/images/la-main-ouverte/spread6.jpg",
                 pre: "/images/la-main-ouverte/pre/spread6.jpg",
-                alt: "Double-page spread with images of Le Corbusier's architecture in Chandigarh",
+                alt:
+                  "Double-page spread with images of Le Corbusier's architecture in Chandigarh",
+                width: 1216,
+                height: 760,
               },
               {
                 src: "/images/la-main-ouverte/spread7.jpg",
                 pre: "/images/la-main-ouverte/pre/spread7.jpg",
-                alt: "Double-page spread with images of Le Corbusier's architecture in Chandigarh",
+                alt:
+                  "Double-page spread with images of Le Corbusier's architecture in Chandigarh",
+                width: 1216,
+                height: 760,
               },
               {
                 src: "/images/la-main-ouverte/spread8.jpg",
                 pre: "/images/la-main-ouverte/pre/spread8.jpg",
-                alt: "Double-page spread with images of Le Corbusier's architecture in Chandigarh",
+                alt:
+                  "Double-page spread with images of Le Corbusier's architecture in Chandigarh",
+                width: 1216,
+                height: 760,
               },
             ]}
           />

@@ -21,6 +21,7 @@ div.galleryImages div.galleryImage {
 div.galleryImages img {
   display: inline-block;
   max-width: 100%;
+  height: 100%;
 }
 
 div.galleryImages.grid {

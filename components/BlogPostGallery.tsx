@@ -1,7 +1,7 @@
 import Draggable from "react-draggable";
+import Image from "next/image";
 
 import styles from "./BlogPostGallery.module.css";
-import ProgressiveImage from "./ProgressiveImage";
 
 export enum GalleryType {
   GRID,
@@ -10,8 +10,10 @@ export enum GalleryType {
 
 export interface BlogPostGalleryImage {
   src: String;
-  pre: String;
+  pre?: String;
   alt: String;
+  height: Number;
+  width: Number;
 }
 
 export interface BlogPostGalleryProps {
@@ -37,7 +39,14 @@ export default function BlogPostGallery({
 }: BlogPostGalleryProps) {
   const renderImage = (image) => {
     return (
-      <ProgressiveImage preview={image.pre} image={image.src} alt={image.alt} />
+      <Image 
+        src={image.src}
+        alt={image.alt}
+        width={image.width}
+        height={image.height}
+        placeholder={image.pre ? "blur" : "empty"}
+        blurDataURL={image.pre ?? null}
+      />
     );
   };
 

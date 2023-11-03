@@ -13,6 +13,11 @@ export interface ProgressiveImageState {
   loading: boolean;
 }
 
+/**
+ * @deprecated Deprecated in favor of using native next.js <Image> with blur and optimizations
+ * @see https://nextjs.org/docs/pages/building-your-application/optimizing/images
+ */
+
 class ProgressiveImage extends React.Component<
   ProgressiveImageProps,
   ProgressiveImageState
