@@ -1,15 +1,19 @@
 import Head from "next/head";
+import { useIntl } from "react-intl";
+
 import Layout from "../components/Layout";
 import LinkList from "../components/LinkList";
 
 import styles from "./index.module.css";
 
 export default function Home() {
+  const { formatMessage } = useIntl();
+
   return (
     <>
       <Layout home>
         <Head>
-          <title>Devin Nguyen.Home</title>
+          <title>{formatMessage({ id: "ddxdevin.home.title" })}</title>
         </Head>
         <h1>DEVIN NGUYEN</h1>
         <div className={styles.mainContent}>
@@ -18,7 +22,7 @@ export default function Home() {
               <span className={styles.icon} aria-hidden="true">
                 &#x2198;
               </span>
-              Principal Engineer at{" "}
+              {formatMessage({ id: "ddxdevin.work.role.principal" })}{" "}
               <a
                 href="https://www.hypr.com/"
                 className={styles.companyLink}
@@ -33,7 +37,8 @@ export default function Home() {
                 &#x2198;
               </span>
               <span>
-                Previously: Software Engineer at{" "}
+                {formatMessage({ id: "ddxdevin.work.role.previous" })}:{" "}
+                {formatMessage({ id: "ddxdevin.work.role.software" })}{" "}
                 <a
                   href="https://www.cloudhealthtech.com/"
                   className={styles.companyLink}
@@ -42,73 +47,95 @@ export default function Home() {
                 >
                   CloudHealth
                 </a>
-                <span> (acquired by VMware!)</span>
+                <span>
+                  {" "}
+                  {formatMessage({ id: "ddxdevin.work.role.cht.acquired" })}
+                </span>
               </span>
             </span>
           </div>
           <LinkList
-            title="Code"
+            title={formatMessage({ id: "ddxdevin.code.title" })}
             links={[
               {
                 url: "https://github.com/devin2712/myturn-monitor",
-                title: "COVID-19 Vaccine: MyTurn CA Availability Monitor",
+                title: formatMessage({ id: "ddxdevin.code.myturn.title" }),
                 isExternal: true,
-                externalLinkLabel: "GitHub Source Code",
+                externalLinkLabel: formatMessage({
+                  id: "ddxdevin.code.tags.github",
+                }),
               },
               {
                 url: "https://github.com/devin2712/covid-notify",
-                title: "COVID-19 Vaccine: Appointment Notification System",
+                title: formatMessage({ id: "ddxdevin.code.notify.title" }),
                 isExternal: true,
-                externalLinkLabel: "GitHub Source Code",
+                externalLinkLabel: formatMessage({
+                  id: "ddxdevin.code.tags.github",
+                }),
               },
               {
                 url:
                   "https://ddxdevin.medium.com/build-a-covid-19-vaccine-appointment-notification-system-with-a-twilio-serverless-function-23cf328c01f4",
-                title: "COVID-19 Vaccine: Appointment Notification System",
+                title: formatMessage({ id: "ddxdevin.code.notify.title" }),
                 isExternal: true,
-                externalLinkLabel: "Medium Setup Guide",
+                externalLinkLabel: formatMessage({
+                  id: "ddxdevin.code.tags.medium",
+                }),
               },
             ]}
           />
 
           <LinkList
-            title="Photography"
-            links={[
-              { url: "/la-main-ouverte", title: "La Main Ouverte" },
-              { url: "/bauhauslers", title: "Bauhäuslers" },
-              { url: "/se1", title: "(S)E1 [WIP]" },
-            ]}
-          />
-          <LinkList
-            title="Talks"
+            title={formatMessage({ id: "ddxdevin.photography.title" })}
             links={[
               {
-                url: "/bauhaus",
-                title: "Bauhaus Architecture & CloudHealth UI",
+                url: "/la-main-ouverte",
+                title: formatMessage({
+                  id: "ddxdevin.photography.laMainOuverte",
+                }),
+              },
+              {
+                url: "/bauhauslers",
+                title: formatMessage({
+                  id: "ddxdevin.photography.bauhauslers",
+                }),
+              },
+              {
+                url: "/se1",
+                title: formatMessage({ id: "ddxdevin.photography.se1" }),
               },
             ]}
           />
           <LinkList
-            title="Links"
+            title={formatMessage({ id: "ddxdevin.talks.title" })}
+            links={[
+              {
+                url: "/bauhaus",
+                title: formatMessage({ id: "ddxdevin.talks.bauhaus.title" }),
+              },
+            ]}
+          />
+          <LinkList
+            title={formatMessage({ id: "ddxdevin.links.title" })}
             links={[
               {
                 url: "//www.linkedin.com/in/devinnguyen/",
-                title: "LinkedIn",
+                title: formatMessage({ id: "ddxdevin.links.linkedin" }),
                 isExternal: true,
               },
               {
                 url: "//github.com/devin2712",
-                title: "Github",
+                title: formatMessage({ id: "ddxdevin.links.github" }),
                 isExternal: true,
               },
               {
                 url: "//twitter.com/ddxdevin",
-                title: "Twitter",
+                title: formatMessage({ id: "ddxdevin.links.twitter" }),
                 isExternal: true,
               },
               {
                 url: "//instagram.com/ddxdevin",
-                title: "Instagram",
+                title: formatMessage({ id: "ddxdevin.links.instagram" }),
                 isExternal: true,
               },
             ]}

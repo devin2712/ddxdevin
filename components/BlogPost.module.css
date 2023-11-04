@@ -11,3 +11,7 @@ article.blogPost p {
   max-width: 640px;
   text-align: justify;
 }
+
+article.blogPost > h1 {
+  text-transform: uppercase;
+}

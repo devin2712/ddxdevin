@@ -17,6 +17,7 @@ html[data-dark-mode-enabled="true"].dark p,
 html[data-dark-mode-enabled="true"].dark span,
 html[data-dark-mode-enabled="true"].dark a,
 html[data-dark-mode-enabled="true"].dark em,
+html[data-dark-mode-enabled="true"].dark button,
 html[data-dark-mode-enabled="true"].dark label {
   color: #fafafa;
 }
