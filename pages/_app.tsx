@@ -51,7 +51,7 @@ export default function App({ Component, pageProps }: AppProps) {
           defaultLocale="en"
           messages={messages}
         >
-          <Component {...pageProps} />;
+          <Component {...pageProps} />
         </IntlProvider>
       </InternationalizationContext.Provider>
     </ThemeProvider>
