@@ -22,6 +22,10 @@ html[data-dark-mode-enabled="true"].dark label {
   color: #fafafa;
 }
 
+html[data-dark-mode-enabled="true"].dark button:hover {
+  color: #ffffff;
+}
+
 h1 {
   color: #444;
 }
