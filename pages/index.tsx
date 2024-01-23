@@ -24,6 +24,21 @@ export default function Home() {
               </span>
               {formatMessage({ id: "ddxdevin.work.role.principal" })}{" "}
               <a
+                href="https://www.aidkit.com/"
+                className={styles.companyLink}
+                target="_blank"
+                rel="noreferrer"
+              >
+                AidKit
+              </a>
+            </span>
+            <span className={styles.company}>
+              <span className={styles.icon} aria-hidden="true">
+                &#x2198;
+              </span>
+              {formatMessage({ id: "ddxdevin.work.role.previous" })}:{" "}
+              {formatMessage({ id: "ddxdevin.work.role.principal" })}{" "}
+              <a
                 href="https://www.hypr.com/"
                 className={styles.companyLink}
                 target="_blank"
