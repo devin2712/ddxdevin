@@ -98,10 +98,6 @@ export default function Concerts() {
     return null;
   }, [data]);
 
-  console.log()
-
-  console.log(parsedData)
-
   const filteredRows = useMemo(() => {
     if (!debouncedSearchQuery) return parsedData;
 
