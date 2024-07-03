@@ -153,6 +153,11 @@ export default function Home() {
                 title: formatMessage({ id: "ddxdevin.links.instagram" }),
                 isExternal: true,
               },
+              {
+                url: "/concerts",
+                title: formatMessage({ id: "ddxdevin.links.concerts" }),
+                isExternal: false,
+              },
             ]}
           />
         </div>

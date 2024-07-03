@@ -15,3 +15,8 @@ article.blogPost p {
 article.blogPost > h1 {
   text-transform: uppercase;
 }
+
+article.blogPost input {
+  display: block;
+  margin: 0 auto;
+}

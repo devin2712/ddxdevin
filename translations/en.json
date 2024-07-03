@@ -24,6 +24,7 @@
   "ddxdevin.links.github": "GitHub",
   "ddxdevin.links.twitter": "Twitter",
   "ddxdevin.links.instagram": "Instagram",
+  "ddxdevin.links.concerts": "Concert Log",
   "ddxdevin.lmo.title": "La Main Ouverte",
   "ddxdevin.lmo.location": "Chandigarh, India",
   "ddxdevin.lmo.book": "36 pages perfect-bound book",
@@ -59,5 +60,10 @@
   "ddxdevin.bauhaus.images.alt.7": "Slide Preview: Illustrations of examples of the international style noting 'Reduce structures to their most basic structural elements' and on Wireframes & Prototyping, 'Without applying visual clutter, can your content carry itself alone?'",
   "ddxdevin.bauhaus.images.alt.8": "Slide Preview: Illustration of international style graphics with many diagonal lines of various widths crossing each other on the slide canvas. Considerations for Building Our UI: interaction, function, context, space, clarity, etc.",
   "ddxdevin.bauhaus.images.alt.9": "Slide Preview: Array of screenshots of corporate landing pages showing uniformity in artistic direction with exaggerated human figures and blue skin",
-  "ddxdevin.bauhaus.images.alt.10": "Slide Preview: Array of screenshots of post-modernist art direction from various companies and their advertising material showing abstract graphic illustrations and exaggerated typefaces"
+  "ddxdevin.bauhaus.images.alt.10": "Slide Preview: Array of screenshots of post-modernist art direction from various companies and their advertising material showing abstract graphic illustrations and exaggerated typefaces",
+  "ddxdevin.concerts.title": "Concert Log",
+  "ddxdevin.concerts.search": "Search",
+  "ddxdevin.concerts.loading": "Loading",
+  "ddxdevin.concerts.indicator": "indicates multiple shows",
+  "ddxdevin.concerts.lastUpdated": "Last Updated"
 }
