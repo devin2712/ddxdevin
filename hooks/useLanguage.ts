@@ -12,6 +12,8 @@ const getStoredLanguage = (): Language => {
 
     return savedLanguage !== null ? savedLanguage : DEFAULT_LANGUAGE;
   }
+
+  return DEFAULT_LANGUAGE;
 };
 
 // Use Local Storage to persist language preferences

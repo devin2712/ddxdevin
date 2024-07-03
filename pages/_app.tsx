@@ -1,22 +1,22 @@
-import "../styles/normalize.css";
-import "../styles/fonts.css";
 import "../styles/ddx-global.css";
 import "../styles/ddx-main.css";
+import "../styles/fonts.css";
+import "../styles/normalize.css";
 
 import { AppProps } from "next/app";
 import Router from "next/router";
 
-import { useMemo } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { IntlProvider } from "react-intl";
 
-import { ThemeProvider } from "../context/ThemeContext";
 import InternationalizationContext, {
   Language,
 } from "../context/InternationalizationContext";
+import { ThemeProvider } from "../context/ThemeContext";
 
+import { useLanguage } from "../hooks/useLanguage";
 import English from "../translations/en.json";
 import French from "../translations/fr.json";
-import { useLanguage } from "../hooks/useLanguage";
 
 // OVERRIDE for now; only enable dark mode for /se1 page
 const handleRouteChange = (url) => {
@@ -25,7 +25,8 @@ const handleRouteChange = (url) => {
 };
 
 export default function App({ Component, pageProps }: AppProps) {
-  const [language, setLanguage] = useLanguage();
+  const [language, setLanguage] = useState<Language | null>(null);
+  const [preferredLangauge, setPreferredLanguage] = useLanguage();
 
   const messages = useMemo(() => {
     switch (language) {
@@ -38,12 +39,18 @@ export default function App({ Component, pageProps }: AppProps) {
     }
   }, [language]);
 
+  useEffect(() => {
+    setLanguage(preferredLangauge);
+  }, [preferredLangauge]);
+
+  if (!language) { return null; }
+
   return (
     <ThemeProvider>
       <InternationalizationContext.Provider
         value={{
           currentLanguage: language as Language,
-          updateLanguage: setLanguage as (_: Language) => void,
+          updateLanguage: setPreferredLanguage as (_: Language) => void,
         }}
       >
         <IntlProvider
