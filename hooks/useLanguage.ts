@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Language } from "../context/InternationalizationContext";
 
-const DDXDEVIN_LANGUAGE_KEY = "languagePreference";
+const DDXDEVIN_LANGUAGE_KEY = "ddxdevin.languagePreference";
 const DEFAULT_LANGUAGE = Language.en;
 
 const getStoredLanguage = (): Language => {

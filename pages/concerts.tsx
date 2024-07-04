@@ -32,6 +32,9 @@ export default function Concerts() {
 
   const CONCERT_DATA_URL =
     "https://docs.google.com/spreadsheets/d/e/2PACX-1vS7cRqq437Wt4-eWBZkbUUmO1GnCUQ-V_f4e9-VVwPS0hbD5vQDgFWzvgm16hMvDSLOtgRF8TBgRsvM/pub?gid=0&single=true&output=csv";
+  const CONCERT_CACHE_KEY = "ddxdevin.concertData";
+  const CONCERT_TIME_KEY = "ddxdevin.concertDataCacheTime";
+  const CONCERT_CACHE_EXPIRATION = 24 * 60 * 60 * 1000; // One Day
 
   useEffect(() => {
     if (q) {
@@ -65,23 +68,63 @@ export default function Concerts() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch(CONCERT_DATA_URL);
-        if (!response.ok) {
-          throw new Error(`HTTP error: ${response.status}`);
+        const cachedData = getCachedData();
+        if (cachedData) {
+          setData(cachedData);
+        } else {
+          const fetchedData = await fetchDataFromUrl(CONCERT_DATA_URL);
+          setData(fetchedData);
+          setCachedData(fetchedData);
         }
-        const text = await response.text();
-        setData(text);
       } catch (error) {
         console.error("Error fetching CSV data: ", error);
-
-        // Try using backup file instead
-        const backup = await fetch("/docs/concerts-backup.csv");
-        setData(await backup.text());
+        try {
+          const backupData = await fetchBackupData();
+          setData(backupData);
+          setCachedData(backupData);
+        } catch (backupError) {
+          console.error("Error fetching backup CSV data: ", backupError);
+        }
       }
     };
 
     fetchData();
   }, []);
+
+  const getCachedData = () => {
+    const cachedData: string = localStorage.getItem(CONCERT_CACHE_KEY);
+    const cachedTime: number = parseInt(localStorage.getItem(CONCERT_TIME_KEY));
+    if (
+      cachedData &&
+      cachedTime &&
+      Date.now() - cachedTime < CONCERT_CACHE_EXPIRATION
+    ) {
+      return cachedData;
+    }
+
+    return null;
+  };
+
+  const setCachedData = (data) => {
+    localStorage.setItem(CONCERT_CACHE_KEY, data);
+    localStorage.setItem(CONCERT_TIME_KEY, Date.now().toString());
+  };
+
+  const fetchDataFromUrl = async (url) => {
+    const response = await fetch(url);
+    if (!response.ok) {
+      throw new Error(`HTTP error: ${response.status}`);
+    }
+    return response.text();
+  };
+
+  const fetchBackupData = async () => {
+    const response = await fetch("/docs/concerts-backup.csv");
+    if (!response.ok) {
+      throw new Error(`HTTP error: ${response.status}`);
+    }
+    return response.text();
+  };
 
   const parsedData = useMemo(() => {
     if (!data) return [];
@@ -204,9 +247,9 @@ export default function Concerts() {
                     </li>
                   ))}
                 </ul>
-                <h3 className={styles.encore}>
+                <h2 className={styles.encore}>
                   {formatMessage({ id: "ddxdevin.concerts.encore" })}
-                </h3>
+                </h2>
                 <ul className={styles.artistList}>
                   <li>
                     <ArtistDisplay
@@ -217,7 +260,9 @@ export default function Concerts() {
               </>
             )}
             <div className={styles.ductTapeContainer}>
-              <div className={`${styles.ductTape} ${styles.ductTape_alt}`}></div>
+              <div
+                className={`${styles.ductTape} ${styles.ductTape_alt}`}
+              ></div>
             </div>
           </main>
         )}
