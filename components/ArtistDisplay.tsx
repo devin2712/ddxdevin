@@ -25,5 +25,3 @@ export const ArtistDisplay = React.memo(
     );
   }
 );
-
-// export default Highlight;
