@@ -65,5 +65,6 @@
   "ddxdevin.concerts.search": "Search",
   "ddxdevin.concerts.loading": "Loading",
   "ddxdevin.concerts.indicator": "indicates multiple shows",
-  "ddxdevin.concerts.lastUpdated": "Last Updated"
+  "ddxdevin.concerts.lastUpdated": "Last Updated",
+  "ddxdevin.concerts.encore": "Encore (last show)"
 }
