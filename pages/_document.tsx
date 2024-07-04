@@ -1,4 +1,5 @@
 import Document, { Html, Head, Main, NextScript } from "next/document";
+import { Analytics } from "@vercel/analytics/react";
 
 class DevinDocument extends Document {
   static async getInitialProps(ctx) {
@@ -16,6 +17,7 @@ class DevinDocument extends Document {
         <body>
           <Main />
           <NextScript />
+          <Analytics />
         </body>
       </Html>
     );
