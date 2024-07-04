@@ -4,14 +4,32 @@ export interface CSVRow {
 
 export const parseCSV = (text: string): CSVRow[] => {
   const rows = text.trim().split("\n");
-  const headers = rows[0].split(",");
+  const headers = rows[0].split(",").map((header) => header.trim());
 
   const result: CSVRow[] = rows.slice(1).map((row) => {
-    const values = row.split(",");
+    const values = [];
+    let current = "";
+    let inQuotes = false;
+
+    for (let char of row) {
+      if (char === '"' && inQuotes) {
+        inQuotes = false;
+      } else if (char === '"' && !inQuotes) {
+        inQuotes = true;
+      } else if (char === "," && !inQuotes) {
+        values.push(current.trim());
+        current = "";
+      } else {
+        current += char;
+      }
+    }
+    values.push(current.trim());
+
     const obj: CSVRow = {};
     headers.forEach((header, index) => {
-      obj[header.trim()] = values[index]?.trim();
+      obj[header] = values[index] || "";
     });
+
     return obj;
   });
 
@@ -20,7 +38,7 @@ export const parseCSV = (text: string): CSVRow[] => {
 
 export const getHeaders = (text: string): string[] => {
   const rows = text.trim().split("\n");
-  const headers = rows[0].split(",");
+  const headers = rows[0].split(",").map((header) => header.trim());
 
   return headers;
-}
+};
