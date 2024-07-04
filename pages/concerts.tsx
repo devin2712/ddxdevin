@@ -217,7 +217,7 @@ export default function Concerts() {
               </>
             )}
             <div className={styles.ductTapeContainer}>
-              <div className={styles.ductTape}></div>
+              <div className={`${styles.ductTape} ${styles.ductTape_alt}`}></div>
             </div>
           </main>
         )}
