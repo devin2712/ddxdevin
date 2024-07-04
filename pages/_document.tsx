@@ -18,6 +18,8 @@ class DevinDocument extends Document {
         <body>
           <Main />
           <NextScript />
+
+          {/* Vercel Analytics */}
           <Analytics />
           <SpeedInsights />
         </body>
