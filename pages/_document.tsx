@@ -1,5 +1,3 @@
-import { Analytics } from "@vercel/analytics/react";
-import { SpeedInsights } from "@vercel/speed-insights/next";
 import Document, { Head, Html, Main, NextScript } from "next/document";
 
 class DevinDocument extends Document {
@@ -18,10 +16,6 @@ class DevinDocument extends Document {
         <body>
           <Main />
           <NextScript />
-
-          {/* Vercel Analytics */}
-          <Analytics />
-          <SpeedInsights />
         </body>
       </Html>
     );

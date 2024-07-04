@@ -14,6 +14,8 @@ import InternationalizationContext, {
 } from "../context/InternationalizationContext";
 import { ThemeProvider } from "../context/ThemeContext";
 
+import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import { useLanguage } from "../hooks/useLanguage";
 import English from "../translations/en.json";
 import French from "../translations/fr.json";
@@ -59,6 +61,10 @@ export default function App({ Component, pageProps }: AppProps) {
           messages={messages}
         >
           <Component {...pageProps} />
+
+          {/* Vercel Analytics */}
+          <Analytics />
+          <SpeedInsights />
         </IntlProvider>
       </InternationalizationContext.Provider>
     </ThemeProvider>
