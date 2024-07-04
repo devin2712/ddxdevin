@@ -73,6 +73,10 @@ export default function Concerts() {
         setData(text);
       } catch (error) {
         console.error("Error fetching CSV data: ", error);
+
+        // Try using backup file instead
+        const backup = await fetch("/docs/concerts-backup.csv");
+        setData(await backup.text());
       }
     };
 
