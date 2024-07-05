@@ -37,6 +37,11 @@ div.indicator strong.showCount {
   font-size: 1rem;
 }
 
+div.indicator strong.showCount {
+  background-color: #444;
+  color: #fff;
+}
+
 div.search {
   margin: 1rem auto;
   text-align: center;
