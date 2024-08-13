@@ -154,6 +154,11 @@ export default function Home() {
                 isExternal: true,
               },
               {
+                url: "//discogs.com/user/devin2712/collection",
+                title: formatMessage({ id: "ddxdevin.links.discogs" }),
+                isExternal: true,
+              },
+              {
                 url: "/concerts",
                 title: formatMessage({ id: "ddxdevin.links.concerts" }),
                 isExternal: false,
