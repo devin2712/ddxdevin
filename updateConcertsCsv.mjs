@@ -16,7 +16,7 @@ const fetchAndSaveCsv = async () => {
     const response = await fetch(csvUrl);
 
     if (!response.ok) {
-      throw new Error(`Failed to fetch CSV: ${response.statusText}`);
+      throw new Error(`⚠️ Failed to fetch CSV: ${response.statusText}`);
     }
 
     const csvData = await response.text();
@@ -38,7 +38,7 @@ const fetchAndSaveCsv = async () => {
     console.log("✅ CSV file successfully staged for commit.");
   } catch (error) {
     console.error(
-      "⚠️ Skipping CSV overwrite, error fetching or saving CSV file:",
+      "⚠️ Skipping CSV overwrite due to error fetching or saving CSV file:",
       error
     );
   }
