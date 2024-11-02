@@ -7,16 +7,14 @@ import Layout from "../components/Layout";
 import { useDebounce } from "../hooks/useDebounce";
 import { getHeaders, parseCSV } from "../utils/CSVreader";
 
-const Highlight = React.lazy(() => import("../components/Highlight"));
-
 import { useRouter } from "next/router";
 import styles from "./concerts.module.css";
 
 import React from "react";
+import { ARTIST_KEY, ArtistDisplay } from "../components/ArtistDisplay";
+import useBrowserLocale from "../hooks/useBrowserLocale";
 import { decodeQuery, encodeQuery } from "../utils/encoder";
 import { normalizeString } from "../utils/stringNormalizer";
-import useBrowserLocale from "../hooks/useBrowserLocale";
-import { ARTIST_KEY, ArtistDisplay } from "../components/ArtistDisplay";
 
 export default function Concerts() {
   const { formatMessage } = useIntl();
@@ -28,7 +26,7 @@ export default function Concerts() {
 
   const [data, setData] = useState<string | null>(null);
   const [searchQuery, setSearchQuery] = useState<string>(initialSearchQuery);
-  const debouncedSearchQuery = useDebounce(searchQuery, 300);
+  const debouncedSearchQuery = useDebounce(searchQuery, 200);
 
   const CONCERT_DATA_URL =
     "https://docs.google.com/spreadsheets/d/e/2PACX-1vS7cRqq437Wt4-eWBZkbUUmO1GnCUQ-V_f4e9-VVwPS0hbD5vQDgFWzvgm16hMvDSLOtgRF8TBgRsvM/pub?gid=0&single=true&output=csv";
