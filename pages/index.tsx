@@ -73,6 +73,14 @@ export default function Home() {
             title={formatMessage({ id: "ddxdevin.code.title" })}
             links={[
               {
+                url: "https://github.com/devin2712/calfire-gis-mcp-server",
+                title: formatMessage({ id: "ddxdevin.code.gis.title" }),
+                isExternal: true,
+                externalLinkLabel: formatMessage({
+                  id: "ddxdevin.code.tags.github",
+                }),
+              },
+              {
                 url: "https://github.com/devin2712/myturn-monitor",
                 title: formatMessage({ id: "ddxdevin.code.myturn.title" }),
                 isExternal: true,
