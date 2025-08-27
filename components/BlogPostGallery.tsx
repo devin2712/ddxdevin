@@ -1,5 +1,6 @@
 import Draggable from "react-draggable";
 import Image from "next/image";
+import React, { useRef } from "react";
 
 import styles from "./BlogPostGallery.module.css";
 
@@ -33,20 +34,33 @@ function galleryTypeClass(type: GalleryType | undefined) {
   return typeClasses[type];
 }
 
+// Custom draggable wrapper component that uses a ref
+function DraggableImage({ image, renderImage }: { image: BlogPostGalleryImage; renderImage: (image: BlogPostGalleryImage) => React.JSX.Element }) {
+  const nodeRef = useRef<HTMLDivElement>(null);
+  
+  return (
+    <Draggable nodeRef={nodeRef} onStart={(e) => e.preventDefault()}>
+      <div ref={nodeRef} className={styles.draggable}>
+        {renderImage(image)}
+      </div>
+    </Draggable>
+  );
+}
+
 export default function BlogPostGallery({
   listOfImages,
   type,
   draggable,
 }: BlogPostGalleryProps) {
-  const renderImage = (image) => {
+  const renderImage = (image: BlogPostGalleryImage) => {
     return (
       <Image
-        src={image.src}
-        alt={image.alt}
-        width={image.width}
-        height={image.height}
+        src={image.src as string}
+        alt={image.alt as string}
+        width={image.width as number}
+        height={image.height as number}
         placeholder={image.pre ? "blur" : "empty"}
-        blurDataURL={image.pre ?? null}
+        blurDataURL={image.pre as string ?? null}
         priority={image.largestContentfulPaint ?? false}
       />
     );
@@ -57,9 +71,7 @@ export default function BlogPostGallery({
       {listOfImages.map((image) => (
         <div className={styles.galleryImage} key={image.src as string}>
           {draggable && draggable === true ? (
-            <Draggable onStart={(e) => e.preventDefault()}>
-              <div className={styles.draggable}>{renderImage(image)}</div>
-            </Draggable>
+            <DraggableImage image={image} renderImage={renderImage} />
           ) : (
             renderImage(image)
           )}

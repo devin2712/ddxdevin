@@ -21,7 +21,7 @@ import English from "../translations/en.json";
 import French from "../translations/fr.json";
 
 // OVERRIDE for now; only enable dark mode for /se1 page
-const handleRouteChange = (url) => {
+const handleRouteChange = (url: string) => {
   const root = document.getElementsByTagName("html")[0];
   root.setAttribute("data-dark-mode-enabled", String(url === "/se1"));
 };

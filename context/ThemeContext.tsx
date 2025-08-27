@@ -61,7 +61,7 @@ export function ThemeProvider({ children }: ThemeProviderProps) {
     }
   }, []);
 
-  const applyTheme = (theme) => {
+  const applyTheme = (theme: string) => {
     const root = document.getElementsByTagName("html")[0];
     root.className = theme;
   };
