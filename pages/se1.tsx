@@ -1,3 +1,4 @@
+import Head from "next/head";
 import Layout from "../components/Layout";
 import BlogPost from "../components/BlogPost";
 import LightTable from "../components/LightTable";
@@ -9,6 +10,14 @@ export default function Se1() {
 
   return (
     <Layout largeFormat>
+      <Head>
+        <title>{formatMessage({ id: "ddxdevin.se1.title" })}</title>
+        <meta name="description" content={formatMessage({ id: "ddxdevin.se1.description" })} />
+        <meta property="og:title" content={formatMessage({ id: "ddxdevin.se1.title" })} />
+        <meta property="og:description" content={formatMessage({ id: "ddxdevin.se1.description" })} />
+        <meta property="og:type" content="article" />
+        <meta name="og:image" content="https://devinnguyen.com/images/light-table/000051980002.jpg" />
+      </Head>
       <BlogPost title={formatMessage({ id: "ddxdevin.se1.title" })}>
         <>
           <section>

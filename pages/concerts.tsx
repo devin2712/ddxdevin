@@ -165,6 +165,7 @@ export default function Concerts() {
   return (
     <Layout largeFormat>
       <Head>
+        <title>{formatMessage({ id: "ddxdevin.concerts.title" })}</title>
         <meta
           property="og:title"
           content={formatMessage({ id: "ddxdevin.concerts.title" })}

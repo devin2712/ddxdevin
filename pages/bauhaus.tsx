@@ -11,6 +11,8 @@ export default function Bauhaus() {
   return (
     <Layout largeFormat>
       <Head>
+        <title>{formatMessage({ id: "ddxdevin.bauhaus.talk.title" })}</title>
+        <meta name="description" content={formatMessage({ id: "ddxdevin.bauhaus.talk.description" })} />
         <meta
           name="og:image"
           content="https://devinnguyen.com/images/bauhaus/6.jpg"
@@ -20,6 +22,7 @@ export default function Bauhaus() {
           property="og:title"
           content={formatMessage({ id: "ddxdevin.bauhaus.talk.title" })}
         />
+        <meta property="og:description" content={formatMessage({ id: "ddxdevin.bauhaus.talk.description" })} />
       </Head>
       <BlogPost title={formatMessage({ id: "ddxdevin.bauhaus.title" })}>
         <>

@@ -11,6 +11,7 @@ export default function Bauhauslers() {
   return (
     <Layout largeFormat>
       <Head>
+        <title>{formatMessage({ id: "ddxdevin.bauhauslers.title" })}</title>
         <meta
           name="og:image"
           content="https://devinnguyen.com/images/bauhauslers/1.jpg"

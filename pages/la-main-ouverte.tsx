@@ -11,6 +11,7 @@ export default function LaMainOuverte() {
   return (
     <Layout largeFormat>
       <Head>
+        <title>{formatMessage({ id: "ddxdevin.lmo.title" })}</title>
         <meta
           name="og:image"
           content="https://devinnguyen.com/images/la-main-ouverte/spread3.jpg"
