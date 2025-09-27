@@ -1,0 +1,29 @@
+.button {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  font-family: inherit;
+  font-size: inherit;
+  background: transparent;
+  color: var(--foreground);
+  border-radius: 0.375rem;
+  cursor: pointer;
+  transition: background-color 0.16s ease;
+  text-decoration: none;
+}
+
+.button:hover, .button:focus-visible {
+  background-color: #F4F4F4;
+}
+
+@media (prefers-color-scheme: dark) {
+  .button:hover, .button:focus-visible {
+    background-color: #F4F4F4;
+    color: #0D0D0D;
+  }
+}
+
+.button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}

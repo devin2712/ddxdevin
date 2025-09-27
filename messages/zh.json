@@ -1,0 +1,111 @@
+{
+    "bauhaus": {
+        "title": "包豪斯的教训",
+        "paragraphs": [
+            "多年来，我向我的团队做过这个演讲的各种版本，从包豪斯及其相关运动中汲取灵感，提出一个理解当前UI趋势的框架，并将包豪斯的教训应用到构建UI设计系统中。"
+        ],
+        "openPdfAriaLabel": "打开包豪斯的教训演示PDF（在新标签页中打开）",
+        "openPdfText": "打开PDF ↗",
+        "titleSlideAlt": "包豪斯的教训 - 标题幻灯片",
+        "viewPresentationLink": "查看完整演示（PDF）"
+    },
+    "bauhauslers": {
+        "title": "Bauhäuslers",
+        "paragraphs": [
+            "从魏玛到德绍再到柏林的旅程，在包豪斯百年庆典期间追寻其足迹。",
+            "Bauhäusler — 包豪斯的学生",
+            "Mieslinge — 对模仿大师密斯·凡·德·罗的学生的贬义词；来自\"Mies\"和德语\"misslingen\"[失败]"
+        ]
+    },
+    "common": {
+        "index": "索引"
+    },
+    "concertLog": {
+        "title": "音乐会日志",
+        "paragraphs": [
+            "参加过的音乐会列表。",
+            "使用Times New Roman字体，因为IYKYK。"
+        ],
+        "encore": "安可（最后一场演出）",
+        "indicator": "表示多场演出",
+        "live": "现场",
+        "loading": "加载中",
+        "search": "搜索"
+    },
+    "covidAppointments": {
+        "title": "COVID预约通知",
+        "image": "带有Twilio标志的横幅图形，三条线指向标志。标题写着使用Twilio无服务器函数获取COVID-19疫苗通知。",
+        "paragraphs": [
+            "这是一个整合Airtable和Twilio的项目，当疫苗预约可用时会给您打电话。当时，我编写了与加利福尼亚、马萨诸塞州和纽约市系统的集成，以及与GetMyVaccine的集成，后者汇总了CVS、Rite-Aid和Walgreens的疫苗可用性。",
+            "<github>疫苗预约通知 ↗</github>"
+        ]
+    },
+    "covidMyturn": {
+        "title": "COVID MyTurn CA监控器",
+        "paragraphs": [
+            "这是一个从加利福尼亚州疫苗接种系统（MyTurn）收集和汇总所有58个县的疫苗可用性数据的项目。",
+            "<github>MyTurn监控器 ↗</github>"
+        ]
+    },
+    "home": {
+        "title": "Devin Nguyen",
+        "description": "软件工程师",
+        "intro": "我是一名位于纽约的全栈软件工程师，目前在<aidkit>AidKit</aidkit>构建直接现金援助项目。",
+        "background": "之前，我是<hypr>HYPR</hypr>的首席软件工程师，为银行、大学和初创公司构建可扩展的无密码系统。在那之前，我是<vmware>VMware</vmware>旗下<cloudhealth>CloudHealth</cloudhealth>的高级技术人员，这是一个云基础设施管理平台。",
+        "links": {
+            "bauhaus": "包豪斯的教训",
+            "bauhaus_photo": "Bauhäuslers",
+            "ca_wildfire_mcp": "MCP：用AI绘制LA野火地图",
+            "concerts": "音乐会日志",
+            "covid_appointments": "COVID预约通知",
+            "covid_myturn": "COVID MyTurn CA监控器",
+            "discogs": "Discogs",
+            "github": "GitHub",
+            "la_main_ouverte": "La Main Ouverte",
+            "linkedin": "LinkedIn",
+            "live": "现场",
+            "se1": "(S)E1"
+        },
+        "sections": {
+            "connect": "联系",
+            "photography": "摄影",
+            "writing": "写作"
+        }
+    },
+    "laMainOuverte": {
+        "title": "La Main Ouverte",
+        "icon": "张开的手形状的La Main Ouverte符号",
+        "paragraphs": [
+            "位于新德里以北仅几小时路程的昌迪加尔是一座规划城市，诞生于印度独立后一次雄心勃勃的不寻常合作。1947年印度分治后，英属印度的旁遮普省被分割给印度和巴基斯坦。印度第一任总理贾瓦哈拉尔·尼赫鲁与勒·柯布西耶开始了一项联合努力，建造一座乌托邦城市，作为旁遮普邦和哈里亚纳邦的共同首府。这是一个现代的野兽派天堂，于1960年代完工，旨在为印度的激进新开端奠定基础，是勒·柯布西耶建筑作品中的开创性作品之一。",
+            "张开的手，或La Main Ouverte，是勒·柯布西耶作品中反复出现的主题，并成为昌迪加尔的标志性象征。"
+        ],
+        "attribution": "勒·柯布西耶",
+        "pullquote": "\"它随风转动，不是漫无目的，而是表达生命的真谛：不断变化。手是张开的，用来给予和接受。这是在这个灾难世界中的乐观标志。\""
+    },
+    "mcpWildfire": {
+        "title": "MCP：用AI绘制LA野火地图",
+        "image": "显示地图层的图表，包含每层的描述（从下往上）：洛杉矶基础地图、疏散区、活跃火灾区、损害评估和损害照片",
+        "paragraphs": [
+            "为应对2025年1月洛杉矶的野火，<aidkit>AidKit</aidkit>迅速与洛杉矶县和洛杉矶市合作，启动了两个提供有针对性的紧急灾难现金援助的项目。",
+            "我领导了平台新地理空间能力的实施，用于紧急响应，包括与税收地块和CAL FIRE数据的GIS数据集成。我还构建了实时地图可视化，以便所有利益相关者都能了解项目的影响和覆盖范围。这些项目向LA的个人和小企业分发了超过2500万美元的援助。",
+            "您可以在这里了解更多关于这些项目的信息：",
+            "<casestudy>洛杉矶地区野火救济项目</casestudy>",
+            "<award>AidKit在2025年史蒂夫技术卓越奖中获得殊荣</award>",
+            "我很受启发地看到AI和MCP服务器如何用于实现快速项目管理，并将LLM与CAL FIRE的损害检查数据连接，以支持更广泛的工作流程。",
+            "这方面的示例服务器可以在这里找到：",
+            "<repo>CAL FIRE DINS ArcGIS MCP Server ↗</repo>"
+        ]
+    },
+    "notFound": {
+        "title": "404",
+        "subtitle": "页面未找到",
+        "message": "您要查找的页面不存在。",
+        "returnHome": "返回首页"
+    },
+    "se1": {
+        "title": "(S)E1",
+        "paragraphs": [
+            "伦敦从E1到SE1的通勤场景"
+        ]
+    }
+}

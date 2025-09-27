@@ -1,0 +1,111 @@
+{
+    "bauhaus": {
+        "title": "바우하우스의 교훈",
+        "paragraphs": [
+            "수년간 저는 팀들에게 이 강연의 다양한 버전을 선보였습니다. 바우하우스와 관련 운동에서 영감을 얻고, 현재 UI 트렌드를 이해하고 UI 디자인 시스템 구축에 바우하우스의 교훈을 적용하는 프레임워크를 제안하기 위해서입니다."
+        ],
+        "openPdfAriaLabel": "바우하우스의 교훈 프레젠테이션 PDF 열기 (새 탭에서 열림)",
+        "openPdfText": "PDF 열기 ↗",
+        "titleSlideAlt": "바우하우스의 교훈 - 제목 슬라이드",
+        "viewPresentationLink": "전체 프레젠테이션 보기 (PDF)"
+    },
+    "bauhauslers": {
+        "title": "Bauhäuslers",
+        "paragraphs": [
+            "바이마르에서 데사우를 거쳐 베를린까지의 여행, 바우하우스 100주년 기념 행사 기간 동안 그 길을 따라가며.",
+            "Bauhäusler — 바우하우스의 학생",
+            "Mieslinge — 마스터 미스 반 데어 로에를 모방하는 학생들에 대한 경멸적 용어; \"Mies\"와 독일어 \"misslingen\" [실패]에서 유래"
+        ]
+    },
+    "common": {
+        "index": "색인"
+    },
+    "concertLog": {
+        "title": "콘서트 로그",
+        "paragraphs": [
+            "참석한 콘서트 목록.",
+            "IYKYK이기 때문에 Times New Roman으로 설정."
+        ],
+        "encore": "앙코르 (마지막 쇼)",
+        "indicator": "여러 쇼를 나타냄",
+        "live": "라이브",
+        "loading": "로딩 중",
+        "search": "검색"
+    },
+    "covidAppointments": {
+        "title": "COVID 예약 알림",
+        "image": "Twilio 로고와 로고를 가리키는 세 줄이 있는 배너 그래픽. 제목은 Twilio Serverless Functions를 사용하여 COVID-19 백신 알림 받기라고 되어 있습니다.",
+        "paragraphs": [
+            "이것은 백신 예약이 가능해지면 전화를 걸어주는 Airtable과 Twilio를 통합하는 프로젝트였습니다. 당시 저는 캘리포니아, 매사추세츠, 뉴욕시의 시스템들과 통합을 작성했고, CVS, Rite-Aid, Walgreens에서 백신 가용성을 집계하는 GetMyVaccine과도 통합했습니다.",
+            "<github>백신 예약 알림 ↗</github>"
+        ]
+    },
+    "covidMyturn": {
+        "title": "COVID MyTurn CA 모니터",
+        "paragraphs": [
+            "이것은 캘리포니아 주 백신 접종 시스템(MyTurn)에서 58개 카운티 모두의 백신 가용성 데이터를 수집하고 집계하는 프로젝트였습니다.",
+            "<github>MyTurn 모니터 ↗</github>"
+        ]
+    },
+    "home": {
+        "title": "Devin Nguyen",
+        "description": "소프트웨어 엔지니어",
+        "intro": "저는 NYC에 거주하는 풀스택 소프트웨어 엔지니어이며, 현재 <aidkit>AidKit</aidkit>에서 직접 현금 지원 프로그램을 구축하고 있습니다.",
+        "background": "이전에는 <hypr>HYPR</hypr>에서 주요 소프트웨어 엔지니어로 은행, 대학, 스타트업을 위한 확장 가능한 비밀번호 없는 시스템을 구축했습니다. 그 전에는 클라우드 인프라 관리 플랫폼인 <vmware>VMware</vmware>의 <cloudhealth>CloudHealth</cloudhealth>에서 선임 기술 스태프 멤버였습니다.",
+        "links": {
+            "bauhaus": "바우하우스의 교훈",
+            "bauhaus_photo": "Bauhäuslers",
+            "ca_wildfire_mcp": "MCP: AI로 LA 산불 매핑하기",
+            "concerts": "콘서트 로그",
+            "covid_appointments": "COVID 예약 알림",
+            "covid_myturn": "COVID MyTurn CA 모니터",
+            "discogs": "Discogs",
+            "github": "GitHub",
+            "la_main_ouverte": "La Main Ouverte",
+            "linkedin": "LinkedIn",
+            "live": "라이브",
+            "se1": "(S)E1"
+        },
+        "sections": {
+            "connect": "연결",
+            "photography": "사진",
+            "writing": "글쓰기"
+        }
+    },
+    "laMainOuverte": {
+        "title": "La Main Ouverte",
+        "icon": "열린 손 모양의 La Main Ouverte 심볼",
+        "paragraphs": [
+            "뉴델리 북쪽으로 불과 몇 시간 거리에 위치한 찬디가르는 인도 독립 후 야심찬 정신으로 이루어진 특별한 협력에서 탄생한 계획 도시입니다. 1947년 인도 분할 후 영국령 인도의 펀자브 주가 인도와 파키스탄으로 나뉘었습니다. 인도의 첫 총리인 자와할랄 네루는 르 코르뷔지에와 함께 펀자브와 하리아나의 공동 수도 역할을 할 유토피아 도시를 건설하는 공동 노력에 착수했습니다. 1960년대에 완성된 이 현대적이고 브루탈리즘적인 천국은 인도의 급진적인 새 출발을 위한 무대를 마련하려는 의도였으며 르 코르뷔지에의 건축계 대표작 중 하나였습니다.",
+            "열린 손, 즉 La Main Ouverte는 르 코르뷔지에 작품 전반에 걸친 반복적인 모티프였으며 찬디가르의 상징적 심볼이 되었습니다."
+        ],
+        "attribution": "르 코르뷔지에",
+        "pullquote": "\"그것은 바람과 함께 돌지만, 목적 없이가 아니라 삶이 정말로 무엇인지를 표현하기 위해서입니다: 끊임없는 변화. 손은 주고받기 위해 열려있습니다. 이는 이 재앙의 세계에서 낙관주의의 표시입니다.\""
+    },
+    "mcpWildfire": {
+        "title": "MCP: AI로 LA 산불 매핑하기",
+        "image": "각 레이어에 대한 설명이 있는 지도 레이어를 보여주는 다이어그램 (아래에서 위로): 로스앤젤레스 기본 지도, 대피 구역, 활성 화재 구역, 피해 평가, 피해 사진",
+        "paragraphs": [
+            "2025년 1월 로스앤젤레스 산불에 대응하여, <aidkit>AidKit</aidkit>은 로스앤젤레스 카운티 및 로스앤젤레스 시와 신속히 파트너십을 맺고 목표화된 긴급 재해 현금 지원을 제공하는 두 가지 프로그램을 시작했습니다.",
+            "저는 세금 구획 및 CAL FIRE 데이터와의 GIS 데이터 통합을 포함한 긴급 대응을 위한 플랫폼의 새로운 지리공간 기능 구현을 주도했습니다. 또한 모든 이해관계자들이 프로그램의 영향과 범위를 계속 파악할 수 있도록 실시간 지도 시각화를 구축했습니다. 이 프로그램들은 LA의 개인과 소기업에 2,500만 달러 이상의 지원을 배포했습니다.",
+            "프로그램에 대해 더 자세히 알아보려면:",
+            "<casestudy>로스앤젤레스 지역 산불 구호 프로그램</casestudy>",
+            "<award>AidKit, 2025 스티비 기술 우수상 수상자로 선정</award>",
+            "AI와 MCP 서버가 빠른 프로그램 관리를 가능하게 하고 LLM을 CAL FIRE의 피해 검사 데이터에 연결하여 더 광범위한 워크플로우를 지원하는 방법을 보고 영감을 받았습니다.",
+            "이것이 어떤 모습인지 보여주는 예시 서버는 여기에서 찾을 수 있습니다:",
+            "<repo>CAL FIRE DINS ArcGIS MCP Server ↗</repo>"
+        ]
+    },
+    "notFound": {
+        "title": "404",
+        "subtitle": "페이지를 찾을 수 없음",
+        "message": "찾고 있는 페이지가 존재하지 않습니다.",
+        "returnHome": "홈으로 돌아가기"
+    },
+    "se1": {
+        "title": "(S)E1",
+        "paragraphs": [
+            "런던에서 E1에서 SE1까지의 통근 장면"
+        ]
+    }
+}

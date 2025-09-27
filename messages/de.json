@@ -1,0 +1,111 @@
+{
+    "bauhaus": {
+        "title": "Lektionen vom Bauhaus",
+        "paragraphs": [
+            "Über die Jahre habe ich verschiedene Versionen dieses Vortrags meinen Teams gehalten, um sich vom Bauhaus und seinen verwandten Bewegungen inspirieren zu lassen und ein Rahmenwerk vorzuschlagen, um aktuelle UI-Trends zu verstehen und Lektionen vom Bauhaus für den Aufbau von UI-Design-Systemen anzuwenden."
+        ],
+        "openPdfAriaLabel": "Lektionen vom Bauhaus Präsentation PDF öffnen (öffnet in neuem Tab)",
+        "openPdfText": "PDF öffnen ↗",
+        "titleSlideAlt": "Lektionen vom Bauhaus - Titelfolie",
+        "viewPresentationLink": "Vollständige Präsentation ansehen (PDF)"
+    },
+    "bauhauslers": {
+        "title": "Bauhäuslers",
+        "paragraphs": [
+            "Eine Reise von Weimar über Dessau nach Berlin, dem Weg des Bauhaus während seiner Hundertjahrfeier folgend.",
+            "Bauhäusler — ein Student des Bauhaus",
+            "Mieslinge — abwertender Begriff für Studenten, die den Meister kopieren, Mies van der Rohe; von \"Mies\" und deutsch \"misslingen\" [Versagen]"
+        ]
+    },
+    "common": {
+        "index": "Index"
+    },
+    "concertLog": {
+        "title": "Konzertprotokoll",
+        "paragraphs": [
+            "Eine Liste besuchter Konzerte.",
+            "Gesetzt in Times New Roman, weil IYKYK."
+        ],
+        "encore": "Zugabe (letzte Show)",
+        "indicator": "zeigt mehrere Shows an",
+        "live": "LIVE",
+        "loading": "Wird geladen",
+        "search": "Suchen"
+    },
+    "covidAppointments": {
+        "title": "COVID-Terminbenachrichtigungen",
+        "image": "Banner-Grafik mit Twilio-Logo und drei Linien, die zum Logo zeigen. Der Titel lautet COVID-19-Impfstoff-Benachrichtigungen mit Twilio Serverless Functions erhalten.",
+        "paragraphs": [
+            "Dies war ein Projekt zur Integration von Airtable und Twilio, um Sie anzurufen, wenn ein Impftermin verfügbar wurde. Damals schrieb ich Integrationen zu Systemen in Kalifornien, Massachusetts und New York City sowie zu GetMyVaccine, das Impfstoffverfügbarkeiten bei CVS, Rite-Aid und Walgreens aggregierte.",
+            "<github>Impftermin-Benachrichtigungen ↗</github>"
+        ]
+    },
+    "covidMyturn": {
+        "title": "COVID MyTurn CA Monitor",
+        "paragraphs": [
+            "Dies war ein Projekt zur Sammlung und Aggregation von Impfstoffverfügbarkeitsdaten aus dem Impfsystem des Bundesstaates Kalifornien (MyTurn) für alle 58 Bezirke.",
+            "<github>MyTurn Monitor ↗</github>"
+        ]
+    },
+    "home": {
+        "title": "Devin Nguyen",
+        "description": "Software-Ingenieur",
+        "intro": "Ich bin ein Full-Stack-Software-Ingenieur mit Sitz in NYC und entwickle derzeit Programme für direkte Bargeldunterstützung bei <aidkit>AidKit</aidkit>.",
+        "background": "Zuvor war ich Principal Software Engineer bei <hypr>HYPR</hypr> und entwickelte skalierbare passwortlose Systeme für Banken, Universitäten und Startups. Davor war ich Senior Member of Technical Staff bei <cloudhealth>CloudHealth</cloudhealth> von <vmware>VMware</vmware>, einer Plattform für Cloud-Infrastruktur-Management.",
+        "links": {
+            "bauhaus": "Lektionen vom Bauhaus",
+            "bauhaus_photo": "Bauhäuslers",
+            "ca_wildfire_mcp": "MCP: LA-Waldbrände mit KI kartieren",
+            "concerts": "Konzertprotokoll",
+            "covid_appointments": "COVID-Terminbenachrichtigungen",
+            "covid_myturn": "COVID MyTurn CA Monitor",
+            "discogs": "Discogs",
+            "github": "GitHub",
+            "la_main_ouverte": "La Main Ouverte",
+            "linkedin": "LinkedIn",
+            "live": "LIVE",
+            "se1": "(S)E1"
+        },
+        "sections": {
+            "connect": "Verbinden",
+            "photography": "Fotografie",
+            "writing": "Schreiben"
+        }
+    },
+    "laMainOuverte": {
+        "title": "La Main Ouverte",
+        "icon": "La Main Ouverte Symbol in Form einer offenen Hand",
+        "paragraphs": [
+            "Nur wenige Stunden nördlich von Neu-Delhi gelegen, ist Chandigarh eine geplante Stadt, die aus einer ungewöhnlichen Zusammenarbeit mit einem ehrgeizigen Geist nach Indiens Unabhängigkeit entstanden ist. Nach der Teilung Indiens 1947 wurde die Punjab-Provinz Britisch-Indiens zwischen Indien und Pakistan aufgeteilt. Jawaharlal Nehru, Indiens erster Premierminister, begann eine gemeinsame Anstrengung mit Le Corbusier, eine utopische Stadt zu bauen, die als gemeinsame Hauptstadt von Punjab und Haryana fungieren sollte. Es ist ein modernes, brutalistisches Paradies, das in den 1960er Jahren fertiggestellt wurde und den Grundstein für einen radikalen Neuanfang für Indien legen sollte und war eines von Le Corbusiers wegweisenden Werken in der Architektur.",
+            "Die Offene Hand, oder La Main Ouverte, war ein wiederkehrendes Motiv in Le Corbusiers Werk und wurde zum bestimmenden Symbol von Chandigarh."
+        ],
+        "attribution": "Le Corbusier",
+        "pullquote": "\"Sie dreht sich mit dem Wind, nicht ziellos, sondern um auszudrücken, was das Leben wirklich ist: ständiger Wandel. Die Hand ist offen, um zu geben und zu empfangen. Es ist ein Zeichen des Optimismus in dieser Welt der Katastrophe.\""
+    },
+    "mcpWildfire": {
+        "title": "MCP: LA-Waldbrände mit KI kartieren",
+        "image": "Diagramm, das Kartenebenen mit einer Beschreibung jeder Ebene zeigt (von unten nach oben): Basiskarte von Los Angeles, Evakuierungszone, Aktive Brandzone, Schadensbewertung und Schadensfotos",
+        "paragraphs": [
+            "Als Reaktion auf die Waldbrände vom Januar 2025 in Los Angeles arbeitete <aidkit>AidKit</aidkit> schnell mit Los Angeles County und der Stadt Los Angeles zusammen, um zwei Programme für gezielte Bargeld-Katastrophenhilfe zu starten.",
+            "Ich leitete die Implementierung der neuen geospatialen Fähigkeiten der Plattform für Notfallmaßnahmen, einschließlich GIS-Datenintegrationen mit Steuerparzellen- und CAL FIRE-Daten. Ich erstellte auch Echtzeit-Kartenvisualisierungen, damit alle Beteiligten über die Auswirkungen und Reichweite der Programme auf dem Laufenden bleiben konnten. Diese Programme verteilten über 25 Millionen Dollar Hilfe an Einzelpersonen und kleine Unternehmen in LA.",
+            "Mehr über die Programme können Sie hier lesen:",
+            "<casestudy>Los Angeles Regional Wildfire Relief Programs</casestudy>",
+            "<award>AidKit als Gewinner der Stevie Awards 2025 für technische Exzellenz ausgezeichnet</award>",
+            "Ich war inspiriert zu sehen, wie KI und MCP-Server genutzt werden könnten, um eine schnelle Programmverwaltung zu ermöglichen und ein LLM mit CAL FIREs Schadensinspektionsdaten zu verbinden, um eine breitere Palette von Arbeitsabläufen zu ermöglichen.",
+            "Ein Beispielserver dafür finden Sie hier:",
+            "<repo>CAL FIRE DINS ArcGIS MCP Server ↗</repo>"
+        ]
+    },
+    "notFound": {
+        "title": "404",
+        "subtitle": "Seite nicht gefunden",
+        "message": "Die gesuchte Seite existiert nicht.",
+        "returnHome": "Zur Startseite"
+    },
+    "se1": {
+        "title": "(S)E1",
+        "paragraphs": [
+            "Pendelszenen in London von E1 nach SE1"
+        ]
+    }
+}

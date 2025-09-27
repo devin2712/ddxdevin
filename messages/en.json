@@ -1,0 +1,111 @@
+{
+    "bauhaus": {
+        "title": "Lessons from the Bauhaus",
+        "paragraphs": [
+            "Over the years, I've given variations of this talk to my teams to take inspiration from the Bauhaus and its associated movements and propose a framework for understanding ongoing UI trends and applying lessons from the Bauhaus towards building UI design systems."
+        ],
+        "openPdfAriaLabel": "Open Lessons from the Bauhaus presentation PDF (opens in new tab)",
+        "openPdfText": "Open PDF ↗",
+        "titleSlideAlt": "Lessons from the Bauhaus - Title Slide",
+        "viewPresentationLink": "View Full Presentation (PDF)"
+    },
+    "bauhauslers": {
+        "title": "Bauhäuslers",
+        "paragraphs": [
+            "A trip from Weimar to Dessau to Berlin, tracing the path of the Bauhaus during its centennial celebration.",
+            "Bauhäusler — a student of the Bauhaus",
+            "Mieslinge — disparaging term for students copying the master, Mies van der Rohe; from \"Mies\" and German \"misslingen\" [failure]"
+        ]
+    },
+    "common": {
+        "index": "Index"
+    },
+    "concertLog": {
+        "title": "Concert Log",
+        "paragraphs": [
+            "A set list of concerts attended.",
+            "Set in Times New Roman because IYKYK."
+        ],
+        "encore": "Encore (last show)",
+        "indicator": "indicates multiple shows",
+        "live": "LIVE",
+        "loading": "Loading",
+        "search": "Search"
+    },
+    "covidAppointments": {
+      "title": "COVID Appointment Notifications",
+      "image": "Banner graphic with Twilio's logo and lines three lines pointing to towards the logo. The title reads Get COVID-19 Vafccine Notifications using Twilio Serverless Functions.",
+      "paragraphs": [
+        "This was a project to integrate Airtable and Twilio to call you when a vaccine appointment became avaialble. At the time, I wrote integrations to systems in California, Massachussetts, and New York City as well as GetMyVaccine which aggregated vaccine availabilities at CVS, Rite-Aid, and Walgreens.",
+        "<github>Vaccine Appointment Notifications ↗</github>"
+      ]
+    },
+    "covidMyturn": {
+        "title": "COVID MyTurn CA Monitor",
+        "paragraphs": [
+            "This was a project to collect and aggregate vaccine availability data from the CA state vaccination system (MyTurn) for all 58 counties.",
+            "<github>MyTurn Monitor ↗</github>"
+        ]
+    },
+    "home": {
+        "title": "Devin Nguyen",
+        "description": "Software Engineer",
+        "intro": "I'm a full-stack software engineer based in NYC, currently building direct cash assistance programs at <aidkit>AidKit</aidkit>.",
+        "background": "Previously, I was a Principal Software Engineer at <hypr>HYPR</hypr> building scalable passwordless systems for banks, universities, and startups. Before that, I was a Senior Member of Technical Staff at <cloudhealth>CloudHealth</cloudhealth> by <vmware>VMware</vmware>, a platform for cloud infrastructure management.",
+        "links": {
+            "bauhaus": "Lessons from the Bauhaus",
+            "bauhaus_photo": "Bauhäuslers",
+            "ca_wildfire_mcp": "MCP: Mapping LA Wildfires with AI",
+            "concerts": "Concert Log",
+            "covid_appointments": "COVID Appointment Notifications",
+            "covid_myturn": "COVID MyTurn CA Monitor",
+            "discogs": "Discogs",
+            "github": "GitHub",
+            "la_main_ouverte": "La Main Ouverte",
+            "linkedin": "LinkedIn",
+            "live": "LIVE",
+            "se1": "(S)E1"
+        },
+        "sections": {
+            "connect": "Connect",
+            "photography": "Photography",
+            "writing": "Writing"
+        }
+    },
+    "laMainOuverte": {
+        "title": "La Main Ouverte",
+        "icon": "La Main Ouverte symbol in the shape of an open hand",
+        "paragraphs": [
+            "Located just a few hours north of New Delhi, Chandigarh is a planned city born from an unusual collaboration with an ambitious spirit following India's independence. After the partition of India in 1947, the Punjab province of British India was split between India and Pakistan. Jawaharlal Nehru, India's first Prime Minister, embarked on a joint effort with Le Corbusier to build a utopian city that would act as a shared capital of Punjab and Haryana. It's a modern, Brutalist paradise that was completed in the 1960s and was meant to set the stage for a radical new beginning for India and was one of Le Corbusier's seminal works in architecture.",
+            "The Open Hand, or La Main Ouverte, was a recurring motif throughout Le Corbusier's work and became the defining symbol of Chandigarh."
+        ],
+        "attribution": "Le Corbusier",
+        "pullquote": "\"It turns with the wind, not aimlessly, but to express what life really is: constant change. The hand is open to give and receive. It's a sign of optimism in this world of catastrophe.\""
+    },
+    "mcpWildfire": {
+        "title": "MCP: Mapping LA Wildfires with AI",
+        "image": "Diagram showing layers of a map with a description of each layer (from bottom to top): Base map of Los Angeles, Evacuation Zone, Active Fire Zone, Damage Assessment, and Damage Photographs",
+        "paragraphs": [
+            "In response to the January 2025 wildfires in Los Angeles, <aidkit>AidKit</aidkit> quickly partnered with Los Angeles County and the City of Los Angeles to launch two programs to provide targeted emergency disaster cash aid relief.",
+            "I led the implementation of the platform's new geospatial capabilities for emergency response, including GIS data integrations with tax parcel and CAL FIRE data. I also built real-time mapping visualizations so that all stakeholders could stay in-the-loop on the programs' impact and reach. These programs distributed over $25M in aid to individuals and small businesses across LA.",
+            "You can read more about the programs here:",
+            "<casestudy>Los Angeles Regional Wildfire Relief Programs</casestudy>",
+            "<award>AidKit Named a Winner in the 2025 Stevie Awards for Technology Excellence</award>",
+            "I was inspired to see how AI and MCP servers could be used to enable fast program administration and connect an LLM to CAL FIRE's damage inspection data to enable a wider range of workflows.",
+            "An example server of what that looks like can be found here:",
+            "<repo>CAL FIRE DINS ArcGIS MCP Server ↗</repo>"
+        ]
+    },
+    "notFound": {
+        "title": "404",
+        "subtitle": "Page Not Found",
+        "message": "The page you're looking for doesn't exist.",
+        "returnHome": "Return Home"
+    },
+    "se1": {
+        "title": "(S)E1",
+        "paragraphs": [
+            "Commuting scenes in London from E1 to SE1"
+        ]
+    }
+}

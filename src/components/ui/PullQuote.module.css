@@ -1,0 +1,18 @@
+.pullQuote {
+  margin: 2rem 0;
+  padding-left: 1rem;
+  border-left: 4px solid #C8C8C8;
+  text-align: left;
+}
+
+.quote {
+  font-style: italic;
+  line-height: 1.5;
+  margin-bottom: 0.5rem;
+}
+
+.attribution {
+  display: block;
+  font-style: normal;
+  margin-top: 0.5rem;
+}

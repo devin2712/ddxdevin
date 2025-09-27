@@ -1,0 +1,49 @@
+li.default {
+    transition: opacity 0.16s ease;
+}
+
+li.inactive, div.inactive {
+    color: var(--text-color);
+    opacity: 0.4;
+    transition: opacity 0.16s ease;
+}
+
+li.active {
+    color: var(--text-color);
+    transition: opacity 0.16s ease;
+}
+
+span.indexIcon {
+    font-size: 1.25rem;
+    display: inline-flex;
+    align-items: center;
+    line-height: 1;
+}
+
+a.link {
+    width: 100%;
+    display: inline-flex;
+    justify-content: space-between;
+    gap: 0.5rem;
+    padding: 0.5rem 0;
+    color: inherit;
+    text-decoration: none;
+}
+
+a.link:hover {
+    color: inherit;
+}
+
+span.linkContent {
+    color: var(--text-color);
+    opacity: 0.6;
+}
+
+section.linkSection {
+    margin-bottom: 1rem;
+}
+
+.headerWithIndex {
+    display: inline-flex;
+    gap: 0.5rem;
+}

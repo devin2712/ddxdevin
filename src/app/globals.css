@@ -1,0 +1,71 @@
+@font-face {
+  font-family: 'Tarnac';
+  src: url('/fonts/Tarnac-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Tarnac';
+  src: url('/fonts/Tarnac-Black.otf') format('opentype');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  --text-color: #0D0D0D;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+    --text-color: #ededed;
+  }
+}
+
+html,
+body {
+  max-width: 100vw;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: 'Tarnac', var(--font-roboto-slab), serif;
+  font-size: 16px;
+  font-synthesis: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3 {
+  font-size: 1rem;
+  font-weight: 900;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: var(--text-color);
+  text-decoration: underline;
+}
+
+a:hover, a:active, a:focus-within {
+  color: var(--text-color);
+  opacity: 1;
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+}
