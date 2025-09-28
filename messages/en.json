@@ -22,6 +22,13 @@
         "index": "Index",
         "skipToContent": "Skip to content"
     },
+    "theme": {
+        "system": "System theme",
+        "light": "Light mode",
+        "dark": "Dark mode",
+        "switchTo": "Switch to {theme}",
+        "currentMode": "Current: {mode}. Click to switch."
+    },
     "concertLog": {
         "title": "Concert Log",
         "paragraphs": [

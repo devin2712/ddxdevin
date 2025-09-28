@@ -22,6 +22,13 @@
         "index": "सूची",
         "skipToContent": "सामग्री पर जाएं"
     },
+    "theme": {
+        "system": "सिस्टम थीम",
+        "light": "हल्का मोड",
+        "dark": "गहरा मोड",
+        "switchTo": "{theme} पर स्विच करें",
+        "currentMode": "वर्तमान: {mode}। स्विच करने के लिए क्लिक करें।"
+    },
     "concertLog": {
         "title": "संगीत समारोह डायरी",
         "paragraphs": [

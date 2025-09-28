@@ -22,6 +22,17 @@
   }
 }
 
+/* Explicit theme overrides (higher specificity) */
+[data-theme="dark"] .button:hover,
+[data-theme="dark"] .button:focus-visible {
+  background-color: #444;
+}
+
+[data-theme="light"] .button:hover,
+[data-theme="light"] .button:focus-visible {
+  background-color: #F4F4F4;
+}
+
 .button:disabled {
   cursor: not-allowed;
   opacity: 0.5;

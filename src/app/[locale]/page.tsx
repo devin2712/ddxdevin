@@ -4,6 +4,7 @@ import styles from "./page.module.css";
 import { Header } from "@/components/ui/Header";
 import { useTranslations } from "next-intl";
 import { StyledLink } from "@/components/ui/StyledLink";
+import { ThemeToggle } from "@/components/ui/ThemeToggle";
 
 export default function Home() {
   const t = useTranslations("home");
@@ -131,6 +132,9 @@ export default function Home() {
     <>
       <main id="main-content" className={styles.contentContainer}>
         <div className={styles.content}>
+          <div className={styles.themeToggleContainer}>
+            <ThemeToggle />
+          </div>
           <Header
             as="h1"
             title={<span className={styles.name}>{t("title")}</span>}

@@ -64,7 +64,7 @@ div.search input {
   color: #333;
   font-family: inherit;
   outline: none;
-  transition: border-color 0.2s ease;
+  transition: border-color 0.16s ease;
   box-sizing: border-box;
 }
 
@@ -139,4 +139,45 @@ h2.encore {
   div.search pre.resultsCount {
     color: #aaa;
   }
+}
+
+/* Explicit theme overrides (higher specificity) */
+[data-theme="dark"] div.search input {
+  background-color: #333;
+  color: #fff;
+  border-color: #555;
+}
+
+[data-theme="dark"] div.search input:focus,
+[data-theme="dark"] div.search input:focus-visible,
+[data-theme="dark"] div.search input:active {
+  border-color: #005fcc;
+}
+
+[data-theme="dark"] div.search input::placeholder {
+  color: #aaa;
+}
+
+[data-theme="dark"] div.search pre.resultsCount {
+  color: #aaa;
+}
+
+[data-theme="light"] div.search input {
+  background-color: #fff;
+  color: #333;
+  border-color: #b8b8b8;
+}
+
+[data-theme="light"] div.search input:focus,
+[data-theme="light"] div.search input:focus-visible,
+[data-theme="light"] div.search input:active {
+  border-color: #005fcc;
+}
+
+[data-theme="light"] div.search input::placeholder {
+  color: #999;
+}
+
+[data-theme="light"] div.search pre.resultsCount {
+  color: #666;
 }

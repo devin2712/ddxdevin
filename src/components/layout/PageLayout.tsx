@@ -3,8 +3,9 @@
 import React, { useEffect, useRef } from "react";
 import { useTranslations } from "next-intl";
 import { Button } from "@/components/ui/Button";
-import { Arrow } from "@/components/ui/Arrow";
+import { Arrow } from "@/components/ui/icons/Arrow";
 import { Header, HeaderProps } from "@/components/ui/Header";
+import { ThemeToggle } from "@/components/ui/ThemeToggle";
 import styles from "./PageLayout.module.css";
 
 type PageLayoutProps = {
@@ -35,7 +36,11 @@ export const PageLayout: React.FC<PageLayoutProps> = ({ header, children, size =
       <a href="#main-content" className={styles.skipLink} ref={skipLinkRef}>
         {t("skipToContent")}
       </a>
-      <div className={`${styles.layout} ${size === "xlarge" ? styles.layoutXlarge : ""}`}>
+      <div
+        className={`${styles.layout} ${
+          size === "xlarge" ? styles.layoutXlarge : ""
+        }`}
+      >
         <aside className={styles.sidebar}>
           <Button as="link" href="/">
             <span className={styles.buttonContent}>
@@ -43,8 +48,14 @@ export const PageLayout: React.FC<PageLayoutProps> = ({ header, children, size =
               {t("index")}
             </span>
           </Button>
+          <div className={styles.themeToggleAsideContainer}>
+            <ThemeToggle />
+          </div>
         </aside>
         <main id="main-content" className={styles.content}>
+          <div className={styles.themeToggleContainer}>
+            <ThemeToggle />
+          </div>
           <div className={styles.header}>
             <Header {...header} />
           </div>

@@ -22,6 +22,13 @@
         "index": "Índice",
         "skipToContent": "Saltar al contenido"
     },
+    "theme": {
+        "system": "Tema del sistema",
+        "light": "Modo claro",
+        "dark": "Modo oscuro",
+        "switchTo": "Cambiar a {theme}",
+        "currentMode": "Actual: {mode}. Haz clic para cambiar."
+    },
     "concertLog": {
         "title": "Registro de conciertos",
         "paragraphs": [

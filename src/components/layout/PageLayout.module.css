@@ -1,7 +1,7 @@
 .container {
   display: flex;
   justify-content: center;
-  padding: 5rem 2rem 5rem;
+  padding: 2rem 2rem 5rem;
   width: 100%;
   position: relative;
   p {
@@ -40,12 +40,16 @@
 
 .sidebar {
   grid-column: 1;
-  justify-self: end;
+  justify-self: center;
   align-self: start;
-  padding-right: min(16vw, 16rem);
   white-space: nowrap;
   position: sticky;
-  top: 5rem;
+  top: 6rem;
+  padding: 0 0.5rem;
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 100%;
 }
 
 .content {
@@ -60,10 +64,22 @@
   text-transform: uppercase;
 }
 
+.themeToggleContainer {
+  margin: 0 auto 1rem auto;
+  display: flex;
+  justify-content: flex-end;
+  max-width: 500px;
+  height: 3rem;
+}
+
 .header {
   width: 100%;
   max-width: 500px;
   margin: 0 auto;
+}
+
+.themeToggleAsideContainer {
+  display: none;
 }
 
 @media (max-width: 768px) {
@@ -80,16 +96,26 @@
 
   .sidebar {
     grid-column: 1;
-    justify-self: start;
+    justify-self: flex-start;
     padding: 0;
     margin-bottom: 1rem;
     position: static;
+    justify-content: space-between;
   }
 
   .content {
     grid-column: 1;
     padding: 0 1rem;
     max-width: 100%;
+  }
+
+  .themeToggleContainer {
+    display: none;
+  }
+
+  .themeToggleAsideContainer {
+    padding-right: 1rem;
+    display: block;
   }
 }
 
@@ -128,7 +154,7 @@
   }
 
   .layout.layoutXlarge .sidebar {
-    justify-self: start;
+    justify-self: center;
     width: auto;
   }
 

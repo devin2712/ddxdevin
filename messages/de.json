@@ -22,6 +22,13 @@
         "index": "Index",
         "skipToContent": "Zum Inhalt springen"
     },
+    "theme": {
+        "system": "Systemdesign",
+        "light": "Heller Modus",
+        "dark": "Dunkler Modus",
+        "switchTo": "Wechseln zu {theme}",
+        "currentMode": "Aktuell: {mode}. Klicken zum Wechseln."
+    },
     "concertLog": {
         "title": "Konzertprotokoll",
         "paragraphs": [

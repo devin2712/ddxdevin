@@ -2,7 +2,7 @@ import { Header } from "@/components/ui/Header";
 import { useTranslations } from "next-intl";
 import styles from "./page.module.css";
 import { Button } from "@/components/ui/Button";
-import { Arrow } from "@/components/ui/Arrow";
+import { Arrow } from "@/components/ui/icons/Arrow";
 
 export default function NotFound() {
   const t = useTranslations("notFound");

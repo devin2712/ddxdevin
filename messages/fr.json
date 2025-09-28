@@ -22,6 +22,13 @@
         "index": "Index",
         "skipToContent": "Aller au contenu"
     },
+    "theme": {
+        "system": "Thème système",
+        "light": "Mode clair",
+        "dark": "Mode sombre",
+        "switchTo": "Changer vers {theme}",
+        "currentMode": "Actuel : {mode}. Cliquez pour changer."
+    },
     "concertLog": {
         "title": "Journal de concerts",
         "paragraphs": [

@@ -40,7 +40,7 @@ export default function LaMainOuvertePage() {
         as: "h1",
       }}
     >
-      <p style={{marginTop: '1rem'}}>
+      <p>
         <Image
           src="/icons/mainouverte.svg"
           alt={t("icon")}

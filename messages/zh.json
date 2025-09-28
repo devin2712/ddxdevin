@@ -22,6 +22,13 @@
         "index": "索引",
         "skipToContent": "跳转到内容"
     },
+    "theme": {
+        "system": "系统主题",
+        "light": "浅色模式",
+        "dark": "深色模式",
+        "switchTo": "切换到{theme}",
+        "currentMode": "当前：{mode}。点击切换。"
+    },
     "concertLog": {
         "title": "音乐会日志",
         "paragraphs": [
