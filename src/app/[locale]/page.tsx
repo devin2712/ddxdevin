@@ -5,6 +5,7 @@ import { Header } from "@/components/ui/Header";
 import { useTranslations } from "next-intl";
 import { StyledLink } from "@/components/ui/StyledLink";
 import { ThemeToggle } from "@/components/ui/ThemeToggle";
+import { Clock } from "@/components/ui/Clock";
 
 export default function Home() {
   const t = useTranslations("home");
@@ -132,7 +133,8 @@ export default function Home() {
     <>
       <main id="main-content" className={styles.contentContainer}>
         <div className={styles.content}>
-          <div className={styles.themeToggleContainer}>
+          <div className={styles.controlPanel}>
+            <Clock label="NYC" />
             <ThemeToggle />
           </div>
           <Header

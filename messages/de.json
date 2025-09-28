@@ -18,12 +18,15 @@
         ],
         "imageAlt": "Porträt {number} aus der Bauhäuslers Fotoserie"
     },
+    "clock": {
+        "ariaLabel": "Uhr zeigt {time} ET"
+    },
     "common": {
         "index": "Index",
         "skipToContent": "Zum Inhalt springen"
     },
     "theme": {
-        "system": "Systemdesign",
+        "system": "Systemstandard",
         "light": "Heller Modus",
         "dark": "Dunkler Modus",
         "switchTo": "Wechseln zu {theme}",

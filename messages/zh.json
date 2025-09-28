@@ -18,12 +18,15 @@
         ],
         "imageAlt": "Bauhäuslers摄影系列中的人像{number}"
     },
+    "clock": {
+        "ariaLabel": "时钟显示 {time} 东部时间"
+    },
     "common": {
         "index": "索引",
         "skipToContent": "跳转到内容"
     },
     "theme": {
-        "system": "系统主题",
+        "system": "系统默认",
         "light": "浅色模式",
         "dark": "深色模式",
         "switchTo": "切换到{theme}",

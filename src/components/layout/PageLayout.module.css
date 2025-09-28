@@ -1,7 +1,7 @@
 .container {
   display: flex;
   justify-content: center;
-  padding: 2rem 2rem 5rem;
+  padding: 3rem 2rem 5rem;
   width: 100%;
   position: relative;
   p {
@@ -44,10 +44,11 @@
   align-self: start;
   white-space: nowrap;
   position: sticky;
-  top: 6rem;
+  top: 3.25rem;
   padding: 0 0.5rem;
   display: flex;
   justify-content: center;
+  align-items: baseline;
   gap: 0.5rem;
   width: 100%;
 }
@@ -64,10 +65,12 @@
   text-transform: uppercase;
 }
 
-.themeToggleContainer {
-  margin: 0 auto 1rem auto;
+.controlPanel {
+  margin: 0 auto 0.5rem auto;
   display: flex;
-  justify-content: flex-end;
+  gap: 0.5rem;
+  justify-content: space-between;
+  align-items: center;
   max-width: 500px;
   height: 3rem;
 }
@@ -78,7 +81,7 @@
   margin: 0 auto;
 }
 
-.themeToggleAsideContainer {
+.mobileControlPanel {
   display: none;
 }
 
@@ -109,13 +112,15 @@
     max-width: 100%;
   }
 
-  .themeToggleContainer {
+  .controlPanel {
     display: none;
   }
 
-  .themeToggleAsideContainer {
+  .mobileControlPanel {
+    display: inline-flex;
+    gap: 0.5rem;
+    align-items: center;
     padding-right: 1rem;
-    display: block;
   }
 }
 

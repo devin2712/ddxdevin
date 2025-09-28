@@ -18,12 +18,15 @@
         ],
         "imageAlt": "Chân dung {number} từ bộ sưu tập ảnh Bauhäuslers"
     },
+    "clock": {
+        "ariaLabel": "Đồng hồ hiển thị {time} ET"
+    },
     "common": {
         "index": "Mục lục",
         "skipToContent": "Chuyển đến nội dung"
     },
     "theme": {
-        "system": "Chủ đề hệ thống",
+        "system": "mặc định hệ thống",
         "light": "Chế độ sáng",
         "dark": "Chế độ tối",
         "switchTo": "Chuyển sang {theme}",

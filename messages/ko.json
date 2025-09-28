@@ -18,12 +18,15 @@
         ],
         "imageAlt": "Bauhäuslers 사진 시리즈의 초상화 {number}"
     },
+    "clock": {
+        "ariaLabel": "시계 표시 {time} ET"
+    },
     "common": {
         "index": "색인",
         "skipToContent": "콘텐츠로 건너뛰기"
     },
     "theme": {
-        "system": "시스템 테마",
+        "system": "시스템 기본값",
         "light": "밝은 모드",
         "dark": "어두운 모드",
         "switchTo": "{theme}로 전환",

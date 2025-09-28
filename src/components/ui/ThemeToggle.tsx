@@ -2,6 +2,7 @@
 
 import React from "react";
 import { useTranslations } from "next-intl";
+import { Tooltip } from "./Tooltip";
 import { useTheme, type Theme } from "@/contexts/ThemeContext";
 import { useDeviceType } from "@/hooks/useDeviceType";
 import { SunIcon } from "./icons/SunIcon";
@@ -37,14 +38,17 @@ export const ThemeToggle: React.FC = () => {
   const nextTheme = themeOrder[(themeOrder.indexOf(theme) + 1) % themeOrder.length];
 
   return (
-    <button
-      type="button"
-      className={styles.toggle}
-      onClick={handleToggle}
-      aria-label={t("switchTo", { theme: t(nextTheme) })}
-      title={t("currentMode", { mode: t(theme) })}
-    >
-      {getThemeIcon(theme, deviceType)}
-    </button>
+    <Tooltip content={t("switchTo", { theme: t(nextTheme) })}>
+      <div className={styles.toggleWrapper}>
+        <button
+          type="button"
+          className={styles.toggle}
+          onClick={handleToggle}
+          aria-label={t("switchTo", { theme: t(nextTheme) })}
+        >
+          {getThemeIcon(theme, deviceType)}
+        </button>
+      </div>
+    </Tooltip>
   );
 };

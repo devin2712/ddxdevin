@@ -7,6 +7,7 @@ import { Arrow } from "@/components/ui/icons/Arrow";
 import { Header, HeaderProps } from "@/components/ui/Header";
 import { ThemeToggle } from "@/components/ui/ThemeToggle";
 import styles from "./PageLayout.module.css";
+import { Clock } from "../ui/Clock";
 
 type PageLayoutProps = {
   header: Omit<HeaderProps, "className">;
@@ -48,12 +49,14 @@ export const PageLayout: React.FC<PageLayoutProps> = ({ header, children, size =
               {t("index")}
             </span>
           </Button>
-          <div className={styles.themeToggleAsideContainer}>
+          <div className={styles.mobileControlPanel}>
+            <Clock label="NYC" labelAlign="left" />
             <ThemeToggle />
           </div>
         </aside>
         <main id="main-content" className={styles.content}>
-          <div className={styles.themeToggleContainer}>
+          <div className={styles.controlPanel}>
+            <Clock label="NYC" />
             <ThemeToggle />
           </div>
           <div className={styles.header}>

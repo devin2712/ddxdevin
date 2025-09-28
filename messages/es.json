@@ -18,14 +18,17 @@
         ],
         "imageAlt": "Retrato {number} de la serie fotográfica Bauhäuslers"
     },
+    "clock": {
+        "ariaLabel": "Reloj mostrando {time} ET"
+    },
     "common": {
         "index": "Índice",
         "skipToContent": "Saltar al contenido"
     },
     "theme": {
-        "system": "Tema del sistema",
-        "light": "Modo claro",
-        "dark": "Modo oscuro",
+        "system": "predeterminado del sistema",
+        "light": "modo claro",
+        "dark": "modo oscuro",
         "switchTo": "Cambiar a {theme}",
         "currentMode": "Actual: {mode}. Haz clic para cambiar."
     },

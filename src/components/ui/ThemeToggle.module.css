@@ -1,21 +1,30 @@
 .toggle {
   background: none;
+  /* border: 1px solid color-mix(in srgb, var(--text-color) 40%, transparent); */
   border: none;
   border-radius: 50%;
-  padding: 8px;
-  color: var(--text-color);
+  padding: 4px;
+  background-color: color-mix(in srgb, var(--text-color) 15%, transparent);
+  color: color-mix(in srgb, var(--text-color) 80%, transparent);
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: all 0.16s ease;
-  width: 36px;
-  height: 36px;
+  transition: transform 0.16s ease, background 0.16s ease, color 0.16s ease, border 0.16s ease;
+  width: 28px;
+  height: 28px;
+}
+
+.toggleWrapper {
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .toggle:hover {
-  background: var(--text-color);
-  color: var(--background);
+  background-color: color-mix(in srgb, var(--text-color) 90%, transparent);
+  color: color-mix(in srgb, var(--background) 90%, transparent);
 }
 
 .toggle:focus-visible {

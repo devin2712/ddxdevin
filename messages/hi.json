@@ -18,12 +18,15 @@
         ],
         "imageAlt": "Bauhäuslers फोटोग्राफी श्रृंखला से चित्र {number}"
     },
+    "clock": {
+        "ariaLabel": "घड़ी {time} ET दिखा रही है"
+    },
     "common": {
         "index": "सूची",
         "skipToContent": "सामग्री पर जाएं"
     },
     "theme": {
-        "system": "सिस्टम थीम",
+        "system": "सिस्टम डिफ़ॉल्ट",
         "light": "हल्का मोड",
         "dark": "गहरा मोड",
         "switchTo": "{theme} पर स्विच करें",

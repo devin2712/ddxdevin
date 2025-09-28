@@ -18,14 +18,17 @@
         ],
         "imageAlt": "Portrait {number} from Bauhäuslers photography series"
     },
+    "clock": {
+        "ariaLabel": "Clock showing {time} ET"
+    },
     "common": {
         "index": "Index",
         "skipToContent": "Skip to content"
     },
     "theme": {
-        "system": "System theme",
-        "light": "Light mode",
-        "dark": "Dark mode",
+        "system": "system default",
+        "light": "light mode",
+        "dark": "dark mode",
         "switchTo": "Switch to {theme}",
         "currentMode": "Current: {mode}. Click to switch."
     },

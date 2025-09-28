@@ -1,0 +1,40 @@
+.clockWrapper {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  height: 2rem;
+
+  span {
+    opacity: 0.7;
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+}
+
+.clockWrapper.leftAlign {
+  flex-direction: row-reverse;
+}
+
+.clock {
+  display: inline-block;
+  width: 28px;
+  height: 28px;
+  cursor: default;
+  color: var(--text-color);
+  border-radius: 50%;
+  transition: transform 0.16s ease, background 0.16s ease, color 0.16s ease;
+}
+
+.clock:focus-visible {
+  outline: 2px solid var(--text-color);
+  outline-offset: 2px;
+}
+
+.clock svg {
+  display: block;
+}
+
+.clockFace {
+  stroke: color-mix(in srgb, var(--text-color) 40%, transparent);
+  stroke-width: 1.5;
+}
