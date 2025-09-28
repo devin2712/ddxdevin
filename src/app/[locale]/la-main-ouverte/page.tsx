@@ -41,7 +41,7 @@ export default function LaMainOuvertePage() {
     >
       <p style={{marginTop: '1rem'}}>
         <Image
-          src="/icons/mainouverte.svg"
+          src="/icons/mainouverte.png"
           alt={t("icon")}
           width={48}
           height={48}
