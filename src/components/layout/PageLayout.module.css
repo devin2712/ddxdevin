@@ -120,3 +120,20 @@
     max-width: 100%;
   }
 }
+
+@media (max-width: 768px) {
+  .layout.layoutXlarge {
+    max-width: 100%;
+    margin: 0;
+  }
+
+  .layout.layoutXlarge .sidebar {
+    justify-self: start;
+    width: auto;
+    padding: 0 1rem;
+  }
+
+  .layout.layoutXlarge .content {
+    padding: 0 1rem;
+  }
+}

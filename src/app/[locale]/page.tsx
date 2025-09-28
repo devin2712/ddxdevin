@@ -128,9 +128,6 @@ export default function Home() {
 
   return (
     <>
-      <a href="#main-content" className={styles.skipLink}>
-        {t("skipToContent")}
-      </a>
       <main id="main-content" className={styles.contentContainer}>
         <div className={styles.content}>
           <Header

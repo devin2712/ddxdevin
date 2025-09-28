@@ -37,7 +37,8 @@ div.indicator strong.showCount {
 }
 
 div.contentWrapper {
-  width: 500px;
+  width: 100%;
+  max-width: 500px;
   display: flex;
   flex-direction: column;
   gap: 0.25rem;
