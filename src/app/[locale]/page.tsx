@@ -10,6 +10,7 @@ import type { Metadata } from "next";
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
+    description: "Devin Nguyen is a full-stack software engineer based in NYC.",
     openGraph: {
       images: [
         {

@@ -6,6 +6,9 @@ import type { Metadata } from "next";
 export async function generateMetadata(): Promise<Metadata> {
   return {
     openGraph: {
+      title: "Bauhäuslers by Devin Nguyen",
+      description:
+        "A journey tracing the Bauhaus movement's historic path from Weimar to Dessau to Berlin during the centennial celebration.",
       images: [
         {
           url: "https://devinnguyen.com/images/bauhauslers/1.jpg",
@@ -16,6 +19,10 @@ export async function generateMetadata(): Promise<Metadata> {
       ],
     },
     twitter: {
+      title: "Bauhäuslers by Devin Nguyen",
+      description:
+        "A journey tracing the Bauhaus movement's historic path from Weimar to Dessau to Berlin during the centennial celebration.",
+      creator: "@ddxdevin",
       card: "summary_large_image",
       images: ["https://devinnguyen.com/images/bauhauslers/1.jpg"],
     },

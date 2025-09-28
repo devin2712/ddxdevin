@@ -6,6 +6,9 @@ import { BauhausClientComponent } from "./BauhausClientComponent";
 export async function generateMetadata(): Promise<Metadata> {
   return {
     openGraph: {
+      title: "Lessons from the Bauhaus by Devin Nguyen",
+      description:
+        "A presentation exploring Bauhaus design principles and their lasting influence on modern design.",
       images: [
         {
           url: "https://devinnguyen.com/images/bauhaus/1.png",
@@ -17,6 +20,10 @@ export async function generateMetadata(): Promise<Metadata> {
     },
     twitter: {
       card: "summary_large_image",
+      creator: "@ddxdevin",
+      title: "Lessons from the Bauhaus by Devin Nguyen",
+      description:
+        "A presentation exploring Bauhaus design principles and their lasting influence on modern design.",
       images: ["https://devinnguyen.com/images/bauhaus/1.png"],
     },
   };

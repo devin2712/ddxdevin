@@ -8,6 +8,8 @@ import type { Metadata } from "next";
 export async function generateMetadata(): Promise<Metadata> {
   return {
     openGraph: {
+      title: "La Main Ouverte by Devin Nguyen",
+      description: "Chandigarh, India - 2019",
       images: [
         {
           url: "https://devinnguyen.com/images/lamainouverte/AAIMG_7378.jpg",
@@ -18,6 +20,9 @@ export async function generateMetadata(): Promise<Metadata> {
       ],
     },
     twitter: {
+      title: "La Main Ouverte by Devin Nguyen",
+      description: "Chandigarh, India - 2019",
+      creator: "@ddxdevin",
       card: "summary_large_image",
       images: ["https://devinnguyen.com/images/lamainouverte/AAIMG_7378.jpg"],
     },

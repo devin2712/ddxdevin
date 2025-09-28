@@ -6,6 +6,9 @@ import type { Metadata } from "next";
 export async function generateMetadata(): Promise<Metadata> {
   return {
     openGraph: {
+      title: "COVID MyTurn CA Monitor",
+      description:
+        "Collect and aggregate vaccine availability data from the CA state vaccination system (MyTurn)",
       images: [
         {
           url: "https://devinnguyen.com/icons/blue_arrow_512.png",
@@ -16,6 +19,10 @@ export async function generateMetadata(): Promise<Metadata> {
       ],
     },
     twitter: {
+      title: "COVID MyTurn CA Monitor",
+      description:
+        "Collect and aggregate vaccine availability data from the CA state vaccination system (MyTurn)",
+      creator: "@ddxdevin",
       card: "summary",
       images: ["https://devinnguyen.com/icons/blue_arrow_512.png"],
     },
@@ -56,11 +63,7 @@ export default function CovidMyturnPage() {
             <p key={index}>
               {t.rich(`paragraphs.${index}`, {
                 notifier: (chunks) => (
-                  <StyledLink
-                    href="/covid-appointments"
-                  >
-                    {chunks}
-                  </StyledLink>
+                  <StyledLink href="/covid-appointments">{chunks}</StyledLink>
                 ),
               })}
             </p>

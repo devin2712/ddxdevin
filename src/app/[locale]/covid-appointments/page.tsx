@@ -7,6 +7,9 @@ import type { Metadata } from "next";
 export async function generateMetadata(): Promise<Metadata> {
   return {
     openGraph: {
+      title: "COVID Appointment Notifications",
+      description:
+        "Get COVID-19 Vaccine Notifications using Twilio Serverless Functions",
       images: [
         {
           url: "https://devinnguyen.com/images/covidappointments/banner.png",
@@ -17,6 +20,10 @@ export async function generateMetadata(): Promise<Metadata> {
       ],
     },
     twitter: {
+      title: "COVID Appointment Notifications",
+      description:
+        "Get COVID-19 Vaccine Notifications using Twilio Serverless Functions",
+      creator: "@ddxdevin",
       card: "summary_large_image",
       images: ["https://devinnguyen.com/images/covidappointments/banner.png"],
     },

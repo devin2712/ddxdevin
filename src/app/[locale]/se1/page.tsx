@@ -6,6 +6,8 @@ import type { Metadata } from "next";
 export async function generateMetadata(): Promise<Metadata> {
   return {
     openGraph: {
+      title: "(S)E1 by Devin Nguyen",
+      description: "Commuting scenes in London from E1 to SE1",
       images: [
         {
           url: "https://devinnguyen.com/images/se1/000051980002.jpg",
@@ -16,6 +18,9 @@ export async function generateMetadata(): Promise<Metadata> {
       ],
     },
     twitter: {
+      title: "(S)E1 by Devin Nguyen",
+      description: "Commuting scenes in London from E1 to SE1",
+      creator: "@ddxdevin",
       card: "summary_large_image",
       images: ["https://devinnguyen.com/images/se1/000051980002.jpg"],
     },

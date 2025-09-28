@@ -7,6 +7,9 @@ import type { Metadata } from "next";
 export async function generateMetadata(): Promise<Metadata> {
   return {
     openGraph: {
+      title: "MCP: Mapping LA Wildfires with AI",
+      description:
+        "An MCP server for accessing CAL FIRE wildfire data to help with disaster relief programs",
       images: [
         {
           url: "https://devinnguyen.com/images/calfire/diagram.png",
@@ -17,6 +20,10 @@ export async function generateMetadata(): Promise<Metadata> {
       ],
     },
     twitter: {
+      title: "MCP: Mapping LA Wildfires with AI",
+      creator: "@ddxdevin",
+      description:
+        "An MCP server for accessing CAL FIRE wildfire data to help with disaster relief programs",
       card: "summary_large_image",
       images: ["https://devinnguyen.com/images/calfire/diagram.png"],
     },
