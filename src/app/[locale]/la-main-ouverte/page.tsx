@@ -40,15 +40,13 @@ export default function LaMainOuvertePage() {
         as: "h1",
       }}
     >
-      <p>
-        <Image
-          src="/icons/mainouverte.svg"
-          alt={t("icon")}
-          width={48}
-          height={48}
-          className={styles.handIcon}
-        />
-      </p>
+      <Image
+        src="/icons/mainouverte.svg"
+        alt={t("icon")}
+        height={0}
+        width={0}
+        className={styles.handIcon}
+      />
       {t.raw("paragraphs").map((paragraph: string, index: number) => (
         <p key={index}>{paragraph}</p>
       ))}
