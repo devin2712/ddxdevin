@@ -10,6 +10,7 @@ import { getHeaders, parseCSV } from "@/utils/CSVreader";
 import { normalizeString } from "@/utils/stringNormalizer";
 
 import styles from "./concerts.module.css";
+import { useConcertData } from "@/hooks/useConcertData";
 
 export default function ConcertsPage() {
   const t = useTranslations("concertLog");
@@ -18,16 +19,16 @@ export default function ConcertsPage() {
   const searchParams = useSearchParams();
   const q = searchParams.get("q") || "";
 
-  const [data, setData] = useState<string | null>(null);
   const [searchQuery, setSearchQuery] = useState<string>(q);
   const debouncedSearchQuery = useDebounce(searchQuery, 300);
   const isSearching = searchQuery !== debouncedSearchQuery;
 
-  const CONCERT_DATA_URL =
-    "https://docs.google.com/spreadsheets/d/e/2PACX-1vS7cRqq437Wt4-eWBZkbUUmO1GnCUQ-V_f4e9-VVwPS0hbD5vQDgFWzvgm16hMvDSLOtgRF8TBgRsvM/pub?gid=0&single=true&output=csv";
-  const CONCERT_CACHE_KEY = "ddxdevin.concertData";
-  const CONCERT_TIME_KEY = "ddxdevin.concertDataCacheTime";
-  const CONCERT_CACHE_EXPIRATION = 24 * 60 * 60 * 1000; // One Day
+  const {
+    data,
+    isLoading,
+    isError: _isError,
+    error: _error,
+  } = useConcertData();
 
   useEffect(() => {
     setSearchQuery(q);
@@ -45,70 +46,6 @@ export default function ConcertsPage() {
       }
     }
   }, [debouncedSearchQuery, router, q]);
-
-  useEffect(() => {
-    const getCachedData = () => {
-      if (typeof window === "undefined") return null;
-      const cachedData = localStorage.getItem(CONCERT_CACHE_KEY);
-      const cachedTime = parseInt(
-        localStorage.getItem(CONCERT_TIME_KEY) || "0"
-      );
-      if (
-        cachedData &&
-        cachedTime &&
-        Date.now() - cachedTime < CONCERT_CACHE_EXPIRATION
-      ) {
-        return cachedData;
-      }
-      return null;
-    };
-
-    const fetchData = async () => {
-      try {
-        const cachedData = getCachedData();
-        if (cachedData) {
-          setData(cachedData);
-        } else {
-          const fetchedData = await fetchDataFromUrl(CONCERT_DATA_URL);
-          setData(fetchedData);
-          setCachedData(fetchedData);
-        }
-      } catch (error) {
-        console.error("Error fetching CSV data: ", error);
-        try {
-          const backupData = await fetchBackupData();
-          setData(backupData);
-          setCachedData(backupData);
-        } catch (backupError) {
-          console.error("Error fetching backup CSV data: ", backupError);
-        }
-      }
-    };
-
-    fetchData();
-  }, [CONCERT_CACHE_EXPIRATION]);
-
-  const setCachedData = (data: string) => {
-    if (typeof window === "undefined") return;
-    localStorage.setItem(CONCERT_CACHE_KEY, data);
-    localStorage.setItem(CONCERT_TIME_KEY, Date.now().toString());
-  };
-
-  const fetchDataFromUrl = async (url: string) => {
-    const response = await fetch(url);
-    if (!response.ok) {
-      throw new Error(`HTTP error: ${response.status}`);
-    }
-    return response.text();
-  };
-
-  const fetchBackupData = async () => {
-    const response = await fetch("/docs/concerts-backup.csv");
-    if (!response.ok) {
-      throw new Error(`HTTP error: ${response.status}`);
-    }
-    return response.text();
-  };
 
   const parsedData = useMemo(() => {
     if (!data) return [];
@@ -134,9 +71,7 @@ export default function ConcertsPage() {
     if (!trimmedQuery) return parsedData;
 
     return parsedData.filter((row) =>
-      normalizeString(row[ARTIST_KEY]).includes(
-        normalizeString(trimmedQuery)
-      )
+      normalizeString(row[ARTIST_KEY]).includes(normalizeString(trimmedQuery))
     );
   }, [debouncedSearchQuery, parsedData]);
 
@@ -182,7 +117,7 @@ export default function ConcertsPage() {
       }}
       size="xlarge"
     >
-      {!data && (
+      {isLoading && (
         <section className={styles.concertLog}>
           <p>{t("loading")}...</p>
         </section>
@@ -192,9 +127,11 @@ export default function ConcertsPage() {
         <section className={styles.concertLogList}>
           <div className={styles.contentWrapper}>
             {t.raw("paragraphs") && Array.isArray(t.raw("paragraphs"))
-              ? (t.raw("paragraphs") as string[]).map((paragraph: string, index: number) => (
-                  <p key={index}>{paragraph}</p>
-                ))
+              ? (t.raw("paragraphs") as string[]).map(
+                  (paragraph: string, index: number) => (
+                    <p key={index}>{paragraph}</p>
+                  )
+                )
               : null}
             <div className={styles.search}>
               <label htmlFor="concert-search" className="sr-only">
@@ -210,9 +147,17 @@ export default function ConcertsPage() {
                 onChange={handleSearch}
                 aria-describedby="search-results-count"
               />
-              <pre ref={counterRef} className={styles.resultsCount} id="search-results-count" aria-live="polite">
+              <pre
+                ref={counterRef}
+                className={styles.resultsCount}
+                id="search-results-count"
+                aria-live="polite"
+              >
                 {isSearching ? (
-                  <span className={styles.spinner} aria-label="Searching"></span>
+                  <span
+                    className={styles.spinner}
+                    aria-label="Searching"
+                  ></span>
                 ) : (
                   resultsCount[0]
                 )}{" "}

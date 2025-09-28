@@ -6,8 +6,9 @@ import { routing } from "@/i18n/routing";
 import { setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { ThemeProvider } from "@/contexts/ThemeContext";
+import { QueryProvider } from "@/components/providers/QueryProvider";
 
-// Fallback font registration if Tarnac is unavailable 
+// Fallback font registration if Tarnac is unavailable
 // We expose this as a CSS variable to <html>
 const robotoSlab = Roboto_Slab({
   weight: ["400", "700", "900"],
@@ -98,11 +99,11 @@ export default async function LocaleLayout({
         />
       </head>
       <body>
-        <ThemeProvider>
-          <NextIntlClientProvider>
-            {children}
-          </NextIntlClientProvider>
-        </ThemeProvider>
+        <QueryProvider>
+          <ThemeProvider>
+            <NextIntlClientProvider>{children}</NextIntlClientProvider>
+          </ThemeProvider>
+        </QueryProvider>
       </body>
     </html>
   );
