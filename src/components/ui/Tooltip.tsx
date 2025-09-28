@@ -15,7 +15,7 @@ export const Tooltip: React.FC<TooltipProps> = ({
   children,
   content,
   delayDuration = 100,
-  sideOffset = 2,
+  sideOffset = 5,
 }) => {
   return (
     <RadixTooltip.Provider delayDuration={delayDuration}>
