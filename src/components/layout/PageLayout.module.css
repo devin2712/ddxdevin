@@ -45,7 +45,7 @@
   white-space: nowrap;
   position: sticky;
   top: 3.25rem;
-  padding: 0 0.5rem;
+  padding: 0 0.5rem 0;
   display: flex;
   justify-content: center;
   align-items: baseline;
@@ -87,7 +87,7 @@
 
 @media (max-width: 768px) {
   .container {
-    padding: 1rem 1rem 3rem;
+    padding: 0 1rem 3rem;
   }
 
   .layout {
@@ -100,7 +100,6 @@
   .sidebar {
     grid-column: 1;
     justify-self: flex-start;
-    padding: 0;
     position: sticky;
     top: 0;
     z-index: 11;
@@ -117,7 +116,7 @@
 
   .header {
     position: sticky;
-    top: 3rem;
+    top: 4rem;
     z-index: 10;
     background: var(--background);
     margin: 0 auto;
@@ -139,7 +138,7 @@
 @media (max-width: 432px) {
   .container {
     justify-content: flex-start;
-    padding: 1rem 1rem 3rem;
+    padding: 0 1rem 3rem;
   }
 }
 
