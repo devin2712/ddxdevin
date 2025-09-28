@@ -41,6 +41,9 @@ span.linkContent {
 
 section.linkSection {
     margin-bottom: 1rem;
+    ul {
+        padding: 0.5rem 0 0;
+    }
 }
 
 .headerWithIndex {
