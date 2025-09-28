@@ -77,50 +77,49 @@ export const Clock: React.FC<ClockProps> = ({ label, labelAlign = 'right' }) => 
           aria-label={t("ariaLabel", { time: formattedTime })}
           tabIndex={0}
         >
-          <svg width="28" height="28" viewBox="0 0 28 28">
+          <svg width="24" height="24" viewBox="0 0 24 24">
             <circle
-              cx="14"
-              cy="14"
-              r="12"
-              fill="none"
+              cx="12"
+              cy="12"
+              r="10"
               className={styles.clockFace}
             />
 
-            <circle cx="14" cy="14" r="1" fill="currentColor" opacity="0.8" />
+            <circle cx="12" cy="12" r="1" fill="currentColor" opacity="0.8" />
 
             <line
-              x1="14"
-              y1="14"
-              x2="14"
-              y2="8"
+              x1="12"
+              y1="12"
+              x2="12"
+              y2="7"
               stroke="currentColor"
               strokeWidth="1.5"
               strokeLinecap="round"
-              transform={`rotate(${hourAngle} 14 14)`}
+              transform={`rotate(${hourAngle} 12 12)`}
               opacity="0.7"
             />
 
             <line
-              x1="14"
-              y1="14"
-              x2="14"
-              y2="4"
-              stroke="currentColor"
-              strokeWidth="1.5"
-              strokeLinecap="round"
-              transform={`rotate(${minuteAngle} 14 14)`}
-              opacity="0.7"
-            />
-
-            <line
-              x1="14"
-              y1="14"
-              x2="14"
+              x1="12"
+              y1="12"
+              x2="12"
               y2="3"
+              stroke="currentColor"
+              strokeWidth="1.5"
+              strokeLinecap="round"
+              transform={`rotate(${minuteAngle} 12 12)`}
+              opacity="0.7"
+            />
+
+            <line
+              x1="12"
+              y1="12"
+              x2="12"
+              y2="2"
               stroke="#FF0000"
               strokeWidth="0.5"
               strokeLinecap="round"
-              transform={`rotate(${secondAngle} 14 14)`}
+              transform={`rotate(${secondAngle} 12 12)`}
             />
           </svg>
         </div>

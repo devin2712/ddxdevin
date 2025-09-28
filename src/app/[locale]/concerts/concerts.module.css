@@ -60,7 +60,7 @@ div.search input {
   padding: 0.5rem 4rem 0.5rem 1rem;
   border: 2px solid #b8b8b8;
   border-radius: 4px;
-  background-color: #fff;
+  background-color: #fafafa;
   color: #333;
   font-family: inherit;
   outline: none;
@@ -163,7 +163,7 @@ h2.encore {
 }
 
 [data-theme="light"] div.search input {
-  background-color: #fff;
+  background-color: #fafafa;
   color: #333;
   border-color: #b8b8b8;
 }

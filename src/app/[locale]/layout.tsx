@@ -83,6 +83,8 @@ export default async function LocaleLayout({
   return (
     <html className={robotoSlab.variable} lang={locale}>
       <head>
+        <meta name="theme-color" content="#fafafa" media="(prefers-color-scheme: light)" />
+        <meta name="theme-color" content="#0a0a0a" media="(prefers-color-scheme: dark)" />
         <link
           rel="preload"
           href="/fonts/Tarnac-Regular.otf"

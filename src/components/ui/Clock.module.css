@@ -17,8 +17,8 @@
 
 .clock {
   display: inline-block;
-  width: 28px;
-  height: 28px;
+  width: 24px;
+  height: 24px;
   cursor: default;
   color: var(--text-color);
   border-radius: 50%;
@@ -35,6 +35,7 @@
 }
 
 .clockFace {
-  stroke: color-mix(in srgb, var(--text-color) 40%, transparent);
+  fill: color-mix(in srgb, var(--text-color) 10%, transparent);
+  stroke: color-mix(in srgb, var(--text-color) 10%, transparent);
   stroke-width: 1.5;
 }

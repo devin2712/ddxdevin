@@ -4,38 +4,30 @@ import React from "react";
 import { useTranslations } from "next-intl";
 import { Tooltip } from "./Tooltip";
 import { useTheme, type Theme } from "@/contexts/ThemeContext";
-import { useDeviceType } from "@/hooks/useDeviceType";
 import { SunIcon } from "./icons/SunIcon";
 import { MoonIcon } from "./icons/MoonIcon";
-import { SystemIcon } from "./icons/SystemIcon";
 import styles from "./ThemeToggle.module.css";
 
-const themeOrder: Theme[] = ["system", "light", "dark"];
-
-const getThemeIcon = (theme: Theme, deviceType: "desktop" | "mobile" | "tablet") => {
+const getThemeIcon = (theme: Theme) => {
   switch (theme) {
     case "light":
       return <SunIcon size={16} />;
     case "dark":
       return <MoonIcon size={16} />;
-    case "system":
     default:
-      return <SystemIcon size={16} deviceType={deviceType} />;
+      return <SunIcon size={16} />;
   }
 };
 
 export const ThemeToggle: React.FC = () => {
   const { theme, setTheme } = useTheme();
-  const deviceType = useDeviceType();
   const t = useTranslations("theme");
 
   const handleToggle = () => {
-    const currentIndex = themeOrder.indexOf(theme);
-    const nextIndex = (currentIndex + 1) % themeOrder.length;
-    setTheme(themeOrder[nextIndex]);
+    setTheme(theme === "light" ? "dark" : "light");
   };
 
-  const nextTheme = themeOrder[(themeOrder.indexOf(theme) + 1) % themeOrder.length];
+  const nextTheme = theme === "light" ? "dark" : "light";
 
   return (
     <Tooltip content={t("switchTo", { theme: t(nextTheme) })}>
@@ -46,7 +38,7 @@ export const ThemeToggle: React.FC = () => {
           onClick={handleToggle}
           aria-label={t("switchTo", { theme: t(nextTheme) })}
         >
-          {getThemeIcon(theme, deviceType)}
+          {getThemeIcon(theme)}
         </button>
       </div>
     </Tooltip>
