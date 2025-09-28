@@ -2,17 +2,17 @@
     "bauhaus": {
         "title": "Lessons from the Bauhaus",
         "paragraphs": [
-            "Over the years, I've given variations of this talk to my teams to take inspiration from the Bauhaus and its associated movements and propose a framework for understanding ongoing UI trends and applying lessons from the Bauhaus towards building UI design systems."
+            "Over the years, I've presented variations of this talk to my teams, drawing inspiration from the Bauhaus and its related design movements. The talk outlines a framework for interpreting modern UI trends and applies principles and lessons from the Bauhaus to the creation of scalable, cohesive UI design systems."
         ],
         "openPdfAriaLabel": "Open Lessons from the Bauhaus presentation PDF (opens in new tab)",
-        "openPdfText": "Open PDF ↗",
+        "openPdfText": "Open PDF",
         "titleSlideAlt": "Lessons from the Bauhaus - Title Slide",
         "viewPresentationLink": "View Full Presentation (PDF)"
     },
     "bauhauslers": {
         "title": "Bauhäuslers",
         "paragraphs": [
-            "A trip from Weimar to Dessau to Berlin, tracing the path of the Bauhaus during its centennial celebration.",
+            "A journey tracing the Bauhaus movement's historic path from Weimar to Dessau to Berlin during the centennial celebration.",
             "Bauhäusler — a student of the Bauhaus",
             "Mieslinge — disparaging term for students copying the master, Mies van der Rohe; from \"Mies\" and German \"misslingen\" [failure]"
         ],
@@ -36,24 +36,26 @@
     },
     "covidAppointments": {
       "title": "COVID Appointment Notifications",
-      "image": "Banner graphic with Twilio's logo and lines three lines pointing to towards the logo. The title reads Get COVID-19 Vafccine Notifications using Twilio Serverless Functions.",
+      "image": "Banner graphic with Twilio's logo and three lines pointing towards the logo. The title reads Get COVID-19 Vaccine Notifications using Twilio Serverless Functions.",
       "paragraphs": [
-        "This was a project to integrate Airtable and Twilio to call you when a vaccine appointment became avaialble. At the time, I wrote integrations to systems in California, Massachussetts, and New York City as well as GetMyVaccine which aggregated vaccine availabilities at CVS, Rite-Aid, and Walgreens.",
-        "<github>Vaccine Appointment Notifications ↗</github>"
+        "This project was an automated notification system that integrated Airtable and Twilio to call you when COVID-19 vaccine appointments became available. At the time, I wrote integrations with systems in California, Massachusetts, and New York City, as well as GetMyVaccine which aggregated vaccine availabilities from CVS, Rite-Aid, and Walgreens.",
+        "<github>Vaccine Appointment Notifications</github>"
       ]
     },
     "covidMyturn": {
         "title": "COVID MyTurn CA Monitor",
         "paragraphs": [
-            "This was a project to collect and aggregate vaccine availability data from the CA state vaccination system (MyTurn) for all 58 counties.",
-            "<github>MyTurn Monitor ↗</github>"
+            "This project was built to collect and aggregate vaccine availability data from the CA state vaccination system (MyTurn), covering all 58 counties.",
+            "Using CloudWatch, I scheduled a cron-triggered fan-out of serverless Lambda jobs to collect availability data from MyTurn in parallel. A separate Lambda function aggregated the results and stored them in S3 as a single canonical dataset.",
+            "This was an optimization to <notifier>Vaccine Appointment Notifications</notifier> to reduce direct calls to MyTurn and to enable other projects.",
+            "<github>MyTurn Monitor</github>"
         ]
     },
     "home": {
         "title": "Devin Nguyen",
         "description": "Software Engineer",
-        "intro": "I'm a full-stack software engineer based in NYC, currently building direct cash assistance programs at <aidkit>AidKit</aidkit>.",
-        "background": "Previously, I was a Principal Software Engineer at <hypr>HYPR</hypr> building scalable passwordless systems for banks, universities, and startups. Before that, I was a Senior Member of Technical Staff at <cloudhealth>CloudHealth</cloudhealth> by <vmware>VMware</vmware>, a platform for cloud infrastructure management.",
+        "intro": "I'm a full-stack software engineer based in NYC, currently building infrastructure for governments and nonprofits to modernize and scale benefits delivery at <aidkit>AidKit</aidkit>.",
+        "background": "Previously, I was a Principal Software Engineer at <hypr>HYPR</hypr>, where I built passwordless authentication infrastructure trusted by banks, universities, and startups. Before that, I was a Senior Member of Technical Staff at <cloudhealth>CloudHealth</cloudhealth> by <vmware>VMware</vmware>, building solutions for cloud governance, cost optimization, and compliance at enterprise scale.",
         "links": {
             "bauhaus": "Lessons from the Bauhaus",
             "bauhaus_photo": "Bauhäuslers",
@@ -90,14 +92,18 @@
         "title": "MCP: Mapping LA Wildfires with AI",
         "image": "Diagram showing layers of a map with a description of each layer (from bottom to top): Base map of Los Angeles, Evacuation Zone, Active Fire Zone, Damage Assessment, and Damage Photographs",
         "paragraphs": [
-            "In response to the January 2025 wildfires in Los Angeles, <aidkit>AidKit</aidkit> quickly partnered with Los Angeles County and the City of Los Angeles to launch two programs to provide targeted emergency disaster cash aid relief.",
-            "I led the implementation of the platform's new geospatial capabilities for emergency response, including GIS data integrations with tax parcel and CAL FIRE data. I also built real-time mapping visualizations so that all stakeholders could stay in-the-loop on the programs' impact and reach. These programs distributed over $25M in aid to individuals and small businesses across LA.",
+            "In response to the January 2025 wildfires in Los Angeles, <aidkit>AidKit</aidkit> partnered with Los Angeles County and the City of Los Angeles to rapidly launch two emergency cash relief programs.",
+            "I led the design and implementation of the platform's new geospatial capabilities for disaster response. This included building a sync pipeline that ingested and normalized data from remote tax parcel datasets and CAL FIRE damage inspection data, storing it in PostGIS for spatial queries. We used this data to automatically qualify applicants based on parcel-level impact, reducing manual review and speeding up aid delivery.",
+            "I also built real-time, interactive maps to give stakeholders live visibility into program reach and eligibility coverage. These programs ultimately distributed over $25M in direct aid to individuals and small businesses across Los Angeles.",
+            "This project inspired me to explore how AI and MCP servers can accelerate program administration. For example, we could connect an LLM to CAL FIRE's damage data to enable a wider range of automated triage and eligibility workflows.",
+            "Here's an example server implementation:",
+            "<repo>CAL FIRE DINS ArcGIS MCP Server</repo>",
             "You can read more about the programs here:",
-            "<casestudy>Los Angeles Regional Wildfire Relief Programs</casestudy>",
+            "<casestudy>AidKit Case Study: Los Angeles Regional Wildfire Relief Programs</casestudy>",
             "<award>AidKit Named a Winner in the 2025 Stevie Awards for Technology Excellence</award>",
-            "I was inspired to see how AI and MCP servers could be used to enable fast program administration and connect an LLM to CAL FIRE's damage inspection data to enable a wider range of workflows.",
-            "An example server of what that looks like can be found here:",
-            "<repo>CAL FIRE DINS ArcGIS MCP Server ↗</repo>"
+            "<press>Route Fifty: How LA is using tech to get wildfire victims financial help</press>",
+            "<press3>Santa Monica Daily Press: LA County Launches $250,000 Grant Program for Malibu-Topanga Businesses</press3>",
+            "<press2>Secret Los Angeles: L.A. County Launches A New $250,000 Grant To Help Small Businesses Impacted By Wildfires</press2>"
         ]
     },
     "notFound": {

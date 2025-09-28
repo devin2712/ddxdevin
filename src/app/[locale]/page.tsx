@@ -3,6 +3,7 @@ import { LinkListSection } from "@/types";
 import styles from "./page.module.css";
 import { Header } from "@/components/ui/Header";
 import { useTranslations } from "next-intl";
+import { StyledLink } from "@/components/ui/StyledLink";
 
 export default function Home() {
   const t = useTranslations("home");
@@ -133,49 +134,60 @@ export default function Home() {
           <Header
             as="h1"
             title={<span className={styles.name}>{t("title")}</span>}
-            description={<span className={styles.title}>{t("description")}</span>}
+            description={
+              <span className={styles.title}>{t("description")}</span>
+            }
           />
           <section className={styles.intro}>
             <p>
               {t.rich("intro", {
                 aidkit: (chunks) => (
-                  <a
+                  <StyledLink
                     href="https://www.aidkit.com"
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label={`${chunks} (opens in new tab)`}
+                    showArrow={false}
                   >
                     {chunks}
-                  </a>
+                  </StyledLink>
                 ),
               })}
             </p>
             <p>
               {t.rich("background", {
                 cloudhealth: (chunks) => (
-                  <a
+                  <StyledLink
                     href="https://www.cloudhealthtech.com"
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label={`${chunks} (opens in new tab)`}
+                    showArrow={false}
                   >
                     {chunks}
-                  </a>
+                  </StyledLink>
                 ),
                 hypr: (chunks) => (
-                  <a href="https://www.hypr.com" target="_blank" rel="noopener noreferrer" aria-label={`${chunks} (opens in new tab)`}>
+                  <StyledLink
+                    href="https://www.hypr.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={`${chunks} (opens in new tab)`}
+                    showArrow={false}
+                  >
                     {chunks}
-                  </a>
+                  </StyledLink>
                 ),
                 vmware: (chunks) => (
-                  <a
+                  <StyledLink
                     href="https://www.vmware.com"
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label={`${chunks} (opens in new tab)`}
+                    showArrow={false}
                   >
                     {chunks}
-                  </a>
+                  </StyledLink>
                 ),
               })}
             </p>

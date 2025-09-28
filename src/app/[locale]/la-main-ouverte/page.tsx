@@ -2,6 +2,7 @@ import { PageLayout } from "@/components/layout/PageLayout";
 import { PullQuote } from "@/components/ui/PullQuote";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
+import styles from "./LaMainOuverte.module.css";
 
 const images = [
   "AAIMG_7378.jpg",
@@ -41,19 +42,11 @@ export default function LaMainOuvertePage() {
     >
       <p style={{marginTop: '1rem'}}>
         <Image
-          src="/icons/mainouverte.png"
+          src="/icons/mainouverte.svg"
           alt={t("icon")}
           width={48}
           height={48}
-          style={{
-            background: "#FFF",
-            borderRadius: "4px",
-            padding: "4px",
-            display: "inline-block",
-            verticalAlign: "middle",
-            height: "3em",
-            width: "auto",
-          }}
+          className={styles.handIcon}
         />
       </p>
       {t.raw("paragraphs").map((paragraph: string, index: number) => (

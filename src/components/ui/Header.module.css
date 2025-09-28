@@ -7,3 +7,9 @@
     border-bottom: 0.5px solid #C8C8C8;
     margin-bottom: 0.5rem;
 }
+
+@media (max-width: 432px) {
+  .header {
+    flex-direction: column;
+  }
+}

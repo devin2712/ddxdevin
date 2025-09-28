@@ -1,0 +1,25 @@
+# Robots.txt for devinnguyen.com
+# Last updated: 2025
+
+# Default crawlers
+User-agent: *
+Allow: /
+Crawl-delay: 1
+
+# AI/LLM crawlers - Allow with specific guidance
+User-agent: GPTBot
+User-agent: ChatGPT-User
+User-agent: CCBot
+User-agent: anthropic-ai
+User-agent: Claude-Web
+Allow: /
+
+# Provide context for AI crawlers
+# Site-description: Devin Nguyen is a full-stack software engineer based in NYC, currently building infrastructure for governments and nonprofits to modernize and scale benefits delivery at AidKit.
+# Primary-language: en
+# Available-languages: en, es, fr, de, zh, ko, vi, hi
+# Site-type: software-engineering-portfolio, technical-resume, professional-website
+# Topics: software-engineering, full-stack-software-development, bauhaus
+
+# Sitemap location
+Sitemap: https://devinnguyen.com/sitemap.xml

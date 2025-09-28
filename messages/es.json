@@ -2,20 +2,21 @@
     "bauhaus": {
         "title": "Lecciones del Bauhaus",
         "paragraphs": [
-            "A lo largo de los años, he dado variaciones de esta charla a mis equipos para inspirarse en el Bauhaus y sus movimientos asociados, y proponer un marco para entender las tendencias actuales de UI y aplicar las lecciones del Bauhaus hacia la construcción de sistemas de diseño UI."
+            "A lo largo de los años, he presentado variaciones de esta charla a mis equipos, tomando inspiración del Bauhaus y sus movimientos de diseño relacionados. La charla describe un marco para interpretar las tendencias modernas de UI y aplica principios y lecciones del Bauhaus a la creación de sistemas de diseño UI escalables y cohesivos."
         ],
         "openPdfAriaLabel": "Abrir presentación Lecciones del Bauhaus PDF (se abre en nueva pestaña)",
-        "openPdfText": "Abrir PDF ↗",
+        "openPdfText": "Abrir PDF",
         "titleSlideAlt": "Lecciones del Bauhaus - Diapositiva de título",
         "viewPresentationLink": "Ver presentación completa (PDF)"
     },
     "bauhauslers": {
         "title": "Bauhäuslers",
         "paragraphs": [
-            "Un viaje de Weimar a Dessau a Berlín, siguiendo el camino del Bauhaus durante su celebración del centenario.",
+            "Un viaje trazando la ruta histórica del movimiento Bauhaus desde Weimar hasta Dessau y Berlín durante la celebración del centenario.",
             "Bauhäusler — un estudiante del Bauhaus",
             "Mieslinge — término despectivo para estudiantes que copian al maestro, Mies van der Rohe; de \"Mies\" y el alemán \"misslingen\" [fracaso]"
-        ]
+        ],
+        "imageAlt": "Retrato {number} de la serie fotográfica Bauhäuslers"
     },
     "common": {
         "index": "Índice",
@@ -37,22 +38,24 @@
         "title": "Notificaciones de citas COVID",
         "image": "Gráfico banner con el logo de Twilio y tres líneas apuntando hacia el logo. El título dice Recibe notificaciones de vacuna COVID-19 usando Twilio Serverless Functions.",
         "paragraphs": [
-            "Este fue un proyecto para integrar Airtable y Twilio para llamarte cuando una cita de vacunación estuviera disponible. En ese momento, escribí integraciones con sistemas en California, Massachusetts y Nueva York, así como con GetMyVaccine que agregaba disponibilidades de vacunas en CVS, Rite-Aid y Walgreens.",
-            "<github>Notificaciones de citas de vacunación ↗</github>"
+            "Este proyecto fue un sistema de notificación automatizado que integraba Airtable y Twilio para llamarte cuando las citas de vacunas COVID-19 estuvieran disponibles. En ese momento, escribí integraciones con sistemas en California, Massachusetts y la ciudad de Nueva York, así como con GetMyVaccine que agregaba disponibilidades de vacunas de CVS, Rite-Aid y Walgreens.",
+            "<github>Notificaciones de citas de vacunación</github>"
         ]
     },
     "covidMyturn": {
         "title": "Monitor COVID MyTurn CA",
         "paragraphs": [
-            "Este fue un proyecto para recopilar y agregar datos de disponibilidad de vacunas del sistema de vacunación del estado de California (MyTurn) para los 58 condados.",
-            "<github>Monitor MyTurn ↗</github>"
+            "Este proyecto fue construido para recopilar y agregar datos de disponibilidad de vacunas del sistema de vacunación del estado de California (MyTurn), cubriendo los 58 condados.",
+            "Usando CloudWatch, programé una distribución en abanico activada por cron de trabajos Lambda serverless para recopilar datos de disponibilidad de MyTurn en paralelo. Una función Lambda separada agregó los resultados y los almacenó en S3 como un conjunto de datos canónico único.",
+            "Esta fue una optimización para <notifier>Notificaciones de citas de vacunación</notifier> para reducir las llamadas directas a MyTurn y habilitar otros proyectos.",
+            "<github>Monitor MyTurn</github>"
         ]
     },
     "home": {
         "title": "Devin Nguyen",
         "description": "Ingeniero de software",
-        "intro": "Soy un ingeniero de software full-stack con sede en NYC, actualmente desarrollando programas de asistencia económica directa en <aidkit>AidKit</aidkit>.",
-        "background": "Anteriormente, fui Ingeniero Principal de Software en <hypr>HYPR</hypr> construyendo sistemas sin contraseña escalables para bancos, universidades y startups. Antes de eso, fui Miembro Senior del Equipo Técnico en <cloudhealth>CloudHealth</cloudhealth> de <vmware>VMware</vmware>, una plataforma para gestión de infraestructura en la nube.",
+        "intro": "Soy un ingeniero de software full-stack con sede en NYC, actualmente construyendo infraestructura para que gobiernos y organizaciones sin fines de lucro modernicen y escalen la entrega de beneficios en <aidkit>AidKit</aidkit>.",
+        "background": "Anteriormente, fui Ingeniero Principal de Software en <hypr>HYPR</hypr>, donde construí infraestructura de autenticación sin contraseña confiable para bancos, universidades y startups. Antes de eso, fui Miembro Senior del Equipo Técnico en <cloudhealth>CloudHealth</cloudhealth> de <vmware>VMware</vmware>, construyendo soluciones para gobernanza en la nube, optimización de costos y cumplimiento a escala empresarial.",
         "links": {
             "bauhaus": "Lecciones del Bauhaus",
             "bauhaus_photo": "Bauhäuslers",
@@ -82,20 +85,25 @@
             "La Mano Abierta, o La Main Ouverte, fue un motivo recurrente a lo largo del trabajo de Le Corbusier y se convirtió en el símbolo definitorio de Chandigarh."
         ],
         "attribution": "Le Corbusier",
-        "pullquote": "\"Gira con el viento, no sin rumbo, sino para expresar lo que realmente es la vida: cambio constante. La mano está abierta para dar y recibir. Es una señal de optimismo en este mundo de catástrofe.\""
+        "pullquote": "\"Gira con el viento, no sin rumbo, sino para expresar lo que realmente es la vida: cambio constante. La mano está abierta para dar y recibir. Es una señal de optimismo en este mundo de catástrofe.\"",
+        "imageAlt": "Fotografía {number} de la serie arquitectónica La Main Ouverte"
     },
     "mcpWildfire": {
         "title": "MCP: Mapear incendios forestales de LA con IA",
         "image": "Diagrama mostrando capas de un mapa con una descripción de cada capa (de abajo hacia arriba): Mapa base de Los Ángeles, Zona de evacuación, Zona de incendio activo, Evaluación de daños y Fotografías de daños",
         "paragraphs": [
-            "En respuesta a los incendios forestales de enero de 2025 en Los Ángeles, <aidkit>AidKit</aidkit> se asoció rápidamente con el Condado de Los Ángeles y la Ciudad de Los Ángeles para lanzar dos programas que proporcionan ayuda económica de emergencia dirigida por desastre.",
-            "Lideré la implementación de las nuevas capacidades geoespaciales de la plataforma para respuesta de emergencia, incluyendo integraciones de datos GIS con datos de parcelas fiscales y CAL FIRE. También construí visualizaciones de mapas en tiempo real para que todas las partes interesadas pudieran mantenerse informadas sobre el impacto y alcance de los programas. Estos programas distribuyeron más de $25M en ayuda a individuos y pequeñas empresas en LA.",
+            "En respuesta a los incendios forestales de enero de 2025 en Los Ángeles, <aidkit>AidKit</aidkit> se asoció con el Condado de Los Ángeles y la Ciudad de Los Ángeles para lanzar rápidamente dos programas de ayuda económica de emergencia.",
+            "Lideré el diseño e implementación de las nuevas capacidades geoespaciales de la plataforma para respuesta a desastres. Esto incluyó construir un pipeline de sincronización que ingería y normalizaba datos de conjuntos de datos remotos de parcelas fiscales y datos de inspección de daños de CAL FIRE, almacenándolos en PostGIS para consultas espaciales. Usamos estos datos para calificar automáticamente a los solicitantes según el impacto a nivel de parcela, reduciendo la revisión manual y acelerando la entrega de ayuda.",
+            "También construí mapas interactivos en tiempo real para dar a las partes interesadas visibilidad en vivo sobre el alcance del programa y la cobertura de elegibilidad. Estos programas finalmente distribuyeron más de $25M en ayuda directa a individuos y pequeñas empresas en Los Ángeles.",
+            "Este proyecto me inspiró a explorar cómo la IA y los servidores MCP pueden acelerar la administración de programas. Por ejemplo, podríamos conectar un LLM a los datos de daños de CAL FIRE para habilitar una gama más amplia de flujos de trabajo automatizados de triaje y elegibilidad.",
+            "Aquí hay una implementación de servidor de ejemplo:",
+            "<repo>Servidor MCP CAL FIRE DINS ArcGIS</repo>",
             "Puedes leer más sobre los programas aquí:",
-            "<casestudy>Programas regionales de alivio de incendios forestales de Los Ángeles</casestudy>",
+            "<casestudy>Caso de estudio de AidKit: Programas regionales de ayuda para incendios forestales de Los Ángeles</casestudy>",
             "<award>AidKit nombrado ganador en los Premios Stevie 2025 por Excelencia Tecnológica</award>",
-            "Me inspiré al ver cómo la IA y los servidores MCP podrían usarse para permitir una administración rápida de programas y conectar un LLM con los datos de inspección de daños de CAL FIRE para permitir una gama más amplia de flujos de trabajo.",
-            "Un ejemplo de servidor de cómo se ve esto se puede encontrar aquí:",
-            "<repo>Servidor MCP CAL FIRE DINS ArcGIS ↗</repo>"
+            "<press>Route Fifty: Cómo LA está usando tecnología para brindar ayuda financiera a las víctimas de incendios forestales</press>",
+            "<press3>Santa Monica Daily Press: El condado de LA lanza un programa de subvenciones de $250,000 para negocios de Malibu-Topanga</press3>",
+            "<press2>Secret Los Angeles: El condado de L.A. lanza una nueva subvención de $250,000 para ayudar a pequeñas empresas afectadas por incendios forestales</press2>"
         ]
     },
     "notFound": {
@@ -108,6 +116,7 @@
         "title": "(S)E1",
         "paragraphs": [
             "Escenas de viaje en Londres de E1 a SE1"
-        ]
+        ],
+        "imageAlt": "Fotografía {number} de la colección de fotografía cinematográfica SE1"
     }
 }

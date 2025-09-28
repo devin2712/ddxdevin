@@ -21,7 +21,7 @@ main.contentContainer {
 
 div.content {
   max-width: 500px;
-  margin: 5rem auto 1rem auto;
+  margin: 5rem auto 3rem auto;
   ul {
     list-style-type: none;
   }
@@ -29,7 +29,7 @@ div.content {
 
 @media (max-width: 768px) {
   div.content {
-    margin: 1rem auto;
+    margin: 1rem auto 2rem auto;
   }
 }
 

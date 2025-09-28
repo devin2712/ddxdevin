@@ -1,4 +1,5 @@
 import { PageLayout } from "@/components/layout/PageLayout";
+import { StyledLink } from "@/components/ui/StyledLink";
 import { useTranslations } from "next-intl";
 
 export default function CovidMyturnPage() {
@@ -18,13 +19,28 @@ export default function CovidMyturnPage() {
             <p key={index}>
               {t.rich(`paragraphs.${index}`, {
                 github: (chunks) => (
-                  <a
+                  <StyledLink
                     href="https://github.com/devin2712/myturn-monitor"
                     target="_blank"
                     rel="noreferrer"
                   >
                     {chunks}
-                  </a>
+                  </StyledLink>
+                ),
+              })}
+            </p>
+          );
+        }
+        if (paragraph.includes("<notifier>")) {
+          return (
+            <p key={index}>
+              {t.rich(`paragraphs.${index}`, {
+                notifier: (chunks) => (
+                  <StyledLink
+                    href="/covid-appointments"
+                  >
+                    {chunks}
+                  </StyledLink>
                 ),
               })}
             </p>

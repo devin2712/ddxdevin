@@ -1,6 +1,7 @@
 "use client";
 
 import { PageLayout } from "@/components/layout/PageLayout";
+import { StyledLink } from "@/components/ui/StyledLink";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 import { useEffect } from "react";
@@ -8,17 +9,20 @@ import { useEffect } from "react";
 export default function BauhausPage() {
   const t = useTranslations("bauhaus");
 
-  const toggleOverlay = (e: React.FocusEvent | React.MouseEvent, show: boolean) => {
-    const overlay = e.currentTarget.querySelector('.overlay') as HTMLElement;
-    if (overlay) overlay.style.opacity = show ? '1' : '0';
+  const toggleOverlay = (
+    e: React.FocusEvent | React.MouseEvent,
+    show: boolean
+  ) => {
+    const overlay = e.currentTarget.querySelector(".overlay") as HTMLElement;
+    if (overlay) overlay.style.opacity = show ? "1" : "0";
   };
 
   // Prefetch PDF on component mount to improve performance when opening the slide deck
   useEffect(() => {
-    const link = document.createElement('link');
-    link.rel = 'prefetch';
-    link.href = '/docs/bauhaus.pdf';
-    link.as = 'document';
+    const link = document.createElement("link");
+    link.rel = "prefetch";
+    link.href = "/docs/bauhaus.pdf";
+    link.as = "document";
     document.head.appendChild(link);
 
     return () => {
@@ -94,25 +98,26 @@ export default function BauhausPage() {
               pointerEvents: "none",
             }}
           >
-            <span style={{
-              color: "white",
-              fontSize: "1.25rem",
-              fontWeight: "500",
-              textTransform: "uppercase",
-              letterSpacing: "0.05em",
-            }}>
+            <span
+              style={{
+                color: "white",
+                fontSize: "1.25rem",
+                fontWeight: "500",
+                textTransform: "uppercase",
+                letterSpacing: "0.05em",
+              }}
+            >
               {t("openPdfText")}
             </span>
           </div>
         </a>
         <p>
-          <a
+          <StyledLink
             href="/docs/bauhaus.pdf"
             target="_blank"
-            rel="noopener noreferrer"
           >
             {t("viewPresentationLink")}
-          </a>
+          </StyledLink>
         </p>
       </div>
     </PageLayout>

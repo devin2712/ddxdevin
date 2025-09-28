@@ -1,0 +1,16 @@
+.handIcon {
+  padding: 4px;
+  display: inline-block;
+  vertical-align: middle;
+  height: 3em;
+  width: auto;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+  shape-rendering: crispEdges;
+}
+
+@media (prefers-color-scheme: dark) {
+  .handIcon {
+    filter: invert(1) contrast(1.2);
+  }
+}

@@ -5,14 +5,14 @@
             "Über die Jahre habe ich verschiedene Versionen dieses Vortrags meinen Teams gehalten, um sich vom Bauhaus und seinen verwandten Bewegungen inspirieren zu lassen und ein Rahmenwerk vorzuschlagen, um aktuelle UI-Trends zu verstehen und Lektionen vom Bauhaus für den Aufbau von UI-Design-Systemen anzuwenden."
         ],
         "openPdfAriaLabel": "Lektionen vom Bauhaus Präsentation PDF öffnen (öffnet in neuem Tab)",
-        "openPdfText": "PDF öffnen ↗",
+        "openPdfText": "PDF öffnen",
         "titleSlideAlt": "Lektionen vom Bauhaus - Titelfolie",
         "viewPresentationLink": "Vollständige Präsentation ansehen (PDF)"
     },
     "bauhauslers": {
         "title": "Bauhäuslers",
         "paragraphs": [
-            "Eine Reise von Weimar über Dessau nach Berlin, dem Weg des Bauhaus während seiner Hundertjahrfeier folgend.",
+            "Eine Reise, die dem historischen Pfad der Bauhaus-Bewegung von Weimar über Dessau nach Berlin während der Hundertjahrfeier folgt.",
             "Bauhäusler — ein Student des Bauhaus",
             "Mieslinge — abwertender Begriff für Studenten, die den Meister kopieren, Mies van der Rohe; von \"Mies\" und deutsch \"misslingen\" [Versagen]"
         ],
@@ -38,22 +38,24 @@
         "title": "COVID-Terminbenachrichtigungen",
         "image": "Banner-Grafik mit Twilio-Logo und drei Linien, die zum Logo zeigen. Der Titel lautet COVID-19-Impfstoff-Benachrichtigungen mit Twilio Serverless Functions erhalten.",
         "paragraphs": [
-            "Dies war ein Projekt zur Integration von Airtable und Twilio, um Sie anzurufen, wenn ein Impftermin verfügbar wurde. Damals schrieb ich Integrationen zu Systemen in Kalifornien, Massachusetts und New York City sowie zu GetMyVaccine, das Impfstoffverfügbarkeiten bei CVS, Rite-Aid und Walgreens aggregierte.",
-            "<github>Impftermin-Benachrichtigungen ↗</github>"
+            "Dieses Projekt war ein automatisiertes Benachrichtigungssystem, das Airtable und Twilio integrierte, um Sie anzurufen, wenn COVID-19-Impftermine verfügbar wurden. Damals schrieb ich Integrationen mit Systemen in Kalifornien, Massachusetts und New York City sowie mit GetMyVaccine, das Impfstoffverfügbarkeiten von CVS, Rite-Aid und Walgreens aggregierte.",
+            "<github>Impftermin-Benachrichtigungen</github>"
         ]
     },
     "covidMyturn": {
         "title": "COVID MyTurn CA Monitor",
         "paragraphs": [
-            "Dies war ein Projekt zur Sammlung und Aggregation von Impfstoffverfügbarkeitsdaten aus dem Impfsystem des Bundesstaates Kalifornien (MyTurn) für alle 58 Bezirke.",
-            "<github>MyTurn Monitor ↗</github>"
+            "Dieses Projekt wurde entwickelt, um Impfstoffverfügbarkeitsdaten aus dem Impfsystem des Bundesstaates Kalifornien (MyTurn) für alle 58 Bezirke zu sammeln und zu aggregieren.",
+            "Mit CloudWatch programmierte ich ein cron-ausgelöstes Fan-out von serverlosen Lambda-Jobs, um Verfügbarkeitsdaten von MyTurn parallel zu sammeln. Eine separate Lambda-Funktion aggregierte die Ergebnisse und speicherte sie in S3 als einen einzigen kanonischen Datensatz.",
+            "Dies war eine Optimierung für <notifier>Impftermin-Benachrichtigungen</notifier>, um direkte Aufrufe an MyTurn zu reduzieren und andere Projekte zu ermöglichen.",
+            "<github>MyTurn Monitor</github>"
         ]
     },
     "home": {
         "title": "Devin Nguyen",
         "description": "Software-Ingenieur",
-        "intro": "Ich bin ein Full-Stack-Software-Ingenieur mit Sitz in NYC und entwickle derzeit Programme für direkte Bargeldunterstützung bei <aidkit>AidKit</aidkit>.",
-        "background": "Zuvor war ich Principal Software Engineer bei <hypr>HYPR</hypr> und entwickelte skalierbare passwortlose Systeme für Banken, Universitäten und Startups. Davor war ich Senior Member of Technical Staff bei <cloudhealth>CloudHealth</cloudhealth> von <vmware>VMware</vmware>, einer Plattform für Cloud-Infrastruktur-Management.",
+        "intro": "Ich bin ein Full-Stack-Software-Ingenieur mit Sitz in NYC und baue derzeit Infrastruktur für Regierungen und gemeinnützige Organisationen zur Modernisierung und Skalierung der Leistungserbringung bei <aidkit>AidKit</aidkit>.",
+        "background": "Zuvor war ich Principal Software Engineer bei <hypr>HYPR</hypr>, wo ich vertrauenswürdige passwortlose Authentifizierungsinfrastruktur für Banken, Universitäten und Startups aufgebaut habe. Davor war ich Senior Member of Technical Staff bei <cloudhealth>CloudHealth</cloudhealth> von <vmware>VMware</vmware> und baute Lösungen für Cloud-Governance, Kostenoptimierung und Compliance im Unternehmensmaßstab.",
         "links": {
             "bauhaus": "Lektionen vom Bauhaus",
             "bauhaus_photo": "Bauhäuslers",
@@ -90,14 +92,18 @@
         "title": "MCP: LA-Waldbrände mit KI kartieren",
         "image": "Diagramm, das Kartenebenen mit einer Beschreibung jeder Ebene zeigt (von unten nach oben): Basiskarte von Los Angeles, Evakuierungszone, Aktive Brandzone, Schadensbewertung und Schadensfotos",
         "paragraphs": [
-            "Als Reaktion auf die Waldbrände vom Januar 2025 in Los Angeles arbeitete <aidkit>AidKit</aidkit> schnell mit Los Angeles County und der Stadt Los Angeles zusammen, um zwei Programme für gezielte Bargeld-Katastrophenhilfe zu starten.",
-            "Ich leitete die Implementierung der neuen geospatialen Fähigkeiten der Plattform für Notfallmaßnahmen, einschließlich GIS-Datenintegrationen mit Steuerparzellen- und CAL FIRE-Daten. Ich erstellte auch Echtzeit-Kartenvisualisierungen, damit alle Beteiligten über die Auswirkungen und Reichweite der Programme auf dem Laufenden bleiben konnten. Diese Programme verteilten über 25 Millionen Dollar Hilfe an Einzelpersonen und kleine Unternehmen in LA.",
+            "Als Reaktion auf die Waldbrände vom Januar 2025 in Los Angeles arbeitete <aidkit>AidKit</aidkit> mit Los Angeles County und der Stadt Los Angeles zusammen, um schnell zwei Programme für Bargeld-Katastrophenhilfe zu starten.",
+            "Ich leitete das Design und die Implementierung der neuen geospatialen Fähigkeiten der Plattform für Katastrophenhilfe. Dies umfasste den Aufbau einer Synchronisations-Pipeline, die Daten von entfernten Steuerparzellen-Datensätzen und CAL FIRE-Schadensinspektionsdaten aufnahm und normalisierte und sie in PostGIS für räumliche Abfragen speicherte. Wir nutzten diese Daten, um Antragsteller automatisch basierend auf dem Einfluss auf Parzellenebene zu qualifizieren, wodurch manuelle Überprüfungen reduziert und die Hilfslieferung beschleunigt wurde.",
+            "Ich baute auch interaktive Echtzeit-Karten, um Interessengruppen Live-Einblicke in die Programmreichweite und Berechtigung zu geben. Diese Programme verteilten schließlich über 25 Millionen Dollar direkte Hilfe an Einzelpersonen und kleine Unternehmen in Los Angeles.",
+            "Dieses Projekt inspirierte mich zu erforschen, wie KI und MCP-Server die Programmverwaltung beschleunigen können. Zum Beispiel könnten wir ein LLM mit CAL FIREs Schadensdaten verbinden, um eine breitere Palette automatisierter Triage- und Berechtigungs-Workflows zu ermöglichen.",
+            "Hier ist eine Beispiel-Server-Implementierung:",
+            "<repo>CAL FIRE DINS ArcGIS MCP Server</repo>",
             "Mehr über die Programme können Sie hier lesen:",
-            "<casestudy>Los Angeles Regional Wildfire Relief Programs</casestudy>",
+            "<casestudy>AidKit Fallstudie: Los Angeles Regional Wildfire Relief Programs</casestudy>",
             "<award>AidKit als Gewinner der Stevie Awards 2025 für technische Exzellenz ausgezeichnet</award>",
-            "Ich war inspiriert zu sehen, wie KI und MCP-Server genutzt werden könnten, um eine schnelle Programmverwaltung zu ermöglichen und ein LLM mit CAL FIREs Schadensinspektionsdaten zu verbinden, um eine breitere Palette von Arbeitsabläufen zu ermöglichen.",
-            "Ein Beispielserver dafür finden Sie hier:",
-            "<repo>CAL FIRE DINS ArcGIS MCP Server ↗</repo>"
+            "<press>Route Fifty: Wie LA Technologie nutzt, um Waldbrandopfern finanzielle Hilfe zu leisten</press>",
+            "<press3>Santa Monica Daily Press: LA County startet 250.000-Dollar-Zuschuss-Programm für Malibu-Topanga-Unternehmen</press3>",
+            "<press2>Secret Los Angeles: L.A. County startet einen neuen 250.000-Dollar-Zuschuss zur Unterstützung von Kleinunternehmen, die von Waldbränden betroffen sind</press2>"
         ]
     },
     "notFound": {

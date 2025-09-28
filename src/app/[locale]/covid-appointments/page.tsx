@@ -1,4 +1,5 @@
 import { PageLayout } from "@/components/layout/PageLayout";
+import { StyledLink } from "@/components/ui/StyledLink";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 
@@ -34,13 +35,13 @@ export default function CovidAppointmentsPage() {
             <p key={index}>
               {t.rich(`paragraphs.${index}`, {
                 github: (chunks) => (
-                  <a
+                  <StyledLink
                     href="https://github.com/devin2712/our-turn"
                     target="_blank"
                     rel="noreferrer"
                   >
                     {chunks}
-                  </a>
+                  </StyledLink>
                 ),
               })}
             </p>

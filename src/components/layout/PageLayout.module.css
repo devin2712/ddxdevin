@@ -1,7 +1,7 @@
 .container {
   display: flex;
   justify-content: center;
-  padding: 5rem 2rem 2rem;
+  padding: 5rem 2rem 5rem;
   width: 100%;
   position: relative;
   p {
@@ -68,7 +68,7 @@
 
 @media (max-width: 768px) {
   .container {
-    padding: 1rem 0;
+    padding: 1rem 1rem 3rem;
   }
 
   .layout {
@@ -96,7 +96,7 @@
 @media (max-width: 432px) {
   .container {
     justify-content: flex-start;
-    padding: 1rem;
+    padding: 1rem 1rem 3rem;
   }
 }
 
@@ -130,7 +130,6 @@
   .layout.layoutXlarge .sidebar {
     justify-self: start;
     width: auto;
-    padding: 0 1rem;
   }
 
   .layout.layoutXlarge .content {

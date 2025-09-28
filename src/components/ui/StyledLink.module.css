@@ -1,0 +1,23 @@
+.link {
+  color: var(--text-color);
+  text-decoration: underline;
+  text-decoration-color: color-mix(in srgb, var(--text-color) 30%, transparent);
+  text-underline-offset: 0.3em;
+  transition: text-decoration-color 0.2s ease;
+}
+
+.link:hover,
+.link:active,
+.link:focus-visible {
+  text-decoration-color: var(--text-color);
+}
+
+.externalIcon {
+  font-size: 1.25em;
+  line-height: 0;
+  position: relative;
+  top: 0.1em;
+  margin-inline-start: 0.25rem;
+  opacity: 0.7;
+  display: inline-block;
+}
