@@ -3,26 +3,28 @@
   "version": "0.2.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
+    "dev": "next dev --turbopack",
+    "build": "next build --turbopack",
     "start": "next start",
+    "lint": "eslint",
     "prepare": "husky"
   },
   "dependencies": {
-    "@vercel/analytics": "^1.5.0",
-    "@vercel/speed-insights": "^1.2.0",
-    "husky": "^9.1.7",
-    "next": "^15.5.2",
+    "@tanstack/react-query": "^5.90.2",
+    "next": "15.5.4",
+    "next-intl": "^4.3.9",
     "node-fetch": "^3.3.2",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0",
-    "react-draggable": "^4.5.0",
-    "react-intl": "^7.0.0"
+    "react": "19.1.0",
+    "react-dom": "19.1.0"
   },
   "devDependencies": {
-    "@types/node": "^24.0.0",
-    "@types/react": "^19.0.0",
-    "prettier": "^3.6.2",
-    "typescript": "^5.9.2"
+    "@eslint/eslintrc": "^3",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "15.5.4",
+    "husky": "^9.1.7",
+    "typescript": "^5"
   }
 }

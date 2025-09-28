@@ -1,0 +1,111 @@
+{
+    "bauhaus": {
+        "title": "Bài học từ Bauhaus",
+        "paragraphs": [
+            "Qua nhiều năm, tôi đã trình bày các phiên bản khác nhau của bài thuyết trình này cho các nhóm của mình để lấy cảm hứng từ Bauhaus và các phong trào liên quan, đồng thời đề xuất một khung để hiểu các xu hướng UI hiện tại và áp dụng các bài học từ Bauhaus vào việc xây dựng hệ thống thiết kế UI."
+        ],
+        "openPdfAriaLabel": "Mở bài thuyết trình Bài học từ Bauhaus PDF (mở trong tab mới)",
+        "openPdfText": "Mở PDF ↗",
+        "titleSlideAlt": "Bài học từ Bauhaus - Slide tiêu đề",
+        "viewPresentationLink": "Xem bài thuyết trình đầy đủ (PDF)"
+    },
+    "bauhauslers": {
+        "title": "Bauhäuslers",
+        "paragraphs": [
+            "Một chuyến đi từ Weimar đến Dessau rồi đến Berlin, theo dấu chân của Bauhaus trong dịp kỷ niệm 100 năm.",
+            "Bauhäusler — một học sinh của Bauhaus",
+            "Mieslinge — thuật ngữ chê bai dành cho những học sinh bắt chước thầy, Mies van der Rohe; từ \"Mies\" và tiếng Đức \"misslingen\" [thất bại]"
+        ]
+    },
+    "common": {
+        "index": "Mục lục"
+    },
+    "concertLog": {
+        "title": "Nhật ký hòa nhạc",
+        "paragraphs": [
+            "Danh sách các buổi hòa nhạc đã tham dự.",
+            "Được thiết lập bằng Times New Roman vì IYKYK."
+        ],
+        "encore": "Encore (buổi diễn cuối)",
+        "indicator": "cho biết nhiều buổi diễn",
+        "live": "TRỰC TIẾP",
+        "loading": "Đang tải",
+        "search": "Tìm kiếm"
+    },
+    "covidAppointments": {
+        "title": "Thông báo lịch hẹn COVID",
+        "image": "Đồ họa banner với logo Twilio và ba đường thẳng chỉ về phía logo. Tiêu đề ghi Nhận thông báo vaccine COVID-19 bằng cách sử dụng Twilio Serverless Functions.",
+        "paragraphs": [
+            "Đây là một dự án tích hợp Airtable và Twilio để gọi cho bạn khi có lịch hẹn tiêm vaccine. Vào thời điểm đó, tôi đã viết các tích hợp với các hệ thống ở California, Massachusetts và New York cũng như GetMyVaccine, nơi tổng hợp tình trạng sẵn có của vaccine tại CVS, Rite-Aid và Walgreens.",
+            "<github>Thông báo lịch hẹn vaccine ↗</github>"
+        ]
+    },
+    "covidMyturn": {
+        "title": "Trình giám sát COVID MyTurn CA",
+        "paragraphs": [
+            "Đây là một dự án để thu thập và tổng hợp dữ liệu về tình trạng sẵn có của vaccine từ hệ thống tiêm chủng của bang California (MyTurn) cho tất cả 58 quận.",
+            "<github>Trình giám sát MyTurn ↗</github>"
+        ]
+    },
+    "home": {
+        "title": "Devin Nguyen",
+        "description": "Kỹ sư phần mềm",
+        "intro": "Tôi là một kỹ sư phần mềm full-stack có trụ sở tại NYC, hiện đang xây dựng các chương trình hỗ trợ tiền mặt trực tiếp tại <aidkit>AidKit</aidkit>.",
+        "background": "Trước đây, tôi là Kỹ sư phần mềm chính tại <hypr>HYPR</hypr> xây dựng các hệ thống không mật khẩu có khả năng mở rộng cho các ngân hàng, trường đại học và startup. Trước đó, tôi là Thành viên kỹ thuật cấp cao tại <cloudhealth>CloudHealth</cloudhealth> của <vmware>VMware</vmware>, một nền tảng quản lý cơ sở hạ tầng đám mây.",
+        "links": {
+            "bauhaus": "Bài học từ Bauhaus",
+            "bauhaus_photo": "Bauhäuslers",
+            "ca_wildfire_mcp": "MCP: Lập bản đồ cháy rừng LA với AI",
+            "concerts": "Nhật ký hòa nhạc",
+            "covid_appointments": "Thông báo lịch hẹn COVID",
+            "covid_myturn": "Trình giám sát COVID MyTurn CA",
+            "discogs": "Discogs",
+            "github": "GitHub",
+            "la_main_ouverte": "La Main Ouverte",
+            "linkedin": "LinkedIn",
+            "live": "TRỰC TIẾP",
+            "se1": "(S)E1"
+        },
+        "sections": {
+            "connect": "Kết nối",
+            "photography": "Nhiếp ảnh",
+            "writing": "Viết lách"
+        }
+    },
+    "laMainOuverte": {
+        "title": "La Main Ouverte",
+        "icon": "Biểu tượng La Main Ouverte có hình dạng bàn tay mở",
+        "paragraphs": [
+            "Nằm chỉ vài giờ về phía bắc New Delhi, Chandigarh là một thành phố được quy hoạch ra đời từ một sự hợp tác bất thường với tinh thần đầy tham vọng sau khi Ấn Độ độc lập. Sau cuộc phân chia Ấn Độ năm 1947, tỉnh Punjab của Ấn Độ thuộc Anh được chia giữa Ấn Độ và Pakistan. Jawaharlal Nehru, Thủ tướng đầu tiên của Ấn Độ, đã bắt tay vào một nỗ lực chung với Le Corbusier để xây dựng một thành phố utopia sẽ đóng vai trò là thủ đô chung của Punjab và Haryana. Đó là một thiên đường hiện đại, theo trường phái Brutalist được hoàn thành vào những năm 1960 và nhằm mục đích tạo tiền đề cho một khởi đầu mới triệt để cho Ấn Độ và là một trong những tác phẩm kiến trúc tinh hoa của Le Corbusier.",
+            "Bàn tay mở, hay La Main Ouverte, là một chủ đề lặp đi lặp lại trong tác phẩm của Le Corbusier và trở thành biểu tượng đặc trưng của Chandigarh."
+        ],
+        "attribution": "Le Corbusier",
+        "pullquote": "\"Nó quay theo gió, không phải một cách vô mục đích, mà để thể hiện cuộc sống thực sự là gì: sự thay đổi liên tục. Bàn tay mở để cho và nhận. Đó là một dấu hiệu của sự lạc quan trong thế giới thảm họa này.\""
+    },
+    "mcpWildfire": {
+        "title": "MCP: Lập bản đồ cháy rừng LA với AI",
+        "image": "Sơ đồ hiển thị các lớp của bản đồ với mô tả từng lớp (từ dưới lên trên): Bản đồ cơ sở Los Angeles, Khu vực sơ tán, Khu vực cháy đang hoạt động, Đánh giá thiệt hại và Ảnh thiệt hại",
+        "paragraphs": [
+            "Để ứng phó với các vụ cháy rừng tháng 1 năm 2025 tại Los Angeles, <aidkit>AidKit</aidkit> đã nhanh chóng hợp tác với Quận Los Angeles và Thành phố Los Angeles để khởi động hai chương trình cung cấp hỗ trợ tiền mặt khẩn cấp có mục tiêu trong thảm họa.",
+            "Tôi đã dẫn dắt việc triển khai các khả năng không gian địa lý mới của nền tảng cho ứng phó khẩn cấp, bao gồm tích hợp dữ liệu GIS với dữ liệu thửa đất thuế và CAL FIRE. Tôi cũng đã xây dựng các trực quan hóa bản đồ thời gian thực để tất cả các bên liên quan có thể cập nhật về tác động và phạm vi của các chương trình. Những chương trình này đã phân phối hơn 25 triệu đô la viện trợ cho các cá nhân và doanh nghiệp nhỏ trên khắp LA.",
+            "Bạn có thể đọc thêm về các chương trình tại đây:",
+            "<casestudy>Chương trình cứu trợ cháy rừng khu vực Los Angeles</casestudy>",
+            "<award>AidKit được vinh danh là người chiến thắng tại Giải thưởng Stevie 2025 cho Xuất sắc Công nghệ</award>",
+            "Tôi được truyền cảm hứng khi thấy AI và các máy chủ MCP có thể được sử dụng như thế nào để cho phép quản lý chương trình nhanh chóng và kết nối LLM với dữ liệu kiểm tra thiệt hại của CAL FIRE để cho phép một loạt quy trình làm việc rộng hơn.",
+            "Một ví dụ về máy chủ trông như thế nào có thể được tìm thấy tại đây:",
+            "<repo>Máy chủ MCP CAL FIRE DINS ArcGIS ↗</repo>"
+        ]
+    },
+    "notFound": {
+        "title": "404",
+        "subtitle": "Không tìm thấy trang",
+        "message": "Trang bạn đang tìm kiếm không tồn tại.",
+        "returnHome": "Về trang chủ"
+    },
+    "se1": {
+        "title": "(S)E1",
+        "paragraphs": [
+            "Cảnh đi lại ở London từ E1 đến SE1"
+        ]
+    }
+}

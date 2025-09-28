@@ -1,0 +1,29 @@
+main.contentContainer {
+    padding: 0 1rem;
+}
+div.content {
+    max-width: 500px;
+    margin: 2rem auto 1rem auto;
+    ul {
+        list-style-type: none;
+    }
+}
+
+section.intro {
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;   
+}
+
+.name {
+    text-transform: uppercase;
+}
+
+.title {
+    opacity: 0.6;
+}
+
+p.not_found_return_home {
+    margin-top: 3rem;
+}

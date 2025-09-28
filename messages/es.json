@@ -1,0 +1,111 @@
+{
+    "bauhaus": {
+        "title": "Lecciones del Bauhaus",
+        "paragraphs": [
+            "A lo largo de los años, he dado variaciones de esta charla a mis equipos para inspirarse en el Bauhaus y sus movimientos asociados, y proponer un marco para entender las tendencias actuales de UI y aplicar las lecciones del Bauhaus hacia la construcción de sistemas de diseño UI."
+        ],
+        "openPdfAriaLabel": "Abrir presentación Lecciones del Bauhaus PDF (se abre en nueva pestaña)",
+        "openPdfText": "Abrir PDF ↗",
+        "titleSlideAlt": "Lecciones del Bauhaus - Diapositiva de título",
+        "viewPresentationLink": "Ver presentación completa (PDF)"
+    },
+    "bauhauslers": {
+        "title": "Bauhäuslers",
+        "paragraphs": [
+            "Un viaje de Weimar a Dessau a Berlín, siguiendo el camino del Bauhaus durante su celebración del centenario.",
+            "Bauhäusler — un estudiante del Bauhaus",
+            "Mieslinge — término despectivo para estudiantes que copian al maestro, Mies van der Rohe; de \"Mies\" y el alemán \"misslingen\" [fracaso]"
+        ]
+    },
+    "common": {
+        "index": "Índice"
+    },
+    "concertLog": {
+        "title": "Registro de conciertos",
+        "paragraphs": [
+            "Una lista de conciertos a los que he asistido.",
+            "Configurado en Times New Roman porque IYKYK."
+        ],
+        "encore": "Bis (último show)",
+        "indicator": "indica múltiples shows",
+        "live": "EN VIVO",
+        "loading": "Cargando",
+        "search": "Buscar"
+    },
+    "covidAppointments": {
+        "title": "Notificaciones de citas COVID",
+        "image": "Gráfico banner con el logo de Twilio y tres líneas apuntando hacia el logo. El título dice Recibe notificaciones de vacuna COVID-19 usando Twilio Serverless Functions.",
+        "paragraphs": [
+            "Este fue un proyecto para integrar Airtable y Twilio para llamarte cuando una cita de vacunación estuviera disponible. En ese momento, escribí integraciones con sistemas en California, Massachusetts y Nueva York, así como con GetMyVaccine que agregaba disponibilidades de vacunas en CVS, Rite-Aid y Walgreens.",
+            "<github>Notificaciones de citas de vacunación ↗</github>"
+        ]
+    },
+    "covidMyturn": {
+        "title": "Monitor COVID MyTurn CA",
+        "paragraphs": [
+            "Este fue un proyecto para recopilar y agregar datos de disponibilidad de vacunas del sistema de vacunación del estado de California (MyTurn) para los 58 condados.",
+            "<github>Monitor MyTurn ↗</github>"
+        ]
+    },
+    "home": {
+        "title": "Devin Nguyen",
+        "description": "Ingeniero de software",
+        "intro": "Soy un ingeniero de software full-stack con sede en NYC, actualmente desarrollando programas de asistencia económica directa en <aidkit>AidKit</aidkit>.",
+        "background": "Anteriormente, fui Ingeniero Principal de Software en <hypr>HYPR</hypr> construyendo sistemas sin contraseña escalables para bancos, universidades y startups. Antes de eso, fui Miembro Senior del Equipo Técnico en <cloudhealth>CloudHealth</cloudhealth> de <vmware>VMware</vmware>, una plataforma para gestión de infraestructura en la nube.",
+        "links": {
+            "bauhaus": "Lecciones del Bauhaus",
+            "bauhaus_photo": "Bauhäuslers",
+            "ca_wildfire_mcp": "MCP: Mapear incendios forestales de LA con IA",
+            "concerts": "Registro de conciertos",
+            "covid_appointments": "Notificaciones de citas COVID",
+            "covid_myturn": "Monitor COVID MyTurn CA",
+            "discogs": "Discogs",
+            "github": "GitHub",
+            "la_main_ouverte": "La Main Ouverte",
+            "linkedin": "LinkedIn",
+            "live": "EN VIVO",
+            "se1": "(S)E1"
+        },
+        "sections": {
+            "connect": "Conectar",
+            "photography": "Fotografía",
+            "writing": "Escritura"
+        }
+    },
+    "laMainOuverte": {
+        "title": "La Main Ouverte",
+        "icon": "Símbolo de La Main Ouverte en forma de mano abierta",
+        "paragraphs": [
+            "Ubicada a solo unas horas al norte de Nueva Delhi, Chandigarh es una ciudad planificada nacida de una colaboración inusual con un espíritu ambicioso tras la independencia de India. Después de la partición de India en 1947, la provincia de Punjab de la India británica se dividió entre India y Pakistán. Jawaharlal Nehru, el primer Primer Ministro de India, se embarcó en un esfuerzo conjunto con Le Corbusier para construir una ciudad utópica que actuaría como capital compartida de Punjab y Haryana. Es un paraíso moderno y brutalista que se completó en los años 1960 y estaba destinado a sentar las bases para un nuevo comienzo radical para India y fue una de las obras arquitectónicas seminales de Le Corbusier.",
+            "La Mano Abierta, o La Main Ouverte, fue un motivo recurrente a lo largo del trabajo de Le Corbusier y se convirtió en el símbolo definitorio de Chandigarh."
+        ],
+        "attribution": "Le Corbusier",
+        "pullquote": "\"Gira con el viento, no sin rumbo, sino para expresar lo que realmente es la vida: cambio constante. La mano está abierta para dar y recibir. Es una señal de optimismo en este mundo de catástrofe.\""
+    },
+    "mcpWildfire": {
+        "title": "MCP: Mapear incendios forestales de LA con IA",
+        "image": "Diagrama mostrando capas de un mapa con una descripción de cada capa (de abajo hacia arriba): Mapa base de Los Ángeles, Zona de evacuación, Zona de incendio activo, Evaluación de daños y Fotografías de daños",
+        "paragraphs": [
+            "En respuesta a los incendios forestales de enero de 2025 en Los Ángeles, <aidkit>AidKit</aidkit> se asoció rápidamente con el Condado de Los Ángeles y la Ciudad de Los Ángeles para lanzar dos programas que proporcionan ayuda económica de emergencia dirigida por desastre.",
+            "Lideré la implementación de las nuevas capacidades geoespaciales de la plataforma para respuesta de emergencia, incluyendo integraciones de datos GIS con datos de parcelas fiscales y CAL FIRE. También construí visualizaciones de mapas en tiempo real para que todas las partes interesadas pudieran mantenerse informadas sobre el impacto y alcance de los programas. Estos programas distribuyeron más de $25M en ayuda a individuos y pequeñas empresas en LA.",
+            "Puedes leer más sobre los programas aquí:",
+            "<casestudy>Programas regionales de alivio de incendios forestales de Los Ángeles</casestudy>",
+            "<award>AidKit nombrado ganador en los Premios Stevie 2025 por Excelencia Tecnológica</award>",
+            "Me inspiré al ver cómo la IA y los servidores MCP podrían usarse para permitir una administración rápida de programas y conectar un LLM con los datos de inspección de daños de CAL FIRE para permitir una gama más amplia de flujos de trabajo.",
+            "Un ejemplo de servidor de cómo se ve esto se puede encontrar aquí:",
+            "<repo>Servidor MCP CAL FIRE DINS ArcGIS ↗</repo>"
+        ]
+    },
+    "notFound": {
+        "title": "404",
+        "subtitle": "Página no encontrada",
+        "message": "La página que buscas no existe.",
+        "returnHome": "Volver al inicio"
+    },
+    "se1": {
+        "title": "(S)E1",
+        "paragraphs": [
+            "Escenas de viaje en Londres de E1 a SE1"
+        ]
+    }
+}
