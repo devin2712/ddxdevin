@@ -6,6 +6,26 @@ import { useTranslations } from "next-intl";
 import { StyledLink } from "@/components/ui/StyledLink";
 import { ThemeToggle } from "@/components/ui/ThemeToggle";
 import { Clock } from "@/components/ui/Clock";
+import type { Metadata } from "next";
+
+export async function generateMetadata(): Promise<Metadata> {
+  return {
+    openGraph: {
+      images: [
+        {
+          url: "https://devinnguyen.com/icons/blue_arrow_512.png",
+          width: 512,
+          height: 512,
+          alt: "Devin Nguyen - Software Engineer",
+        },
+      ],
+    },
+    twitter: {
+      card: "summary",
+      images: ["https://devinnguyen.com/icons/blue_arrow_512.png"],
+    },
+  };
+}
 
 export default function Home() {
   const t = useTranslations("home");

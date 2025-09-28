@@ -43,6 +43,14 @@ export const metadata: Metadata = {
     siteName: "Devin Nguyen",
     locale: "en_US",
     type: "website",
+    images: [
+      {
+        url: "https://devinnguyen.com/icons/blue_arrow_512.png",
+        width: 512,
+        height: 512,
+        alt: "Devin Nguyen - Software Engineer",
+      },
+    ],
   },
   twitter: {
     card: "summary",
@@ -83,6 +91,16 @@ export default async function LocaleLayout({
   return (
     <html className={robotoSlab.variable} lang={locale}>
       <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              try {
+                var theme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+                document.documentElement.setAttribute('data-theme', theme);
+              } catch (e) {}
+            `,
+          }}
+        />
         <meta name="theme-color" content="#fafafa" media="(prefers-color-scheme: light)" />
         <meta name="theme-color" content="#0a0a0a" media="(prefers-color-scheme: dark)" />
         <link

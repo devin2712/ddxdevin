@@ -2,6 +2,26 @@ import { PageLayout } from "@/components/layout/PageLayout";
 import { StyledLink } from "@/components/ui/StyledLink";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
+import type { Metadata } from "next";
+
+export async function generateMetadata(): Promise<Metadata> {
+  return {
+    openGraph: {
+      images: [
+        {
+          url: "https://devinnguyen.com/images/covidappointments/banner.png",
+          width: 500,
+          height: 263,
+          alt: "COVID appointments banner",
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      images: ["https://devinnguyen.com/images/covidappointments/banner.png"],
+    },
+  };
+}
 
 export default function CovidAppointmentsPage() {
   const t = useTranslations("covidAppointments");

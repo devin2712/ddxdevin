@@ -21,13 +21,10 @@ export function ThemeProvider({ children }: ThemeProviderProps) {
 
   useEffect(() => {
     setMounted(true);
-    const stored = localStorage.getItem("theme") as Theme;
-    if (stored && ["light", "dark"].includes(stored)) {
-      setTheme(stored);
-    } else {
-      // Default to system preference if no stored theme
-      const systemPrefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-      setTheme(systemPrefersDark ? "dark" : "light");
+    // Read the theme that was already set by the blocking script
+    const currentTheme = document.documentElement.getAttribute("data-theme") as Theme;
+    if (currentTheme && ["light", "dark"].includes(currentTheme)) {
+      setTheme(currentTheme);
     }
   }, []);
 

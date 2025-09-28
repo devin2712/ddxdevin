@@ -1,6 +1,26 @@
 import { PageLayout } from "@/components/layout/PageLayout";
 import { StyledLink } from "@/components/ui/StyledLink";
 import { useTranslations } from "next-intl";
+import type { Metadata } from "next";
+
+export async function generateMetadata(): Promise<Metadata> {
+  return {
+    openGraph: {
+      images: [
+        {
+          url: "https://devinnguyen.com/icons/blue_arrow_512.png",
+          width: 512,
+          height: 512,
+          alt: "Devin Nguyen - Software Engineer",
+        },
+      ],
+    },
+    twitter: {
+      card: "summary",
+      images: ["https://devinnguyen.com/icons/blue_arrow_512.png"],
+    },
+  };
+}
 
 export default function CovidMyturnPage() {
   const t = useTranslations("covidMyturn");

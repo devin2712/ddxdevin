@@ -14,12 +14,14 @@
   font-display: swap;
 }
 
+/* Default light theme for SSR and initial load */
 :root {
   --background: #fafafa;
   --foreground: #171717;
   --text-color: #0D0D0D;
 }
 
+/* Apply system preference by default until theme is explicitly set */
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
@@ -72,14 +74,9 @@ h1, h2, h3 {
   margin: 0;
 }
 
-*,
-*::before,
-*::after {
-  transition:
-    color 0.16s ease,
-    background-color 0.16s ease,
-    border-color 0.16s ease,
-    box-shadow 0.16s ease;
+/* Apply transitions only to specific elements to prevent flashing */
+body {
+  transition: color 0.16s ease, background-color 0.16s ease;
 }
 
 a {
@@ -105,8 +102,11 @@ a:hover, a:active, a:focus-within {
   border: 0;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
+/* Color scheme hint for browser chrome */
+[data-theme="dark"] {
+  color-scheme: dark;
+}
+
+[data-theme="light"] {
+  color-scheme: light;
 }

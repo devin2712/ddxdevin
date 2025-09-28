@@ -1,6 +1,26 @@
 import { PageLayout } from "@/components/layout/PageLayout";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
+import type { Metadata } from "next";
+
+export async function generateMetadata(): Promise<Metadata> {
+  return {
+    openGraph: {
+      images: [
+        {
+          url: "https://devinnguyen.com/images/bauhauslers/1.jpg",
+          width: 800,
+          height: 600,
+          alt: "Bauhauslers photography",
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      images: ["https://devinnguyen.com/images/bauhauslers/1.jpg"],
+    },
+  };
+}
 
 const images = [
   "1.jpg",

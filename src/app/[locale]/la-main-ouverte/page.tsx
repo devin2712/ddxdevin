@@ -3,6 +3,26 @@ import { PullQuote } from "@/components/ui/PullQuote";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 import styles from "./LaMainOuverte.module.css";
+import type { Metadata } from "next";
+
+export async function generateMetadata(): Promise<Metadata> {
+  return {
+    openGraph: {
+      images: [
+        {
+          url: "https://devinnguyen.com/images/lamainouverte/AAIMG_7378.jpg",
+          width: 800,
+          height: 600,
+          alt: "La Main Ouverte photography",
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      images: ["https://devinnguyen.com/images/lamainouverte/AAIMG_7378.jpg"],
+    },
+  };
+}
 
 const images = [
   "AAIMG_7378.jpg",
