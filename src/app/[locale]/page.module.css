@@ -39,6 +39,11 @@ div.content {
 @media (max-width: 768px) {
   div.content {
     margin: 1rem auto 2rem auto;
+    padding: 0 1rem;
+  }
+
+  .controlPanel {
+    margin-bottom: 0;
   }
 }
 
