@@ -1,1 +1,16 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+# Run linter
+echo "🔍 Running ESLint..."
+bun run lint
+
+# Run TypeScript type checking
+echo "🔧 Running TypeScript type check..."
+bun run type-check
+
+# Run the concert CSV update
+echo "📊 Updating concert CSV..."
 node updateConcertsCsv.mjs
+
+echo "✅ All pre-commit checks passed!"

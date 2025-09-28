@@ -31,7 +31,7 @@ export default function NotFound() {
                   textTransform: "uppercase",
                 }}
               >
-                <Arrow aria-hidden="true" />
+                <Arrow aria-hidden />
                 {t("returnHome")}
               </span>
             </Button>
