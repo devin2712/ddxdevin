@@ -85,6 +85,10 @@
   display: none;
 }
 
+.mainContent {
+  padding: 0.5rem 0 0;
+}
+
 @media (max-width: 768px) {
   .container {
     padding: 0 1rem 3rem;

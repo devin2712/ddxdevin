@@ -62,7 +62,9 @@ export const PageLayout: React.FC<PageLayoutProps> = ({ header, children, size =
           <div className={styles.header}>
             <Header {...header} />
           </div>
-          {children}
+          <div className={styles.mainContent}>
+            {children}
+          </div>
         </main>
       </div>
     </div>
