@@ -15,26 +15,48 @@ export const Clock: React.FC<ClockProps> = ({ label, labelAlign = 'right' }) => 
   const [time, setTime] = useState(new Date());
 
   useEffect(() => {
-    const timer = setInterval(() => {
-      setTime(new Date());
-    }, 1000);
+    let animationFrameId: number;
 
-    return () => clearInterval(timer);
+    const updateTime = () => {
+      setTime(new Date());
+      animationFrameId = requestAnimationFrame(updateTime);
+    };
+
+    animationFrameId = requestAnimationFrame(updateTime);
+
+    return () => {
+      if (animationFrameId) {
+        cancelAnimationFrame(animationFrameId);
+      }
+    };
   }, []);
 
-  const etTime = new Date(
-    time.toLocaleString("en-US", { timeZone: "America/New_York" })
-  );
+  // Get timezone offset for ET and convert while preserving milliseconds
+  const etFormatter = new Intl.DateTimeFormat("en", {
+    timeZone: "America/New_York",
+    hour12: false,
+    hour: "2-digit",
+    minute: "2-digit",
+    second: "2-digit"
+  });
 
-  const hours = etTime.getHours() % 12;
-  const minutes = etTime.getMinutes();
-  const seconds = etTime.getSeconds();
+  // Parse ET time parts and reconstruct with original milliseconds
+  const etParts = etFormatter.formatToParts(time);
+  const etHour = parseInt(etParts.find(p => p.type === 'hour')?.value || '0');
+  const etMinute = parseInt(etParts.find(p => p.type === 'minute')?.value || '0');
+  const etSecond = parseInt(etParts.find(p => p.type === 'second')?.value || '0');
 
-  const secondAngle = seconds * 6;
-  const minuteAngle = minutes * 6 + seconds * 0.1;
-  const hourAngle = hours * 30 + minutes * 0.5;
+  const hours = etHour % 12;
+  const minutes = etMinute;
+  const seconds = etSecond;
+  const milliseconds = time.getMilliseconds(); // Keep original milliseconds
 
-  const formattedTime = etTime.toLocaleTimeString("en-US", {
+  // Smooth calculations including milliseconds for fluid motion
+  const secondAngle = (seconds + milliseconds / 1000) * 6;
+  const minuteAngle = minutes * 6 + (seconds + milliseconds / 1000) * 0.1;
+  const hourAngle = hours * 30 + minutes * 0.5 + (seconds + milliseconds / 1000) * (0.5 / 60);
+
+  const formattedTime = time.toLocaleTimeString("en-US", {
     timeZone: "America/New_York",
     hour: "numeric",
     minute: "2-digit",
@@ -95,11 +117,10 @@ export const Clock: React.FC<ClockProps> = ({ label, labelAlign = 'right' }) => 
               y1="14"
               x2="14"
               y2="3"
-              stroke="currentColor"
+              stroke="#FF0000"
               strokeWidth="0.5"
               strokeLinecap="round"
               transform={`rotate(${secondAngle} 14 14)`}
-              opacity="0.6"
             />
           </svg>
         </div>
