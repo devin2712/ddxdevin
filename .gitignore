@@ -1,7 +1,7 @@
 # next.js build
 .next
 
-# node dependency 
+# node dependency
 node_modules/
 
 # logs
@@ -11,5 +11,8 @@ yarn-error.log*
 
 # vscode
 .vscode/
+
+# TypeScript build cache
+tsconfig.tsbuildinfo
 
 .DS_Store
