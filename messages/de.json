@@ -13,8 +13,7 @@
         "title": "Bauhäuslers",
         "paragraphs": [
             "Eine Reise, die dem historischen Pfad der Bauhaus-Bewegung von Weimar über Dessau nach Berlin während der Hundertjahrfeier folgt.",
-            "Bauhäusler — ein Student des Bauhaus",
-            "Mieslinge — abwertender Begriff für Studenten, die den Meister kopieren, Mies van der Rohe; von \"Mies\" und deutsch \"misslingen\" [Versagen]"
+            "Bauhäusler — ein Student des Bauhaus"
         ],
         "imageAlt": "Porträt {number} aus der Bauhäuslers Fotoserie"
     },
@@ -64,7 +63,7 @@
     "home": {
         "title": "Devin Nguyen",
         "description": "Software-Ingenieur",
-        "intro": "Ich bin ein Full-Stack-Software-Ingenieur mit Sitz in NYC und baue derzeit Infrastruktur für Regierungen und gemeinnützige Organisationen zur Modernisierung und Skalierung der Leistungserbringung bei <aidkit>AidKit</aidkit>.",
+        "intro": "Ich bin ein Full-Stack-Software-Ingenieur mit Sitz in New York City und baue derzeit Infrastruktur für Regierungen und gemeinnützige Organisationen zur Modernisierung und Skalierung der Leistungserbringung bei <aidkit>AidKit</aidkit>.",
         "background": "Zuvor war ich Principal Software Engineer bei <hypr>HYPR</hypr>, wo ich vertrauenswürdige passwortlose Authentifizierungsinfrastruktur für Banken, Universitäten und Startups aufgebaut habe. Davor war ich Senior Member of Technical Staff bei <cloudhealth>CloudHealth</cloudhealth> von <vmware>VMware</vmware> und baute Lösungen für Cloud-Governance, Kostenoptimierung und Compliance im Unternehmensmaßstab.",
         "links": {
             "bauhaus": "Lektionen vom Bauhaus",

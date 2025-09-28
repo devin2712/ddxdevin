@@ -13,8 +13,7 @@
         "title": "Bauhäuslers",
         "paragraphs": [
             "바우하우스 운동의 역사적 경로를 따라 바이마르에서 데사우를 거쳐 베를린까지의 여행, 100주년 기념 행사 기간 동안.",
-            "Bauhäusler — 바우하우스의 학생",
-            "Mieslinge — 마스터 미스 반 데어 로에를 모방하는 학생들에 대한 경멸적 용어; \"Mies\"와 독일어 \"misslingen\" [실패]에서 유래"
+            "Bauhäusler — 바우하우스의 학생"
         ],
         "imageAlt": "Bauhäuslers 사진 시리즈의 초상화 {number}"
     },
@@ -64,7 +63,7 @@
     "home": {
         "title": "Devin Nguyen",
         "description": "소프트웨어 엔지니어",
-        "intro": "저는 NYC에 거주하는 풀스택 소프트웨어 엔지니어이며, 현재 <aidkit>AidKit</aidkit>에서 정부와 비영리 단체가 혜택 전달을 현대화하고 확장할 수 있도록 인프라를 구축하고 있습니다.",
+        "intro": "저는 뉴욕시에 거주하는 풀스택 소프트웨어 엔지니어이며, 현재 <aidkit>AidKit</aidkit>에서 정부와 비영리 단체가 혜택 전달을 현대화하고 확장할 수 있도록 인프라를 구축하고 있습니다.",
         "background": "이전에는 <hypr>HYPR</hypr>에서 주요 소프트웨어 엔지니어로 은행, 대학, 스타트업이 신뢰할 수 있는 비밀번호 없는 인증 인프라를 구축했습니다. 그 전에는 <vmware>VMware</vmware>의 <cloudhealth>CloudHealth</cloudhealth>에서 선임 기술 스태프 멤버로 기업 규모의 클라우드 거버넌스, 비용 최적화, 규정 준수를 위한 솔루션을 구축했습니다.",
         "links": {
             "bauhaus": "바우하우스의 교훈",

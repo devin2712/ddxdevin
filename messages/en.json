@@ -13,8 +13,7 @@
         "title": "Bauhäuslers",
         "paragraphs": [
             "A journey tracing the Bauhaus movement's historic path from Weimar to Dessau to Berlin during the centennial celebration.",
-            "Bauhäusler — a student of the Bauhaus",
-            "Mieslinge — disparaging term for students copying the master, Mies van der Rohe; from \"Mies\" and German \"misslingen\" [failure]"
+            "Bauhäusler — a student of the Bauhaus"
         ],
         "imageAlt": "Portrait {number} from Bauhäuslers photography series"
     },
@@ -64,7 +63,7 @@
     "home": {
         "title": "Devin Nguyen",
         "description": "Software Engineer",
-        "intro": "I'm a full-stack software engineer based in NYC, currently building infrastructure for governments and nonprofits to modernize and scale benefits delivery at <aidkit>AidKit</aidkit>.",
+        "intro": "I'm a full-stack software engineer based in New York City, currently building infrastructure for governments and nonprofits to modernize and scale benefits delivery at <aidkit>AidKit</aidkit>.",
         "background": "Previously, I was a Principal Software Engineer at <hypr>HYPR</hypr>, where I built passwordless authentication infrastructure trusted by banks, universities, and startups. Before that, I was a Senior Member of Technical Staff at <cloudhealth>CloudHealth</cloudhealth> by <vmware>VMware</vmware>, building solutions for cloud governance, cost optimization, and compliance at enterprise scale.",
         "links": {
             "bauhaus": "Lessons from the Bauhaus",

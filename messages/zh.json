@@ -13,8 +13,7 @@
         "title": "Bauhäuslers",
         "paragraphs": [
             "追寻包豪斯运动从魏玛到德绍再到柏林的历史路径，在百年庆典期间进行的旅程。",
-            "Bauhäusler — 包豪斯的学生",
-            "Mieslinge — 对模仿大师密斯·凡·德·罗的学生的贬义词；来自\"Mies\"和德语\"misslingen\"[失败]"
+            "Bauhäusler — 包豪斯的学生"
         ],
         "imageAlt": "Bauhäuslers摄影系列中的人像{number}"
     },
@@ -64,7 +63,7 @@
     "home": {
         "title": "Devin Nguyen",
         "description": "软件工程师",
-        "intro": "我是一名位于纽约的全栈软件工程师，目前在<aidkit>AidKit</aidkit>为政府和非营利组织构建基础设施，以实现福利交付的现代化和规模化。",
+        "intro": "我是一名位于纽约市的全栈软件工程师，目前在<aidkit>AidKit</aidkit>为政府和非营利组织构建基础设施，以实现福利交付的现代化和规模化。",
         "background": "之前，我是<hypr>HYPR</hypr>的首席软件工程师，在那里我为银行、大学和初创公司构建了可信赖的无密码身份验证基础设施。在那之前，我是<vmware>VMware</vmware>旗下<cloudhealth>CloudHealth</cloudhealth>的高级技术人员，构建了企业级云治理、成本优化和合规性解决方案。",
         "links": {
             "bauhaus": "包豪斯的教训",
