@@ -8,8 +8,12 @@ export default function NotFound() {
   const t = useTranslations("notFound");
 
   return (
-    <main className={styles.contentContainer}>
-      <div className={styles.content}>
+    <>
+      <a href="#main-content" className={styles.skipLink}>
+        Skip to content
+      </a>
+      <main id="main-content" className={styles.contentContainer}>
+        <div className={styles.content}>
         <section className={styles.intro}>
           <Header
             as="h1"
@@ -27,7 +31,7 @@ export default function NotFound() {
                   textTransform: "uppercase",
                 }}
               >
-                <Arrow />
+                <Arrow aria-hidden="true" />
                 {t("returnHome")}
               </span>
             </Button>
@@ -35,5 +39,6 @@ export default function NotFound() {
         </section>
       </div>
     </main>
+    </>
   );
 }

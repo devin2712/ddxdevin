@@ -189,7 +189,7 @@ export default function ConcertsPage() {
       )}
 
       {data && (
-        <main className={styles.concertLogList}>
+        <section className={styles.concertLogList}>
           <div className={styles.contentWrapper}>
             {t.raw("paragraphs") && Array.isArray(t.raw("paragraphs"))
               ? (t.raw("paragraphs") as string[]).map((paragraph: string, index: number) => (
@@ -197,17 +197,22 @@ export default function ConcertsPage() {
                 ))
               : null}
             <div className={styles.search}>
+              <label htmlFor="concert-search" className="sr-only">
+                {t("search")}
+              </label>
               <input
+                id="concert-search"
                 ref={inputRef}
                 autoFocus
                 type="text"
                 placeholder={`${t("search")}...`}
                 value={searchQuery}
                 onChange={handleSearch}
+                aria-describedby="search-results-count"
               />
-              <pre ref={counterRef} className={styles.resultsCount}>
+              <pre ref={counterRef} className={styles.resultsCount} id="search-results-count" aria-live="polite">
                 {isSearching ? (
-                  <span className={styles.spinner}></span>
+                  <span className={styles.spinner} aria-label="Searching"></span>
                 ) : (
                   resultsCount[0]
                 )}{" "}
@@ -252,7 +257,7 @@ export default function ConcertsPage() {
               </ul>
             </>
           )}
-        </main>
+        </section>
       )}
     </PageLayout>
   );

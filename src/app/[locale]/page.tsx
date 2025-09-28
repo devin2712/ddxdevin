@@ -127,57 +127,65 @@ export default function Home() {
   ];
 
   return (
-    <main className={styles.contentContainer}>
-      <div className={styles.content}>
-        <Header
-          as="h1"
-          title={<span className={styles.name}>{t("title")}</span>}
-          description={<span className={styles.title}>{t("description")}</span>}
-        />
-        <section className={styles.intro}>
-          <p>
-            {t.rich("intro", {
-              aidkit: (chunks) => (
-                <a
-                  href="https://www.aidkit.com"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  {chunks}
-                </a>
-              ),
-            })}
-          </p>
-          <p>
-            {t.rich("background", {
-              cloudhealth: (chunks) => (
-                <a
-                  href="https://www.cloudhealthtech.com"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  {chunks}
-                </a>
-              ),
-              hypr: (chunks) => (
-                <a href="https://www.hypr.com" target="_blank" rel="noreferrer">
-                  {chunks}
-                </a>
-              ),
-              vmware: (chunks) => (
-                <a
-                  href="https://www.vmware.com"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  {chunks}
-                </a>
-              ),
-            })}
-          </p>
-        </section>
-        <LinkList sections={linkSections} />
-      </div>
-    </main>
+    <>
+      <a href="#main-content" className={styles.skipLink}>
+        {t("skipToContent")}
+      </a>
+      <main id="main-content" className={styles.contentContainer}>
+        <div className={styles.content}>
+          <Header
+            as="h1"
+            title={<span className={styles.name}>{t("title")}</span>}
+            description={<span className={styles.title}>{t("description")}</span>}
+          />
+          <section className={styles.intro}>
+            <p>
+              {t.rich("intro", {
+                aidkit: (chunks) => (
+                  <a
+                    href="https://www.aidkit.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={`${chunks} (opens in new tab)`}
+                  >
+                    {chunks}
+                  </a>
+                ),
+              })}
+            </p>
+            <p>
+              {t.rich("background", {
+                cloudhealth: (chunks) => (
+                  <a
+                    href="https://www.cloudhealthtech.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={`${chunks} (opens in new tab)`}
+                  >
+                    {chunks}
+                  </a>
+                ),
+                hypr: (chunks) => (
+                  <a href="https://www.hypr.com" target="_blank" rel="noopener noreferrer" aria-label={`${chunks} (opens in new tab)`}>
+                    {chunks}
+                  </a>
+                ),
+                vmware: (chunks) => (
+                  <a
+                    href="https://www.vmware.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={`${chunks} (opens in new tab)`}
+                  >
+                    {chunks}
+                  </a>
+                ),
+              })}
+            </p>
+          </section>
+          <LinkList sections={linkSections} />
+        </div>
+      </main>
+    </>
   );
 }

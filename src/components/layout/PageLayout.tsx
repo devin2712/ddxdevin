@@ -16,16 +16,19 @@ export const PageLayout: React.FC<PageLayoutProps> = ({ header, children, size =
 
   return (
     <div className={styles.container}>
+      <a href="#main-content" className={styles.skipLink}>
+        {t("skipToContent")}
+      </a>
       <div className={`${styles.layout} ${size === "xlarge" ? styles.layoutXlarge : ""}`}>
         <aside className={styles.sidebar}>
           <Button as="link" href="/">
             <span className={styles.buttonContent}>
-              <Arrow />
+              <Arrow aria-hidden />
               {t("index")}
             </span>
           </Button>
         </aside>
-        <main className={styles.content}>
+        <main id="main-content" className={styles.content}>
           <div className={styles.header}>
             <Header {...header} />
           </div>

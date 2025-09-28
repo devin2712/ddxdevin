@@ -1,11 +1,29 @@
 .container {
   display: flex;
   justify-content: center;
-  padding: 2rem 2rem;
+  padding: 5rem 2rem 2rem;
   width: 100%;
+  position: relative;
   p {
     margin-bottom: 1rem;
   }
+}
+
+.skipLink {
+  position: absolute;
+  top: -40px;
+  left: 6px;
+  background: var(--background);
+  color: var(--text-color);
+  padding: 8px;
+  text-decoration: none;
+  z-index: 100;
+  border-radius: 4px;
+  font-weight: normal;
+}
+
+.skipLink:focus-visible {
+  top: 6px;
 }
 
 .layout {
@@ -26,6 +44,8 @@
   align-self: start;
   padding-right: min(16vw, 16rem);
   white-space: nowrap;
+  position: sticky;
+  top: 5rem;
 }
 
 .content {
@@ -63,6 +83,7 @@
     justify-self: start;
     padding: 0;
     margin-bottom: 1rem;
+    position: static;
   }
 
   .content {

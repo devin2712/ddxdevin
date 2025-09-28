@@ -18,7 +18,8 @@
         ]
     },
     "common": {
-        "index": "Índice"
+        "index": "Índice",
+        "skipToContent": "Saltar al contenido"
     },
     "concertLog": {
         "title": "Registro de conciertos",
@@ -70,7 +71,8 @@
             "connect": "Conectar",
             "photography": "Fotografía",
             "writing": "Escritura"
-        }
+        },
+        "skipToContent": "Saltar al contenido"
     },
     "laMainOuverte": {
         "title": "La Main Ouverte",

@@ -15,10 +15,12 @@
             "A trip from Weimar to Dessau to Berlin, tracing the path of the Bauhaus during its centennial celebration.",
             "Bauhäusler — a student of the Bauhaus",
             "Mieslinge — disparaging term for students copying the master, Mies van der Rohe; from \"Mies\" and German \"misslingen\" [failure]"
-        ]
+        ],
+        "imageAlt": "Portrait {number} from Bauhäuslers photography series"
     },
     "common": {
-        "index": "Index"
+        "index": "Index",
+        "skipToContent": "Skip to content"
     },
     "concertLog": {
         "title": "Concert Log",
@@ -70,7 +72,8 @@
             "connect": "Connect",
             "photography": "Photography",
             "writing": "Writing"
-        }
+        },
+        "skipToContent": "Skip to content"
     },
     "laMainOuverte": {
         "title": "La Main Ouverte",
@@ -80,7 +83,8 @@
             "The Open Hand, or La Main Ouverte, was a recurring motif throughout Le Corbusier's work and became the defining symbol of Chandigarh."
         ],
         "attribution": "Le Corbusier",
-        "pullquote": "\"It turns with the wind, not aimlessly, but to express what life really is: constant change. The hand is open to give and receive. It's a sign of optimism in this world of catastrophe.\""
+        "pullquote": "\"It turns with the wind, not aimlessly, but to express what life really is: constant change. The hand is open to give and receive. It's a sign of optimism in this world of catastrophe.\"",
+        "imageAlt": "Photograph {number} from La Main Ouverte architecture series"
     },
     "mcpWildfire": {
         "title": "MCP: Mapping LA Wildfires with AI",
@@ -106,6 +110,7 @@
         "title": "(S)E1",
         "paragraphs": [
             "Commuting scenes in London from E1 to SE1"
-        ]
+        ],
+        "imageAlt": "Photograph {number} from SE1 film photography collection"
     }
 }

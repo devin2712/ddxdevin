@@ -16,15 +16,15 @@ type CurrentLink = {
 } | null;
 
 const INDEX_ICONS: Record<number, JSX.Element> = {
-  1: <span className={styles.indexIcon}>{String.fromCodePoint(0x2776)}</span>,
-  2: <span className={styles.indexIcon}>{String.fromCodePoint(0x2777)}</span>,
-  3: <span className={styles.indexIcon}>{String.fromCodePoint(0x2778)}</span>,
-  4: <span className={styles.indexIcon}>{String.fromCodePoint(0x2779)}</span>,
-  5: <span className={styles.indexIcon}>{String.fromCodePoint(0x277a)}</span>,
-  6: <span className={styles.indexIcon}>{String.fromCodePoint(0x277b)}</span>,
-  7: <span className={styles.indexIcon}>{String.fromCodePoint(0x277c)}</span>,
-  8: <span className={styles.indexIcon}>{String.fromCodePoint(0x277d)}</span>,
-  9: <span className={styles.indexIcon}>{String.fromCodePoint(0x277e)}</span>,
+  1: <span className={styles.indexIcon} aria-hidden="true">{String.fromCodePoint(0x2776)}</span>,
+  2: <span className={styles.indexIcon} aria-hidden="true">{String.fromCodePoint(0x2777)}</span>,
+  3: <span className={styles.indexIcon} aria-hidden="true">{String.fromCodePoint(0x2778)}</span>,
+  4: <span className={styles.indexIcon} aria-hidden="true">{String.fromCodePoint(0x2779)}</span>,
+  5: <span className={styles.indexIcon} aria-hidden="true">{String.fromCodePoint(0x277a)}</span>,
+  6: <span className={styles.indexIcon} aria-hidden="true">{String.fromCodePoint(0x277b)}</span>,
+  7: <span className={styles.indexIcon} aria-hidden="true">{String.fromCodePoint(0x277c)}</span>,
+  8: <span className={styles.indexIcon} aria-hidden="true">{String.fromCodePoint(0x277d)}</span>,
+  9: <span className={styles.indexIcon} aria-hidden="true">{String.fromCodePoint(0x277e)}</span>,
 };
 
 export const LinkList: React.FC<LinkListProps> = ({ sections }) => {
@@ -94,7 +94,8 @@ export const LinkList: React.FC<LinkListProps> = ({ sections }) => {
                   className={styles.link}
                   href={link.config.url}
                   target="_blank"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
+                  aria-label={`${link.title} (opens in new tab)`}
                   onFocus={() =>
                     handleSetCurrentLink({ sectionKey: section.key, linkKey: link.key })
                   }

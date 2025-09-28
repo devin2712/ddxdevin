@@ -15,10 +15,12 @@
             "Un voyage de Weimar à Dessau en passant par Berlin, suivant le chemin du Bauhaus pendant sa célébration du centenaire.",
             "Bauhäusler — un étudiant du Bauhaus",
             "Mieslinge — terme péjoratif pour les étudiants copiant le maître, Mies van der Rohe ; de « Mies » et de l'allemand « misslingen » [échec]"
-        ]
+        ],
+        "imageAlt": "Portrait {number} de la série photographique Bauhäuslers"
     },
     "common": {
-        "index": "Index"
+        "index": "Index",
+        "skipToContent": "Aller au contenu"
     },
     "concertLog": {
         "title": "Journal de concerts",
@@ -70,7 +72,8 @@
             "connect": "Se connecter",
             "photography": "Photographie",
             "writing": "Écriture"
-        }
+        },
+        "skipToContent": "Aller au contenu"
     },
     "laMainOuverte": {
         "title": "La Main Ouverte",
@@ -80,7 +83,8 @@
             "La Main Ouverte était un motif récurrent dans l'œuvre de Le Corbusier et devint le symbole définitoire de Chandigarh."
         ],
         "attribution": "Le Corbusier",
-        "pullquote": "« Elle tourne avec le vent, non pas sans but, mais pour exprimer ce qu'est vraiment la vie : le changement constant. La main est ouverte pour donner et recevoir. C'est un signe d'optimisme dans ce monde de catastrophe. »"
+        "pullquote": "« Elle tourne avec le vent, non pas sans but, mais pour exprimer ce qu'est vraiment la vie : le changement constant. La main est ouverte pour donner et recevoir. C'est un signe d'optimisme dans ce monde de catastrophe. »",
+        "imageAlt": "Photographie {number} de la série d'architecture La Main Ouverte"
     },
     "mcpWildfire": {
         "title": "MCP : Cartographier les incendies de LA avec l'IA",
@@ -106,6 +110,7 @@
         "title": "(S)E1",
         "paragraphs": [
             "Scènes de trajet à Londres de E1 à SE1"
-        ]
+        ],
+        "imageAlt": "Photographie {number} de la collection de photographie argentique SE1"
     }
 }

@@ -18,7 +18,8 @@
         ]
     },
     "common": {
-        "index": "索引"
+        "index": "索引",
+        "skipToContent": "跳转到内容"
     },
     "concertLog": {
         "title": "音乐会日志",
@@ -70,7 +71,8 @@
             "connect": "联系",
             "photography": "摄影",
             "writing": "写作"
-        }
+        },
+        "skipToContent": "跳转到内容"
     },
     "laMainOuverte": {
         "title": "La Main Ouverte",

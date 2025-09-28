@@ -8,7 +8,21 @@ export default function GlobalNotFound() {
   return (
     <html lang="en">
       <body>
-        <div style={{
+        <a href="#main-content" style={{
+          position: 'absolute',
+          top: '-40px',
+          left: '6px',
+          background: '#000',
+          color: '#fff',
+          padding: '8px',
+          textDecoration: 'none',
+          zIndex: 100,
+          borderRadius: '4px',
+          fontWeight: 'bold'
+        }} onFocus={(e) => e.target.style.top = '6px'} onBlur={(e) => e.target.style.top = '-40px'}>
+          Skip to content
+        </a>
+        <main id="main-content" style={{
           display: 'flex',
           flexDirection: 'column',
           alignItems: 'center',
@@ -23,7 +37,7 @@ export default function GlobalNotFound() {
           <Link href="/en" style={{ textDecoration: 'underline' }}>
             ← Return Home
           </Link>
-        </div>
+        </main>
       </body>
     </html>
   );

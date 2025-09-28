@@ -15,10 +15,12 @@
             "Eine Reise von Weimar über Dessau nach Berlin, dem Weg des Bauhaus während seiner Hundertjahrfeier folgend.",
             "Bauhäusler — ein Student des Bauhaus",
             "Mieslinge — abwertender Begriff für Studenten, die den Meister kopieren, Mies van der Rohe; von \"Mies\" und deutsch \"misslingen\" [Versagen]"
-        ]
+        ],
+        "imageAlt": "Porträt {number} aus der Bauhäuslers Fotoserie"
     },
     "common": {
-        "index": "Index"
+        "index": "Index",
+        "skipToContent": "Zum Inhalt springen"
     },
     "concertLog": {
         "title": "Konzertprotokoll",
@@ -70,7 +72,8 @@
             "connect": "Verbinden",
             "photography": "Fotografie",
             "writing": "Schreiben"
-        }
+        },
+        "skipToContent": "Zum Inhalt springen"
     },
     "laMainOuverte": {
         "title": "La Main Ouverte",
@@ -80,7 +83,8 @@
             "Die Offene Hand, oder La Main Ouverte, war ein wiederkehrendes Motiv in Le Corbusiers Werk und wurde zum bestimmenden Symbol von Chandigarh."
         ],
         "attribution": "Le Corbusier",
-        "pullquote": "\"Sie dreht sich mit dem Wind, nicht ziellos, sondern um auszudrücken, was das Leben wirklich ist: ständiger Wandel. Die Hand ist offen, um zu geben und zu empfangen. Es ist ein Zeichen des Optimismus in dieser Welt der Katastrophe.\""
+        "pullquote": "\"Sie dreht sich mit dem Wind, nicht ziellos, sondern um auszudrücken, was das Leben wirklich ist: ständiger Wandel. Die Hand ist offen, um zu geben und zu empfangen. Es ist ein Zeichen des Optimismus in dieser Welt der Katastrophe.\"",
+        "imageAlt": "Fotografie {number} aus der La Main Ouverte Architekturserie"
     },
     "mcpWildfire": {
         "title": "MCP: LA-Waldbrände mit KI kartieren",
@@ -106,6 +110,7 @@
         "title": "(S)E1",
         "paragraphs": [
             "Pendelszenen in London von E1 nach SE1"
-        ]
+        ],
+        "imageAlt": "Fotografie {number} aus der SE1 Filmfotografie-Sammlung"
     }
 }

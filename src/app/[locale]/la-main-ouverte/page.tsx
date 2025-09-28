@@ -68,11 +68,11 @@ export default function LaMainOuvertePage() {
           marginTop: "1rem",
         }}
       >
-        {images.map((image) => (
+        {images.map((image, index) => (
           <Image
             key={image}
             src={`/images/lamainouverte/${image}`}
-            alt={`La Main Ouverte - ${image}`}
+            alt={t("imageAlt", { number: index + 1 })}
             width={800}
             height={600}
             style={{

@@ -18,7 +18,8 @@
         ]
     },
     "common": {
-        "index": "Mục lục"
+        "index": "Mục lục",
+        "skipToContent": "Chuyển đến nội dung"
     },
     "concertLog": {
         "title": "Nhật ký hòa nhạc",
@@ -70,7 +71,8 @@
             "connect": "Kết nối",
             "photography": "Nhiếp ảnh",
             "writing": "Viết lách"
-        }
+        },
+        "skipToContent": "Chuyển đến nội dung"
     },
     "laMainOuverte": {
         "title": "La Main Ouverte",

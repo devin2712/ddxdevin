@@ -38,11 +38,11 @@ export default function Se1Page() {
           marginTop: "1rem",
         }}
       >
-        {images.map((image) => (
+        {images.map((image, index) => (
           <Image
             key={image}
             src={`/images/se1/${image}`}
-            alt={`SE1 - ${image}`}
+            alt={t("imageAlt", { number: index + 1 })}
             width={800}
             height={600}
             style={{

@@ -43,11 +43,11 @@ export default function BauhauslersPage() {
           marginTop: "1rem",
         }}
       >
-        {images.map((image) => (
+        {images.map((image, index) => (
           <Image
             key={image}
             src={`/images/bauhauslers/${image}`}
-            alt={`Bauhäuslers - ${image}`}
+            alt={t("imageAlt", { number: index + 1 })}
             width={800}
             height={600}
             style={{
