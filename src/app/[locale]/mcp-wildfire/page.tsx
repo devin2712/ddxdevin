@@ -1,8 +1,11 @@
 import { PageLayout } from "@/components/layout/PageLayout";
 import { StyledLink } from "@/components/ui/StyledLink";
-import { useTranslations } from "next-intl";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import Image from "next/image";
 import type { Metadata } from "next";
+
+// This page is fully static
+export const dynamic = 'force-static';
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
@@ -30,8 +33,14 @@ export async function generateMetadata(): Promise<Metadata> {
   };
 }
 
-export default function McpWildfirePage() {
-  const t = useTranslations("mcpWildfire");
+export default async function McpWildfirePage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+  const t = await getTranslations("mcpWildfire");
 
   return (
     <PageLayout
@@ -54,6 +63,7 @@ export default function McpWildfirePage() {
             height: "auto",
             maxWidth: "500px",
           }}
+          priority
         />
       </p>
       {t.raw("paragraphs").map((paragraph: string, index: number) => {

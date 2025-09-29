@@ -1,5 +1,5 @@
 import React, { ButtonHTMLAttributes, AnchorHTMLAttributes, forwardRef } from "react";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import styles from "./Button.module.css";
 
 type ButtonAsButton = ButtonHTMLAttributes<HTMLButtonElement> & {
@@ -27,6 +27,7 @@ export const Button = forwardRef<
       <Link
         ref={ref as React.Ref<HTMLAnchorElement>}
         className={buttonClass}
+        prefetch={true}
         {...linkProps}
       >
         {children}

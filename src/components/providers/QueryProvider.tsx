@@ -21,7 +21,10 @@ const createQueryClient = () =>
 
 const PersistentQueryProvider = dynamic(
   () => import("./PersistentQueryProvider"),
-  { ssr: false }
+  {
+    ssr: false,
+    loading: () => null // Prevent flash of loading state
+  }
 );
 
 export const QueryProvider = ({ children }: { children: ReactNode }) => {
@@ -31,7 +34,9 @@ export const QueryProvider = ({ children }: { children: ReactNode }) => {
     <QueryClientProvider client={queryClient}>
       <PersistentQueryProvider>
         {children}
-        <ReactQueryDevtools initialIsOpen={false} />
+        {process.env.NODE_ENV === 'development' && (
+          <ReactQueryDevtools initialIsOpen={false} />
+        )}
       </PersistentQueryProvider>
     </QueryClientProvider>
   );

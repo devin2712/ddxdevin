@@ -1,9 +1,12 @@
 import { PageLayout } from "@/components/layout/PageLayout";
 import { PullQuote } from "@/components/ui/PullQuote";
-import { useTranslations } from "next-intl";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import Image from "next/image";
 import styles from "./LaMainOuverte.module.css";
 import type { Metadata } from "next";
+
+// This page is fully static
+export const dynamic = 'force-static';
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
@@ -54,8 +57,14 @@ const images = [
   "XJVD4428.jpg",
 ];
 
-export default function LaMainOuvertePage() {
-  const t = useTranslations("laMainOuverte");
+export default async function LaMainOuvertePage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+  const t = await getTranslations("laMainOuverte");
 
   return (
     <PageLayout
@@ -71,6 +80,7 @@ export default function LaMainOuvertePage() {
         height={0}
         width={0}
         className={styles.handIcon}
+        priority
       />
       {t.raw("paragraphs").map((paragraph: string, index: number) => (
         <p key={index}>{paragraph}</p>
@@ -97,7 +107,8 @@ export default function LaMainOuvertePage() {
             }}
             sizes="500px"
             quality={85}
-            loading="lazy"
+            loading={index === 0 ? "eager" : "lazy"}
+            priority={index === 0}
           />
         ))}
       </div>

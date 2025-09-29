@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { ReactNode } from "react";
+import { QueryProvider } from "@/components/providers/QueryProvider";
 
 export const metadata: Metadata = {
   openGraph: {
@@ -23,5 +24,5 @@ type Props = {
 };
 
 export default function ConcertsLayout({ children }: Props) {
-  return children;
+  return <QueryProvider>{children}</QueryProvider>;
 }

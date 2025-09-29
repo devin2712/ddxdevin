@@ -1,7 +1,10 @@
 import { PageLayout } from "@/components/layout/PageLayout";
-import { useTranslations } from "next-intl";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import Image from "next/image";
 import type { Metadata } from "next";
+
+// This page is fully static
+export const dynamic = 'force-static';
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
@@ -48,8 +51,14 @@ const images = [
   "16.jpg",
 ];
 
-export default function BauhauslersPage() {
-  const t = useTranslations("bauhauslers");
+export default async function BauhauslersPage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+  const t = await getTranslations("bauhauslers");
 
   return (
     <PageLayout
@@ -83,7 +92,8 @@ export default function BauhauslersPage() {
             }}
             sizes="500px"
             quality={85}
-            loading="lazy"
+            loading={index === 0 ? "eager" : "lazy"}
+            priority={index === 0}
           />
         ))}
       </div>

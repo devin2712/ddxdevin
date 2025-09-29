@@ -43,11 +43,10 @@
 .tooltipTime {
   display: inline-flex;
   align-items: center;
-  gap: 0.25em;
+  gap: 0.25rem;
 }
 
 .timeDigits {
-  display: inline-block;
-  min-width: 4.5em;
-  text-align: right;
+  font-variant-numeric: tabular-nums lining-nums;
+  font-feature-settings: "tnum" 1, "lnum" 1;
 }

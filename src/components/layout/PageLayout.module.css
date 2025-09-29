@@ -75,14 +75,14 @@
   height: 3rem;
 }
 
+.mobileControlPanel {
+  display: none;
+}
+
 .header {
   width: 100%;
   max-width: 500px;
   margin: 0 auto;
-}
-
-.mobileControlPanel {
-  display: none;
 }
 
 .mainContent {

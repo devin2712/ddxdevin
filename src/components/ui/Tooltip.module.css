@@ -9,6 +9,7 @@
   z-index: 9999;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   animation: fadeIn 200ms ease;
+  text-align: center;
 }
 
 @keyframes fadeIn {

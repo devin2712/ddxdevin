@@ -1,7 +1,10 @@
 import { PageLayout } from "@/components/layout/PageLayout";
 import { StyledLink } from "@/components/ui/StyledLink";
-import { useTranslations } from "next-intl";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import type { Metadata } from "next";
+
+// This page is fully static
+export const dynamic = 'force-static';
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
@@ -29,8 +32,14 @@ export async function generateMetadata(): Promise<Metadata> {
   };
 }
 
-export default function CovidMyturnPage() {
-  const t = useTranslations("covidMyturn");
+export default async function CovidMyturnPage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+  const t = await getTranslations("covidMyturn");
 
   return (
     <PageLayout

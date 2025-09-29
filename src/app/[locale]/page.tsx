@@ -2,34 +2,19 @@ import { LinkList } from "@/components/ui/LinkList";
 import { LinkListSection } from "@/types";
 import styles from "./page.module.css";
 import { Header } from "@/components/ui/Header";
-import { useTranslations } from "next-intl";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import { StyledLink } from "@/components/ui/StyledLink";
 import { ThemeToggle } from "@/components/ui/ThemeToggle";
 import { Clock } from "@/components/ui/Clock";
-import type { Metadata } from "next";
 
-export async function generateMetadata(): Promise<Metadata> {
-  return {
-    description: "Devin Nguyen is a full-stack software engineer based in NYC.",
-    openGraph: {
-      images: [
-        {
-          url: "https://devinnguyen.com/icons/blue_arrow_512.png",
-          width: 512,
-          height: 512,
-          alt: "Devin Nguyen - Software Engineer",
-        },
-      ],
-    },
-    twitter: {
-      card: "summary",
-      images: ["https://devinnguyen.com/icons/blue_arrow_512.png"],
-    },
-  };
-}
-
-export default function Home() {
-  const t = useTranslations("home");
+export default async function Home({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+  const t = await getTranslations("home");
   const linkSections: LinkListSection[] = [
     {
       key: "writing",

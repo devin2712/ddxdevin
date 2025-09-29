@@ -1,7 +1,10 @@
 import { PageLayout } from "@/components/layout/PageLayout";
-import { useTranslations } from "next-intl";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import type { Metadata } from "next";
 import { BauhausClientComponent } from "./BauhausClientComponent";
+
+// This page is fully static
+export const dynamic = 'force-static';
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
@@ -29,8 +32,14 @@ export async function generateMetadata(): Promise<Metadata> {
   };
 }
 
-export default function BauhausPage() {
-  const t = useTranslations("bauhaus");
+export default async function BauhausPage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+  const t = await getTranslations("bauhaus");
 
   return (
     <PageLayout

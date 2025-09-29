@@ -108,6 +108,7 @@ export const LinkList: React.FC<LinkListProps> = ({ sections }) => {
                 <NavLink
                   href={link.config.url}
                   className={styles.link}
+                  prefetch={true}
                   onFocus={() =>
                     handleSetCurrentLink({ sectionKey: section.key, linkKey: link.key })
                   }

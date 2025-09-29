@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { useTranslations } from "next-intl";
 import { Button } from "@/components/ui/Button";
 import { Arrow } from "@/components/ui/icons/Arrow";
@@ -18,6 +18,7 @@ type PageLayoutProps = {
 export const PageLayout: React.FC<PageLayoutProps> = ({ header, children, size = "regular" }) => {
   const t = useTranslations("common");
   const skipLinkRef = useRef<HTMLAnchorElement>(null);
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
     // Prevent skip link from being focused on page load/navigation
@@ -31,6 +32,21 @@ export const PageLayout: React.FC<PageLayoutProps> = ({ header, children, size =
       return () => clearTimeout(timer);
     }
   }, []);
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.matchMedia('(max-width: 768px)').matches);
+    };
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
+  const clockComponent = React.useMemo(() => (
+    <Clock label="NYC" labelAlign={isMobile ? "left" : "right"} />
+  ), [isMobile]);
+
+  const themeToggleComponent = React.useMemo(() => <ThemeToggle />, []);
 
   return (
     <div className={styles.container}>
@@ -49,16 +65,20 @@ export const PageLayout: React.FC<PageLayoutProps> = ({ header, children, size =
               {t("index")}
             </span>
           </Button>
-          <div className={styles.mobileControlPanel}>
-            <Clock label="NYC" labelAlign="left" />
-            <ThemeToggle />
-          </div>
+          {isMobile && (
+            <div className={styles.mobileControlPanel}>
+              {clockComponent}
+              {themeToggleComponent}
+            </div>
+          )}
         </aside>
         <main id="main-content" className={styles.content}>
-          <div className={styles.controlPanel}>
-            <Clock label="NYC" />
-            <ThemeToggle />
-          </div>
+          {!isMobile && (
+            <div className={styles.controlPanel}>
+              {clockComponent}
+              {themeToggleComponent}
+            </div>
+          )}
           <div className={styles.header}>
             <Header {...header} />
           </div>
