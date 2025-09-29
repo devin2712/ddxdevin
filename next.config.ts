@@ -4,13 +4,13 @@ import createNextIntlPlugin from "next-intl/plugin";
 const nextConfig: NextConfig = {
   images: {
     qualities: [75, 85, 100],
-    formats: ['image/avif', 'image/webp'],
+    formats: ["image/avif", "image/webp"],
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
     // Minimize image files
     minimumCacheTTL: 60 * 60 * 24 * 365, // 1 year
     dangerouslyAllowSVG: true,
-    contentDispositionType: 'attachment',
+    contentDispositionType: "attachment",
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
   },
 
@@ -24,88 +24,113 @@ const nextConfig: NextConfig = {
 
   // Optimize CSS and JS
   compiler: {
-    removeConsole: process.env.NODE_ENV === 'production' ? { exclude: ['error', 'warn'] } : false,
+    removeConsole:
+      process.env.NODE_ENV === "production"
+        ? { exclude: ["error", "warn"] }
+        : false,
   },
 
   // Experimental features for better performance
   experimental: {
     optimizeCss: true,
     scrollRestoration: true,
-    optimizePackageImports: ['next-intl', '@radix-ui/react-tooltip', '@tanstack/react-query'],
+    optimizePackageImports: [
+      "next-intl",
+      "@radix-ui/react-tooltip",
+      "@tanstack/react-query",
+    ],
   },
 
   // Security headers
   async headers() {
     return [
       {
-        source: '/:path*',
+        source: "/:path*",
         headers: [
           {
-            key: 'X-DNS-Prefetch-Control',
-            value: 'on'
+            key: "X-DNS-Prefetch-Control",
+            value: "on",
           },
           {
-            key: 'Strict-Transport-Security',
-            value: 'max-age=63072000; includeSubDomains; preload'
+            key: "Strict-Transport-Security",
+            value: "max-age=63072000; includeSubDomains; preload",
           },
           {
-            key: 'X-Content-Type-Options',
-            value: 'nosniff'
+            key: "X-Content-Type-Options",
+            value: "nosniff",
           },
           {
-            key: 'X-Frame-Options',
-            value: 'SAMEORIGIN'
+            key: "X-Frame-Options",
+            value: "SAMEORIGIN",
           },
           {
-            key: 'X-XSS-Protection',
-            value: '1; mode=block'
+            key: "X-XSS-Protection",
+            value: "1; mode=block",
           },
           {
-            key: 'Referrer-Policy',
-            value: 'origin-when-cross-origin'
+            key: "Referrer-Policy",
+            value: "origin-when-cross-origin",
           },
           {
-            key: 'Permissions-Policy',
-            value: 'camera=(), microphone=(), geolocation=()'
+            key: "Permissions-Policy",
+            value: "camera=(), microphone=(), geolocation=()",
           },
         ],
       },
       {
-        source: '/:all*(svg|jpg|jpeg|png|gif|ico|webp|avif)',
+        source: "/:all*(svg|jpg|jpeg|png|gif|ico|webp|avif)",
         locale: false,
         headers: [
           {
-            key: 'Cache-Control',
-            value: 'public, max-age=31536000, immutable',
+            key: "Cache-Control",
+            value: "public, max-age=31536000, immutable",
           },
         ],
       },
       {
-        source: '/_next/static/:path*',
+        source: "/:all*(pdf)",
+        locale: false,
         headers: [
           {
-            key: 'Cache-Control',
-            value: 'public, max-age=31536000, immutable',
+            key: "Cache-Control",
+            value:
+              "public, max-age=3600, s-maxage=3600, stale-while-revalidate=604800",
+          },
+          {
+            key: "Content-Type",
+            value: "application/pdf",
+          },
+        ],
+      },
+      {
+        source: "/_next/static/:path*",
+        headers: [
+          {
+            key: "Cache-Control",
+            value: "public, max-age=31536000, immutable",
           },
         ],
       },
       {
         // Cache headers for static portfolio pages
-        source: '/:locale(de|en|es|fr|hi|ko|vi|zh)/:path(bauhaus|covid-appointments|covid-myturn|se1|bauhauslers|la-main-ouverte|mcp-wildfire)',
+        source:
+          "/:locale(de|en|es|fr|hi|ko|vi|zh)/:path(bauhaus|covid-appointments|covid-myturn|se1|bauhauslers|la-main-ouverte|mcp-wildfire)",
         headers: [
           {
-            key: 'Cache-Control',
-            value: 'public, max-age=86400, s-maxage=604800, stale-while-revalidate=2592000',
+            key: "Cache-Control",
+            value:
+              "public, max-age=86400, s-maxage=604800, stale-while-revalidate=2592000",
           },
         ],
       },
       {
         // Cache headers for home pages (more frequent updates)
-        source: '/:locale(de|en|es|fr|hi|ko|vi|zh)',
+        source: "/:locale(de|en|es|fr|hi|ko|vi|zh)",
         headers: [
           {
-            key: 'Cache-Control',
-            value: 'public, max-age=3600, s-maxage=86400, stale-while-revalidate=604800',
+            key: "Cache-Control",
+            value:
+              "public, max-age=3600, s-maxage=86400, stale-while-revalidate=604800",
           },
         ],
       },
@@ -120,5 +145,5 @@ const nextConfig: NextConfig = {
   }),
 };
 
-const withNextIntl = createNextIntlPlugin('./src/i18n/request.ts');
+const withNextIntl = createNextIntlPlugin("./src/i18n/request.ts");
 export default withNextIntl(nextConfig);

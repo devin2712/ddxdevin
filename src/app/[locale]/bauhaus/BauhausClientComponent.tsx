@@ -21,7 +21,7 @@ export function BauhausClientComponent() {
     const link = document.createElement("link");
     link.rel = "prefetch";
     link.href = "/docs/bauhaus.pdf";
-    link.as = "document";
+    link.as = "fetch";
     document.head.appendChild(link);
 
     return () => {
