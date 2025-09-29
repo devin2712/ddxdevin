@@ -66,7 +66,7 @@ export default function LaMainOuvertePage() {
       }}
     >
       <Image
-        src="/icons/mainouverte_noeffects.svg"
+        src="/icons/mainouverte.svg"
         alt={t("icon")}
         height={0}
         width={0}
