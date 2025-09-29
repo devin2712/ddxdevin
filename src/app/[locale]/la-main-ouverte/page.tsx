@@ -75,10 +75,10 @@ export default async function LaMainOuvertePage({
       }}
     >
       <Image
-        src="/icons/mainouverte.svg"
+        src="/icons/mainouverte.png"
         alt={t("icon")}
-        height={0}
-        width={0}
+        height={50}
+        width={68}
         className={styles.handIcon}
         priority
       />
