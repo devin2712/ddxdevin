@@ -13,6 +13,38 @@ type ClockProps = {
 export const Clock: React.FC<ClockProps> = ({ label, labelAlign = 'right' }) => {
   const t = useTranslations("clock");
   const [time, setTime] = useState(new Date());
+  const [tooltipOpen, setTooltipOpen] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+
+  // Check if device is mobile
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.matchMedia('(max-width: 768px)').matches ||
+                  'ontouchstart' in window);
+    };
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
+  // Hide tooltip on scroll (mobile only)
+  useEffect(() => {
+    if (!isMobile) return;
+
+    const handleScroll = () => {
+      if (tooltipOpen) {
+        setTooltipOpen(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    window.addEventListener('touchmove', handleScroll, { passive: true });
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('touchmove', handleScroll);
+    };
+  }, [isMobile, tooltipOpen]);
 
   useEffect(() => {
     let animationFrameId: number;
@@ -64,8 +96,40 @@ export const Clock: React.FC<ClockProps> = ({ label, labelAlign = 'right' }) => 
     hour12: true,
   });
 
+  // Split time and period
+  const [timeOnly, period] = formattedTime.split(' ');
+
+  const handleClockClick = (e: React.MouseEvent) => {
+    if (isMobile) {
+      e.preventDefault();
+      e.stopPropagation();
+      setTooltipOpen(prev => !prev);
+    }
+  };
+
+  const handleOpenChange = (open: boolean) => {
+    // On mobile, only allow closing through our click handler or scroll
+    // This prevents the tooltip from re-opening immediately after closing
+    if (isMobile && !open) {
+      // Allow closing
+      setTooltipOpen(false);
+    } else if (!isMobile) {
+      // On desktop, allow normal hover behavior
+      setTooltipOpen(open);
+    }
+  };
+
   return (
-    <Tooltip content={`${formattedTime} ET`}>
+    <Tooltip
+      content={
+        <span className={styles.tooltipTime}>
+          <span className={styles.timeDigits}>{timeOnly}</span> {period} ET
+        </span>
+      }
+      open={isMobile ? tooltipOpen : undefined}
+      onOpenChange={isMobile ? handleOpenChange : undefined}
+      delayDuration={isMobile ? 0 : 100}
+    >
       <div
         className={`${styles.clockWrapper} ${
           labelAlign === "right" ? "" : styles.leftAlign
@@ -76,12 +140,13 @@ export const Clock: React.FC<ClockProps> = ({ label, labelAlign = 'right' }) => 
           role="img"
           aria-label={t("ariaLabel", { time: formattedTime })}
           tabIndex={0}
+          onClick={handleClockClick}
         >
           <svg width="24" height="24" viewBox="0 0 24 24">
             <circle
               cx="12"
               cy="12"
-              r="10"
+              r="11"
               className={styles.clockFace}
             />
 

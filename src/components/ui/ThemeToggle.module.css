@@ -1,6 +1,5 @@
 .toggle {
   background: none;
-  /* border: 1px solid color-mix(in srgb, var(--text-color) 40%, transparent); */
   border: none;
   border-radius: 50%;
   background-color: color-mix(in srgb, var(--text-color) 10%, transparent);

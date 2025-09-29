@@ -35,7 +35,19 @@
 }
 
 .clockFace {
-  fill: color-mix(in srgb, var(--text-color) 10%, transparent);
-  stroke: color-mix(in srgb, var(--text-color) 10%, transparent);
+  fill: none;
+  stroke: color-mix(in srgb, var(--text-color) 20%, transparent);
   stroke-width: 1.5;
+}
+
+.tooltipTime {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25em;
+}
+
+.timeDigits {
+  display: inline-block;
+  min-width: 4.5em;
+  text-align: right;
 }
