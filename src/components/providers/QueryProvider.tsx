@@ -13,7 +13,7 @@ const createQueryClient = () =>
         gcTime: 1000 * 60 * 60 * 24, // Keep data in cache for 24 hours
         refetchOnWindowFocus: false,
         refetchOnMount: false,
-        retry: 2,
+        retry: 1,
         retryDelay: (attemptIndex) => Math.min(1000 * 2 ** attemptIndex, 30000),
       },
     },
