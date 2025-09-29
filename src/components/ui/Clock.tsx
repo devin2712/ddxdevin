@@ -108,15 +108,13 @@ export const Clock: React.FC<ClockProps> = ({ label, labelAlign = 'right' }) => 
   };
 
   const handleOpenChange = (open: boolean) => {
-    // On mobile, only allow closing through our click handler or scroll
-    // This prevents the tooltip from re-opening immediately after closing
-    if (isMobile && !open) {
-      // Allow closing
-      setTooltipOpen(false);
-    } else if (!isMobile) {
-      // On desktop, allow normal hover behavior
-      setTooltipOpen(open);
+    // On mobile, only allow programmatic state changes
+    if (isMobile) {
+      // Don't do anything - let our click handler manage the state
+      return;
     }
+    // On desktop, allow normal hover behavior
+    setTooltipOpen(open);
   };
 
   return (
@@ -134,21 +132,16 @@ export const Clock: React.FC<ClockProps> = ({ label, labelAlign = 'right' }) => 
         className={`${styles.clockWrapper} ${
           labelAlign === "right" ? "" : styles.leftAlign
         }`}
+        onClick={handleClockClick}
       >
         <div
           className={styles.clock}
           role="img"
           aria-label={t("ariaLabel", { time: formattedTime })}
           tabIndex={0}
-          onClick={handleClockClick}
         >
           <svg width="24" height="24" viewBox="0 0 24 24">
-            <circle
-              cx="12"
-              cy="12"
-              r="11"
-              className={styles.clockFace}
-            />
+            <circle cx="12" cy="12" r="11" className={styles.clockFace} />
 
             <circle cx="12" cy="12" r="1" fill="currentColor" opacity="0.8" />
 
