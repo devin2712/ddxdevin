@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { useTranslations } from "next-intl";
 import { Tooltip } from "./Tooltip";
 import styles from "./Clock.module.css";
@@ -15,6 +15,7 @@ export const Clock: React.FC<ClockProps> = ({ label, labelAlign = 'right' }) => 
   const [time, setTime] = useState(new Date());
   const [tooltipOpen, setTooltipOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
+  const clockWrapperRef = useRef<HTMLDivElement>(null);
 
   // Check if device is mobile
   useEffect(() => {
@@ -27,22 +28,31 @@ export const Clock: React.FC<ClockProps> = ({ label, labelAlign = 'right' }) => 
     return () => window.removeEventListener('resize', checkMobile);
   }, []);
 
-  // Hide tooltip on scroll (mobile only)
+  // Hide tooltip on scroll or outside click (mobile only)
   useEffect(() => {
-    if (!isMobile) return;
+    if (!isMobile || !tooltipOpen) return;
 
     const handleScroll = () => {
-      if (tooltipOpen) {
+      setTooltipOpen(false);
+    };
+
+    const handleOutsideClick = (e: MouseEvent) => {
+      if (clockWrapperRef.current && !clockWrapperRef.current.contains(e.target as Node)) {
         setTooltipOpen(false);
       }
     };
 
     window.addEventListener('scroll', handleScroll, { passive: true });
-    window.addEventListener('touchmove', handleScroll, { passive: true });
+
+    // Small delay to prevent closing on the same click that opened it
+    const timer = setTimeout(() => {
+      document.addEventListener('click', handleOutsideClick, true);
+    }, 100);
 
     return () => {
+      clearTimeout(timer);
       window.removeEventListener('scroll', handleScroll);
-      window.removeEventListener('touchmove', handleScroll);
+      document.removeEventListener('click', handleOutsideClick, true);
     };
   }, [isMobile, tooltipOpen]);
 
@@ -129,6 +139,7 @@ export const Clock: React.FC<ClockProps> = ({ label, labelAlign = 'right' }) => 
       delayDuration={isMobile ? 0 : 100}
     >
       <div
+        ref={clockWrapperRef}
         className={`${styles.clockWrapper} ${
           labelAlign === "right" ? "" : styles.leftAlign
         }`}
