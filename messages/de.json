@@ -48,7 +48,8 @@
         "image": "Banner-Grafik mit Twilio-Logo und drei Linien, die zum Logo zeigen. Der Titel lautet COVID-19-Impfstoff-Benachrichtigungen mit Twilio Serverless Functions erhalten.",
         "paragraphs": [
             "Dieses Projekt war ein automatisiertes Benachrichtigungssystem, das Airtable und Twilio integrierte, um Sie anzurufen, wenn COVID-19-Impftermine verfügbar wurden. Damals schrieb ich Integrationen mit Systemen in Kalifornien, Massachusetts und New York City sowie mit GetMyVaccine, das Impfstoffverfügbarkeiten von CVS, Rite-Aid und Walgreens aggregierte.",
-            "<github>Impftermin-Benachrichtigungen</github>"
+            "<github>Impftermin-Benachrichtigungen Repository</github>",
+            "<medium>Setup-Anleitung: Ein COVID-19-Impftermin-Benachrichtigungssystem mit Twilio Serverless Functions erstellen</medium>"
         ]
     },
     "covidMyturn": {

@@ -48,7 +48,8 @@
         "image": "带有Twilio标志的横幅图形，三条线指向标志。标题写着使用Twilio无服务器函数获取COVID-19疫苗通知。",
         "paragraphs": [
             "这个项目是一个自动化通知系统，集成了Airtable和Twilio，当COVID-19疫苗预约可用时会给您打电话。当时，我编写了与加利福尼亚、马萨诸塞州和纽约市系统的集成，以及与GetMyVaccine的集成，后者汇总了CVS、Rite-Aid和Walgreens的疫苗可用性。",
-            "<github>疫苗预约通知</github>"
+            "<github>疫苗预约通知代码库</github>",
+            "<medium>设置指南：使用Twilio无服务器函数构建COVID-19疫苗预约通知系统</medium>"
         ]
     },
     "covidMyturn": {

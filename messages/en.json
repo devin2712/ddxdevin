@@ -48,7 +48,8 @@
       "image": "Banner graphic with Twilio's logo and three lines pointing towards the logo. The title reads Get COVID-19 Vaccine Notifications using Twilio Serverless Functions.",
       "paragraphs": [
         "This project was an automated notification system that integrated Airtable and Twilio to call you when COVID-19 vaccine appointments became available. At the time, I wrote integrations with systems in California, Massachusetts, and New York City, as well as GetMyVaccine which aggregated vaccine availabilities from CVS, Rite-Aid, and Walgreens.",
-        "<github>Vaccine Appointment Notifications</github>"
+        "<github>Vaccine Appointment Notifications Repo</github>",
+        "<medium>Setup Guide: Build a COVID-19 Vaccine Appointment Notification System with Twilio Serverless Functions</medium>"
       ]
     },
     "covidMyturn": {

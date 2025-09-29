@@ -74,6 +74,23 @@ export default function CovidAppointmentsPage() {
             </p>
           );
         }
+        if (paragraph.includes("<medium>")) {
+          return (
+            <p key={index}>
+              {t.rich(`paragraphs.${index}`, {
+                medium: (chunks) => (
+                  <StyledLink
+                    href="https://ddxdevin.medium.com/build-a-covid-19-vaccine-appointment-notification-system-with-a-twilio-serverless-function-23cf328c01f4"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    {chunks}
+                  </StyledLink>
+                ),
+              })}
+            </p>
+          );
+        }
         return <p key={index}>{paragraph}</p>;
       })}{" "}
     </PageLayout>

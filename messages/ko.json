@@ -48,7 +48,8 @@
         "image": "Twilio 로고와 로고를 가리키는 세 줄이 있는 배너 그래픽. 제목은 Twilio Serverless Functions를 사용하여 COVID-19 백신 알림 받기라고 되어 있습니다.",
         "paragraphs": [
             "이 프로젝트는 COVID-19 백신 예약이 가능해질 때 전화를 걸어주는 자동화된 알림 시스템으로 Airtable과 Twilio를 통합했습니다. 당시 저는 캘리포니아, 매사추세츠, 뉴욕시의 시스템들과 통합을 작성했고, CVS, Rite-Aid, Walgreens에서 백신 가용성을 집계하는 GetMyVaccine과도 통합했습니다.",
-            "<github>백신 예약 알림</github>"
+            "<github>백신 예약 알림 저장소</github>",
+            "<medium>설정 가이드: Twilio Serverless Functions로 COVID-19 백신 예약 알림 시스템 구축하기</medium>"
         ]
     },
     "covidMyturn": {

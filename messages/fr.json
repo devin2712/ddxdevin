@@ -48,7 +48,8 @@
         "image": "Graphique bannière avec le logo de Twilio et trois lignes pointant vers le logo. Le titre indique Recevoir des notifications de vaccin COVID-19 en utilisant les fonctions sans serveur Twilio.",
         "paragraphs": [
             "Ce projet était un système de notification automatisé qui intégrait Airtable et Twilio pour vous appeler lorsque des rendez-vous de vaccination COVID-19 devenaient disponibles. À l'époque, j'ai écrit des intégrations avec des systèmes en Californie, au Massachusetts et dans la ville de New York, ainsi qu'avec GetMyVaccine qui agrégeait les disponibilités de vaccins de CVS, Rite-Aid et Walgreens.",
-            "<github>Notifications de rendez-vous de vaccination</github>"
+            "<github>Dépôt de Notifications de Rendez-vous de Vaccination</github>",
+            "<medium>Guide de Configuration: Construire un Système de Notification de Rendez-vous de Vaccination COVID-19 avec les Fonctions Sans Serveur Twilio</medium>"
         ]
     },
     "covidMyturn": {

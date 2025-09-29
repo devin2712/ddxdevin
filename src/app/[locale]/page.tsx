@@ -54,21 +54,21 @@ export default function Home() {
           },
         },
         {
-          key: "covid_myturn",
-          title: t("links.covid_myturn"),
-          content: "2020",
-          config: {
-            external: false,
-            url: "/covid-myturn",
-          },
-        },
-        {
           key: "covid_appointments",
           title: t("links.covid_appointments"),
           content: "2020",
           config: {
             external: false,
             url: "/covid-appointments",
+          },
+        },
+        {
+          key: "covid_myturn",
+          title: t("links.covid_myturn"),
+          content: "2020",
+          config: {
+            external: false,
+            url: "/covid-myturn",
           },
         },
         {

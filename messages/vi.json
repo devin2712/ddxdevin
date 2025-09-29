@@ -48,7 +48,8 @@
         "image": "Đồ họa banner với logo Twilio và ba đường thẳng chỉ về phía logo. Tiêu đề ghi Nhận thông báo vaccine COVID-19 bằng cách sử dụng Twilio Serverless Functions.",
         "paragraphs": [
             "Đây là một hệ thống thông báo tự động tích hợp Airtable và Twilio để gọi cho bạn khi có lịch hẹn tiêm vaccine COVID-19. Vào thời điểm đó, tôi đã viết các tích hợp với các hệ thống ở California, Massachusetts và thành phố New York, cũng như GetMyVaccine nơi tổng hợp tình trạng sẵn có của vaccine từ CVS, Rite-Aid và Walgreens.",
-            "<github>Thông báo lịch hẹn vaccine</github>"
+            "<github>Kho lưu trữ Thông báo Lịch hẹn Vaccine</github>",
+            "<medium>Hướng dẫn Cài đặt: Xây dựng Hệ thống Thông báo Lịch hẹn Vaccine COVID-19 với Twilio Serverless Functions</medium>"
         ]
     },
     "covidMyturn": {
