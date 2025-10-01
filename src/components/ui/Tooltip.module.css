@@ -12,6 +12,22 @@
   text-align: center;
 }
 
+.tooltipContent[data-side="top"] {
+  transform-origin: bottom;
+}
+
+.tooltipContent[data-side="bottom"] {
+  transform-origin: top;
+}
+
+.tooltipContent[data-side="left"] {
+  transform-origin: right;
+}
+
+.tooltipContent[data-side="right"] {
+  transform-origin: left;
+}
+
 @keyframes fadeIn {
   from {
     opacity: 0;

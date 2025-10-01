@@ -1,7 +1,7 @@
 .container {
   display: flex;
   justify-content: center;
-  padding: 3rem 2rem 5rem;
+  padding: 6rem 2rem 5rem;
   width: 100%;
   position: relative;
   p {
@@ -29,9 +29,15 @@
 .layout {
   display: grid;
   grid-template-columns: 1fr 500px 1fr;
+  grid-template-rows: auto 1fr;
+  grid-template-areas:
+    "sidebar controls empty"
+    "sidebar content empty";
+  grid-auto-rows: min-content;
   width: 100%;
   max-width: 1800px;
   margin: 0 auto;
+  align-items: start;
 }
 
 .layoutXlarge {
@@ -39,23 +45,25 @@
 }
 
 .sidebar {
-  grid-column: 1;
+  grid-area: sidebar;
   justify-self: center;
   align-self: start;
   white-space: nowrap;
   position: sticky;
-  top: 3.25rem;
+  top: 6rem;
   padding: 0 1rem 0;
   display: flex;
   justify-content: center;
-  align-items: baseline;
+  align-items: center;
   gap: 0.5rem;
   width: 100%;
+  height: 3rem;
 }
 
 .content {
-  grid-column: 2;
+  grid-area: content;
   width: 100%;
+  align-self: start;
 }
 
 .buttonContent {
@@ -65,18 +73,28 @@
   text-transform: uppercase;
 }
 
-.controlPanel {
-  margin: 0 auto 0.5rem auto;
-  display: flex;
-  gap: 0.5rem;
-  justify-content: space-between;
-  align-items: center;
+.topRegion {
+  grid-area: controls;
+  justify-self: center;
+  align-self: start;
+  width: 100%;
   max-width: 500px;
-  height: 3rem;
+  margin: 0 auto 0.5rem;
+  display: flex;
+  flex-direction: column;
 }
 
-.mobileControlPanel {
-  display: none;
+.controlPanel {
+  display: inline-flex;
+  gap: 1rem;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 3rem;
+  width: 100%;
+}
+
+.controlPanel :global(.clockWrapper) {
+  margin-right: auto;
 }
 
 .header {
@@ -95,57 +113,115 @@
   }
 
   .layout {
-    grid-template-columns: 1fr;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto 1fr;
+    grid-template-areas:
+      "sidebar controls"
+      "content content";
+    grid-auto-rows: min-content;
     gap: 0;
     width: 100%;
     max-width: 500px;
   }
 
   .sidebar {
-    grid-column: 1;
+    grid-area: sidebar;
     justify-self: flex-start;
     position: sticky;
     top: 0;
-    z-index: 11;
+    z-index: 12;
     background: var(--background);
-    justify-content: space-between;
-    padding: 1rem 0 0;
-    min-height: 3rem;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 1.25rem 0 0;
+    height: 3rem;
     transition: background-color 0.16s ease;
   }
 
   .content {
-    grid-column: 1;
+    grid-area: content;
     padding: 0 1rem;
     max-width: 100%;
   }
 
-  .header {
+  .topRegion {
+    grid-area: controls;
+    justify-self: stretch;
+    align-self: stretch;
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    padding: 1rem 1rem 0;
     position: sticky;
-    top: 4rem;
-    z-index: 10;
+    top: 0;
+    z-index: 11;
     background: var(--background);
-    margin: 0 auto;
     transition: background-color 0.16s ease;
+    grid-column: 1 / -1;
+    pointer-events: none;
   }
 
   .controlPanel {
-    display: none;
+    width: 100%;
+    justify-content: flex-end;
+    align-items: center;
   }
 
-  .mobileControlPanel {
-    display: inline-flex;
-    gap: 0.5rem;
-    align-items: center;
-    padding-right: 1rem;
-    height: 3rem;
+  .controlPanel :global(.clockWrapper) {
+    margin-right: 0;
+    flex-direction: row-reverse;
+  }
+
+  .topRegion > * {
+    pointer-events: auto;
   }
 }
 
 @media (max-width: 432px) {
   .container {
     justify-content: flex-start;
-    padding: 0 1rem 3rem;
+    padding: 0 0 3rem;
+  }
+
+  .layout {
+    grid-template-columns: auto 1fr;
+    grid-template-areas:
+      "sidebar controls"
+      "header header"
+      "content content";
+  }
+
+  .sidebar {
+    padding: 0.75rem 0 0;
+    justify-self: flex-start;
+    width: auto;
+    position: sticky;
+    top: 0;
+    z-index: 12;
+    background: var(--background);
+  }
+
+  .topRegion {
+    display: contents;
+  }
+
+  .controlPanel {
+    grid-area: controls;
+    justify-self: end;
+    padding: 1rem 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 11;
+    background: var(--background);
+  }
+
+  .header {
+    grid-area: header;
+    padding: 0 1rem;
+    position: sticky;
+    top: 3rem;
+    z-index: 10;
+    background: var(--background);
   }
 }
 
@@ -157,7 +233,12 @@
 
 @media (max-width: 768px) {
   .layout.layoutXlarge {
-    grid-template-columns: 1fr;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto 1fr;
+    grid-template-areas:
+      "sidebar controls"
+      "header header"
+      "content content";
     max-width: 500px;
     margin: 0 auto;
   }

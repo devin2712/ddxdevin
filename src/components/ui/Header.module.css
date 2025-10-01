@@ -10,5 +10,6 @@
 @media (max-width: 432px) {
   .header {
     flex-direction: column;
+    gap: 0.25rem;
   }
 }
