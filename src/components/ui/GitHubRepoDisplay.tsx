@@ -35,8 +35,10 @@ export const GitHubRepoDisplay = async ({
           className={styles.avatar}
         />
         <div className={styles.repoPath}>
-          <span className={styles.username}>{username}</span>
-          <span className={styles.separator}>/</span>
+          <div className={styles.repoPrefix}>
+            <span className={styles.username}>{username}</span>
+            <span className={styles.separator}>/</span>
+          </div>
           <span className={styles.repoName}>{repoName}</span>
         </div>
       </div>

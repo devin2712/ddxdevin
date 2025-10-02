@@ -52,8 +52,8 @@ span.staticArrow {
     transition: opacity 0.2s ease-out;
 }
 
-.listWrapper:hover span.staticArrow,
-.listWrapper:has(a:focus) span.staticArrow {
+.listWrapper:not([data-touch-device="true"]):hover span.staticArrow,
+.listWrapper:not([data-touch-device="true"]):has(a:focus) span.staticArrow {
     opacity: 0;
 }
 

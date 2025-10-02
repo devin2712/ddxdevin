@@ -5,6 +5,7 @@ import styles from "./LinkList.module.css";
 import { LinkListSection } from "@/types";
 import { Link as NavLink } from "@/i18n/navigation";
 import { Header } from "./Header";
+import { useIsTouchDevice } from "@/hooks/useIsTouchDevice";
 
 type LinkListProps = {
   sections: LinkListSection[];
@@ -68,6 +69,7 @@ export const LinkList: React.FC<LinkListProps> = ({
   sections,
   showIndex = true,
 }) => {
+  const isTouchDevice = useIsTouchDevice();
   const [currentLink, setCurrentLink] = useState<CurrentLink>(null);
   const [arrowPosition, setArrowPosition] = useState<{
     top: number;
@@ -151,7 +153,9 @@ export const LinkList: React.FC<LinkListProps> = ({
     const isSectionInactive =
       currentLink && currentLink.sectionKey !== section.key;
     const showArrow =
-      hasArrowContent(section) && arrowPosition?.section === section.key;
+      !isTouchDevice &&
+      hasArrowContent(section) &&
+      arrowPosition?.section === section.key;
 
     return (
       <section key={section.key} className={styles.linkSection}>
@@ -170,6 +174,7 @@ export const LinkList: React.FC<LinkListProps> = ({
         />
         <div
           className={styles.listWrapper}
+          data-touch-device={isTouchDevice}
           onMouseEnter={() => setIsHoveringSection(true)}
           onMouseLeave={() => {
             setIsHoveringSection(false);
