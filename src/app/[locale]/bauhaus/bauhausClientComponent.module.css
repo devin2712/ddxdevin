@@ -1,0 +1,36 @@
+.link {
+  display: block;
+  max-width: 640px;
+  position: relative;
+  overflow: hidden;
+}
+
+.link:active .overlay {
+    transform: scale(0.97);
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.16s ease;
+  pointer-events: none;
+}
+
+.overlay:active {
+  transform: scale(0.99);
+}
+
+.image {
+  cursor: pointer;
+  display: block;
+  max-width: 100%;
+  height: auto;
+}

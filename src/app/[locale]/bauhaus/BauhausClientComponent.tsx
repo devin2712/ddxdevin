@@ -4,6 +4,7 @@ import { useTranslations } from "next-intl";
 import Image from "next/image";
 import { StyledLink } from "@/components/ui/StyledLink";
 import { useEffect } from "react";
+import styles from "./bauhausClientComponent.module.css";
 
 export function BauhausClientComponent() {
   const t = useTranslations("bauhaus");
@@ -43,12 +44,7 @@ export function BauhausClientComponent() {
         target="_blank"
         rel="noopener noreferrer"
         aria-label={t("openPdfAriaLabel")}
-        style={{
-          display: "block",
-          maxWidth: "640px",
-          position: "relative",
-          overflow: "hidden",
-        }}
+        className={styles.link}
         onMouseEnter={(e) => toggleOverlay(e, true)}
         onMouseLeave={(e) => toggleOverlay(e, false)}
         onFocus={(e) => toggleOverlay(e, true)}
@@ -59,33 +55,14 @@ export function BauhausClientComponent() {
           alt={t("titleSlideAlt")}
           width={800}
           height={600}
-          style={{
-            cursor: "pointer",
-            display: "block",
-            maxWidth: "100%",
-            height: "auto",
-          }}
+          className={styles.image}
           sizes="(max-width: 768px) 100vw, 640px"
           quality={85}
           priority
         />
         <div
-          className="overlay"
+          className={`${styles.overlay} overlay`}
           aria-hidden="true"
-          style={{
-            position: "absolute",
-            top: 0,
-            left: 0,
-            right: 0,
-            bottom: 0,
-            backgroundColor: "rgba(0, 0, 0, 0.7)",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            opacity: 0,
-            transition: "opacity 0.16s ease",
-            pointerEvents: "none",
-          }}
         >
           <span
             style={{
@@ -101,10 +78,7 @@ export function BauhausClientComponent() {
         </div>
       </a>
       <p>
-        <StyledLink
-          href="/docs/bauhaus.pdf"
-          target="_blank"
-        >
+        <StyledLink href="/docs/bauhaus.pdf" target="_blank">
           {t("viewPresentationLink")}
         </StyledLink>
       </p>
