@@ -25,11 +25,6 @@
   color: color-mix(in srgb, var(--background) 90%, transparent);
 }
 
-.toggle:focus-visible {
-  outline: 2px solid var(--text-color);
-  outline-offset: 2px;
-}
-
 .toggle:active {
   transform: scale(0.95);
 }

@@ -74,6 +74,7 @@ export const LinkList: React.FC<LinkListProps> = ({
     section: string;
   } | null>(null);
   const [isHoveringSection, setIsHoveringSection] = useState(false);
+  const [isFocusedSection, setIsFocusedSection] = useState(false);
   const blurTimeoutRef = React.useRef<NodeJS.Timeout | null>(null);
   const rafRef = React.useRef<number | null>(null);
   const linkRefs = React.useRef<Record<string, HTMLLIElement | null>>({});
@@ -114,7 +115,7 @@ export const LinkList: React.FC<LinkListProps> = ({
 
   const handleClearCurrentLink = () => {
     blurTimeoutRef.current = setTimeout(() => {
-      if (!isHoveringSection) {
+      if (!isHoveringSection && !isFocusedSection) {
         setCurrentLink(null);
         setArrowPosition(null);
       }
@@ -206,13 +207,17 @@ export const LinkList: React.FC<LinkListProps> = ({
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label={`${link.title} (opens in new tab)`}
-                    onFocus={() =>
+                    onFocus={() => {
+                      setIsFocusedSection(true);
                       handleSetCurrentLink({
                         sectionKey: section.key,
                         linkKey: link.key,
-                      })
-                    }
-                    onBlur={handleClearCurrentLink}
+                      });
+                    }}
+                    onBlur={() => {
+                      setIsFocusedSection(false);
+                      handleClearCurrentLink();
+                    }}
                   >
                     <span>{link.title}</span>
                     {link.content === "arrow" ? (
@@ -226,13 +231,17 @@ export const LinkList: React.FC<LinkListProps> = ({
                     href={link.config.url}
                     className={styles.link}
                     prefetch={true}
-                    onFocus={() =>
+                    onFocus={() => {
+                      setIsFocusedSection(true);
                       handleSetCurrentLink({
                         sectionKey: section.key,
                         linkKey: link.key,
-                      })
-                    }
-                    onBlur={handleClearCurrentLink}
+                      });
+                    }}
+                    onBlur={() => {
+                      setIsFocusedSection(false);
+                      handleClearCurrentLink();
+                    }}
                   >
                     <span>{link.title}</span>
                     {link.content === "arrow" ? (

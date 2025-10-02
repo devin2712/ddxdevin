@@ -27,9 +27,10 @@ span.indexIcon {
 a.link {
     width: 100%;
     display: inline-flex;
+    align-items: center;
     justify-content: space-between;
     gap: 0.5rem;
-    padding: 0.5rem 0;
+    padding: 0.5rem 0.5rem 0.5rem 0;
     color: inherit;
     text-decoration: none;
 }
@@ -51,7 +52,8 @@ span.staticArrow {
     transition: opacity 0.2s ease-out;
 }
 
-.listWrapper:hover span.staticArrow {
+.listWrapper:hover span.staticArrow,
+.listWrapper:has(a:focus) span.staticArrow {
     opacity: 0;
 }
 
@@ -74,9 +76,10 @@ span.floatingArrow {
     transform: translateY(-50%);
 }
 
-.listWrapper:hover span.floatingArrow {
+.listWrapper:hover span.floatingArrow,
+.listWrapper:has(a:focus) span.floatingArrow {
     opacity: 1;
-    transform: translateY(-75%) translateX(-2px) rotate(-45deg);
+    transform: translateY(-50%) translateX(-0.5rem) rotate(-45deg);
 }
 
 section.linkSection {

@@ -25,11 +25,6 @@
   transition: transform 0.16s ease, background 0.16s ease, color 0.16s ease;
 }
 
-.clock:focus-visible {
-  outline: 2px solid var(--text-color);
-  outline-offset: 2px;
-}
-
 .clock svg {
   display: block;
 }
