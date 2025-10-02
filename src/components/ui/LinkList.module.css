@@ -43,21 +43,40 @@ span.linkContent {
     opacity: 0.6;
 }
 
-span.arrow {
+span.staticArrow {
     line-height: 1rem;
     font-family: "Tarnac", sans-serif;
     font-size: 1.5rem;
     opacity: 0.6;
-    transition: all 0.2s ease-out;
+    transition: opacity 0.2s ease-out;
 }
 
-a.link:hover span.arrow {
-    opacity: 1;
-    transform: rotate(-45deg);
-}
-
-li.inactive span.arrow {
+.listWrapper:hover span.staticArrow {
     opacity: 0;
+}
+
+.listWrapper {
+    position: relative;
+}
+
+span.floatingArrow {
+    position: absolute;
+    right: 0;
+    line-height: 1rem;
+    font-family: "Tarnac", sans-serif;
+    font-size: 1.5rem;
+    opacity: 0;
+    pointer-events: none;
+    will-change: top, opacity;
+    transition:
+        top 0.2s cubic-bezier(0.33, 1, 0.68, 1),
+        opacity 0.15s ease-out;
+    transform: translateY(-50%);
+}
+
+.listWrapper:hover span.floatingArrow {
+    opacity: 1;
+    transform: translateY(-75%) translateX(-2px) rotate(-45deg);
 }
 
 section.linkSection {
