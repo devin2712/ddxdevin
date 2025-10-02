@@ -1,7 +1,7 @@
 export type Link = {
   key: string;
   title: string;
-  content: string;
+  content?: React.ReactNode;
   config: {
     external: boolean;
     url: string;

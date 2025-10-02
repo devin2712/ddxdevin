@@ -43,22 +43,22 @@
         "loading": "Đang tải",
         "search": "Tìm kiếm"
     },
+    "githubRepo": {
+        "ariaLabel": "Mở kho lưu trữ {username}/{repoName} trên GitHub"
+    },
     "covidAppointments": {
-        "title": "Thông báo lịch hẹn COVID",
-        "image": "Đồ họa banner với logo Twilio và ba đường thẳng chỉ về phía logo. Tiêu đề ghi Nhận thông báo vaccine COVID-19 bằng cách sử dụng Twilio Serverless Functions.",
-        "paragraphs": [
-            "Đây là một hệ thống thông báo tự động tích hợp Airtable và Twilio để gọi cho bạn khi có lịch hẹn tiêm vaccine COVID-19. Vào thời điểm đó, tôi đã viết các tích hợp với các hệ thống ở California, Massachusetts và thành phố New York, cũng như GetMyVaccine nơi tổng hợp tình trạng sẵn có của vaccine từ CVS, Rite-Aid và Walgreens.",
-            "<github>Kho lưu trữ Thông báo Lịch hẹn Vaccine</github>",
-            "<medium>Hướng dẫn Cài đặt: Xây dựng Hệ thống Thông báo Lịch hẹn Vaccine COVID-19 với Twilio Serverless Functions</medium>"
-        ]
+      "title": "Thông báo lịch hẹn COVID",
+      "image": "Đồ họa banner với logo Twilio và ba đường thẳng chỉ về phía logo. Tiêu đề ghi Nhận thông báo vaccine COVID-19 bằng cách sử dụng Twilio Serverless Functions.",
+      "paragraphs": [
+        "Đây là một hệ thống thông báo tự động tích hợp Airtable và Twilio để gọi cho bạn khi có lịch hẹn tiêm vaccine COVID-19. Vào thời điểm đó, tôi đã viết các tích hợp với các hệ thống ở California, Massachusetts và thành phố New York, cũng như GetMyVaccine nơi tổng hợp tình trạng sẵn có của vaccine từ CVS, Rite-Aid và Walgreens."      ],
+      "setupGuide": "Hướng dẫn Cài đặt"
     },
     "covidMyturn": {
         "title": "Trình giám sát COVID MyTurn CA",
         "paragraphs": [
             "Dự án này được xây dựng để thu thập và tổng hợp dữ liệu về tình trạng sẵn có của vaccine từ hệ thống tiêm chủng của bang California (MyTurn), bao gồm tất cả 58 quận.",
             "Sử dụng CloudWatch, tôi đã lên lịch một fan-out được kích hoạt bằng cron của các công việc Lambda serverless để thu thập dữ liệu tính sẵn có từ MyTurn song song. Một hàm Lambda riêng biệt đã tổng hợp kết quả và lưu trữ chúng trong S3 như một bộ dữ liệu chuẩn duy nhất.",
-            "Đây là một tối ưu hóa cho <notifier>Thông báo lịch hẹn vaccine</notifier> để giảm các cuộc gọi trực tiếp đến MyTurn và cho phép các dự án khác.",
-            "<github>Trình giám sát MyTurn</github>"
+            "Đây là một tối ưu hóa cho <notifier>Thông báo lịch hẹn vaccine</notifier> để giảm các cuộc gọi trực tiếp đến MyTurn và cho phép các dự án khác."
         ]
     },
     "home": {
@@ -105,16 +105,22 @@
             "Để ứng phó với các vụ cháy rừng tháng 1 năm 2025 tại Los Angeles, <aidkit>AidKit</aidkit> đã hợp tác với Quận Los Angeles và Thành phố Los Angeles để nhanh chóng khởi động hai chương trình cứu trợ tiền mặt khẩn cấp.",
             "Tôi đã dẫn dắt thiết kế và triển khai các khả năng không gian địa lý mới của nền tảng cho ứng phó thảm họa. Điều này bao gồm xây dựng một pipeline đồng bộ hóa để thu thập và chuẩn hóa dữ liệu từ các bộ dữ liệu thửa đất thuế từ xa và dữ liệu kiểm tra thiệt hại CAL FIRE, lưu trữ chúng trong PostGIS cho các truy vấn không gian. Chúng tôi đã sử dụng dữ liệu này để tự động phân loại các ứng viên dựa trên tác động ở cấp độ thửa đất, giảm việc xem xét thủ công và tăng tốc việc giao hàng trợ giúp.",
             "Tôi cũng đã xây dựng các bản đồ tương tác thời gian thực để cung cấp cho các bên liên quan khả năng hiển thị trực tiếp về phạm vi chương trình và phạm vi đủ điều kiện. Cuối cùng, những chương trình này đã phân phối hơn 25 triệu đô la viện trợ trực tiếp cho các cá nhân và doanh nghiệp nhỏ trên khắp Los Angeles.",
-            "Dự án này đã truyền cảm hứng cho tôi khám phá cách AI và các máy chủ MCP có thể tăng tốc việc quản lý chương trình. Ví dụ, chúng tôi có thể kết nối LLM với dữ liệu thiệt hại CAL FIRE để cho phép một loạt các quy trình làm việc phân loại và đủ điều kiện tự động rộng hơn.",
-            "Đây là một ví dụ về triển khai máy chủ:",
-            "<repo>Máy chủ MCP CAL FIRE DINS ArcGIS</repo>",
-            "Bạn có thể đọc thêm về các chương trình tại đây:",
-            "<casestudy>Nghiên cứu trường hợp AidKit: Chương trình cứu trợ cháy rừng khu vực Los Angeles</casestudy>",
-            "<award>AidKit được vinh danh là người chiến thắng tại Giải thưởng Stevie 2025 cho Xuất sắc Công nghệ</award>",
-            "<press>Route Fifty: Cách LA đang sử dụng công nghệ để giúp nạn nhân cháy rừng về tài chính</press>",
-            "<press3>Santa Monica Daily Press: Quận LA khởi động chương trình tài trợ 250.000 đô la cho các doanh nghiệp Malibu-Topanga</press3>",
-            "<press2>Secret Los Angeles: Quận L.A. khởi động khoản tài trợ mới 250.000 đô la để giúp các doanh nghiệp nhỏ bị ảnh hưởng bởi cháy rừng</press2>"
-        ]
+            "Dự án này đã truyền cảm hứng cho tôi khám phá cách AI và các máy chủ MCP có thể tăng tốc việc quản lý chương trình. Ví dụ, chúng tôi có thể kết nối LLM với dữ liệu thiệt hại CAL FIRE để cho phép một loạt các quy trình làm việc phân loại và đủ điều kiện tự động rộng hơn."
+        ],
+        "readMore": "Đọc thêm về các chương trình",
+        "caseStudy": "Nghiên cứu trường hợp AidKit",
+        "award": "Giải thưởng Stevie 2025 cho Xuất sắc Công nghệ",
+        "routeFifty": "Route Fifty",
+        "santaMonicaDailyPress": "Santa Monica Daily Press",
+        "santaMonicaMirror": "Santa Monica Mirror",
+        "secretLosAngeles": "Secret Los Angeles",
+        "nbc": "NBC Los Angeles",
+        "latimes": "Los Angeles Times",
+        "lacounty": "County of Los Angeles",
+        "github": {
+            "sectionTitle": "Triển khai máy chủ MCP",
+            "linkTitle": "GitHub"
+        }
     },
     "notFound": {
         "title": "404",

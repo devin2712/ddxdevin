@@ -43,22 +43,22 @@
         "loading": "Loading",
         "search": "Search"
     },
+    "githubRepo": {
+        "ariaLabel": "Open {username}/{repoName} repository on GitHub"
+    },
     "covidAppointments": {
       "title": "COVID Appointment Notifications",
       "image": "Banner graphic with Twilio's logo and three lines pointing towards the logo. The title reads Get COVID-19 Vaccine Notifications using Twilio Serverless Functions.",
       "paragraphs": [
-        "This project was an automated notification system that integrated Airtable and Twilio to call you when COVID-19 vaccine appointments became available. At the time, I wrote integrations with systems in California, Massachusetts, and New York City, as well as GetMyVaccine which aggregated vaccine availabilities from CVS, Rite-Aid, and Walgreens.",
-        "<github>Vaccine Appointment Notifications Repo</github>",
-        "<medium>Setup Guide: Build a COVID-19 Vaccine Appointment Notification System with Twilio Serverless Functions</medium>"
-      ]
+        "This project was an automated notification system that integrated Airtable and Twilio to call you when COVID-19 vaccine appointments became available. At the time, I wrote integrations with systems in California, Massachusetts, and New York City, as well as GetMyVaccine which aggregated vaccine availabilities from CVS, Rite-Aid, and Walgreens."      ],
+      "setupGuide": "Setup Guide"
     },
     "covidMyturn": {
         "title": "COVID MyTurn CA Monitor",
         "paragraphs": [
             "This project was built to collect and aggregate vaccine availability data from the CA state vaccination system (MyTurn), covering all 58 counties.",
             "Using CloudWatch, I scheduled a cron-triggered fan-out of serverless Lambda jobs to collect availability data from MyTurn in parallel. A separate Lambda function aggregated the results and stored them in S3 as a single canonical dataset.",
-            "This was an optimization to <notifier>Vaccine Appointment Notifications</notifier> to reduce direct calls to MyTurn and to enable other projects.",
-            "<github>MyTurn Monitor</github>"
+            "This was an optimization to <notifier>Vaccine Appointment Notifications</notifier> to reduce direct calls to MyTurn and to enable other projects."
         ]
     },
     "home": {
@@ -105,16 +105,22 @@
             "In response to the January 2025 wildfires in Los Angeles, <aidkit>AidKit</aidkit> partnered with Los Angeles County and the City of Los Angeles to rapidly launch two emergency cash relief programs.",
             "I led the design and implementation of the platform's new geospatial capabilities for disaster response. This included building a sync pipeline that ingested and normalized data from remote tax parcel datasets and CAL FIRE damage inspection data, storing it in PostGIS for spatial queries. We used this data to automatically triage applicants based on parcel-level impact, reducing manual review and speeding up aid delivery.",
             "I also built real-time, interactive maps to give stakeholders live visibility into program reach and eligibility coverage. These programs ultimately distributed over $25M in direct aid to individuals and small businesses across Los Angeles.",
-            "This project inspired me to explore how AI and MCP servers can accelerate program administration. For example, we could connect an LLM to CAL FIRE's damage data to enable a wider range of automated triage and eligibility workflows.",
-            "Here's an example server implementation:",
-            "<repo>CAL FIRE DINS ArcGIS MCP Server</repo>",
-            "You can read more about the programs here:",
-            "<casestudy>AidKit Case Study: Los Angeles Regional Wildfire Relief Programs</casestudy>",
-            "<award>AidKit Named a Winner in the 2025 Stevie Awards for Technology Excellence</award>",
-            "<press>Route Fifty: How LA is using tech to get wildfire victims financial help</press>",
-            "<press3>Santa Monica Daily Press: LA County Launches $250,000 Grant Program for Malibu-Topanga Businesses</press3>",
-            "<press2>Secret Los Angeles: L.A. County Launches A New $250,000 Grant To Help Small Businesses Impacted By Wildfires</press2>"
-        ]
+            "This project inspired me to explore how AI and MCP servers can accelerate program administration. For example, we could connect an LLM to CAL FIRE's damage data to enable a wider range of automated triage and eligibility workflows."
+        ],
+        "readMore": "Read more about the programs",
+        "caseStudy": "AidKit Case Study",
+        "award": "2025 Stevie Awards for Technology Excellence",
+        "routeFifty": "Route Fifty",
+        "santaMonicaDailyPress": "Santa Monica Daily Press",
+        "santaMonicaMirror": "Santa Monica Mirror",
+        "secretLosAngeles": "Secret Los Angeles",
+        "nbc": "NBC Los Angeles",
+        "latimes": "Los Angeles Times",
+        "lacounty": "County of Los Angeles",
+        "github": {
+            "sectionTitle": "MCP server implementation",
+            "linkTitle": "GitHub"
+        }
     },
     "notFound": {
         "title": "404",

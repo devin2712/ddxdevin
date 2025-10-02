@@ -30,9 +30,6 @@ main.contentContainer {
 div.content {
   max-width: 500px;
   margin: 6rem auto 3rem auto;
-  ul {
-    list-style-type: none;
-  }
 }
 
 @media (max-width: 768px) {

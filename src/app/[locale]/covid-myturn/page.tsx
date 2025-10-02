@@ -2,9 +2,10 @@ import { PageLayout } from "@/components/layout/PageLayout";
 import { StyledLink } from "@/components/ui/StyledLink";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import type { Metadata } from "next";
+import { GitHubRepoDisplay } from "@/components/ui/GitHubRepoDisplay";
 
 // This page is fully static
-export const dynamic = 'force-static';
+export const dynamic = "force-static";
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
@@ -50,23 +51,6 @@ export default async function CovidMyturnPage({
       }}
     >
       {t.raw("paragraphs").map((paragraph: string, index: number) => {
-        if (paragraph.includes("<github>")) {
-          return (
-            <p key={index}>
-              {t.rich(`paragraphs.${index}`, {
-                github: (chunks) => (
-                  <StyledLink
-                    href="https://github.com/devin2712/myturn-monitor"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    {chunks}
-                  </StyledLink>
-                ),
-              })}
-            </p>
-          );
-        }
         if (paragraph.includes("<notifier>")) {
           return (
             <p key={index}>
@@ -80,6 +64,14 @@ export default async function CovidMyturnPage({
         }
         return <p key={index}>{paragraph}</p>;
       })}
+
+      <div style={{ margin: "2rem 0" }}>
+        <GitHubRepoDisplay
+          username="devin2712"
+          repoName="myturn-monitor"
+          url="https://github.com/devin2712/myturn-monitor"
+        />
+      </div>
     </PageLayout>
   );
 }

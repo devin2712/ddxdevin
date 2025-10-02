@@ -8,6 +8,7 @@ import { Header } from "./Header";
 
 type LinkListProps = {
   sections: LinkListSection[];
+  showIndex?: boolean;
 };
 
 type CurrentLink = {
@@ -27,7 +28,7 @@ const INDEX_ICONS: Record<number, JSX.Element> = {
   9: <span className={styles.indexIcon} aria-hidden="true">{String.fromCodePoint(0x277e)}</span>,
 };
 
-export const LinkList: React.FC<LinkListProps> = ({ sections }) => {
+export const LinkList: React.FC<LinkListProps> = ({ sections, showIndex = true }) => {
   const [currentLink, setCurrentLink] = useState<CurrentLink>(null);
   const blurTimeoutRef = React.useRef<NodeJS.Timeout | null>(null);
 
@@ -55,14 +56,18 @@ export const LinkList: React.FC<LinkListProps> = ({ sections }) => {
 
   const getLinkClassName = (sectionKey: string, linkKey: string): string => {
     if (!currentLink) return styles.default;
-    if (currentLink.sectionKey === sectionKey && currentLink.linkKey === linkKey) {
+    if (
+      currentLink.sectionKey === sectionKey &&
+      currentLink.linkKey === linkKey
+    ) {
       return styles.active;
     }
     return styles.inactive;
   };
 
   return sections.map((section, index) => {
-    const isSectionInactive = currentLink && currentLink.sectionKey !== section.key;
+    const isSectionInactive =
+      currentLink && currentLink.sectionKey !== section.key;
 
     return (
       <section key={section.key} className={styles.linkSection}>
@@ -71,21 +76,24 @@ export const LinkList: React.FC<LinkListProps> = ({ sections }) => {
           title={
             <div
               className={`${styles.headerWithIndex} ${
-                isSectionInactive ? styles.inactive : ''
+                isSectionInactive ? styles.inactive : ""
               }`}
             >
-              {index > -1 && index < 10 && INDEX_ICONS[index + 1]}
+              {showIndex && index > -1 && index < 10 && INDEX_ICONS[index + 1]}
               {section.title}
             </div>
           }
         />
-        <ul>
+        <ul className={styles.list}>
           {section.links.map((link) => (
             <li
               key={link.key}
               className={getLinkClassName(section.key, link.key)}
               onMouseEnter={() =>
-                handleSetCurrentLink({ sectionKey: section.key, linkKey: link.key })
+                handleSetCurrentLink({
+                  sectionKey: section.key,
+                  linkKey: link.key,
+                })
               }
               onMouseLeave={handleClearCurrentLink}
             >
@@ -97,12 +105,15 @@ export const LinkList: React.FC<LinkListProps> = ({ sections }) => {
                   rel="noopener noreferrer"
                   aria-label={`${link.title} (opens in new tab)`}
                   onFocus={() =>
-                    handleSetCurrentLink({ sectionKey: section.key, linkKey: link.key })
+                    handleSetCurrentLink({
+                      sectionKey: section.key,
+                      linkKey: link.key,
+                    })
                   }
                   onBlur={handleClearCurrentLink}
                 >
                   <span>{link.title}</span>
-                  <span className={styles.linkContent}>{link.content}</span>
+                  {link.content && <span className={styles.linkContent}>{link.content}</span>}
                 </a>
               ) : (
                 <NavLink
@@ -110,7 +121,10 @@ export const LinkList: React.FC<LinkListProps> = ({ sections }) => {
                   className={styles.link}
                   prefetch={true}
                   onFocus={() =>
-                    handleSetCurrentLink({ sectionKey: section.key, linkKey: link.key })
+                    handleSetCurrentLink({
+                      sectionKey: section.key,
+                      linkKey: link.key,
+                    })
                   }
                   onBlur={handleClearCurrentLink}
                 >

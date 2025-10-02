@@ -3,9 +3,10 @@ import { StyledLink } from "@/components/ui/StyledLink";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import Image from "next/image";
 import type { Metadata } from "next";
+import { GitHubRepoDisplay } from "@/components/ui/GitHubRepoDisplay";
 
 // This page is fully static
-export const dynamic = 'force-static';
+export const dynamic = "force-static";
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
@@ -66,43 +67,23 @@ export default async function CovidAppointmentsPage({
           priority
         />
       </p>
-      {t.raw("paragraphs").map((paragraph: string, index: number) => {
-        if (paragraph.includes("<github>")) {
-          return (
-            <p key={index}>
-              {t.rich(`paragraphs.${index}`, {
-                github: (chunks) => (
-                  <StyledLink
-                    href="https://github.com/devin2712/our-turn"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    {chunks}
-                  </StyledLink>
-                ),
-              })}
-            </p>
-          );
-        }
-        if (paragraph.includes("<medium>")) {
-          return (
-            <p key={index}>
-              {t.rich(`paragraphs.${index}`, {
-                medium: (chunks) => (
-                  <StyledLink
-                    href="https://ddxdevin.medium.com/build-a-covid-19-vaccine-appointment-notification-system-with-a-twilio-serverless-function-23cf328c01f4"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    {chunks}
-                  </StyledLink>
-                ),
-              })}
-            </p>
-          );
-        }
-        return <p key={index}>{paragraph}</p>;
-      })}{" "}
+      {t.raw("paragraphs").map((paragraph: string, index: number) => (
+        <p key={index}>{paragraph}</p>
+      ))}
+      <div style={{ margin: "2rem 0", display: "flex", flexDirection: "column", gap: "1rem" }}>
+        <GitHubRepoDisplay
+          username="devin2712"
+          repoName="our-turn"
+          url="https://github.com/devin2712/our-turn"
+        />
+        <StyledLink
+          href="https://ddxdevin.medium.com/build-a-covid-19-vaccine-appointment-notification-system-with-a-twilio-serverless-function-23cf328c01f4"
+          target="_blank"
+          rel="noreferrer"
+        >
+          {t("setupGuide")}
+        </StyledLink>
+      </div>
     </PageLayout>
   );
 }

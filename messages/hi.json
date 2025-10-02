@@ -43,22 +43,22 @@
         "loading": "लोड हो रहा है",
         "search": "खोजें"
     },
+    "githubRepo": {
+        "ariaLabel": "{username}/{repoName} repository को GitHub पर खोलें"
+    },
     "covidAppointments": {
-        "title": "COVID अपॉइंटमेंट सूचनाएं",
-        "image": "Twilio के लोगो के साथ बैनर ग्राफिक और तीन लाइनें लोगो की ओर इशारा करती हुई। शीर्षक कहता है Twilio Serverless Functions का उपयोग करके COVID-19 वैक्सीन सूचनाएं प्राप्त करें।",
-        "paragraphs": [
-            "यह प्रोजेक्ट एक स्वचालित सूचना प्रणाली थी जो Airtable और Twilio को एकीकृत करती थी ताकि जब COVID-19 वैक्सीन अपॉइंटमेंट उपलब्ध हों तो आपको कॉल किया जा सके। उस समय, मैंने कैलिफ़ोर्निया, मैसाचुसेट्स और न्यूयॉर्क सिटी में सिस्टमों के साथ-साथ GetMyVaccine के साथ इंटीग्रेशन लिखे थे जो CVS, Rite-Aid और Walgreens से वैक्सीन उपलब्धता को एकत्रित करता था।",
-            "<github>वैक्सीन अपॉइंटमेंट सूचनाएं रिपॉज़िटरी</github>",
-            "<medium>सेटअप गाइड: Twilio Serverless Functions के साथ COVID-19 वैक्सीन अपॉइंटमेंट सूचना प्रणाली बनाएं</medium>"
-        ]
+      "title": "COVID अपॉइंटमेंट सूचनाएं",
+      "image": "Twilio के लोगो के साथ बैनर ग्राफिक और तीन लाइनें लोगो की ओर इशारा करती हुई। शीर्षक कहता है Twilio Serverless Functions का उपयोग करके COVID-19 वैक्सीन सूचनाएं प्राप्त करें।",
+      "paragraphs": [
+        "यह प्रोजेक्ट एक स्वचालित सूचना प्रणाली थी जो Airtable और Twilio को एकीकृत करती थी ताकि जब COVID-19 वैक्सीन अपॉइंटमेंट उपलब्ध हों तो आपको कॉल किया जा सके। उस समय, मैंने कैलिफ़ोर्निया, मैसाचुसेट्स और न्यूयॉर्क सिटी में सिस्टमों के साथ-साथ GetMyVaccine के साथ इंटीग्रेशन लिखे थे जो CVS, Rite-Aid और Walgreens से वैक्सीन उपलब्धता को एकत्रित करता था।"      ],
+      "setupGuide": "सेटअप गाइड"
     },
     "covidMyturn": {
         "title": "COVID MyTurn CA मॉनिटर",
         "paragraphs": [
             "यह प्रोजेक्ट कैलिफ़ोर्निया राज्य वैक्सीनेशन सिस्टम (MyTurn) से सभी 58 काउंटियों के लिए वैक्सीन उपलब्धता डेटा एकत्रित और एकीकृत करने के लिए बनाया गया था।",
             "CloudWatch का उपयोग करके, मैंने MyTurn से समानांतर में उपलब्धता डेटा एकत्रित करने के लिए cron-triggered serverless Lambda jobs का एक fan-out शेड्यूल किया। एक अलग Lambda function परिणामों को एकत्रित करता था और उन्हें S3 में एक एकल canonical dataset के रूप में संग्रहीत करता था।",
-            "यह <notifier>वैक्सीन अपॉइंटमेंट सूचनाएं</notifier> के लिए एक अनुकूलन था ताकि MyTurn के प्रत्यक्ष कॉल को कम किया जा सके और अन्य प्रोजेक्ट्स को सक्षम किया जा सके।",
-            "<github>MyTurn मॉनिटर</github>"
+            "यह <notifier>वैक्सीन अपॉइंटमेंट सूचनाएं</notifier> के लिए एक अनुकूलन था ताकि MyTurn के प्रत्यक्ष कॉल को कम किया जा सके और अन्य प्रोजेक्ट्स को सक्षम किया जा सके।"
         ]
     },
     "home": {
@@ -105,16 +105,22 @@
             "लॉस एंजिल्स में जनवरी 2025 की जंगली आग के जवाब में, <aidkit>AidKit</aidkit> ने लॉस एंजिल्स काउंटी और लॉस एंजिल्स शहर के साथ साझेदारी की ताकि तुरंत दो आपातकालीन नकद राहत कार्यक्रम शुरू किए जा सकें।",
             "मैंने आपदा प्रतिक्रिया के लिए प्लेटफॉर्म की नई भू-स्थानिक क्षमताओं के डिज़ाइन और कार्यान्वयन का नेतृत्व किया। इसमें एक sync pipeline का निर्माण शामिल था जो remote tax parcel datasets और CAL FIRE damage inspection data से डेटा ingest और normalize करती थी, इसे PostGIS में spatial queries के लिए store करती थी। हमने इस डेटा का उपयोग parcel-level impact के आधार पर applicants को automatically triage करने के लिए किया, manual review को कम करके aid delivery को तेज़ बनाया।",
             "मैंने stakeholders को program reach और eligibility coverage पर live visibility देने के लिए real-time, interactive maps भी बनाए। इन कार्यक्रमों ने अंततः लॉस एंजिल्स में व्यक्तियों और छोटे व्यवसायों को $25M से अधिक का प्रत्यक्ष सहायता वितरित किया।",
-            "इस प्रोजेक्ट ने मुझे यह explore करने के लिए प्रेरित किया कि AI और MCP servers कैसे program administration को accelerate कर सकते हैं। उदाहरण के लिए, हम CAL FIRE के damage data के साथ LLM को connect कर सकते हैं ताकि automated triage और eligibility workflows की एक व्यापक रेंज enable हो सके।",
-            "यहां एक example server implementation है:",
-            "<repo>CAL FIRE DINS ArcGIS MCP Server</repo>",
-            "आप कार्यक्रमों के बारे में यहां और पढ़ सकते हैं:",
-            "<casestudy>AidKit Case Study: लॉस एंजिल्स Regional Wildfire Relief Programs</casestudy>",
-            "<award>AidKit को Technology Excellence के लिए 2025 Stevie Awards में Winner नामित किया गया</award>",
-            "<press>Route Fifty: कैसे LA wildfire victims को financial help देने के लिए tech का उपयोग कर रहा है</press>",
-            "<press3>Santa Monica Daily Press: LA County ने Malibu-Topanga Businesses के लिए $250,000 Grant Program launch किया</press3>",
-            "<press2>Secret Los Angeles: L.A. County ने wildfires से प्रभावित Small Businesses की मदद के लिए नया $250,000 Grant launch किया</press2>"
-        ]
+            "इस प्रोजेक्ट ने मुझे यह explore करने के लिए प्रेरित किया कि AI और MCP servers कैसे program administration को accelerate कर सकते हैं। उदाहरण के लिए, हम CAL FIRE के damage data के साथ LLM को connect कर सकते हैं ताकि automated triage और eligibility workflows की एक व्यापक रेंज enable हो सके।"
+        ],
+        "readMore": "कार्यक्रमों के बारे में और पढ़ें",
+        "caseStudy": "AidKit Case Study",
+        "award": "2025 Stevie Awards for Technology Excellence",
+        "routeFifty": "Route Fifty",
+        "santaMonicaDailyPress": "Santa Monica Daily Press",
+        "santaMonicaMirror": "Santa Monica Mirror",
+        "secretLosAngeles": "Secret Los Angeles",
+        "nbc": "NBC Los Angeles",
+        "latimes": "Los Angeles Times",
+        "lacounty": "County of Los Angeles",
+        "github": {
+            "sectionTitle": "MCP server implementation",
+            "linkTitle": "GitHub"
+        }
     },
     "notFound": {
         "title": "404",

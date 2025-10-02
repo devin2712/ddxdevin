@@ -43,22 +43,22 @@
         "loading": "Chargement",
         "search": "Rechercher"
     },
+    "githubRepo": {
+        "ariaLabel": "Ouvrir le dépôt {username}/{repoName} sur GitHub"
+    },
     "covidAppointments": {
-        "title": "Notifications de rendez-vous COVID",
-        "image": "Graphique bannière avec le logo de Twilio et trois lignes pointant vers le logo. Le titre indique Recevoir des notifications de vaccin COVID-19 en utilisant les fonctions sans serveur Twilio.",
-        "paragraphs": [
-            "Ce projet était un système de notification automatisé qui intégrait Airtable et Twilio pour vous appeler lorsque des rendez-vous de vaccination COVID-19 devenaient disponibles. À l'époque, j'ai écrit des intégrations avec des systèmes en Californie, au Massachusetts et dans la ville de New York, ainsi qu'avec GetMyVaccine qui agrégeait les disponibilités de vaccins de CVS, Rite-Aid et Walgreens.",
-            "<github>Dépôt de Notifications de Rendez-vous de Vaccination</github>",
-            "<medium>Guide de Configuration: Construire un Système de Notification de Rendez-vous de Vaccination COVID-19 avec les Fonctions Sans Serveur Twilio</medium>"
-        ]
+      "title": "Notifications de rendez-vous COVID",
+      "image": "Graphique bannière avec le logo de Twilio et trois lignes pointant vers le logo. Le titre indique Recevoir des notifications de vaccin COVID-19 en utilisant les fonctions sans serveur Twilio.",
+      "paragraphs": [
+        "Ce projet était un système de notification automatisé qui intégrait Airtable et Twilio pour vous appeler lorsque des rendez-vous de vaccination COVID-19 devenaient disponibles. À l'époque, j'ai écrit des intégrations avec des systèmes en Californie, au Massachusetts et dans la ville de New York, ainsi qu'avec GetMyVaccine qui agrégeait les disponibilités de vaccins de CVS, Rite-Aid et Walgreens."      ],
+      "setupGuide": "Guide de Configuration"
     },
     "covidMyturn": {
         "title": "Moniteur COVID MyTurn CA",
         "paragraphs": [
             "Ce projet a été conçu pour collecter et agréger les données de disponibilité des vaccins du système de vaccination de l'État de Californie (MyTurn), couvrant les 58 comtés.",
             "En utilisant CloudWatch, j'ai programmé un éventail déclenché par cron de tâches Lambda sans serveur pour collecter en parallèle les données de disponibilité de MyTurn. Une fonction Lambda séparée agrégeait les résultats et les stockait dans S3 comme un ensemble de données canonique unique.",
-            "Il s'agissait d'une optimisation pour <notifier>Notifications de rendez-vous de vaccination</notifier> afin de réduire les appels directs à MyTurn et d'activer d'autres projets.",
-            "<github>Moniteur MyTurn</github>"
+            "Il s'agissait d'une optimisation pour <notifier>Notifications de rendez-vous de vaccination</notifier> afin de réduire les appels directs à MyTurn et d'activer d'autres projets."
         ]
     },
     "home": {
@@ -105,16 +105,22 @@
             "En réponse aux incendies de janvier 2025 à Los Angeles, <aidkit>AidKit</aidkit> s'est associé au comté de Los Angeles et à la ville de Los Angeles pour lancer rapidement deux programmes d'aide financière d'urgence.",
             "J'ai dirigé la conception et l'implémentation des nouvelles capacités géospatiales de la plateforme pour la réponse aux catastrophes. Cela incluait la construction d'un pipeline de synchronisation qui ingérait et normalisait les données des ensembles de données distants de parcelles fiscales et des données d'inspection des dommages de CAL FIRE, les stockant dans PostGIS pour les requêtes spatiales. Nous avons utilisé ces données pour trier automatiquement les candidats en fonction de l'impact au niveau de la parcelle, réduisant l'examen manuel et accélérant la livraison d'aide.",
             "J'ai également construit des cartes interactives en temps réel pour donner aux parties prenantes une visibilité en direct sur la portée du programme et la couverture d'éligibilité. Ces programmes ont finalement distribué plus de 25 millions de dollars d'aide directe aux particuliers et petites entreprises à travers Los Angeles.",
-            "Ce projet m'a inspiré à explorer comment l'IA et les serveurs MCP peuvent accélérer l'administration des programmes. Par exemple, nous pourrions connecter un LLM aux données de dommages de CAL FIRE pour permettre une gamme plus large de flux de travail automatisés de triage et d'éligibilité.",
-            "Voici un exemple d'implémentation de serveur :",
-            "<repo>Serveur MCP CAL FIRE DINS ArcGIS</repo>",
-            "Vous pouvez en savoir plus sur les programmes ici :",
-            "<casestudy>Étude de cas AidKit : Programmes régionaux d'aide aux incendies de Los Angeles</casestudy>",
-            "<award>AidKit nommé lauréat des prix Stevie 2025 pour l'excellence technologique</award>",
-            "<press>Route Fifty : Comment LA utilise la technologie pour aider financièrement les victimes d'incendies</press>",
-            "<press3>Santa Monica Daily Press : Le comté de LA lance un programme de subvention de 250 000 $ pour les entreprises de Malibu-Topanga</press3>",
-            "<press2>Secret Los Angeles : Le comté de L.A. lance une nouvelle subvention de 250 000 $ pour aider les petites entreprises touchées par les incendies</press2>"
-        ]
+            "Ce projet m'a inspiré à explorer comment l'IA et les serveurs MCP peuvent accélérer l'administration des programmes. Par exemple, nous pourrions connecter un LLM aux données de dommages de CAL FIRE pour permettre une gamme plus large de flux de travail automatisés de triage et d'éligibilité."
+        ],
+        "readMore": "En savoir plus sur les programmes",
+        "caseStudy": "Étude de cas AidKit",
+        "award": "Prix Stevie 2025 pour l'excellence technologique",
+        "routeFifty": "Route Fifty",
+        "santaMonicaDailyPress": "Santa Monica Daily Press",
+        "santaMonicaMirror": "Santa Monica Mirror",
+        "secretLosAngeles": "Secret Los Angeles",
+        "nbc": "NBC Los Angeles",
+        "latimes": "Los Angeles Times",
+        "lacounty": "County of Los Angeles",
+        "github": {
+            "sectionTitle": "Implémentation du serveur MCP",
+            "linkTitle": "GitHub"
+        }
     },
     "notFound": {
         "title": "404",

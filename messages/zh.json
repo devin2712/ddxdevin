@@ -43,22 +43,22 @@
         "loading": "加载中",
         "search": "搜索"
     },
+    "githubRepo": {
+        "ariaLabel": "在GitHub上打开{username}/{repoName}仓库"
+    },
     "covidAppointments": {
-        "title": "COVID预约通知",
-        "image": "带有Twilio标志的横幅图形，三条线指向标志。标题写着使用Twilio无服务器函数获取COVID-19疫苗通知。",
-        "paragraphs": [
-            "这个项目是一个自动化通知系统，集成了Airtable和Twilio，当COVID-19疫苗预约可用时会给您打电话。当时，我编写了与加利福尼亚、马萨诸塞州和纽约市系统的集成，以及与GetMyVaccine的集成，后者汇总了CVS、Rite-Aid和Walgreens的疫苗可用性。",
-            "<github>疫苗预约通知代码库</github>",
-            "<medium>设置指南：使用Twilio无服务器函数构建COVID-19疫苗预约通知系统</medium>"
-        ]
+      "title": "COVID预约通知",
+      "image": "带有Twilio标志的横幅图形，三条线指向标志。标题写着使用Twilio无服务器函数获取COVID-19疫苗通知。",
+      "paragraphs": [
+        "这个项目是一个自动化通知系统，集成了Airtable和Twilio，当COVID-19疫苗预约可用时会给您打电话。当时，我编写了与加利福尼亚、马萨诸塞州和纽约市系统的集成，以及与GetMyVaccine的集成，后者汇总了CVS、Rite-Aid和Walgreens的疫苗可用性。"      ],
+      "setupGuide": "设置指南"
     },
     "covidMyturn": {
         "title": "COVID MyTurn CA监控器",
         "paragraphs": [
             "这个项目是为了从加利福尼亚州疫苗接种系统（MyTurn）收集和汇总所有58个县的疫苗可用性数据而构建的。",
             "使用CloudWatch，我调度了cron触发的无服务器Lambda作业的扇出，以并行收集MyTurn的可用性数据。一个单独的Lambda函数聚合结果并将它们作为单一规范数据集存储在S3中。",
-            "这是对<notifier>疫苗预约通知</notifier>的优化，以减少对MyTurn的直接调用并支持其他项目。",
-            "<github>MyTurn监控器</github>"
+            "这是对<notifier>疫苗预约通知</notifier>的优化，以减少对MyTurn的直接调用并支持其他项目。"
         ]
     },
     "home": {
@@ -105,16 +105,22 @@
             "为应对2025年1月洛杉矶的野火，<aidkit>AidKit</aidkit>与洛杉矶县和洛杉矶市合作，迅速启动了两个紧急现金救济项目。",
             "我领导了平台灾难响应新地理空间能力的设计和实施。这包括构建一个同步管道，从远程税收地块数据集和CAL FIRE损害检查数据中摄取和规范化数据，将其存储在PostGIS中用于空间查询。我们使用这些数据根据地块级影响自动对申请人进行分类，减少人工审查并加快援助交付。",
             "我还构建了实时交互式地图，为利益相关者提供项目覆盖范围和资格覆盖的实时可见性。这些项目最终向洛杉矶的个人和小企业分发了超过2500万美元的直接援助。",
-            "这个项目启发我探索AI和MCP服务器如何加速项目管理。例如，我们可以将LLM连接到CAL FIRE的损害数据，以实现更广泛的自动化分类和资格工作流程。",
-            "这里是一个示例服务器实现：",
-            "<repo>CAL FIRE DINS ArcGIS MCP Server</repo>",
-            "您可以在这里了解更多关于这些项目的信息：",
-            "<casestudy>AidKit案例研究：洛杉矶地区野火救济项目</casestudy>",
-            "<award>AidKit在2025年史蒂夫技术卓越奖中获得殊荣</award>",
-            "<press>Route Fifty：LA如何使用技术为野火受害者提供经济帮助</press>",
-            "<press3>Santa Monica Daily Press：LA县为马里布-托潘加企业启动25万美元补助计划</press3>",
-            "<press2>Secret Los Angeles：L.A.县启动新的25万美元补助金，帮助受野火影响的小企业</press2>"
-        ]
+            "这个项目启发我探索AI和MCP服务器如何加速项目管理。例如，我们可以将LLM连接到CAL FIRE的损害数据，以实现更广泛的自动化分类和资格工作流程。"
+        ],
+        "readMore": "了解更多关于这些项目的信息",
+        "caseStudy": "AidKit案例研究",
+        "award": "2025年史蒂夫技术卓越奖",
+        "routeFifty": "Route Fifty",
+        "santaMonicaDailyPress": "Santa Monica Daily Press",
+        "santaMonicaMirror": "Santa Monica Mirror",
+        "secretLosAngeles": "Secret Los Angeles",
+        "nbc": "NBC Los Angeles",
+        "latimes": "Los Angeles Times",
+        "lacounty": "County of Los Angeles",
+        "github": {
+            "sectionTitle": "MCP服务器实现",
+            "linkTitle": "GitHub"
+        }
     },
     "notFound": {
         "title": "404",

@@ -43,22 +43,22 @@
         "loading": "로딩 중",
         "search": "검색"
     },
+    "githubRepo": {
+        "ariaLabel": "GitHub에서 {username}/{repoName} 저장소 열기"
+    },
     "covidAppointments": {
-        "title": "COVID 예약 알림",
-        "image": "Twilio 로고와 로고를 가리키는 세 줄이 있는 배너 그래픽. 제목은 Twilio Serverless Functions를 사용하여 COVID-19 백신 알림 받기라고 되어 있습니다.",
-        "paragraphs": [
-            "이 프로젝트는 COVID-19 백신 예약이 가능해질 때 전화를 걸어주는 자동화된 알림 시스템으로 Airtable과 Twilio를 통합했습니다. 당시 저는 캘리포니아, 매사추세츠, 뉴욕시의 시스템들과 통합을 작성했고, CVS, Rite-Aid, Walgreens에서 백신 가용성을 집계하는 GetMyVaccine과도 통합했습니다.",
-            "<github>백신 예약 알림 저장소</github>",
-            "<medium>설정 가이드: Twilio Serverless Functions로 COVID-19 백신 예약 알림 시스템 구축하기</medium>"
-        ]
+      "title": "COVID 예약 알림",
+      "image": "Twilio 로고와 로고를 가리키는 세 줄이 있는 배너 그래픽. 제목은 Twilio Serverless Functions를 사용하여 COVID-19 백신 알림 받기라고 되어 있습니다.",
+      "paragraphs": [
+        "이 프로젝트는 COVID-19 백신 예약이 가능해질 때 전화를 걸어주는 자동화된 알림 시스템으로 Airtable과 Twilio를 통합했습니다. 당시 저는 캘리포니아, 매사추세츠, 뉴욕시의 시스템들과 통합을 작성했고, CVS, Rite-Aid, Walgreens에서 백신 가용성을 집계하는 GetMyVaccine과도 통합했습니다."      ],
+      "setupGuide": "설정 가이드"
     },
     "covidMyturn": {
         "title": "COVID MyTurn CA 모니터",
         "paragraphs": [
             "이 프로젝트는 캘리포니아 주 백신 접종 시스템(MyTurn)에서 58개 카운티 모두의 백신 가용성 데이터를 수집하고 집계하기 위해 제작되었습니다.",
             "CloudWatch를 사용하여 MyTurn에서 동시에 가용성 데이터를 수집하기 위해 cron 트리거 서버리스 Lambda 작업의 fan-out을 예약했습니다. 별도의 Lambda 함수가 결과를 집계하고 단일 정규 데이터셋으로 S3에 저장했습니다.",
-            "이것은 <notifier>백신 예약 알림</notifier>에 대한 최적화로 MyTurn으로의 직접 호출을 줄이고 다른 프로젝트를 가능하게 하기 위해서였습니다.",
-            "<github>MyTurn 모니터</github>"
+            "이것은 <notifier>백신 예약 알림</notifier>에 대한 최적화로 MyTurn으로의 직접 호출을 줄이고 다른 프로젝트를 가능하게 하기 위해서였습니다."
         ]
     },
     "home": {
@@ -105,16 +105,22 @@
             "2025년 1월 로스앤젤레스 산불에 대응하여, <aidkit>AidKit</aidkit>은 로스앤젤레스 카운티 및 로스앤젤레스 시와 파트너십을 맺고 신속히 두 개의 긴급 현금 구호 프로그램을 시작했습니다.",
             "저는 재해 대응을 위한 플랫폼의 새로운 지리공간 기능의 설계와 구현을 주도했습니다. 이는 원격 세금 구획 데이터셋과 CAL FIRE 피해 검사 데이터에서 데이터를 수집하고 정규화하여 공간 쿼리를 위해 PostGIS에 저장하는 동기화 파이프라인 구축을 포함했습니다. 우리는 이 데이터를 사용하여 구획 수준의 영향에 따라 신청자를 자동으로 분류하여 수동 검토를 줄이고 지원 전달을 가속화했습니다.",
             "또한 이해관계자들에게 프로그램 범위와 자격 적용 범위에 대한 실시간 가시성을 제공하기 위해 실시간 대화형 지도를 구축했습니다. 이 프로그램들은 궁극적으로 로스앤젤레스 전역의 개인과 소기업에 2,500만 달러 이상의 직접 지원을 배포했습니다.",
-            "이 프로젝트는 AI와 MCP 서버가 프로그램 관리를 어떻게 가속화할 수 있는지 탐구하도록 영감을 주었습니다. 예를 들어, 우리는 LLM을 CAL FIRE의 피해 데이터에 연결하여 더 광범위한 자동화된 분류 및 자격 워크플로우를 가능하게 할 수 있습니다.",
-            "다음은 예시 서버 구현입니다:",
-            "<repo>CAL FIRE DINS ArcGIS MCP Server</repo>",
-            "프로그램에 대해 더 자세히 알아보려면:",
-            "<casestudy>AidKit 사례 연구: 로스앤젤레스 지역 산불 구호 프로그램</casestudy>",
-            "<award>AidKit, 2025 스티비 기술 우수상 수상자로 선정</award>",
-            "<press>Route Fifty: LA가 산불 피해자들에게 재정적 도움을 제공하기 위해 기술을 사용하는 방법</press>",
-            "<press3>Santa Monica Daily Press: LA 카운티, 말리부-토팡가 비즈니스를 위한 25만 달러 보조금 프로그램 시작</press3>",
-            "<press2>Secret Los Angeles: L.A. 카운티, 산불로 피해를 입은 소기업을 돕기 위한 새로운 25만 달러 보조금 시작</press2>"
-        ]
+            "이 프로젝트는 AI와 MCP 서버가 프로그램 관리를 어떻게 가속화할 수 있는지 탐구하도록 영감을 주었습니다. 예를 들어, 우리는 LLM을 CAL FIRE의 피해 데이터에 연결하여 더 광범위한 자동화된 분류 및 자격 워크플로우를 가능하게 할 수 있습니다."
+        ],
+        "readMore": "프로그램에 대해 더 읽기",
+        "caseStudy": "AidKit 사례 연구",
+        "award": "2025 스티비 기술 우수상",
+        "routeFifty": "Route Fifty",
+        "santaMonicaDailyPress": "Santa Monica Daily Press",
+        "santaMonicaMirror": "Santa Monica Mirror",
+        "secretLosAngeles": "Secret Los Angeles",
+        "nbc": "NBC Los Angeles",
+        "latimes": "Los Angeles Times",
+        "lacounty": "County of Los Angeles",
+        "github": {
+            "sectionTitle": "MCP 서버 구현",
+            "linkTitle": "GitHub"
+        }
     },
     "notFound": {
         "title": "404",

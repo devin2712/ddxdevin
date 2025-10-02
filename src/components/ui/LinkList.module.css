@@ -1,3 +1,7 @@
+ul.list {
+    list-style-type: none;
+}
+
 li.default {
     transition: opacity 0.16s ease;
 }

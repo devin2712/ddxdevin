@@ -92,8 +92,9 @@ export default async function BauhauslersPage({
             }}
             sizes="500px"
             quality={85}
-            loading={index === 0 ? "eager" : "lazy"}
+            loading="eager"
             priority={index === 0}
+            fetchPriority={index === 0 ? "high" : "low"}
           />
         ))}
       </div>

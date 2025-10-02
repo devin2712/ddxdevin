@@ -1,0 +1,84 @@
+.card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem;
+  border-radius: 6px;
+  background-color: color-mix(in srgb, var(--text-color) 3%, transparent);
+  box-shadow: 0 0 0 1px color-mix(in srgb, var(--text-color) 20%, transparent);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: ui-monospace, "SF Mono", Monaco, "Cascadia Code", "Roboto Mono",
+    Consolas, "Courier New", monospace;
+  text-decoration: none;
+  color: inherit;
+}
+
+.card:hover {
+  box-shadow: 0 0 0 1px color-mix(in srgb, var(--text-color) 40%, transparent);
+  background-color: color-mix(in srgb, var(--text-color) 5%, transparent);
+}
+
+.card:focus-visible {
+  outline: 2px solid var(--text-color);
+  outline-offset: 2px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.avatar {
+  flex-shrink: 0;
+}
+
+.repoPath {
+  display: flex;
+  align-items: baseline;
+  gap: 0.25rem;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.username {
+  color: color-mix(in srgb, var(--text-color) 70%, transparent);
+}
+
+.separator {
+  color: color-mix(in srgb, var(--text-color) 50%, transparent);
+}
+
+.repoName {
+  color: var(--text-color);
+  font-weight: 600;
+}
+
+.arrow {
+  font-family: "Tarnac", sans-serif;
+  font-size: 1.5rem;
+  opacity: 0.6;
+  transition: opacity 0.2s ease;
+}
+
+.card:hover .arrow {
+  opacity: 1;
+}
+
+/* Dark mode support - invert GitHub logo */
+@media (prefers-color-scheme: dark) {
+  .avatar {
+    filter: none;
+  }
+}
+
+[data-theme="dark"] .avatar {
+  filter: none;
+}
+
+[data-theme="light"] .avatar {
+  filter: invert(1);
+}

@@ -43,22 +43,22 @@
         "loading": "Wird geladen",
         "search": "Suchen"
     },
+    "githubRepo": {
+        "ariaLabel": "{username}/{repoName} Repository auf GitHub öffnen"
+    },
     "covidAppointments": {
-        "title": "COVID-Terminbenachrichtigungen",
-        "image": "Banner-Grafik mit Twilio-Logo und drei Linien, die zum Logo zeigen. Der Titel lautet COVID-19-Impfstoff-Benachrichtigungen mit Twilio Serverless Functions erhalten.",
-        "paragraphs": [
-            "Dieses Projekt war ein automatisiertes Benachrichtigungssystem, das Airtable und Twilio integrierte, um Sie anzurufen, wenn COVID-19-Impftermine verfügbar wurden. Damals schrieb ich Integrationen mit Systemen in Kalifornien, Massachusetts und New York City sowie mit GetMyVaccine, das Impfstoffverfügbarkeiten von CVS, Rite-Aid und Walgreens aggregierte.",
-            "<github>Impftermin-Benachrichtigungen Repository</github>",
-            "<medium>Setup-Anleitung: Ein COVID-19-Impftermin-Benachrichtigungssystem mit Twilio Serverless Functions erstellen</medium>"
-        ]
+      "title": "COVID-Terminbenachrichtigungen",
+      "image": "Banner-Grafik mit Twilio-Logo und drei Linien, die zum Logo zeigen. Der Titel lautet COVID-19-Impfstoff-Benachrichtigungen mit Twilio Serverless Functions erhalten.",
+      "paragraphs": [
+        "Dieses Projekt war ein automatisiertes Benachrichtigungssystem, das Airtable und Twilio integrierte, um Sie anzurufen, wenn COVID-19-Impftermine verfügbar wurden. Damals schrieb ich Integrationen mit Systemen in Kalifornien, Massachusetts und New York City sowie mit GetMyVaccine, das Impfstoffverfügbarkeiten von CVS, Rite-Aid und Walgreens aggregierte."      ],
+      "setupGuide": "Setup-Anleitung"
     },
     "covidMyturn": {
         "title": "COVID MyTurn CA Monitor",
         "paragraphs": [
             "Dieses Projekt wurde entwickelt, um Impfstoffverfügbarkeitsdaten aus dem Impfsystem des Bundesstaates Kalifornien (MyTurn) für alle 58 Bezirke zu sammeln und zu aggregieren.",
             "Mit CloudWatch programmierte ich ein cron-ausgelöstes Fan-out von serverlosen Lambda-Jobs, um Verfügbarkeitsdaten von MyTurn parallel zu sammeln. Eine separate Lambda-Funktion aggregierte die Ergebnisse und speicherte sie in S3 als einen einzigen kanonischen Datensatz.",
-            "Dies war eine Optimierung für <notifier>Impftermin-Benachrichtigungen</notifier>, um direkte Aufrufe an MyTurn zu reduzieren und andere Projekte zu ermöglichen.",
-            "<github>MyTurn Monitor</github>"
+            "Dies war eine Optimierung für <notifier>Impftermin-Benachrichtigungen</notifier>, um direkte Aufrufe an MyTurn zu reduzieren und andere Projekte zu ermöglichen."
         ]
     },
     "home": {
@@ -105,16 +105,22 @@
             "Als Reaktion auf die Waldbrände vom Januar 2025 in Los Angeles arbeitete <aidkit>AidKit</aidkit> mit Los Angeles County und der Stadt Los Angeles zusammen, um schnell zwei Programme für Bargeld-Katastrophenhilfe zu starten.",
             "Ich leitete das Design und die Implementierung der neuen geospatialen Fähigkeiten der Plattform für Katastrophenhilfe. Dies umfasste den Aufbau einer Synchronisations-Pipeline, die Daten von entfernten Steuerparzellen-Datensätzen und CAL FIRE-Schadensinspektionsdaten aufnahm und normalisierte und sie in PostGIS für räumliche Abfragen speicherte. Wir nutzten diese Daten, um Antragsteller automatisch basierend auf dem Einfluss auf Parzellenebene zu triagieren, wodurch manuelle Überprüfungen reduziert und die Hilfslieferung beschleunigt wurde.",
             "Ich baute auch interaktive Echtzeit-Karten, um Interessengruppen Live-Einblicke in die Programmreichweite und Berechtigung zu geben. Diese Programme verteilten schließlich über 25 Millionen Dollar direkte Hilfe an Einzelpersonen und kleine Unternehmen in Los Angeles.",
-            "Dieses Projekt inspirierte mich zu erforschen, wie KI und MCP-Server die Programmverwaltung beschleunigen können. Zum Beispiel könnten wir ein LLM mit CAL FIREs Schadensdaten verbinden, um eine breitere Palette automatisierter Triage- und Berechtigungs-Workflows zu ermöglichen.",
-            "Hier ist eine Beispiel-Server-Implementierung:",
-            "<repo>CAL FIRE DINS ArcGIS MCP Server</repo>",
-            "Mehr über die Programme können Sie hier lesen:",
-            "<casestudy>AidKit Fallstudie: Los Angeles Regional Wildfire Relief Programs</casestudy>",
-            "<award>AidKit als Gewinner der Stevie Awards 2025 für technische Exzellenz ausgezeichnet</award>",
-            "<press>Route Fifty: Wie LA Technologie nutzt, um Waldbrandopfern finanzielle Hilfe zu leisten</press>",
-            "<press3>Santa Monica Daily Press: LA County startet 250.000-Dollar-Zuschuss-Programm für Malibu-Topanga-Unternehmen</press3>",
-            "<press2>Secret Los Angeles: L.A. County startet einen neuen 250.000-Dollar-Zuschuss zur Unterstützung von Kleinunternehmen, die von Waldbränden betroffen sind</press2>"
-        ]
+            "Dieses Projekt inspirierte mich zu erforschen, wie KI und MCP-Server die Programmverwaltung beschleunigen können. Zum Beispiel könnten wir ein LLM mit CAL FIREs Schadensdaten verbinden, um eine breitere Palette automatisierter Triage- und Berechtigungs-Workflows zu ermöglichen."
+        ],
+        "readMore": "Mehr über die Programme lesen",
+        "caseStudy": "AidKit Fallstudie",
+        "award": "2025 Stevie Awards für technische Exzellenz",
+        "routeFifty": "Route Fifty",
+        "santaMonicaDailyPress": "Santa Monica Daily Press",
+        "santaMonicaMirror": "Santa Monica Mirror",
+        "secretLosAngeles": "Secret Los Angeles",
+        "nbc": "NBC Los Angeles",
+        "latimes": "Los Angeles Times",
+        "lacounty": "County of Los Angeles",
+        "github": {
+            "sectionTitle": "MCP Server-Implementierung",
+            "linkTitle": "GitHub"
+        }
     },
     "notFound": {
         "title": "404",
