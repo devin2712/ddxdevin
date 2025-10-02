@@ -122,11 +122,7 @@ export default async function McpWildfirePage({
               {
                 key: "caseStudy",
                 title: t("caseStudy"),
-                content: (
-                  <span style={{ fontSize: "1.25rem", lineHeight: "1rem" }}>
-                    ↗
-                  </span>
-                ),
+                content: 'arrow',
                 config: {
                   external: true,
                   url: "https://www.aidkit.com/publication/los-angeles-regional-wildfire-relief-programs",
@@ -135,11 +131,7 @@ export default async function McpWildfirePage({
               {
                 key: "award",
                 title: t("award"),
-                content: (
-                  <span style={{ fontSize: "1.25rem", lineHeight: "1rem" }}>
-                    ↗
-                  </span>
-                ),
+                content: 'arrow',
                 config: {
                   external: true,
                   url: "https://www.aidkit.com/publication/aidkit-named-a-winner-in-the-2025-stevie-awards-for-technology-excellence",
@@ -148,11 +140,7 @@ export default async function McpWildfirePage({
               {
                 key: "routeFifty",
                 title: t("routeFifty"),
-                content: (
-                  <span style={{ fontSize: "1.25rem", lineHeight: "1rem" }}>
-                    ↗
-                  </span>
-                ),
+                content: 'arrow',
                 config: {
                   external: true,
                   url: "https://www.route-fifty.com/digital-government/2025/03/how-la-using-tech-get-wildfire-victims-financial-help/403622/",
@@ -161,11 +149,7 @@ export default async function McpWildfirePage({
               {
                 key: "nbc",
                 title: t("nbc"),
-                content: (
-                  <span style={{ fontSize: "1.25rem", lineHeight: "1rem" }}>
-                    ↗
-                  </span>
-                ),
+                content: 'arrow',
                 config: {
                   external: true,
                   url: "https://www.nbclosangeles.com/news/california-wildfires/la-county-business-wildfire-relief-funds/3627763/",
@@ -174,11 +158,7 @@ export default async function McpWildfirePage({
               {
                 key: "latimes",
                 title: t("latimes"),
-                content: (
-                  <span style={{ fontSize: "1.25rem", lineHeight: "1rem" }}>
-                    ↗
-                  </span>
-                ),
+                content: 'arrow',
                 config: {
                   external: true,
                   url: "https://www.latimes.com/california/story/2025-03-11/local-relief-grants-deadline-here",
@@ -187,11 +167,7 @@ export default async function McpWildfirePage({
               {
                 key: "lacounty",
                 title: t("lacounty"),
-                content: (
-                  <span style={{ fontSize: "1.25rem", lineHeight: "1rem" }}>
-                    ↗
-                  </span>
-                ),
+                content: 'arrow',
                 config: {
                   external: true,
                   url: "https://lacounty.gov/2025/02/26/los-angeles-county-wildfire-relief-funds-receive-a-multimillion-dollar-boost-from-fireaid/",
@@ -200,11 +176,7 @@ export default async function McpWildfirePage({
               {
                 key: "santaMonicaDailyPress",
                 title: t("santaMonicaDailyPress"),
-                content: (
-                  <span style={{ fontSize: "1.25rem", lineHeight: "1rem" }}>
-                    ↗
-                  </span>
-                ),
+                content: 'arrow',
                 config: {
                   external: true,
                   url: "https://smdp.com/business/la-county-launches-dollar250000-grant-program-for-malibu-topanga-businesses/",
@@ -213,11 +185,7 @@ export default async function McpWildfirePage({
               {
                 key: "santaMonicaMirror",
                 title: t("santaMonicaMirror"),
-                content: (
-                  <span style={{ fontSize: "1.25rem", lineHeight: "1rem" }}>
-                    ↗
-                  </span>
-                ),
+                content: 'arrow',
                 config: {
                   external: true,
                   url: "https://smmirror.com/2025/03/county-disburses-initial-2-7m-in-wildfire-relief-funds-to-small-businesses-and-workers/",
@@ -226,11 +194,7 @@ export default async function McpWildfirePage({
               {
                 key: "secretLosAngeles",
                 title: t("secretLosAngeles"),
-                content: (
-                  <span style={{ fontSize: "1.25rem", lineHeight: "1rem" }}>
-                    ↗
-                  </span>
-                ),
+                content: 'arrow',
                 config: {
                   external: true,
                   url: "https://secretlosangeles.com/new-grant-in-la-county-to-help-small-businesses-impacted-by-wildfires/",

@@ -113,7 +113,11 @@ export const LinkList: React.FC<LinkListProps> = ({ sections, showIndex = true }
                   onBlur={handleClearCurrentLink}
                 >
                   <span>{link.title}</span>
-                  {link.content && <span className={styles.linkContent}>{link.content}</span>}
+                  {link.content === 'arrow' ? (
+                    <span className={styles.arrow}>→</span>
+                  ) : (
+                    <span className={styles.linkContent}>{link.content}</span>
+                  )}
                 </a>
               ) : (
                 <NavLink
@@ -129,7 +133,11 @@ export const LinkList: React.FC<LinkListProps> = ({ sections, showIndex = true }
                   onBlur={handleClearCurrentLink}
                 >
                   <span>{link.title}</span>
-                  <span className={styles.linkContent}>{link.content}</span>
+                  {link.content === 'arrow' ? (
+                    <span className={styles.arrow}>→</span>
+                  ) : (
+                    <span className={styles.linkContent}>{link.content}</span>
+                  )}
                 </NavLink>
               )}
             </li>

@@ -43,6 +43,23 @@ span.linkContent {
     opacity: 0.6;
 }
 
+span.arrow {
+    line-height: 1rem;
+    font-family: "Tarnac", sans-serif;
+    font-size: 1.5rem;
+    opacity: 0.6;
+    transition: all 0.2s ease-out;
+}
+
+a.link:hover span.arrow {
+    opacity: 1;
+    transform: rotate(-45deg);
+}
+
+li.inactive span.arrow {
+    opacity: 0;
+}
+
 section.linkSection {
     margin-bottom: 1rem;
     ul {

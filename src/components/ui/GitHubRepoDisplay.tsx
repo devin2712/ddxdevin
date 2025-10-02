@@ -40,7 +40,7 @@ export const GitHubRepoDisplay = async ({
           <span className={styles.repoName}>{repoName}</span>
         </div>
       </div>
-      <span className={styles.arrow}>↗</span>
+      <span className={styles.arrow}>→</span>
     </a>
   );
 };
