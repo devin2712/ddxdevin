@@ -65,7 +65,8 @@
   transition: all 0.2s ease-out;
 }
 
-.card:hover .arrow {
+.card:hover .arrow,
+.card:focus-visible .arrow {
   opacity: 1;
   transform: rotate(-45deg);
 }

@@ -189,6 +189,22 @@ export const LinkList: React.FC<LinkListProps> = ({
               rafRef.current = null;
             }
           }}
+          onBlur={(e) => {
+            // Check if focus is leaving the entire wrapper
+            if (!e.currentTarget.contains(e.relatedTarget as Node)) {
+              setIsFocusedSection(false);
+              setCurrentLink(null);
+              setArrowPosition(null);
+              if (blurTimeoutRef.current) {
+                clearTimeout(blurTimeoutRef.current);
+                blurTimeoutRef.current = null;
+              }
+              if (rafRef.current) {
+                cancelAnimationFrame(rafRef.current);
+                rafRef.current = null;
+              }
+            }
+          }}
         >
           <ul className={styles.list}>
             {section.links.map((link) => (
