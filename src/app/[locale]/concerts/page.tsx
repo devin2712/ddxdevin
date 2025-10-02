@@ -22,6 +22,7 @@ export default function ConcertsPage() {
   const [searchQuery, setSearchQuery] = useState<string>(q);
   const debouncedSearchQuery = useDebounce(searchQuery, 300);
   const isSearching = searchQuery !== debouncedSearchQuery;
+  const lastPushedQuery = useRef<string>(q);
 
   const {
     data,
@@ -30,19 +31,24 @@ export default function ConcertsPage() {
     error: _error,
   } = useConcertData();
 
+  // Sync URL to state only when user navigates (browser back/forward)
   useEffect(() => {
-    setSearchQuery(q);
+    if (q !== lastPushedQuery.current) {
+      setSearchQuery(q);
+    }
   }, [q]);
 
+  // Sync state to URL after debounce
   useEffect(() => {
     const trimmedQuery = debouncedSearchQuery.trim();
     if (trimmedQuery !== q) {
+      lastPushedQuery.current = trimmedQuery;
       const params = new URLSearchParams();
       if (trimmedQuery) {
         params.set("q", trimmedQuery);
-        router.push(`?${params.toString()}`, { scroll: false });
+        router.replace(`?${params.toString()}`, { scroll: false });
       } else {
-        router.push(window.location.pathname, { scroll: false });
+        router.replace(window.location.pathname, { scroll: false });
       }
     }
   }, [debouncedSearchQuery, router, q]);
