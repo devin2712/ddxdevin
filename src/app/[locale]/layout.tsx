@@ -7,6 +7,7 @@ import { routing } from "@/i18n/routing";
 import { getMessages, setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { ThemeProvider } from "@/contexts/ThemeContext";
+import { Analytics } from '@vercel/analytics/react';
 
 // Primary font - Tarnac with optimized loading
 const tarnac = localFont({
@@ -142,6 +143,7 @@ export default async function LocaleLayout({
             {children}
           </NextIntlClientProvider>
         </ThemeProvider>
+        <Analytics />
       </body>
     </html>
   );
