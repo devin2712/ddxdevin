@@ -12,4 +12,5 @@ export type LinkListSection = {
   key: string;
   title: string;
   links: Link[];
+  className?: string;
 };

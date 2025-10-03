@@ -6,6 +6,8 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 import { StyledLink } from "@/components/ui/StyledLink";
 import { ThemeToggle } from "@/components/ui/ThemeToggle";
 import { Clock } from "@/components/ui/Clock";
+import { PageAnimations } from "@/components/ui/PageAnimations";
+import { AnimatedList } from "@/components/ui/AnimatedList";
 
 export default async function Home({
   params,
@@ -15,9 +17,11 @@ export default async function Home({
   const { locale } = await params;
   setRequestLocale(locale);
   const t = await getTranslations("home");
+  
   const linkSections: LinkListSection[] = [
     {
       key: "writing",
+      className: styles.fadeInUpSection,
       title: t("sections.writing"),
       links: [
         {
@@ -69,6 +73,7 @@ export default async function Home({
     },
     {
       key: "photography",
+      className: styles.fadeInUpSection,
       title: t("sections.photography"),
       links: [
         {
@@ -102,6 +107,7 @@ export default async function Home({
     },
     {
       key: "connect",
+      className: styles.fadeInUpSection,
       title: t("sections.connect"),
       links: [
         {
@@ -138,74 +144,87 @@ export default async function Home({
   return (
     <>
       <main id="main-content" className={styles.contentContainer}>
-        <div className={styles.content}>
-          <div className={styles.controlPanel}>
-            <Clock label="NYC" />
-            <ThemeToggle />
+        <PageAnimations>
+          <div className={styles.content}>
+            <div className={`${styles.controlPanel} ${styles.fadeInSection}`}>
+              <Clock label="NYC" />
+              <ThemeToggle />
+            </div>
+            <div
+              className={styles.fadeInUpSection}
+              style={{ animationDelay: "0s" }}
+            >
+              <Header
+                as="h1"
+                title={<span className={styles.name}>{t("title")}</span>}
+                description={
+                  <span className={styles.title}>{t("description")}</span>
+                }
+              />
+            </div>
+            <section className={styles.intro}>
+              <AnimatedList baseDelay={24} stagger={32} className={styles.fadeInUpSection}>
+                <p>
+                  {t.rich("intro", {
+                    aidkit: (chunks) => (
+                      <StyledLink
+                        href="https://www.aidkit.com"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label={`${chunks} (opens in new tab)`}
+                        showArrow={false}
+                      >
+                        {chunks}
+                      </StyledLink>
+                    ),
+                  })}
+                </p>
+                <p>
+                  {t.rich("hypr", {
+                    hypr: (chunks) => (
+                      <StyledLink
+                        href="https://www.hypr.com"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label={`${chunks} (opens in new tab)`}
+                        showArrow={false}
+                      >
+                        {chunks}
+                      </StyledLink>
+                    ),
+                  })}
+                </p>
+                <p>
+                  {t.rich("cht", {
+                    cloudhealth: (chunks) => (
+                      <StyledLink
+                        href="https://www.cloudhealthtech.com"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label={`${chunks} (opens in new tab)`}
+                        showArrow={false}
+                      >
+                        {chunks}
+                      </StyledLink>
+                    ),
+                    vmware: (chunks) => (
+                      <StyledLink
+                        href="https://www.vmware.com"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label={`${chunks} (opens in new tab)`}
+                        showArrow={false}
+                      >
+                        {chunks}
+                      </StyledLink>
+                    ),
+                  })}
+                </p>
+              </AnimatedList>
+            </section>
+            <LinkList sections={linkSections} />
           </div>
-          <Header
-            as="h1"
-            title={<span className={styles.name}>{t("title")}</span>}
-            description={
-              <span className={styles.title}>{t("description")}</span>
-            }
-          />
-          <section className={styles.intro}>
-            <p>
-              {t.rich("intro", {
-                aidkit: (chunks) => (
-                  <StyledLink
-                    href="https://www.aidkit.com"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label={`${chunks} (opens in new tab)`}
-                    showArrow={false}
-                  >
-                    {chunks}
-                  </StyledLink>
-                ),
-              })}
-            </p>
-            <p>
-              {t.rich("background", {
-                cloudhealth: (chunks) => (
-                  <StyledLink
-                    href="https://www.cloudhealthtech.com"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label={`${chunks} (opens in new tab)`}
-                    showArrow={false}
-                  >
-                    {chunks}
-                  </StyledLink>
-                ),
-                hypr: (chunks) => (
-                  <StyledLink
-                    href="https://www.hypr.com"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label={`${chunks} (opens in new tab)`}
-                    showArrow={false}
-                  >
-                    {chunks}
-                  </StyledLink>
-                ),
-                vmware: (chunks) => (
-                  <StyledLink
-                    href="https://www.vmware.com"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label={`${chunks} (opens in new tab)`}
-                    showArrow={false}
-                  >
-                    {chunks}
-                  </StyledLink>
-                ),
-              })}
-            </p>
-          </section>
-          <LinkList sections={linkSections} />
-        </div>
+        </PageAnimations>
       </main>
     </>
   );

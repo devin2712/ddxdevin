@@ -10,6 +10,8 @@ import { useIsTouchDevice } from "@/hooks/useIsTouchDevice";
 type LinkListProps = {
   sections: LinkListSection[];
   showIndex?: boolean;
+  baseDelay?: number;
+  stagger?: number;
 };
 
 type CurrentLink = {
@@ -68,6 +70,8 @@ const INDEX_ICONS: Record<number, JSX.Element> = {
 export const LinkList: React.FC<LinkListProps> = ({
   sections,
   showIndex = true,
+  baseDelay = 200,
+  stagger = 16,
 }) => {
   const isTouchDevice = useIsTouchDevice();
   const [currentLink, setCurrentLink] = useState<CurrentLink>(null);
@@ -149,7 +153,10 @@ export const LinkList: React.FC<LinkListProps> = ({
   const hasArrowContent = (section: (typeof sections)[0]) =>
     section.links.some((link) => link.content === "arrow");
 
-  return sections.map((section, index) => {
+  // Calculate cumulative delay for each section
+  let cumulativeItemCount = 0;
+
+  return sections.map((section, sectionIndex) => {
     const isSectionInactive =
       currentLink && currentLink.sectionKey !== section.key;
     const showArrow =
@@ -157,21 +164,36 @@ export const LinkList: React.FC<LinkListProps> = ({
       hasArrowContent(section) &&
       arrowPosition?.section === section.key;
 
+    // Calculate this section's starting delay
+    const sectionDelay = baseDelay + cumulativeItemCount * stagger;
+
+    // Update cumulative count (1 header + number of links)
+    const itemsInSection = 1 + section.links.length;
+    cumulativeItemCount += itemsInSection;
+
     return (
-      <section key={section.key} className={styles.linkSection}>
-        <Header
-          as="h2"
-          title={
-            <div
-              className={`${styles.headerWithIndex} ${
-                isSectionInactive ? styles.inactive : ""
-              }`}
-            >
-              {showIndex && index > -1 && index < 10 && INDEX_ICONS[index + 1]}
-              {section.title}
-            </div>
-          }
-        />
+      <section
+        key={section.key}
+        className={styles.linkSection}
+      >
+        <div
+          className={section.className ?? ''}
+          style={{ animationDelay: `${sectionDelay}ms` }}
+        >
+          <Header
+            as="h2"
+            title={
+              <div
+                className={`${styles.headerWithIndex} ${
+                  isSectionInactive ? styles.inactive : ""
+                }`}
+              >
+                {showIndex && sectionIndex > -1 && sectionIndex < 10 && INDEX_ICONS[sectionIndex + 1]}
+                {section.title}
+              </div>
+            }
+          />
+        </div>
         <div
           className={styles.listWrapper}
           data-touch-device={isTouchDevice}
@@ -207,20 +229,23 @@ export const LinkList: React.FC<LinkListProps> = ({
           }}
         >
           <ul className={styles.list}>
-            {section.links.map((link) => (
-              <li
-                key={link.key}
-                ref={(el) => {
-                  linkRefs.current[`${section.key}-${link.key}`] = el;
-                }}
-                className={getLinkClassName(section.key, link.key)}
-                onMouseEnter={() =>
-                  handleSetCurrentLink({
-                    sectionKey: section.key,
-                    linkKey: link.key,
-                  })
-                }
-              >
+            {section.links.map((link, linkIndex) => {
+              const linkDelay = sectionDelay + (linkIndex + 1) * stagger;
+              return (
+                <li
+                  key={link.key}
+                  ref={(el) => {
+                    linkRefs.current[`${section.key}-${link.key}`] = el;
+                  }}
+                  className={`${getLinkClassName(section.key, link.key)} ${section.className ?? ''}`}
+                  style={{ animationDelay: `${linkDelay}ms` }}
+                  onMouseEnter={() =>
+                    handleSetCurrentLink({
+                      sectionKey: section.key,
+                      linkKey: link.key,
+                    })
+                  }
+                >
                 {link.config.external ? (
                   <a
                     className={styles.link}
@@ -272,8 +297,9 @@ export const LinkList: React.FC<LinkListProps> = ({
                     )}
                   </NavLink>
                 )}
-              </li>
-            ))}
+                </li>
+              );
+            })}
           </ul>
           {showArrow && (
             <span

@@ -69,3 +69,44 @@ section.intro {
 p.not_found_return_home {
   margin-top: 3rem;
 }
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(32px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.fadeInSection {
+  opacity: 0;
+}
+
+.fadeInUpSection {
+  opacity: 0;
+}
+
+[data-animate="true"] .fadeInSection {
+  animation: fadeIn 0.5s cubic-bezier(0.65,0.05,0.36,1) forwards;
+}
+
+[data-animate="true"] .fadeInUpSection {
+  animation: fadeInUp 0.32s cubic-bezier(0.65,0.05,0.36,1) forwards;
+}
+
+[data-animate="false"] .fadeInSection,
+[data-animate="false"] .fadeInUpSection {
+  opacity: 1;
+}
