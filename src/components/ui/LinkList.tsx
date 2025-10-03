@@ -237,14 +237,17 @@ export const LinkList: React.FC<LinkListProps> = ({
                   ref={(el) => {
                     linkRefs.current[`${section.key}-${link.key}`] = el;
                   }}
-                  className={`${getLinkClassName(section.key, link.key)} ${section.className ?? ''}`}
-                  style={{ animationDelay: `${linkDelay}ms` }}
+                  className={getLinkClassName(section.key, link.key)}
                   onMouseEnter={() =>
                     handleSetCurrentLink({
                       sectionKey: section.key,
                       linkKey: link.key,
                     })
                   }
+                >
+                <div
+                  className={section.className ?? ''}
+                  style={{ animationDelay: `${linkDelay}ms` }}
                 >
                 {link.config.external ? (
                   <a
@@ -297,6 +300,7 @@ export const LinkList: React.FC<LinkListProps> = ({
                     )}
                   </NavLink>
                 )}
+                </div>
                 </li>
               );
             })}
