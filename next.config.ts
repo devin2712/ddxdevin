@@ -41,6 +41,18 @@ const nextConfig: NextConfig = {
     ],
   },
 
+  // Redirects
+  async redirects() {
+    return [
+      {
+        source: "/lac",
+        destination:
+          "https://www.figma.com/deck/rOWMJPrx0Kq9IV8zjFSv8B/LAC?node-id=40000007-512&viewport=-11113%2C-607%2C0.57&t=UIcw7CNQeNDglDrx-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1",
+        permanent: false,
+      },
+    ];
+  },
+
   // Security headers
   async headers() {
     return [
