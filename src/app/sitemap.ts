@@ -12,19 +12,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'covid-myturn',
     'la-main-ouverte',
     'mcp-wildfire',
-    'resume',
     'se1'
   ]
 
   const sitemap: MetadataRoute.Sitemap = []
-
-  // Add root URL
-  sitemap.push({
-    url: baseUrl,
-    lastModified: new Date(),
-    changeFrequency: 'monthly',
-    priority: 1,
-  })
 
   // Add all routes for each language
   languages.forEach((lang) => {
@@ -34,7 +25,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
         url: `${baseUrl}${path}`,
         lastModified: new Date(),
         changeFrequency: 'monthly',
-        priority: route === '' ? 0.9 : 0.8,
+        priority: route === '' ? 1 : 0.8,
       })
     })
   })

@@ -4,6 +4,8 @@
 # Default crawlers
 User-agent: *
 Allow: /
+Disallow: /resume
+Disallow: /lac
 Crawl-delay: 1
 
 # AI/LLM crawlers - Allow with specific guidance

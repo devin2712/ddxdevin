@@ -47,6 +47,20 @@ export async function generateMetadata({ params }: LayoutProps<"/[locale]">): Pr
     keywords: ["Software Engineer", "Developer", "Devin Nguyen"],
     authors: [{ name: "Devin Nguyen" }],
     creator: "Devin Nguyen",
+    alternates: {
+      canonical: `https://devinnguyen.com/${locale}`,
+      languages: {
+        'en': 'https://devinnguyen.com/en',
+        'de': 'https://devinnguyen.com/de',
+        'es': 'https://devinnguyen.com/es',
+        'fr': 'https://devinnguyen.com/fr',
+        'hi': 'https://devinnguyen.com/hi',
+        'ko': 'https://devinnguyen.com/ko',
+        'vi': 'https://devinnguyen.com/vi',
+        'zh': 'https://devinnguyen.com/zh',
+        'x-default': 'https://devinnguyen.com/en',
+      },
+    },
     icons: {
       icon: [
         { url: "/icons/blue_arrow.svg", type: "image/svg+xml" },
@@ -62,7 +76,7 @@ export async function generateMetadata({ params }: LayoutProps<"/[locale]">): Pr
     openGraph: {
       title: "Devin Nguyen",
       description: "Software Engineer",
-      url: "https://devinnguyen.com",
+      url: `https://devinnguyen.com/${locale}`,
       siteName: "Devin Nguyen",
       locale: locale.replace("-", "_"),
       type: "website",
@@ -132,6 +146,23 @@ export default async function LocaleLayout({
                 document.documentElement.setAttribute('data-theme', theme);
               } catch (e) {}
             `,
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Person",
+              "name": "Devin Nguyen",
+              "jobTitle": "Software Engineer",
+              "url": "https://devinnguyen.com",
+              "sameAs": [
+                "https://www.linkedin.com/in/devinnguyen/",
+                "https://github.com/devin2712",
+                "https://twitter.com/ddxdevin"
+              ]
+            })
           }}
         />
         <meta name="theme-color" content="#fafafa" media="(prefers-color-scheme: light)" />
