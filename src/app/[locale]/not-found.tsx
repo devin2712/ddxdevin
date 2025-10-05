@@ -1,11 +1,20 @@
+"use client";
+
 import { Header } from "@/components/ui/Header";
 import { useTranslations } from "next-intl";
 import styles from "./page.module.css";
 import { Button } from "@/components/ui/Button";
 import { Arrow } from "@/components/ui/icons/Arrow";
+import { useEffect } from "react";
 
 export default function NotFound() {
   const t = useTranslations("notFound");
+
+  useEffect(() => {
+    // Apply theme on mount in case the layout's script didn't run
+    const theme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    document.documentElement.setAttribute('data-theme', theme);
+  }, []);
 
   return (
     <>

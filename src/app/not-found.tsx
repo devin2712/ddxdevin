@@ -5,17 +5,32 @@
 // an invalid value as the `[locale]` param and calls `notFound()`.
 
 import Link from 'next/link';
+import './globals.css';
 
 export default function GlobalNotFound() {
   return (
     <html lang="en">
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              try {
+                var theme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+                document.documentElement.setAttribute('data-theme', theme);
+              } catch (e) {}
+            `,
+          }}
+        />
+        <meta name="theme-color" content="#fafafa" media="(prefers-color-scheme: light)" />
+        <meta name="theme-color" content="#0a0a0a" media="(prefers-color-scheme: dark)" />
+      </head>
       <body>
         <a href="#main-content" style={{
           position: 'absolute',
           top: '-40px',
           left: '6px',
-          background: '#000',
-          color: '#fff',
+          background: 'var(--foreground)',
+          color: 'var(--background)',
           padding: '8px',
           textDecoration: 'none',
           zIndex: 100,
