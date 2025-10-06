@@ -6,8 +6,8 @@ import { hasLocale, NextIntlClientProvider } from "next-intl";
 import { routing } from "@/i18n/routing";
 import { getMessages, setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
-import { ThemeProvider } from "@/contexts/ThemeContext";
-import { Analytics } from '@vercel/analytics/react';
+import { Analytics } from "@vercel/analytics/react";
+import { ThemeInitializer } from "@/components/ThemeInitializer";
 
 // Primary font - Tarnac with optimized loading
 const tarnac = localFont({
@@ -26,7 +26,7 @@ const tarnac = localFont({
   variable: "--font-tarnac",
   display: "swap",
   preload: true,
-  adjustFontFallback: 'Arial',
+  adjustFontFallback: "Arial",
 });
 
 // Fallback font registration if Tarnac is unavailable
@@ -37,7 +37,9 @@ const robotoSlab = Roboto_Slab({
   display: "swap",
 });
 
-export async function generateMetadata({ params }: LayoutProps<"/[locale]">): Promise<Metadata> {
+export async function generateMetadata({
+  params,
+}: LayoutProps<"/[locale]">): Promise<Metadata> {
   const { locale } = await params;
 
   return {
@@ -50,15 +52,15 @@ export async function generateMetadata({ params }: LayoutProps<"/[locale]">): Pr
     alternates: {
       canonical: `https://devinnguyen.com/${locale}`,
       languages: {
-        'en': 'https://devinnguyen.com/en',
-        'de': 'https://devinnguyen.com/de',
-        'es': 'https://devinnguyen.com/es',
-        'fr': 'https://devinnguyen.com/fr',
-        'hi': 'https://devinnguyen.com/hi',
-        'ko': 'https://devinnguyen.com/ko',
-        'vi': 'https://devinnguyen.com/vi',
-        'zh': 'https://devinnguyen.com/zh',
-        'x-default': 'https://devinnguyen.com/en',
+        en: "https://devinnguyen.com/en",
+        de: "https://devinnguyen.com/de",
+        es: "https://devinnguyen.com/es",
+        fr: "https://devinnguyen.com/fr",
+        hi: "https://devinnguyen.com/hi",
+        ko: "https://devinnguyen.com/ko",
+        vi: "https://devinnguyen.com/vi",
+        zh: "https://devinnguyen.com/zh",
+        "x-default": "https://devinnguyen.com/en",
       },
     },
     icons: {
@@ -67,8 +69,16 @@ export async function generateMetadata({ params }: LayoutProps<"/[locale]">): Pr
         { url: "/icons/blue_arrow_16.png", sizes: "16x16", type: "image/png" },
         { url: "/icons/blue_arrow_32.png", sizes: "32x32", type: "image/png" },
         { url: "/icons/blue_arrow_64.png", sizes: "64x64", type: "image/png" },
-        { url: "/icons/blue_arrow_192.png", sizes: "192x192", type: "image/png" },
-        { url: "/icons/blue_arrow_512.png", sizes: "512x512", type: "image/png" },
+        {
+          url: "/icons/blue_arrow_192.png",
+          sizes: "192x192",
+          type: "image/png",
+        },
+        {
+          url: "/icons/blue_arrow_512.png",
+          sizes: "512x512",
+          type: "image/png",
+        },
       ],
       shortcut: "/icons/blue_arrow_32.png",
       apple: "/icons/blue_arrow_192.png",
@@ -142,7 +152,18 @@ export default async function LocaleLayout({
           dangerouslySetInnerHTML={{
             __html: `
               try {
-                var theme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+                var stored = localStorage.getItem('theme');
+                var theme = 'light';
+                if (stored) {
+                  try {
+                    var parsed = JSON.parse(stored);
+                    theme = parsed.state?.theme || 'light';
+                  } catch (e) {
+                    theme = 'light';
+                  }
+                } else {
+                  theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+                }
                 document.documentElement.setAttribute('data-theme', theme);
               } catch (e) {}
             `,
@@ -154,27 +175,34 @@ export default async function LocaleLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "Person",
-              "name": "Devin Nguyen",
-              "jobTitle": "Software Engineer",
-              "url": "https://devinnguyen.com",
-              "sameAs": [
+              name: "Devin Nguyen",
+              jobTitle: "Software Engineer",
+              url: "https://devinnguyen.com",
+              sameAs: [
                 "https://www.linkedin.com/in/devinnguyen/",
                 "https://github.com/devin2712",
-                "https://twitter.com/ddxdevin"
-              ]
-            })
+                "https://twitter.com/ddxdevin",
+              ],
+            }),
           }}
         />
-        <meta name="theme-color" content="#fafafa" media="(prefers-color-scheme: light)" />
-        <meta name="theme-color" content="#0a0a0a" media="(prefers-color-scheme: dark)" />
+        <meta
+          name="theme-color"
+          content="#fafafa"
+          media="(prefers-color-scheme: light)"
+        />
+        <meta
+          name="theme-color"
+          content="#0a0a0a"
+          media="(prefers-color-scheme: dark)"
+        />
       </head>
       <body>
-        <ThemeProvider>
-          <NextIntlClientProvider messages={messages}>
-            {children}
-          </NextIntlClientProvider>
-        </ThemeProvider>
+        <NextIntlClientProvider messages={messages}>
+          {children}
+        </NextIntlClientProvider>
         <Analytics />
+        <ThemeInitializer />
       </body>
     </html>
   );

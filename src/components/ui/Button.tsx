@@ -7,7 +7,7 @@ type ButtonAsButton = ButtonHTMLAttributes<HTMLButtonElement> & {
   children: React.ReactNode;
 };
 
-type ButtonAsLink = AnchorHTMLAttributes<HTMLAnchorElement> & {
+type ButtonAsLink = Omit<AnchorHTMLAttributes<HTMLAnchorElement>, 'popover'> & {
   as: "link";
   href: string;
   children: React.ReactNode;

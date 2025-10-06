@@ -3,10 +3,10 @@
 import React from "react";
 import { useTranslations } from "next-intl";
 import { Tooltip } from "./Tooltip";
-import { useTheme, type Theme } from "@/contexts/ThemeContext";
 import { SunIcon } from "./icons/SunIcon";
 import { MoonIcon } from "./icons/MoonIcon";
 import styles from "./ThemeToggle.module.css";
+import { Theme, useThemeStore } from "@/stores/themeStore";
 
 const getThemeIcon = (theme: Theme) => {
   switch (theme) {
@@ -20,7 +20,7 @@ const getThemeIcon = (theme: Theme) => {
 };
 
 export const ThemeToggle: React.FC = () => {
-  const { theme, setTheme } = useTheme();
+  const { theme, setTheme } = useThemeStore();
   const t = useTranslations("theme");
 
   const handleToggle = () => {
