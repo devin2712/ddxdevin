@@ -6,8 +6,17 @@ import { BauhausClientComponent } from "./BauhausClientComponent";
 // This page is fully static
 export const dynamic = 'force-static';
 
-export async function generateMetadata(): Promise<Metadata> {
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+
   return {
+    alternates: {
+      canonical: `https://devinnguyen.com/${locale}/bauhaus`,
+    },
     openGraph: {
       title: "Lessons from the Bauhaus by Devin Nguyen",
       description:

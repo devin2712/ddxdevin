@@ -6,8 +6,17 @@ import type { Metadata } from "next";
 // This page is fully static
 export const dynamic = 'force-static';
 
-export async function generateMetadata(): Promise<Metadata> {
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+
   return {
+    alternates: {
+      canonical: `https://devinnguyen.com/${locale}/se1`,
+    },
     openGraph: {
       title: "(S)E1 by Devin Nguyen",
       description: "Commuting scenes in London from E1 to SE1",

@@ -8,8 +8,17 @@ import { GitHubRepoDisplay } from "@/components/ui/GitHubRepoDisplay";
 // This page is fully static
 export const dynamic = "force-static";
 
-export async function generateMetadata(): Promise<Metadata> {
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+
   return {
+    alternates: {
+      canonical: `https://devinnguyen.com/${locale}/covid-appointments`,
+    },
     openGraph: {
       title: "COVID Appointment Notifications",
       description:

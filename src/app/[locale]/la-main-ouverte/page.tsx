@@ -8,8 +8,17 @@ import type { Metadata } from "next";
 // This page is fully static
 export const dynamic = 'force-static';
 
-export async function generateMetadata(): Promise<Metadata> {
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+
   return {
+    alternates: {
+      canonical: `https://devinnguyen.com/${locale}/la-main-ouverte`,
+    },
     openGraph: {
       title: "La Main Ouverte by Devin Nguyen",
       description: "Chandigarh, India - 2019",
