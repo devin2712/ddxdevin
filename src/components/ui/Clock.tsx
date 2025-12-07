@@ -154,7 +154,7 @@ export const Clock: React.FC<ClockProps> = ({ label, labelAlign = 'right' }) => 
           aria-label={t("ariaLabel", { time: clockData.formattedTime })}
           tabIndex={0}
         >
-          <svg width="24" height="24" viewBox="0 0 24 24">
+          <svg width="24" height="24" viewBox="0 0 24 24" suppressHydrationWarning>
             <circle cx="12" cy="12" r="11" className={styles.clockFace} />
 
             <circle cx="12" cy="12" r="1" fill="currentColor" opacity="0.8" />
@@ -169,6 +169,7 @@ export const Clock: React.FC<ClockProps> = ({ label, labelAlign = 'right' }) => 
               strokeLinecap="round"
               transform={`rotate(${clockData.hourAngle} 12 12)`}
               opacity="0.7"
+              suppressHydrationWarning
             />
 
             <line
@@ -181,6 +182,7 @@ export const Clock: React.FC<ClockProps> = ({ label, labelAlign = 'right' }) => 
               strokeLinecap="round"
               transform={`rotate(${clockData.minuteAngle} 12 12)`}
               opacity="0.7"
+              suppressHydrationWarning
             />
 
             <line
@@ -192,6 +194,7 @@ export const Clock: React.FC<ClockProps> = ({ label, labelAlign = 'right' }) => 
               strokeWidth="0.5"
               strokeLinecap="round"
               transform={`rotate(${clockData.secondAngle} 12 12)`}
+              suppressHydrationWarning
             />
           </svg>
         </div>

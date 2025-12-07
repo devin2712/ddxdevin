@@ -144,7 +144,7 @@ export default async function LocaleLayout({
   const messages = await getMessages();
 
   return (
-    <html className={`${tarnac.variable} ${robotoSlab.variable}`} lang={locale}>
+    <html className={`${tarnac.variable} ${robotoSlab.variable}`} lang={locale} suppressHydrationWarning>
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
