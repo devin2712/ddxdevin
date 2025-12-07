@@ -41,17 +41,38 @@ export const useDeviceType = (): DeviceType => {
   const [deviceType, setDeviceType] = useState<DeviceType>(detectDevice);
 
   useEffect(() => {
+    let timeoutId: NodeJS.Timeout;
+
     const handleResize = () => {
-      setDeviceType(detectDevice());
+      // Debounce to avoid excessive updates
+      clearTimeout(timeoutId);
+
+      timeoutId = setTimeout(() => {
+        const newDeviceType = detectDevice();
+        if (newDeviceType !== deviceType) {
+          setDeviceType(newDeviceType);
+        }
+      }, 150);
     };
 
-    // Listen for window resize
-    window.addEventListener("resize", handleResize);
+    // Use visualViewport API if available 
+    // This only fires when the layout viewport changes, not when browser chrome (address bar) hides/shows
+    if (window.visualViewport) {
+      window.visualViewport.addEventListener("resize", handleResize);
+    } else {
+      // Fallback for older browsers
+      window.addEventListener("resize", handleResize);
+    }
 
     return () => {
-      window.removeEventListener("resize", handleResize);
+      clearTimeout(timeoutId);
+      if (window.visualViewport) {
+        window.visualViewport.removeEventListener("resize", handleResize);
+      } else {
+        window.removeEventListener("resize", handleResize);
+      }
     };
-  }, []);
+  }, [deviceType]);
 
   return deviceType;
 };
