@@ -1,18 +1,24 @@
 'use client';
 
-import { useState } from 'react';
+import { useSyncExternalStore } from 'react';
+
+const subscribe = () => () => {};
+
+const getSnapshot = () => {
+  if (typeof window === 'undefined') return null;
+
+  const hasAnimated = sessionStorage.getItem('page-animated');
+  if (!hasAnimated) {
+    sessionStorage.setItem('page-animated', 'true');
+    return true;
+  }
+  return false;
+};
+
+const getServerSnapshot = () => null;
 
 export function PageAnimations({ children }: { children: React.ReactNode }) {
-  // Initialize state from sessionStorage to avoid effect setState
-  const [shouldAnimate] = useState<boolean>(() => {
-    if (typeof window === 'undefined') return false;
-    const hasAnimated = sessionStorage.getItem('page-animated');
-    if (!hasAnimated) {
-      sessionStorage.setItem('page-animated', 'true');
-      return true;
-    }
-    return false;
-  });
+  const shouldAnimate = useSyncExternalStore(subscribe, getSnapshot, getServerSnapshot);
 
   return (
     <div data-animate={shouldAnimate === null ? undefined : shouldAnimate ? 'true' : 'false'}>

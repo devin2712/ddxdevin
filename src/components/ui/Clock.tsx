@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef, useEffectEvent } from "react";
 import { useTranslations } from "next-intl";
 import { Tooltip } from "./Tooltip";
 import { useDeviceType } from "@/hooks/useDeviceType";
@@ -19,39 +19,39 @@ export const Clock: React.FC<ClockProps> = ({ label, labelAlign = 'right' }) => 
   const isMobile = deviceType !== 'desktop';
   const clockWrapperRef = useRef<HTMLDivElement>(null);
 
+  const onScroll = useEffectEvent(() => {
+    setTooltipOpen(false);
+  });
+
+  const onOutsideClick = useEffectEvent((e: MouseEvent) => {
+    if (clockWrapperRef.current && !clockWrapperRef.current.contains(e.target as Node)) {
+      setTooltipOpen(false);
+    }
+  });
+
   // Hide tooltip on scroll or outside click (mobile only)
   useEffect(() => {
     if (!isMobile || !tooltipOpen) return;
 
-    const handleScroll = () => {
-      setTooltipOpen(false);
-    };
-
-    const handleOutsideClick = (e: MouseEvent) => {
-      if (clockWrapperRef.current && !clockWrapperRef.current.contains(e.target as Node)) {
-        setTooltipOpen(false);
-      }
-    };
-
-    window.addEventListener('scroll', handleScroll, { passive: true });
+    window.addEventListener('scroll', onScroll, { passive: true });
 
     // Small delay to prevent closing on the same click that opened it
     const timer = setTimeout(() => {
-      document.addEventListener('click', handleOutsideClick, true);
+      document.addEventListener('click', onOutsideClick, true);
     }, 100);
 
     return () => {
       clearTimeout(timer);
-      window.removeEventListener('scroll', handleScroll);
-      document.removeEventListener('click', handleOutsideClick, true);
+      window.removeEventListener('scroll', onScroll);
+      document.removeEventListener('click', onOutsideClick, true);
     };
   }, [isMobile, tooltipOpen]);
 
-  useEffect(() => {
-    const updateTime = () => {
-      setTime(new Date());
-    };
+  const updateTime = useEffectEvent(() => {
+    setTime(new Date());
+  });
 
+  useEffect(() => {
     // Update every 100ms for smooth second hand
     const intervalId = setInterval(updateTime, 100);
 
