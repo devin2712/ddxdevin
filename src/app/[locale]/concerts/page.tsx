@@ -31,11 +31,14 @@ export default function ConcertsPage() {
     error: _error,
   } = useConcertData();
 
-  // Sync URL to state only when user navigates (browser back/forward)
+  // Sync URL to state when URL changes from external navigation (back/forward)
   useEffect(() => {
-    if (q !== lastPushedQuery.current) {
-      setSearchQuery(q);
-    }
+    const isExternalNavigation = q !== lastPushedQuery.current;
+    if (!isExternalNavigation) return;
+
+    // Update search query to match URL from browser navigation
+    // eslint-disable-next-line react-hooks/set-state-in-effect
+    setSearchQuery(q);
   }, [q]);
 
   // Sync state to URL after debounce

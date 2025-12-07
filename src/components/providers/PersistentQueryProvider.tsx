@@ -1,6 +1,6 @@
 "use client";
 
-import { ReactNode, useEffect, useState } from "react";
+import { ReactNode, useState } from "react";
 import { useQueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { createAsyncStoragePersister } from "@tanstack/query-async-storage-persister";
 import { PersistQueryClientProvider, Persister } from "@tanstack/react-query-persist-client";
@@ -11,24 +11,22 @@ export default function PersistentQueryProvider({
   children: ReactNode
 }) {
   const queryClient = useQueryClient();
-  const [persister, setPersister] = useState<Persister | null>(null);
-  const [isClient, setIsClient] = useState(false);
+  // Initialize persister lazily to avoid hydration mismatches
+  const [persister] = useState<Persister | null>(() => {
+    if (typeof window !== 'undefined') {
+      return createAsyncStoragePersister({
+        storage: window.localStorage,
+      });
+    }
+    return null;
+  });
 
-  // Check if we're on the client side to avoid hydration mismatches
-  useEffect(() => {
-    setIsClient(true);
-    const asyncPersister = createAsyncStoragePersister({
-      storage: window.localStorage,
-    });
-    setPersister(asyncPersister);
-  }, []);
-
-  // On server or before hydration, render without persistence
-  if (!isClient || !persister) {
+  // On server or when persister is unavailable, render without persistence
+  if (!persister) {
     return <QueryClientProvider client={queryClient}>{children}</QueryClientProvider>;
   }
 
-  // After hydration, render with persistence enabled
+  // After client initialization, render with persistence enabled
   return (
     <PersistQueryClientProvider
       client={queryClient}

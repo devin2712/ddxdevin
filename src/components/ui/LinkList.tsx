@@ -1,6 +1,6 @@
 "use client";
 
-import React, { JSX, useState, useEffect } from "react";
+import React, { JSX, useState, useEffect, useMemo } from "react";
 import styles from "./LinkList.module.css";
 import { LinkListSection } from "@/types";
 import { Link as NavLink } from "@/i18n/navigation";
@@ -153,8 +153,20 @@ export const LinkList: React.FC<LinkListProps> = ({
   const hasArrowContent = (section: (typeof sections)[0]) =>
     section.links.some((link) => link.content === "arrow");
 
-  // Calculate cumulative delay for each section
-  let cumulativeItemCount = 0;
+  // Calculate cumulative delays for all sections using useMemo
+  const sectionDelays = useMemo(() => {
+    return sections.reduce<{ delays: number[]; cumulativeCount: number }>(
+      (acc, section) => {
+        const sectionDelay = baseDelay + acc.cumulativeCount * stagger;
+        const itemsInSection = 1 + section.links.length;
+        return {
+          delays: [...acc.delays, sectionDelay],
+          cumulativeCount: acc.cumulativeCount + itemsInSection,
+        };
+      },
+      { delays: [], cumulativeCount: 0 }
+    ).delays;
+  }, [sections, baseDelay, stagger]);
 
   return sections.map((section, sectionIndex) => {
     const isSectionInactive =
@@ -164,12 +176,8 @@ export const LinkList: React.FC<LinkListProps> = ({
       hasArrowContent(section) &&
       arrowPosition?.section === section.key;
 
-    // Calculate this section's starting delay
-    const sectionDelay = baseDelay + cumulativeItemCount * stagger;
-
-    // Update cumulative count (1 header + number of links)
-    const itemsInSection = 1 + section.links.length;
-    cumulativeItemCount += itemsInSection;
+    // Get pre-calculated delay for this section
+    const sectionDelay = sectionDelays[sectionIndex];
 
     return (
       <section

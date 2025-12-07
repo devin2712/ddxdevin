@@ -1,19 +1,18 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 
 export function PageAnimations({ children }: { children: React.ReactNode }) {
-  const [shouldAnimate, setShouldAnimate] = useState<boolean | null>(null);
-
-  useEffect(() => {
+  // Initialize state from sessionStorage to avoid effect setState
+  const [shouldAnimate] = useState<boolean>(() => {
+    if (typeof window === 'undefined') return false;
     const hasAnimated = sessionStorage.getItem('page-animated');
     if (!hasAnimated) {
-      setShouldAnimate(true);
       sessionStorage.setItem('page-animated', 'true');
-    } else {
-      setShouldAnimate(false);
+      return true;
     }
-  }, []);
+    return false;
+  });
 
   return (
     <div data-animate={shouldAnimate === null ? undefined : shouldAnimate ? 'true' : 'false'}>

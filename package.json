@@ -3,8 +3,8 @@
   "version": "0.2.0",
   "private": true,
   "scripts": {
-    "dev": "next dev --turbopack",
-    "build": "next build --turbopack",
+    "dev": "next dev",
+    "build": "next build",
     "start": "next start",
     "lint": "eslint",
     "lint:fix": "eslint --fix",
@@ -18,11 +18,11 @@
     "@tanstack/react-query-devtools": "^5.91.1",
     "@tanstack/react-query-persist-client": "^5.90.14",
     "@vercel/analytics": "^1.6.1",
-    "next": "15.5.7",
+    "next": "^16.0.7",
     "next-intl": "^4.5.8",
     "node-fetch": "^3.3.2",
-    "react": "19.1.0",
-    "react-dom": "19.1.0",
+    "react": "^19.2.1",
+    "react-dom": "^19.2.1",
     "zustand": "^5.0.9"
   },
   "devDependencies": {
@@ -32,8 +32,9 @@
     "@types/react-dom": "^19.2.3",
     "critters": "^0.0.25",
     "eslint": "^9.39.1",
-    "eslint-config-next": "15.5.4",
+    "eslint-config-next": "^16.0.7",
     "husky": "^9.1.7",
-    "typescript": "^5.9.3"
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.48.1"
   }
 }
