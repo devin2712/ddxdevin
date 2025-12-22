@@ -64,9 +64,9 @@
     "home": {
         "title": "Devin Nguyen",
         "description": "सॉफ्टवेयर इंजीनियर",
-        "intro": "मैं न्यूयॉर्क सिटी में स्थित एक फुल-स्टैक सॉफ्टवेयर इंजीनियर हूं, वर्तमान में <aidkit>AidKit</aidkit> में सरकारों और गैर-लाभकारी संगठनों के लिए benefits delivery को आधुनिक बनाने और स्केल करने के लिए infrastructure बना रहा हूं।",
-        "hypr": "पहले, मैं <hypr>HYPR</hypr> में प्रिंसिपल सॉफ्टवेयर इंजीनियर था, जहां मैंने बैंकों, विश्वविद्यालयों और स्टार्टअप्स के लिए विश्वसनीय passwordless authentication infrastructure बनाया।",
-        "cht": "उससे पहले, मैं <vmware>VMware</vmware> के <cloudhealth>CloudHealth</cloudhealth> में सीनियर मेंबर ऑफ टेक्निकल स्टाफ था, जहां मैंने enterprise scale पर cloud governance, cost optimization, और compliance के लिए solutions बनाए।",
+        "intro": "मैं न्यूयॉर्क सिटी में स्थित एक फुल-स्टैक सॉफ्टवेयर इंजीनियर हूं, वर्तमान में <tennr>Tennr</tennr> में healthcare operations के लिए intelligent automation platform बना रहा हूं।",
+        "previously": "पहले, मैं <aidkit>AidKit</aidkit> में प्रिंसिपल सॉफ्टवेयर इंजीनियर था, जहां मैंने सरकारों और गैर-लाभकारी संगठनों के लिए benefits delivery को आधुनिक बनाने और स्केल करने के लिए infrastructure बनाया, और <hypr>HYPR</hypr> में, जहां मैंने वित्तीय संस्थानों और स्टार्टअप्स के लिए passwordless authentication solutions बनाए।",
+        "before": "उससे पहले, मैं <vmware>VMware</vmware> के <cloudhealth>CloudHealth</cloudhealth> में सीनियर मेंबर ऑफ टेक्निकल स्टाफ था, जहां मैंने enterprise scale पर cloud governance, cost optimization, और compliance के लिए solutions बनाए।",
         "links": {
             "bauhaus": "बाउहाउस से सीख",
             "bauhaus_photo": "Bauhäuslers",

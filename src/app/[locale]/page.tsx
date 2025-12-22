@@ -166,9 +166,9 @@ export default async function Home({
               <AnimatedList baseDelay={24} stagger={32} className={styles.fadeInUpSection}>
                 <p>
                   {t.rich("intro", {
-                    aidkit: (chunks) => (
+                    tennr: (chunks) => (
                       <StyledLink
-                        href="https://www.aidkit.com"
+                        href="https://www.tennr.com/"
                         target="_blank"
                         rel="noopener noreferrer"
                         aria-label={`${chunks} (opens in new tab)`}
@@ -180,7 +180,18 @@ export default async function Home({
                   })}
                 </p>
                 <p>
-                  {t.rich("hypr", {
+                  {t.rich("previously", {
+                    aidkit: (chunks) => (
+                      <StyledLink
+                        href="https://www.aidkit.com"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label={`${chunks} (opens in new tab)`}
+                        showArrow={false}
+                      >
+                        {chunks}
+                      </StyledLink>
+                    ),
                     hypr: (chunks) => (
                       <StyledLink
                         href="https://www.hypr.com"
@@ -195,7 +206,7 @@ export default async function Home({
                   })}
                 </p>
                 <p>
-                  {t.rich("cht", {
+                  {t.rich("before", {
                     cloudhealth: (chunks) => (
                       <StyledLink
                         href="https://www.cloudhealthtech.com"

@@ -64,9 +64,9 @@
     "home": {
         "title": "Devin Nguyen",
         "description": "Kỹ sư phần mềm",
-        "intro": "Tôi là một kỹ sư phần mềm full-stack có trụ sở tại New York City, hiện đang xây dựng cơ sở hạ tầng cho các chính phủ và tổ chức phi lợi nhuận hiện đại hóa và mở rộng việc cung cấp quyền lợi tại <aidkit>AidKit</aidkit>.",
-        "hypr": "Trước đây, tôi là Kỹ sư phần mềm chính tại <hypr>HYPR</hypr>, nơi tôi đã xây dựng cơ sở hạ tầng xác thực không mật khẩu đáng tin cậy cho các ngân hàng, trường đại học và startup.",
-        "cht": "Trước đó, tôi là Thành viên kỹ thuật cấp cao tại <cloudhealth>CloudHealth</cloudhealth> của <vmware>VMware</vmware>, xây dựng các giải pháp cho quản trị đám mây, tối ưu hóa chi phí và tuân thủ quy định ở quy mô doanh nghiệp.",
+        "intro": "Tôi là một kỹ sư phần mềm full-stack có trụ sở tại New York City, hiện đang xây dựng nền tảng tự động hóa thông minh cho hoạt động y tế tại <tennr>Tennr</tennr>.",
+        "previously": "Trước đây, tôi là Kỹ sư phần mềm chính tại <aidkit>AidKit</aidkit>, nơi tôi đã xây dựng cơ sở hạ tầng cho các chính phủ và tổ chức phi lợi nhuận hiện đại hóa và mở rộng việc cung cấp quyền lợi, và tại <hypr>HYPR</hypr>, nơi tôi đã xây dựng các giải pháp xác thực không mật khẩu cho các tổ chức tài chính và startup.",
+        "before": "Trước đó, tôi là Thành viên kỹ thuật cấp cao tại <cloudhealth>CloudHealth</cloudhealth> của <vmware>VMware</vmware>, xây dựng các giải pháp cho quản trị đám mây, tối ưu hóa chi phí và tuân thủ quy định ở quy mô doanh nghiệp.",
         "links": {
             "bauhaus": "Bài học từ Bauhaus",
             "bauhaus_photo": "Bauhäuslers",

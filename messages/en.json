@@ -64,9 +64,9 @@
     "home": {
         "title": "Devin Nguyen",
         "description": "Software Engineer",
-        "intro": "I'm a full-stack software engineer based in New York City, currently building infrastructure for governments and nonprofits to modernize and scale benefits delivery at <aidkit>AidKit</aidkit>.",
-        "hypr": "Previously, I was a Principal Software Engineer at <hypr>HYPR</hypr>, where I built passwordless authentication infrastructure trusted by banks, universities, and startups.",
-        "cht": "Before that, I was a Senior Member of Technical Staff at <cloudhealth>CloudHealth</cloudhealth> by <vmware>VMware</vmware>, building solutions for cloud governance, cost optimization, and compliance at enterprise scale.",
+        "intro": "I'm a full-stack software engineer based in New York City, currently building the intelligent automation platform for healthcare operations at <tennr>Tennr</tennr>.",
+        "previously": "Previously, I was a Principal Software Engineer at <aidkit>AidKit</aidkit>, where I built infrastructure for governments and nonprofits to modernize and scale benefits delivery, and at <hypr>HYPR</hypr>, where I built passwordless authentication solutions for financial institutions and startups.",
+        "before": "Before that, I was a Senior Member of Technical Staff at <cloudhealth>CloudHealth</cloudhealth> by <vmware>VMware</vmware>, building solutions for cloud governance, cost optimization, and compliance at enterprise scale.",
         "links": {
             "bauhaus": "Lessons from the Bauhaus",
             "bauhaus_photo": "Bauhäuslers",
