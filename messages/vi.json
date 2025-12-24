@@ -18,7 +18,7 @@
         "imageAlt": "Chân dung {number} từ bộ sưu tập ảnh Bauhäuslers"
     },
     "clock": {
-        "ariaLabel": "Đồng hồ hiển thị {time} ET"
+        "ariaLabel": "Giờ hiện tại ở New York"
     },
     "common": {
         "index": "Mục lục",

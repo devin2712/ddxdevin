@@ -151,7 +151,7 @@ export const Clock: React.FC<ClockProps> = ({ label, labelAlign = 'right' }) => 
         <div
           className={styles.clock}
           role="img"
-          aria-label={t("ariaLabel", { time: clockData.formattedTime })}
+          aria-label={t("ariaLabel")}
           tabIndex={0}
         >
           <svg width="24" height="24" viewBox="0 0 24 24" suppressHydrationWarning>

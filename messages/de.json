@@ -18,7 +18,7 @@
         "imageAlt": "Porträt {number} aus der Bauhäuslers Fotoserie"
     },
     "clock": {
-        "ariaLabel": "Uhr zeigt {time} ET"
+        "ariaLabel": "Aktuelle Zeit in New York"
     },
     "common": {
         "index": "Index",

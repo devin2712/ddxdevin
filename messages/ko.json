@@ -18,7 +18,7 @@
         "imageAlt": "Bauhäuslers 사진 시리즈의 초상화 {number}"
     },
     "clock": {
-        "ariaLabel": "시계 표시 {time} ET"
+        "ariaLabel": "뉴욕 현재 시간"
     },
     "common": {
         "index": "색인",

@@ -18,7 +18,7 @@
         "imageAlt": "Bauhäuslers摄影系列中的人像{number}"
     },
     "clock": {
-        "ariaLabel": "时钟显示 {time} 东部时间"
+        "ariaLabel": "纽约当前时间"
     },
     "common": {
         "index": "索引",
