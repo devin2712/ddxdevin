@@ -59,11 +59,9 @@ export function BauhausClientComponent() {
           sizes="(max-width: 768px) 100vw, 640px"
           quality={85}
           priority
+          fetchPriority="high"
         />
-        <div
-          className={`${styles.overlay} overlay`}
-          aria-hidden="true"
-        >
+        <div className={`${styles.overlay} overlay`} aria-hidden="true">
           <span
             style={{
               color: "white",

@@ -74,12 +74,20 @@ export default async function CovidAppointmentsPage({
             maxWidth: "500px",
           }}
           priority
+          fetchPriority="high"
         />
       </p>
       {t.raw("paragraphs").map((paragraph: string, index: number) => (
         <p key={index}>{paragraph}</p>
       ))}
-      <div style={{ margin: "2rem 0", display: "flex", flexDirection: "column", gap: "1rem" }}>
+      <div
+        style={{
+          margin: "2rem 0",
+          display: "flex",
+          flexDirection: "column",
+          gap: "1rem",
+        }}
+      >
         <GitHubRepoDisplay
           username="devin2712"
           repoName="our-turn"

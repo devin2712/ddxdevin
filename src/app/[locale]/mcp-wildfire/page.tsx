@@ -75,6 +75,7 @@ export default async function McpWildfirePage({
             maxWidth: "500px",
           }}
           priority
+          fetchPriority="high"
         />
       </p>
       {t.raw("paragraphs").map((paragraph: string, index: number) => {
