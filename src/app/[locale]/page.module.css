@@ -58,6 +58,10 @@ section.intro {
   padding: 0.5rem 0 0;
 }
 
+.introText {
+  opacity: 0.75;
+}
+
 .name {
   text-transform: uppercase;
 }

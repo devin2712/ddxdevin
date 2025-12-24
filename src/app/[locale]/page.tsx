@@ -8,6 +8,17 @@ import { ThemeToggle } from "@/components/ui/ThemeToggle";
 import { Clock } from "@/components/ui/Clock";
 import { PageAnimations } from "@/components/ui/PageAnimations";
 import { AnimatedList } from "@/components/ui/AnimatedList";
+import { ReactNode, Children } from "react";
+
+// Wrapper component to render raw translated strings within <span>s
+const TranslatedStrings = ({ children }: { children: ReactNode }) => {
+  return Children.map(children, (child) => {
+    if (typeof child === 'string') {
+      return <span className={styles.introText}>{child}</span>;
+    }
+    return child;
+  });
+};
 
 export default async function Home({
   params,
@@ -165,71 +176,77 @@ export default async function Home({
             <section className={styles.intro}>
               <AnimatedList baseDelay={24} stagger={32} className={styles.fadeInUpSection}>
                 <p>
-                  {t.rich("intro", {
-                    tennr: (chunks) => (
-                      <StyledLink
-                        href="https://www.tennr.com/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        aria-label={`${chunks} (opens in new tab)`}
-                        showArrow={false}
-                      >
-                        {chunks}
-                      </StyledLink>
-                    ),
-                  })}
+                  <TranslatedStrings>
+                    {t.rich("intro", {
+                      tennr: (chunks) => (
+                        <StyledLink
+                          href="https://www.tennr.com/"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          aria-label={`${chunks} (opens in new tab)`}
+                          showArrow={false}
+                        >
+                          {chunks}
+                        </StyledLink>
+                      ),
+                    })}
+                  </TranslatedStrings>
                 </p>
                 <p>
-                  {t.rich("previously", {
-                    aidkit: (chunks) => (
-                      <StyledLink
-                        href="https://www.aidkit.com"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        aria-label={`${chunks} (opens in new tab)`}
-                        showArrow={false}
-                      >
-                        {chunks}
-                      </StyledLink>
-                    ),
-                    hypr: (chunks) => (
-                      <StyledLink
-                        href="https://www.hypr.com"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        aria-label={`${chunks} (opens in new tab)`}
-                        showArrow={false}
-                      >
-                        {chunks}
-                      </StyledLink>
-                    ),
-                  })}
+                  <TranslatedStrings>
+                    {t.rich("previously", {
+                      aidkit: (chunks) => (
+                        <StyledLink
+                          href="https://www.aidkit.com"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          aria-label={`${chunks} (opens in new tab)`}
+                          showArrow={false}
+                        >
+                          {chunks}
+                        </StyledLink>
+                      ),
+                      hypr: (chunks) => (
+                        <StyledLink
+                          href="https://www.hypr.com"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          aria-label={`${chunks} (opens in new tab)`}
+                          showArrow={false}
+                        >
+                          {chunks}
+                        </StyledLink>
+                      ),
+                    })}
+                  </TranslatedStrings>
                 </p>
                 <p>
-                  {t.rich("before", {
-                    cloudhealth: (chunks) => (
-                      <StyledLink
-                        href="https://www.cloudhealthtech.com"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        aria-label={`${chunks} (opens in new tab)`}
-                        showArrow={false}
-                      >
-                        {chunks}
-                      </StyledLink>
-                    ),
-                    vmware: (chunks) => (
-                      <StyledLink
-                        href="https://www.vmware.com"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        aria-label={`${chunks} (opens in new tab)`}
-                        showArrow={false}
-                      >
-                        {chunks}
-                      </StyledLink>
-                    ),
-                  })}
+                  <TranslatedStrings>
+                    {t.rich("before", {
+                      cloudhealth: (chunks) => (
+                        <StyledLink
+                          href="https://www.cloudhealthtech.com"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          aria-label={`${chunks} (opens in new tab)`}
+                          showArrow={false}
+                        >
+                          {chunks}
+                        </StyledLink>
+                      ),
+                      vmware: (chunks) => (
+                        <StyledLink
+                          href="https://www.vmware.com"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          aria-label={`${chunks} (opens in new tab)`}
+                          showArrow={false}
+                        >
+                          {chunks}
+                        </StyledLink>
+                      ),
+                    })}
+                  </TranslatedStrings>
                 </p>
               </AnimatedList>
             </section>
