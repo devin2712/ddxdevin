@@ -144,6 +144,7 @@
         "images": {
             "main": "Platine vinyle Rega P6 avec disques vinyle sur étagère",
             "magnepan": "Haut-parleurs Magnepan LRS et subwoofer REL T/5x",
+            "rel": "Subwoofer REL T/5x",
             "panamax": "Conditionneur d'alimentation Panamax Max 5510",
             "homekit1": "Configuration de nouvelle scène HomeKit avec haut-parleur Magnepan sélectionné",
             "homekit2": "Paramètres multimédia HomeKit montrant Lire l'audio avec le son ambiant Ocean sélectionné",

@@ -144,6 +144,7 @@
         "images": {
             "main": "Tocadiscos Rega P6 con discos de vinilo en estante",
             "magnepan": "Altavoces Magnepan LRS y subwoofer REL T/5x",
+            "rel": "Subwoofer REL T/5x",
             "panamax": "Acondicionador de energía Panamax Max 5510",
             "homekit1": "Configuración de nueva escena de HomeKit con altavoz Magnepan seleccionado",
             "homekit2": "Configuración de medios de HomeKit mostrando Reproducir audio con sonido ambiental Ocean seleccionado",

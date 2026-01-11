@@ -144,6 +144,7 @@
         "images": {
             "main": "선반에 바이닐 레코드가 있는 Rega P6 턴테이블",
             "magnepan": "Magnepan LRS 스피커와 REL T/5x 서브우퍼",
+            "rel": "REL T/5x 서브우퍼",
             "panamax": "Panamax Max 5510 Power Conditioner",
             "homekit1": "Magnepan 스피커가 선택된 HomeKit 새 장면 설정",
             "homekit2": "Ocean 앰비언트 사운드가 선택된 Play Audio를 표시하는 HomeKit Media 설정",
