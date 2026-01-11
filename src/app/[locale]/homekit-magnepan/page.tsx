@@ -9,6 +9,7 @@ import styles from "./page.module.css";
 const IMAGE_CONFIG: Record<string, { src: string; width: number; height: number }> = {
   "main": { src: "/images/homekit-magnepan/main.jpeg", width: 500, height: 667 },
   "magnepan": { src: "/images/homekit-magnepan/magnepan.jpeg", width: 500, height: 375 },
+  "rel": { src: "/images/homekit-magnepan/rel.jpeg", width: 500, height: 375 },
   "panamax": { src: "/images/homekit-magnepan/panamax.jpeg", width: 500, height: 375 },
   "homekit1": { src: "/images/homekit-magnepan/homekit1.jpeg", width: 300, height: 600 },
   "homekit2": { src: "/images/homekit-magnepan/homekit2.jpeg", width: 300, height: 600 },
