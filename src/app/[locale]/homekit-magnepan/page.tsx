@@ -1,5 +1,6 @@
 import { PageLayout } from "@/components/layout/PageLayout";
 import { Heading } from "@/components/ui/Heading";
+import { StyledLink } from "@/components/ui/StyledLink";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import type { Metadata } from "next";
 import Image from "next/image";
@@ -221,13 +222,15 @@ export default async function HomeKitMagnepan({
         <p key={index}>
           {t.rich(`paragraphs.${index}`, {
             discogs: (chunks) => (
-              <a
+              <StyledLink
                 href="https://www.discogs.com/user/ddx.json/collection"
                 target="_blank"
-                rel="noreferrer"
+                rel="noopener noreferrer"
+                aria-label={`${chunks} (opens in new tab)`}
+                showArrow={false}
               >
                 {chunks}
-              </a>
+              </StyledLink>
             ),
           })}
         </p>
