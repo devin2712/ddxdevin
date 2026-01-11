@@ -37,3 +37,27 @@
     flex: 0 0 auto;
     height: auto !important;
 }
+
+.bulletItem {
+    display: flex;
+    margin: 0.25rem 0 0.25rem 0;
+    align-items: flex-start;
+}
+
+.bulletMarker {
+    flex-shrink: 0;
+    margin-right: 0.25rem;
+    min-width: 1em;
+}
+
+.arrowItem {
+    display: flex;
+    margin: 0.25rem 0 0.25rem 0;
+    align-items: flex-start;
+}
+
+.arrowMarker {
+    flex-shrink: 0;
+    margin-right: 0.25rem;
+    min-width: 1em;
+}

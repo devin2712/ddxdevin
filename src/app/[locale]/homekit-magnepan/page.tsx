@@ -105,18 +105,10 @@ export default async function HomeKitMagnepan({
     if (paragraph.startsWith("- ")) {
       const text = paragraph.slice(2);
       return (
-        <p
-          key={index}
-          style={{
-            marginLeft: "1rem",
-            marginTop: "0.25rem",
-            marginBottom: "0.25rem",
-            paddingLeft: "0.9rem",
-            textIndent: "-0.9rem",
-          }}
-        >
-          •&ensp;{text}
-        </p>
+        <div key={index} className={styles.bulletItem}>
+          <span className={styles.bulletMarker}>•</span>
+          <span>{text}</span>
+        </div>
       );
     }
 
@@ -124,18 +116,10 @@ export default async function HomeKitMagnepan({
     if (paragraph.startsWith("→ ")) {
       const text = paragraph.slice(2);
       return (
-        <p
-          key={index}
-          style={{
-            marginLeft: "1rem",
-            marginTop: "0.25rem",
-            marginBottom: "0.25rem",
-            paddingLeft: "1.1rem",
-            textIndent: "-1.1rem",
-          }}
-        >
-          →&ensp;{text}
-        </p>
+        <div key={index} className={styles.arrowItem}>
+          <span className={styles.arrowMarker}>→</span>
+          <span>{text}</span>
+        </div>
       );
     }
 
