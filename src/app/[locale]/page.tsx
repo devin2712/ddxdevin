@@ -142,10 +142,10 @@ export default async function Home({
         {
           key: "discogs",
           title: t("links.discogs"),
-          content: "@devin2712",
+          content: "@ddx.json",
           config: {
             external: true,
-            url: "https://discogs.com/user/devin2712/collection",
+            url: "https://discogs.com/user/ddx.json/collection",
           },
         },
       ],
