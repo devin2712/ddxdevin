@@ -27,7 +27,7 @@ span.indexIcon {
 a.link {
     width: 100%;
     display: inline-flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
     gap: 0.5rem;
     padding: 0.5rem 0.5rem 0.5rem 0;
