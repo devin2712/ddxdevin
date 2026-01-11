@@ -14,6 +14,7 @@ export async function generateMetadata({
   const { locale } = await params;
 
   return {
+    title: "(S)E1",
     alternates: {
       canonical: `https://devinnguyen.com/${locale}/se1`,
     },

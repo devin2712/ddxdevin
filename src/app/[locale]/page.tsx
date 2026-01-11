@@ -36,6 +36,15 @@ export default async function Home({
       title: t("sections.writing"),
       links: [
         {
+          key: "homekit_magnepan",
+          title: t("links.homekit_magnepan"),
+          content: "2026",
+          config: {
+            external: false,
+            url: "/homekit-magnepan",
+          },
+        },
+        {
           key: "ca_wildfire_mcp",
           title: t("links.ca_wildfire_mcp"),
           content: "2025",

@@ -15,6 +15,7 @@ export async function generateMetadata({
   const { locale } = await params;
 
   return {
+    title: "COVID MyTurn CA Monitor",
     alternates: {
       canonical: `https://devinnguyen.com/${locale}/covid-myturn`,
     },

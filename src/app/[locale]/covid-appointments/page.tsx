@@ -16,6 +16,7 @@ export async function generateMetadata({
   const { locale } = await params;
 
   return {
+    title: "COVID Appointment Notifications",
     alternates: {
       canonical: `https://devinnguyen.com/${locale}/covid-appointments`,
     },

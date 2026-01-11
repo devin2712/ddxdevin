@@ -17,6 +17,7 @@ export async function generateMetadata({
   const { locale } = await params;
 
   return {
+    title: "MCP: Mapping LA Wildfires with AI",
     alternates: {
       canonical: `https://devinnguyen.com/${locale}/mcp-wildfire`,
     },

@@ -44,7 +44,10 @@ export async function generateMetadata({
 
   return {
     metadataBase: new URL("https://devinnguyen.com"),
-    title: "Devin Nguyen",
+    title: {
+      default: "Devin Nguyen",
+      template: "%s - Devin Nguyen",
+    },
     description: "Devin Nguyen is a full-stack software engineer based in NYC.",
     keywords: ["Software Engineer", "Developer", "Devin Nguyen"],
     authors: [{ name: "Devin Nguyen" }],

@@ -16,6 +16,7 @@ export async function generateMetadata({
   const { locale } = await params;
 
   return {
+    title: "La Main Ouverte",
     alternates: {
       canonical: `https://devinnguyen.com/${locale}/la-main-ouverte`,
     },

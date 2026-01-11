@@ -14,6 +14,7 @@ export async function generateMetadata({
   const { locale } = await params;
 
   return {
+    title: "Lessons from the Bauhaus",
     alternates: {
       canonical: `https://devinnguyen.com/${locale}/bauhaus`,
     },

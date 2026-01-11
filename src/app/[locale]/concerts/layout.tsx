@@ -3,10 +3,10 @@ import { ReactNode } from "react";
 import { QueryProvider } from "@/components/providers/QueryProvider";
 
 export const metadata: Metadata = {
-  title: "Concert Log - Devin Nguyen",
+  title: "Concert Log",
   description: "Set list of concerts attended.",
   openGraph: {
-    title: "Concert Log - Devin Nguyen",
+    title: "Concert Log",
     description: "Set list of concerts attended.",
     images: [
       {
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary",
-    title: "Concert Log - Devin Nguyen",
+    title: "Concert Log",
     description: "Set list of concerts attended.",
     images: ["https://devinnguyen.com/icons/blue_arrow_512.png"],
   },

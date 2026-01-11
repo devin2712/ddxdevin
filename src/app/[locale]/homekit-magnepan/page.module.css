@@ -1,0 +1,39 @@
+.twoCol {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+@media (min-width: 768px) {
+    .twoCol {
+        flex-direction: row;
+    }
+}
+
+.twoColLeft {
+    flex: 0 0 auto;
+}
+
+.twoColRight {
+    flex: 1;
+}
+
+.twoImages {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+@media (min-width: 768px) {
+    .twoImages {
+        flex-direction: row;
+    }
+}
+
+.twoImages img {
+    flex: 0 0 auto;
+    height: auto !important;
+}
