@@ -36,6 +36,8 @@ export async function generateMetadata({
 
   return {
     title: "HomeKit Automation for Magnepans",
+    description:
+      "A walkthrough on setting up Magnepan speakers with Apple HomeKit and iOS shortcuts for seamless vinyl and streaming playback control.",
     alternates: {
       canonical: `https://devinnguyen.com/${locale}/homekit-magnepan`,
     },
@@ -295,6 +297,29 @@ export default async function HomeKitMagnepan({
     return result;
   };
 
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: "HomeKit Automation for Magnepans",
+    description:
+      "A walkthrough on setting up Magnepan speakers with Apple HomeKit and iOS shortcuts for seamless vinyl and streaming playback control.",
+    datePublished: "2026-01-01",
+    author: {
+      "@type": "Person",
+      name: "Devin Nguyen",
+      url: "https://devinnguyen.com",
+    },
+    publisher: {
+      "@type": "Person",
+      name: "Devin Nguyen",
+      url: "https://devinnguyen.com",
+    },
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": `https://devinnguyen.com/${locale}/homekit-magnepan`,
+    },
+  };
+
   return (
     <PageLayout
       header={{
@@ -303,6 +328,10 @@ export default async function HomeKitMagnepan({
         as: "h1",
       }}
     >
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       {renderContent()}
     </PageLayout>
   );

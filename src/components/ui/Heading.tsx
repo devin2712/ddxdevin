@@ -10,11 +10,12 @@ export type HeadingProps = {
 };
 
 export const Heading = ({ level, children, className }: HeadingProps) => {
+  const Tag = level;
   return (
-    <p
+    <Tag
       className={`${styles.heading} ${styles[level]} ${className ?? ""}`}
     >
       {children}
-    </p>
+    </Tag>
   );
 };

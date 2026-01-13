@@ -18,6 +18,8 @@ export async function generateMetadata({
 
   return {
     title: "MCP: Mapping LA Wildfires with AI",
+    description:
+      "An MCP server for accessing CAL FIRE wildfire data to help with disaster relief programs.",
     alternates: {
       canonical: `https://devinnguyen.com/${locale}/mcp-wildfire`,
     },
@@ -54,6 +56,30 @@ export default async function McpWildfirePage({
   setRequestLocale(locale);
   const t = await getTranslations("mcpWildfire");
 
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: "MCP: Mapping LA Wildfires with AI",
+    description:
+      "An MCP server for accessing CAL FIRE wildfire data to help with disaster relief programs.",
+    datePublished: "2025-01-01",
+    author: {
+      "@type": "Person",
+      name: "Devin Nguyen",
+      url: "https://devinnguyen.com",
+    },
+    publisher: {
+      "@type": "Person",
+      name: "Devin Nguyen",
+      url: "https://devinnguyen.com",
+    },
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": `https://devinnguyen.com/${locale}/mcp-wildfire`,
+    },
+    image: "https://devinnguyen.com/images/calfire/diagram.png",
+  };
+
   return (
     <PageLayout
       header={{
@@ -62,6 +88,10 @@ export default async function McpWildfirePage({
         as: "h1",
       }}
     >
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <p>
         <Image
           src="/images/calfire/diagram.png"

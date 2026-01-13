@@ -15,6 +15,8 @@ export async function generateMetadata({
 
   return {
     title: "(S)E1",
+    description:
+      "A film photography series capturing commuting scenes in London from E1 to SE1.",
     alternates: {
       canonical: `https://devinnguyen.com/${locale}/se1`,
     },
@@ -63,6 +65,30 @@ export default async function Se1Page({
   setRequestLocale(locale);
   const t = await getTranslations("se1");
 
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: "(S)E1",
+    description:
+      "A film photography series capturing commuting scenes in London from E1 to SE1.",
+    datePublished: "2020-01-01",
+    author: {
+      "@type": "Person",
+      name: "Devin Nguyen",
+      url: "https://devinnguyen.com",
+    },
+    publisher: {
+      "@type": "Person",
+      name: "Devin Nguyen",
+      url: "https://devinnguyen.com",
+    },
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": `https://devinnguyen.com/${locale}/se1`,
+    },
+    image: "https://devinnguyen.com/images/se1/000051980002.jpg",
+  };
+
   return (
     <PageLayout
       header={{
@@ -71,6 +97,10 @@ export default async function Se1Page({
         as: "h1",
       }}
     >
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       {t.raw("paragraphs").map((paragraph: string, index: number) => (
         <p key={index}>{paragraph}</p>
       ))}

@@ -11,6 +11,9 @@ export default function GlobalNotFound() {
   return (
     <html lang="en">
       <head>
+        <title>404 - Page Not Found | Devin Nguyen</title>
+        <meta name="description" content="The page you're looking for doesn't exist. Return to the homepage to explore more." />
+        <meta name="robots" content="noindex, follow" />
         <script
           dangerouslySetInnerHTML={{
             __html: `
