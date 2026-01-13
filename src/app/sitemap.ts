@@ -10,6 +10,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'concerts',
     'covid-appointments',
     'covid-myturn',
+    'homekit-magnepan',
     'la-main-ouverte',
     'mcp-wildfire',
     'se1'
