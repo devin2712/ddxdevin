@@ -21,7 +21,7 @@ const fetchBackupConcertData = async (): Promise<string> => {
 
 const fetchConcertData = async (): Promise<string> => {
   const CONCERT_DATA_URL =
-    "https://docs.google.com/spreadsheets/d/e/2PACX-1vS7cRqq437Wt4-eWBZkbUUmO1GnCUQ-V_f4e9-VVwPS0hbD5vQDgFWzvgm16hMvDSLOtgRF8TBgRsvM/pub?gid=0&single=true&output=csv";
+    "https://docs.google.com/spreadsheets/d/e/2PACX-1vS7cRqq437Wt4-eWBZkbUUmO1GnCUQ-V_f4e9-VVwPS0hbD5vQDgFWzvgm16hMvDSLOtgRF8TBgRsvM/pub?output=csv";
 
   try {
     return await fetchConcertDataFromUrl(CONCERT_DATA_URL);
